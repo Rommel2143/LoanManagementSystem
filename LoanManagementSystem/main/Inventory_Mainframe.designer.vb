@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Mainframe
+Partial Class Inventory_Mainframe
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,27 +22,31 @@ Partial Class Mainframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventory_Mainframe))
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
-        'panel1
+        'Panel1
         '
-        Me.panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panel1.Location = New System.Drawing.Point(0, 0)
-        Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(1324, 749)
-        Me.panel1.TabIndex = 1
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1193, 626)
+        Me.Panel1.TabIndex = 0
         '
-        'Mainframe
+        'Inventory_Mainframe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1324, 749)
-        Me.Controls.Add(Me.panel1)
-        Me.Name = "Mainframe"
-        Me.Text = "Loan Management"
+        Me.ClientSize = New System.Drawing.Size(1193, 626)
+        Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Inventory_Mainframe"
+        Me.Text = "HR- System"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents panel1 As Guna.UI2.WinForms.Guna2Panel
+
+    Friend WithEvents Panel1 As Panel
 End Class

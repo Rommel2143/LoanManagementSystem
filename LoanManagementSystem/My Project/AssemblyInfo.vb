@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("LoanManagement")>
+<Assembly: AssemblyTitle("LoanManagementSystem")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("LoanManagement")>
+<Assembly: AssemblyProduct("LoanManagementSystem")>
 <Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("20a34f6d-7659-4a53-beaf-91562cbc95df")>
+<Assembly: Guid("f7879c64-fd25-4a92-99ae-5af49d482601")>
 
 ' Version information for an assembly consists of the following four values:
 '
