@@ -23,11 +23,14 @@ Public Class sub_FRAME
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         display_form(Login)
-        Login.txt_idno.Clear()
+        Login.txt_user.Clear()
     End Sub
 
     Private Sub DeviceInfoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeviceInfoToolStripMenuItem.Click
         MessageBox.Show("Mac:" & PCmac & "   /  Device:" & PCname & "", "This Device is Registered", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub CreateApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateApplicationToolStripMenuItem.Click
+        display_formsub(loan_application)
+    End Sub
 End Class

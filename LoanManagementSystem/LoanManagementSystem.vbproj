@@ -130,10 +130,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="main\Inventory_Mainframe.designer.vb">
-      <DependentUpon>Inventory_Mainframe.vb</DependentUpon>
+    <Compile Include="Loan\loan_application.Designer.vb">
+      <DependentUpon>loan_application.vb</DependentUpon>
     </Compile>
-    <Compile Include="main\Inventory_Mainframe.vb">
+    <Compile Include="Loan\loan_application.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\search_name.designer.vb">
+      <DependentUpon>search_name.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\search_name.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main\lms_mainframe.designer.vb">
+      <DependentUpon>lms_mainframe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="main\lms_mainframe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main\Login.designer.vb">
@@ -173,8 +185,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="main\Inventory_Mainframe.resx">
-      <DependentUpon>Inventory_Mainframe.vb</DependentUpon>
+    <EmbeddedResource Include="Loan\loan_application.resx">
+      <DependentUpon>loan_application.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\search_name.resx">
+      <DependentUpon>search_name.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main\lms_mainframe.resx">
+      <DependentUpon>lms_mainframe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

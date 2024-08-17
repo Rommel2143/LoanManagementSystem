@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Net.NetworkInformation
+Imports System.Text
 Module Module1
 
     Public Function connection() As MySqlConnection
@@ -18,7 +19,7 @@ Module Module1
     Public user_firstname As String
     Public user_level As String
     'credentials of PC used
-    Public idno As String
+    Public user_account As String
 
     Public PCname As String = Environment.MachineName
     Public PCmac As String = GetMacAddress()
@@ -55,7 +56,7 @@ Module Module1
         With form
             .Refresh()
             .TopLevel = False
-            Inventory_Mainframe.Panel1.Controls.Add(form)
+            lms_mainframe.Panel1.Controls.Add(form)
             .BringToFront()
             .Show()
 
@@ -97,5 +98,31 @@ Module Module1
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Public Function GenerateReferenceNumber() As String
+        Dim letters As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        Dim digits As String = "0123456789"
+        Dim reference As New StringBuilder()
+        Dim rand As New Random()
+
+        ' Generate 6 random letters
+        For i As Integer = 1 To 6
+            reference.Append(letters(rand.Next(letters.Length)))
+        Next
+
+        reference.Append("-") ' Add hyphen separator
+
+        ' Generate 9 random digits
+        For i As Integer = 1 To 9
+            reference.Append(digits(rand.Next(digits.Length)))
+        Next
+
+        Return reference.ToString()
+    End Function
+
+    Sub Main()
+        Dim referenceNumber As String = GenerateReferenceNumber()
+        Console.WriteLine("Generated Reference Number: " & referenceNumber)
     End Sub
 End Module

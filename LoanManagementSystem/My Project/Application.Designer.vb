@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.LoanManagementSystem.Inventory_Mainframe
+            Me.MainForm = Global.LoanManagementSystem.lms_mainframe
         End Sub
     End Class
 End Namespace

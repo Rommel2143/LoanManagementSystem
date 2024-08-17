@@ -17,10 +17,10 @@ Public Class Register_PC
                 With Login
                     .Refresh()
                     .TopLevel = False
-                    Inventory_Mainframe.Panel1.Controls.Add(Login)
+                    lms_mainframe.Panel1.Controls.Add(Login)
 
-                    .txt_idno.Enabled = True
-                    .txt_idno.Focus()
+                    .txt_user.Enabled = True
+                    .txt_user.Focus()
                     .BringToFront()
                     .Show()
 
