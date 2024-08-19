@@ -100,6 +100,7 @@ Module Module1
         End Try
     End Sub
 
+
     Public Function GenerateReferenceNumber() As String
         Dim letters As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         Dim digits As String = "0123456789"
@@ -121,8 +122,5 @@ Module Module1
         Return reference.ToString()
     End Function
 
-    Sub Main()
-        Dim referenceNumber As String = GenerateReferenceNumber()
-        Console.WriteLine("Generated Reference Number: " & referenceNumber)
-    End Sub
+
 End Module
