@@ -25,23 +25,26 @@ Partial Class sub_FRAME
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sub_FRAME))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MasterlistToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreateApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.userstrip = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QRCheckerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmployeeProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CreateApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.AutoSize = False
-        Me.MenuStrip1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterlistToolStripMenuItem, Me.userstrip, Me.QRCheckerToolStripMenuItem, Me.ManageToolStripMenuItem})
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -51,11 +54,30 @@ Partial Class sub_FRAME
         '
         'MasterlistToolStripMenuItem
         '
-        Me.MasterlistToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanToolStripMenuItem})
+        Me.MasterlistToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanToolStripMenuItem, Me.TestToolStripMenuItem})
         Me.MasterlistToolStripMenuItem.Image = CType(resources.GetObject("MasterlistToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MasterlistToolStripMenuItem.Name = "MasterlistToolStripMenuItem"
-        Me.MasterlistToolStripMenuItem.Size = New System.Drawing.Size(85, 37)
+        Me.MasterlistToolStripMenuItem.Size = New System.Drawing.Size(88, 37)
         Me.MasterlistToolStripMenuItem.Text = "MEMO"
+        '
+        'LoanToolStripMenuItem
+        '
+        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateApplicationToolStripMenuItem})
+        Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
+        Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
+        Me.LoanToolStripMenuItem.Text = "Loan"
+        '
+        'CreateApplicationToolStripMenuItem
+        '
+        Me.CreateApplicationToolStripMenuItem.Name = "CreateApplicationToolStripMenuItem"
+        Me.CreateApplicationToolStripMenuItem.Size = New System.Drawing.Size(213, 22)
+        Me.CreateApplicationToolStripMenuItem.Text = "Create Application"
+        '
+        'TestToolStripMenuItem
+        '
+        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
+        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
+        Me.TestToolStripMenuItem.Text = "test"
         '
         'userstrip
         '
@@ -66,7 +88,7 @@ Partial Class sub_FRAME
         Me.userstrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.userstrip.Margin = New System.Windows.Forms.Padding(0, 0, 10, 0)
         Me.userstrip.Name = "userstrip"
-        Me.userstrip.Size = New System.Drawing.Size(83, 37)
+        Me.userstrip.Size = New System.Drawing.Size(88, 37)
         Me.userstrip.Text = "User"
         Me.userstrip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.userstrip.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -77,7 +99,7 @@ Partial Class sub_FRAME
         Me.LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
         Me.LogoutToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
@@ -86,14 +108,14 @@ Partial Class sub_FRAME
         Me.ExitToolStripMenuItem.Image = CType(resources.GetObject("ExitToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'DeviceInfoToolStripMenuItem
         '
         Me.DeviceInfoToolStripMenuItem.Image = CType(resources.GetObject("DeviceInfoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DeviceInfoToolStripMenuItem.Name = "DeviceInfoToolStripMenuItem"
-        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.DeviceInfoToolStripMenuItem.Text = "Device info."
         '
         'QRCheckerToolStripMenuItem
@@ -101,20 +123,27 @@ Partial Class sub_FRAME
         Me.QRCheckerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeProfileToolStripMenuItem})
         Me.QRCheckerToolStripMenuItem.Image = CType(resources.GetObject("QRCheckerToolStripMenuItem.Image"), System.Drawing.Image)
         Me.QRCheckerToolStripMenuItem.Name = "QRCheckerToolStripMenuItem"
-        Me.QRCheckerToolStripMenuItem.Size = New System.Drawing.Size(115, 37)
+        Me.QRCheckerToolStripMenuItem.Size = New System.Drawing.Size(116, 37)
         Me.QRCheckerToolStripMenuItem.Text = "Monitoring"
         '
         'EmployeeProfileToolStripMenuItem
         '
+        Me.EmployeeProfileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.EmployeeProfileToolStripMenuItem.Name = "EmployeeProfileToolStripMenuItem"
-        Me.EmployeeProfileToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.EmployeeProfileToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
         Me.EmployeeProfileToolStripMenuItem.Text = "Employee Profile"
+        '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddToolStripMenuItem.Text = "Add"
         '
         'ManageToolStripMenuItem
         '
         Me.ManageToolStripMenuItem.Image = CType(resources.GetObject("ManageToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(99, 37)
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(95, 37)
         Me.ManageToolStripMenuItem.Text = "Manage"
         '
         'Panel1
@@ -125,18 +154,11 @@ Partial Class sub_FRAME
         Me.Panel1.Size = New System.Drawing.Size(1208, 636)
         Me.Panel1.TabIndex = 12
         '
-        'LoanToolStripMenuItem
+        'ViewToolStripMenuItem
         '
-        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateApplicationToolStripMenuItem})
-        Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
-        Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LoanToolStripMenuItem.Text = "Loan"
-        '
-        'CreateApplicationToolStripMenuItem
-        '
-        Me.CreateApplicationToolStripMenuItem.Name = "CreateApplicationToolStripMenuItem"
-        Me.CreateApplicationToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.CreateApplicationToolStripMenuItem.Text = "Create Application"
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ViewToolStripMenuItem.Text = "view"
         '
         'sub_FRAME
         '
@@ -167,4 +189,7 @@ Partial Class sub_FRAME
     Friend WithEvents EmployeeProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreateApplicationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
 End Class

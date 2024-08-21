@@ -142,6 +142,12 @@
     <Compile Include="Loan\search_name.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\test.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="main\lms_mainframe.designer.vb">
       <DependentUpon>lms_mainframe.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,18 @@
       <DependentUpon>sub_FRAME.vb</DependentUpon>
     </Compile>
     <Compile Include="main\sub_FRAME.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitoring\employee_add.Designer.vb">
+      <DependentUpon>employee_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="monitoring\employee_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitoring\members_masterlist.Designer.vb">
+      <DependentUpon>members_masterlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="monitoring\members_masterlist.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -191,6 +209,9 @@
     <EmbeddedResource Include="Loan\search_name.resx">
       <DependentUpon>search_name.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main\lms_mainframe.resx">
       <DependentUpon>lms_mainframe.vb</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main\sub_FRAME.resx">
       <DependentUpon>sub_FRAME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitoring\employee_add.resx">
+      <DependentUpon>employee_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitoring\members_masterlist.resx">
+      <DependentUpon>members_masterlist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -222,6 +249,18 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultProfileImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -24,6 +24,8 @@ Partial Class loan_application
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loan_application))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lbl_reference = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.lbl_account = New System.Windows.Forms.Label()
         Me.lbl_error = New System.Windows.Forms.Label()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
@@ -32,8 +34,6 @@ Partial Class loan_application
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbl_reference = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,6 +57,30 @@ Partial Class loan_application
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1058, 675)
         Me.Guna2Panel1.TabIndex = 1
+        '
+        'lbl_reference
+        '
+        Me.lbl_reference.AutoSize = True
+        Me.lbl_reference.BackColor = System.Drawing.Color.White
+        Me.lbl_reference.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_reference.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_reference.Location = New System.Drawing.Point(140, 128)
+        Me.lbl_reference.Name = "lbl_reference"
+        Me.lbl_reference.Size = New System.Drawing.Size(27, 20)
+        Me.lbl_reference.TabIndex = 38
+        Me.lbl_reference.Text = "---"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DimGray
+        Me.Label4.Location = New System.Drawing.Point(34, 128)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(106, 20)
+        Me.Label4.TabIndex = 37
+        Me.Label4.Text = "Reference No :"
         '
         'lbl_account
         '
@@ -156,30 +180,6 @@ Partial Class loan_application
         Me.Label2.Size = New System.Drawing.Size(91, 20)
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Account no :"
-        '
-        'lbl_reference
-        '
-        Me.lbl_reference.AutoSize = True
-        Me.lbl_reference.BackColor = System.Drawing.Color.White
-        Me.lbl_reference.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_reference.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_reference.Location = New System.Drawing.Point(140, 128)
-        Me.lbl_reference.Name = "lbl_reference"
-        Me.lbl_reference.Size = New System.Drawing.Size(27, 20)
-        Me.lbl_reference.TabIndex = 38
-        Me.lbl_reference.Text = "---"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.DimGray
-        Me.Label4.Location = New System.Drawing.Point(34, 128)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(106, 20)
-        Me.Label4.TabIndex = 37
-        Me.Label4.Text = "Reference No :"
         '
         'loan_application
         '

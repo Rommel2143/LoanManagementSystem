@@ -33,4 +33,16 @@ Public Class sub_FRAME
     Private Sub CreateApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateApplicationToolStripMenuItem.Click
         display_formsub(loan_application)
     End Sub
+
+    Private Sub TestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem.Click
+        display_formsub(test)
+    End Sub
+
+    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
+        display_formsub(employee_add)
+    End Sub
+
+    Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
+        display_formsub(members_masterlist)
+    End Sub
 End Class
