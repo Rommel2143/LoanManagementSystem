@@ -71,4 +71,8 @@ Public Class employee_add
     Private Sub employee_add_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pic1.Image = My.Resources.addimage
     End Sub
+
+    Private Sub Guna2RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2RadioButton1.CheckedChanged
+
+    End Sub
 End Class

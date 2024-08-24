@@ -3,7 +3,7 @@ Imports System.Reflection
 Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            txt_password.UseSystemPasswordChar = False
+            txt_password.UseSystemPasswordChar = True
             txtpcname.Text = PCname
             txtpcmac.Text = PCmac
             Dim version As String = Assembly.GetExecutingAssembly().GetName().Version.ToString()
@@ -106,7 +106,5 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub Guna2ImageButton1_Click(sender As Object, e As EventArgs) Handles btn_see.Click
 
-    End Sub
 End Class
