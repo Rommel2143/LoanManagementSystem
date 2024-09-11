@@ -3,4 +3,8 @@
         search_name.Show()
         search_name.BringToFront()
     End Sub
+
+    Private Sub loan_application_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

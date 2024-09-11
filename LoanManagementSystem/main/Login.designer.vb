@@ -24,6 +24,7 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btn_see = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.btn_login = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblversion = New System.Windows.Forms.Label()
@@ -33,7 +34,6 @@ Partial Class Login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_user = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btn_see = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,6 +60,21 @@ Partial Class Login
         Me.Guna2Panel1.ShadowDecoration.Enabled = True
         Me.Guna2Panel1.Size = New System.Drawing.Size(810, 484)
         Me.Guna2Panel1.TabIndex = 0
+        '
+        'btn_see
+        '
+        Me.btn_see.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.btn_see.HoverState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.btn_see.Image = CType(resources.GetObject("btn_see.Image"), System.Drawing.Image)
+        Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.btn_see.ImageRotate = 0!
+        Me.btn_see.ImageSize = New System.Drawing.Size(30, 30)
+        Me.btn_see.Location = New System.Drawing.Point(516, 270)
+        Me.btn_see.Name = "btn_see"
+        Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        Me.btn_see.PressedState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.btn_see.Size = New System.Drawing.Size(32, 29)
+        Me.btn_see.TabIndex = 28
         '
         'btn_login
         '
@@ -183,21 +198,6 @@ Partial Class Login
         Me.txt_user.Size = New System.Drawing.Size(217, 42)
         Me.txt_user.TabIndex = 0
         Me.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btn_see
-        '
-        Me.btn_see.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.btn_see.HoverState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btn_see.Image = CType(resources.GetObject("btn_see.Image"), System.Drawing.Image)
-        Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.btn_see.ImageRotate = 0!
-        Me.btn_see.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btn_see.Location = New System.Drawing.Point(516, 270)
-        Me.btn_see.Name = "btn_see"
-        Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        Me.btn_see.PressedState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btn_see.Size = New System.Drawing.Size(32, 29)
-        Me.btn_see.TabIndex = 28
         '
         'Login
         '
