@@ -160,6 +160,12 @@
     <Compile Include="main\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="main\manage_profiles.designer.vb">
+      <DependentUpon>manage_profiles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="main\manage_profiles.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="main\Module1.vb" />
     <Compile Include="main\Register_PC.designer.vb">
       <DependentUpon>Register_PC.vb</DependentUpon>
@@ -167,10 +173,10 @@
     <Compile Include="main\Register_PC.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main\sub_FRAME.designer.vb">
-      <DependentUpon>sub_FRAME.vb</DependentUpon>
+    <Compile Include="main\subframe.designer.vb">
+      <DependentUpon>subframe.vb</DependentUpon>
     </Compile>
-    <Compile Include="main\sub_FRAME.vb">
+    <Compile Include="main\subframe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="monitoring\employee_add.Designer.vb">
@@ -218,11 +224,14 @@
     <EmbeddedResource Include="main\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="main\manage_profiles.resx">
+      <DependentUpon>manage_profiles.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main\Register_PC.resx">
       <DependentUpon>Register_PC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main\sub_FRAME.resx">
-      <DependentUpon>sub_FRAME.vb</DependentUpon>
+    <EmbeddedResource Include="main\subframe.resx">
+      <DependentUpon>subframe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="monitoring\employee_add.resx">
       <DependentUpon>employee_add.vb</DependentUpon>

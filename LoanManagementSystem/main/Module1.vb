@@ -52,7 +52,7 @@ Module Module1
     End Function
 
 
-    Public Sub display_form(form As Form)
+    Public Sub display_mainframe(form As Form)
         With form
             .Refresh()
             .TopLevel = False
@@ -61,6 +61,22 @@ Module Module1
             .Show()
 
         End With
+    End Sub
+
+    Public Sub display_formsub(form As Form, text As String)
+        With form
+            .Refresh()
+            .TopLevel = False
+            subframe.Panel1.Controls.Add(form)
+            subframe.lbl_tittle.Text = text
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+    Public Sub display_error(text As String)
+        subframe.error_panel.Show()
+        subframe.lbl_error.Text = text
     End Sub
     Public Sub reload(ByVal sql As String, ByVal DTG As Object)
         Try
@@ -105,17 +121,19 @@ Module Module1
         Dim letters As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         Dim digits As String = "0123456789"
         Dim reference As New StringBuilder()
+        Dim datecode As String = Date.Now.ToString("yy")
         Dim rand As New Random()
 
+        reference.Append(datecode)
         ' Generate 6 random letters
-        For i As Integer = 1 To 6
+        For i As Integer = 1 To 4
             reference.Append(letters(rand.Next(letters.Length)))
         Next
 
         reference.Append("-") ' Add hyphen separator
 
         ' Generate 9 random digits
-        For i As Integer = 1 To 9
+        For i As Integer = 1 To 6
             reference.Append(digits(rand.Next(digits.Length)))
         Next
 

@@ -22,7 +22,7 @@ Public Class Login
 
 
                 If result = DialogResult.OK Then
-                    display_form(Register_PC)
+                    display_mainframe(Register_PC)
 
                 ElseIf result = DialogResult.Cancel Then
                     con.Close()
@@ -45,15 +45,6 @@ Public Class Login
 
     End Sub
 
-    Private Sub noid()
-        Try
-            txt_error.Visible = True
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
     Private Sub Guna2ImageButton1_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_see.MouseDown
         txt_password.UseSystemPasswordChar = False
     End Sub
@@ -79,14 +70,15 @@ Public Class Login
             dr = cmd.ExecuteReader
             If dr.Read = True Then
                 user_account = dr("account_no").ToString
-
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
-                display_form(sub_FRAME)
-                sub_FRAME.userstrip.Text = "Hello, " & user_firstname
-                txt_error.Visible = False
+
+                display_mainframe(subframe)
+                subframe.userstrip.Text = "Hello, " & user_firstname
+                error_panel.Visible = False
             Else
-                noid()
+                error_panel.Visible = True
+                txt_password.Clear()
             End If
 
         Catch ex As Exception
@@ -94,7 +86,7 @@ Public Class Login
 
         Finally
             con.Close()
-            txt_user.Clear()
+
 
         End Try
     End Sub
@@ -107,6 +99,10 @@ Public Class Login
     End Sub
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
+    End Sub
+
+    Private Sub btn_see_Click(sender As Object, e As EventArgs) Handles btn_see.Click
 
     End Sub
 End Class
