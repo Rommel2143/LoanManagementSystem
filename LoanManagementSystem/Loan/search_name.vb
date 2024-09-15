@@ -37,13 +37,13 @@
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        loan_application.lbl_account.Text = account
-        loan_application.lbl_fullname.Text = fullname
-        Me.Close()
-        loan_application.lbl_reference.Text = GenerateReferenceNumber()
+        With loan_application
+            .lbl_account.Text = account
+            .lbl_fullname.Text = fullname
+            Me.Close()
+            .lbl_reference.Text = GenerateReferenceNumber("L")
+
+        End With
     End Sub
 
-    Private Sub Guna2Separator1_Click(sender As Object, e As EventArgs) Handles Guna2Separator1.Click
-
-    End Sub
 End Class

@@ -29,6 +29,7 @@
     End Sub
 
     Private Sub LoanApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanApplicationToolStripMenuItem.Click
+
         display_formsub(loan_application, "Loan Application")
     End Sub
 

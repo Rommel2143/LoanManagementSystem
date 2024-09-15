@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2024 at 03:28 PM
+-- Generation Time: Sep 15, 2024 at 04:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `computer_location` (
 INSERT INTO `computer_location` (`id`, `PCname`, `PCmac`, `location`) VALUES
 (2, 'PTI-029', '48210B6016EA', ''),
 (3, 'PTI-029', 'E40D3606AB03', ''),
-(4, 'DESKTOP-50NOBGC', 'AC198E0D0BDD', '');
+(4, 'DESKTOP-50NOBGC', 'AC198E0D0BDD', ''),
+(5, 'DESKTOP-50NOBGC', '', '');
 
 -- --------------------------------------------------------
 
@@ -53,12 +54,13 @@ CREATE TABLE `loan_app` (
   `id` int(200) NOT NULL,
   `referenceno` varchar(100) NOT NULL,
   `account_no` varchar(100) NOT NULL,
-  `amount` int(8) NOT NULL,
-  `ammortization` int(8) NOT NULL,
+  `amount` decimal(9,2) NOT NULL,
+  `ammortization` decimal(8,2) NOT NULL,
+  `interest` decimal(5,2) NOT NULL,
   `date_apply` date NOT NULL,
   `date_approved` date DEFAULT NULL,
   `date_start` date DEFAULT NULL,
-  `months_count` int(10) NOT NULL,
+  `months_count` int(4) NOT NULL,
   `teller` varchar(100) NOT NULL,
   `teller_approved` varchar(100) NOT NULL,
   `mode` varchar(30) NOT NULL,
@@ -71,10 +73,32 @@ CREATE TABLE `loan_app` (
 -- Dumping data for table `loan_app`
 --
 
-INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `comaker_1`, `comaker_2`) VALUES
-(1, '24AXTE-826933', '03200728', 10000, 0, '2024-09-12', NULL, NULL, 0, '03200728', '', 'Cash', 'Business', '[value-13]', '[value-14]'),
-(2, '24BVRF-204366', '03200728', 30000, 0, '2024-09-12', NULL, NULL, 36, '03200728', '', 'Cash', 'Business', '[value-13]', '[value-14]'),
-(4, '24IHDZ-451002', '03200728', 30000, 0, '2024-09-12', NULL, NULL, 37, '03200728', '', 'Cash', 'Business', '[value-13]', '[value-14]');
+INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `comaker_1`, `comaker_2`) VALUES
+(5, 'LGLC-670676-24', '03200728', 10.00, 0.00, 0.00, '2024-09-15', NULL, NULL, 36, '03200728', '', '', 'Car Loan', '', ''),
+(6, '---', '---', 10000.00, 1740.34, 0.15, '2024-09-15', NULL, NULL, 6, '03200728', '', '', 'Car Loan', '', ''),
+(7, 'LKUR-020229-24', '03200728', 10000.00, 926.35, 0.20, '2024-09-15', NULL, NULL, 12, '03200728', '', '', 'House Loan', '', ''),
+(8, 'LIVR-490889-24', '03200728', 10000.00, 902.58, 0.15, '2024-09-15', NULL, NULL, 12, '03200728', '', '', 'Car Loan', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loan_types`
+--
+
+CREATE TABLE `loan_types` (
+  `id` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `interest` decimal(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `loan_types`
+--
+
+INSERT INTO `loan_types` (`id`, `type`, `interest`) VALUES
+(1, 'Car Loan', 0.15),
+(2, 'Education Loan', 0.17),
+(3, 'House Loan', 0.20);
 
 -- --------------------------------------------------------
 
@@ -150,6 +174,12 @@ ALTER TABLE `loan_app`
   ADD UNIQUE KEY `referenceno` (`referenceno`);
 
 --
+-- Indexes for table `loan_types`
+--
+ALTER TABLE `loan_types`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `member_profile`
 --
 ALTER TABLE `member_profile`
@@ -169,13 +199,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `computer_location`
 --
 ALTER TABLE `computer_location`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `loan_app`
 --
 ALTER TABLE `loan_app`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `loan_types`
+--
+ALTER TABLE `loan_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `member_profile`

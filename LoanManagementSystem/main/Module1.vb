@@ -117,16 +117,16 @@ Module Module1
     End Sub
 
 
-    Public Function GenerateReferenceNumber() As String
+    Public Function GenerateReferenceNumber(transcode As String) As String
         Dim letters As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         Dim digits As String = "0123456789"
         Dim reference As New StringBuilder()
         Dim datecode As String = Date.Now.ToString("yy")
         Dim rand As New Random()
 
-        reference.Append(datecode)
+        reference.Append(transcode) ' Add hyphen separator
         ' Generate 6 random letters
-        For i As Integer = 1 To 4
+        For i As Integer = 1 To 3
             reference.Append(letters(rand.Next(letters.Length)))
         Next
 
@@ -136,7 +136,8 @@ Module Module1
         For i As Integer = 1 To 6
             reference.Append(digits(rand.Next(digits.Length)))
         Next
-
+        reference.Append("-") ' Add hyphen separator
+        reference.Append(datecode)
         Return reference.ToString()
     End Function
 
