@@ -34,6 +34,7 @@ Partial Class search_name
         Me.lbl_fullname = New System.Windows.Forms.Label()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
+        Me.lbl_who = New System.Windows.Forms.Label()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -149,7 +150,7 @@ Partial Class search_name
         Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(23, 467)
+        Me.lbl_fullname.Location = New System.Drawing.Point(441, 468)
         Me.lbl_fullname.Name = "lbl_fullname"
         Me.lbl_fullname.Size = New System.Drawing.Size(28, 21)
         Me.lbl_fullname.TabIndex = 17
@@ -175,12 +176,26 @@ Partial Class search_name
         '
         Me.Guna2ShadowForm1.TargetForm = Me
         '
+        'lbl_who
+        '
+        Me.lbl_who.AutoSize = True
+        Me.lbl_who.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_who.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_who.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_who.Location = New System.Drawing.Point(351, 468)
+        Me.lbl_who.Name = "lbl_who"
+        Me.lbl_who.Size = New System.Drawing.Size(87, 21)
+        Me.lbl_who.TabIndex = 19
+        Me.lbl_who.Text = "Borrower :"
+        Me.lbl_who.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'search_name
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(943, 610)
+        Me.Controls.Add(Me.lbl_who)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.lbl_fullname)
         Me.Controls.Add(Me.Guna2ControlBox1)
@@ -203,4 +218,5 @@ Partial Class search_name
     Friend WithEvents lbl_fullname As Label
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
+    Friend WithEvents lbl_who As Label
 End Class

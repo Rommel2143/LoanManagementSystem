@@ -37,12 +37,21 @@
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        With loan_application
-            .lbl_account.Text = account
-            .lbl_fullname.Text = fullname
-            Me.Close()
-            .lbl_reference.Text = GenerateReferenceNumber("L")
 
+        With loan_application
+            Select Case lbl_who.Text
+                Case "Borrower :"
+                    .lbl_account.Text = account
+                    .lbl_fullname.Text = fullname
+                    .lbl_reference.Text = GenerateReferenceNumber("L")
+                Case "Co-maker 1 :"
+                    .lbl_cm1.Text = fullname & " (" & account & ")"
+                    .comaker1 = account
+                Case "Co-maker 2 :"
+                    .lbl_cm2.Text = fullname & " (" & account & ")"
+                    .comaker2 = account
+            End Select
+            Me.Close()
         End With
     End Sub
 

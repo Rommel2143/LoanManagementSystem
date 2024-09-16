@@ -7,14 +7,18 @@ Public Class loan_application
     Dim interest_rate As Decimal = 0.00
     Dim monthly_ammo As Decimal
     Dim month_count As Integer
+    Public comaker1 As String
+    Public comaker2 As String
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         search_name.Show()
         search_name.BringToFront()
+        search_name.lbl_who.Text = "Borrower :"
     End Sub
 
     Private Sub loan_application_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmb_display("SELECT type from loan_types", "type", cmb_purpose)
+        cmb_display("SELECT collateral from collateral_types", "collateral", cmb_collateral)
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
@@ -43,7 +47,10 @@ Public Class loan_application
                                                                         `mode`, `purpose`,
                                                                         `comaker_1`,
                                                                         `comaker_2`,
-                                                                         `interest`)
+                                                                         `interest_rate`,
+                                                                          `service_fee`,
+                                                                         `interest`,
+                                                                            `collateral`)
                                                                 VALUES (@referenceno,
                                                                         @account_no,
                                                                         @amount,
@@ -57,7 +64,10 @@ Public Class loan_application
                                                                         @mode, @purpose,
                                                                         @comaker_1,
                                                                         @comaker_2,
-                                                                        @interest)", con)
+                                                                        @interest_rate,
+                                                                        @service_fee,
+                                                                        @interest,
+                                                                        @collateral)", con)
 
             ' Add parameters
             cmdinsert.Parameters.AddWithValue("@referenceno", lbl_reference.Text)
@@ -72,9 +82,12 @@ Public Class loan_application
             cmdinsert.Parameters.AddWithValue("@teller_approved", String.Empty)
             cmdinsert.Parameters.AddWithValue("@mode", cmb_mode.Text)
             cmdinsert.Parameters.AddWithValue("@purpose", cmb_purpose.Text)
-            cmdinsert.Parameters.AddWithValue("@comaker_1", String.Empty)
-            cmdinsert.Parameters.AddWithValue("@comaker_2", String.Empty)
-            cmdinsert.Parameters.AddWithValue("@interest", interest_rate)
+            cmdinsert.Parameters.AddWithValue("@comaker_1", comaker1)
+            cmdinsert.Parameters.AddWithValue("@comaker_2", comaker2)
+            cmdinsert.Parameters.AddWithValue("@interest_rate", interest_rate)
+            cmdinsert.Parameters.AddWithValue("@service_fee", Convert.ToDecimal(lbl_servicefee.Text))
+            cmdinsert.Parameters.AddWithValue("@interest", Convert.ToDecimal(lbl_interest.Text))
+            cmdinsert.Parameters.AddWithValue("@collateral", cmb_collateral.Text)
             cmdinsert.ExecuteNonQuery()
             MessageBox.Show("Record saved successfully.")
 
@@ -82,6 +95,11 @@ Public Class loan_application
             lbl_account.Text = "---"
             lbl_fullname.Text = "---"
             lbl_reference.Text = "---"
+            num_plan.Value = 1
+            lbl_cm1.Text = "Please select name..."
+            lbl_cm2.Text = "Please select name..."
+            lbl_comaker1.Text = ""
+            lbl_comaker2.Text = ""
         Catch ex As Exception
             display_error("Error: " & ex.Message)
         Finally
@@ -140,6 +158,7 @@ Public Class loan_application
 
         ' Re-add the event handler
         AddHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
+
     End Sub
     Private Sub num_plan_ValueChanged(sender As Object, e As EventArgs) Handles num_plan.ValueChanged, btn_month.CheckedChanged, btn_year.CheckedChanged, txt_amount.TextChanged, cmb_purpose.SelectedIndexChanged
         Try
@@ -160,8 +179,23 @@ Public Class loan_application
 
                 ' Calculate monthly amortization
                 monthly_ammo = Math.Round((loan_amount * monthly_interest_rate) / (1 - (1 + monthly_interest_rate) ^ -month_count), 2)
-                txt_ma.Text = monthly_ammo.ToString("N2") & "/Month"
+                txt_ma.Text = monthly_ammo.ToString("N2") & "/ month"
 
+                'service fee
+                If month_count <= 6 Then
+                    lbl_servicefee.Text = loan_amount * 0.015
+                Else
+                    lbl_servicefee.Text = loan_amount * 0.03
+                End If
+                lbl_interest.Text = (monthly_ammo * month_count) - loan_amount
+
+
+                lbl_loanamount.Text = loan_amount
+                lbl_processfee.Text = "-" & lbl_servicefee.Text
+                lbl_purpose.Text = cmb_purpose.Text
+                lbl_disbursement.Text = loan_amount - (Convert.ToDecimal(lbl_servicefee.Text))
+                lbl_term.Text = month_count & " months"
+                lbl_ma.Text = txt_ma.Text
             End If
         Catch ex As OverflowException
 
@@ -180,13 +214,53 @@ Public Class loan_application
 
     Private Sub lbl_account_TextChanged(sender As Object, e As EventArgs) Handles lbl_account.TextChanged
         If lbl_account.Text = "---" Then
-            panel_apply.Enabled = False
+            tabcontrol.Enabled = False
         Else
-            panel_apply.Enabled = True
+            tabcontrol.Enabled = True
         End If
     End Sub
 
-    Private Sub lbl_fullname_Click(sender As Object, e As EventArgs) Handles lbl_fullname.Click
+    Private Sub Guna2Button2_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub cmb_collateral_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_collateral.SelectedIndexChanged
+        lbl_collateral.Text = cmb_collateral.Text
+    End Sub
+
+    Private Sub cmb_mode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_mode.SelectedIndexChanged
+        lbl_transfer.Text = cmb_mode.Text
+    End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles lbl_cm1.Click
+
+    End Sub
+
+    Private Sub Label29_TextChanged(sender As Object, e As EventArgs) Handles lbl_cm1.TextChanged
+        lbl_comaker1.Text = lbl_cm1.Text
+    End Sub
+
+    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles lbl_cm2.Click
+
+    End Sub
+
+    Private Sub Label30_TextChanged(sender As Object, e As EventArgs) Handles lbl_cm2.TextChanged
+        lbl_comaker2.Text = lbl_cm2.Text
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        search_name.Show()
+        search_name.BringToFront()
+        search_name.lbl_who.Text = "Co-maker 1 :"
+    End Sub
+
+    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
+        search_name.Show()
+        search_name.BringToFront()
+        search_name.lbl_who.Text = "Co-maker 2 :"
+    End Sub
+
+    Private Sub panel_details_Click(sender As Object, e As EventArgs) Handles panel_details.Click
 
     End Sub
 End Class
