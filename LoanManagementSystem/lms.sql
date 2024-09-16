@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2024 at 04:41 PM
+-- Generation Time: Sep 16, 2024 at 04:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `lms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `collateral_types`
+--
+
+CREATE TABLE `collateral_types` (
+  `id` int(11) NOT NULL,
+  `collateral` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `collateral_types`
+--
+
+INSERT INTO `collateral_types` (`id`, `collateral`) VALUES
+(1, 'Real State'),
+(2, 'Vehicle'),
+(3, 'Insurance');
 
 -- --------------------------------------------------------
 
@@ -56,7 +76,9 @@ CREATE TABLE `loan_app` (
   `account_no` varchar(100) NOT NULL,
   `amount` decimal(9,2) NOT NULL,
   `ammortization` decimal(8,2) NOT NULL,
-  `interest` decimal(5,2) NOT NULL,
+  `interest_rate` decimal(5,2) NOT NULL,
+  `service_fee` decimal(8,2) NOT NULL,
+  `interest` decimal(8,2) NOT NULL,
   `date_apply` date NOT NULL,
   `date_approved` date DEFAULT NULL,
   `date_start` date DEFAULT NULL,
@@ -65,6 +87,7 @@ CREATE TABLE `loan_app` (
   `teller_approved` varchar(100) NOT NULL,
   `mode` varchar(30) NOT NULL,
   `purpose` varchar(30) NOT NULL,
+  `collateral` varchar(100) NOT NULL,
   `comaker_1` varchar(100) NOT NULL,
   `comaker_2` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -73,11 +96,11 @@ CREATE TABLE `loan_app` (
 -- Dumping data for table `loan_app`
 --
 
-INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `comaker_1`, `comaker_2`) VALUES
-(5, 'LGLC-670676-24', '03200728', 10.00, 0.00, 0.00, '2024-09-15', NULL, NULL, 36, '03200728', '', '', 'Car Loan', '', ''),
-(6, '---', '---', 10000.00, 1740.34, 0.15, '2024-09-15', NULL, NULL, 6, '03200728', '', '', 'Car Loan', '', ''),
-(7, 'LKUR-020229-24', '03200728', 10000.00, 926.35, 0.20, '2024-09-15', NULL, NULL, 12, '03200728', '', '', 'House Loan', '', ''),
-(8, 'LIVR-490889-24', '03200728', 10000.00, 902.58, 0.15, '2024-09-15', NULL, NULL, 12, '03200728', '', '', 'Car Loan', '', '');
+INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest_rate`, `service_fee`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `collateral`, `comaker_1`, `comaker_2`) VALUES
+(13, 'LPOV-335280-24', '03200728', 10000.00, 1740.34, 0.15, 150.00, 442.04, '2024-09-16', NULL, NULL, 6, '03200728', '', 'Check', 'Car Loan', 'Real State', '', ''),
+(14, 'LBQZ-773016-24', '03200728', 10000.00, 902.58, 0.15, 300.00, 830.96, '2024-09-16', NULL, NULL, 12, '03200728', '', 'Cash', 'Car Loan', 'Real State', '', ''),
+(15, 'LKMR-581126-24', '03200728', 100000.00, 4848.66, 0.15, 3000.00, 16367.84, '2024-09-16', NULL, NULL, 24, '03200728', '', 'Bank Transfer', 'Car Loan', 'Real State', '03200728', '03200728'),
+(16, 'LHUM-454259-24', '03200728', 1000.00, 1012.50, 0.15, 15.00, 12.50, '2024-09-16', NULL, NULL, 1, '03200728', '', '', 'Car Loan', 'Real State', '03200728', '03200728');
 
 -- --------------------------------------------------------
 
@@ -161,6 +184,12 @@ INSERT INTO `user` (`id`, `account_no`, `username`, `pass`, `level`) VALUES
 --
 
 --
+-- Indexes for table `collateral_types`
+--
+ALTER TABLE `collateral_types`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `computer_location`
 --
 ALTER TABLE `computer_location`
@@ -196,6 +225,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `collateral_types`
+--
+ALTER TABLE `collateral_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `computer_location`
 --
 ALTER TABLE `computer_location`
@@ -205,7 +240,7 @@ ALTER TABLE `computer_location`
 -- AUTO_INCREMENT for table `loan_app`
 --
 ALTER TABLE `loan_app`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `loan_types`
