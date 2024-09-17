@@ -44,6 +44,7 @@ Partial Class subframe
         Me.btn_close = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_error = New System.Windows.Forms.Label()
+        Me.LoanApprovalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,7 +121,7 @@ Partial Class subframe
         '
         'LoanToolStripMenuItem
         '
-        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanApplicationToolStripMenuItem})
+        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanApplicationToolStripMenuItem, Me.LoanApprovalToolStripMenuItem})
         Me.LoanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
         Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
@@ -256,6 +257,12 @@ Partial Class subframe
         Me.lbl_error.TabIndex = 0
         Me.lbl_error.Text = "Invalid Credentials"
         '
+        'LoanApprovalToolStripMenuItem
+        '
+        Me.LoanApprovalToolStripMenuItem.Name = "LoanApprovalToolStripMenuItem"
+        Me.LoanApprovalToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
+        Me.LoanApprovalToolStripMenuItem.Text = "Loan Approval"
+        '
         'subframe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -306,4 +313,5 @@ Partial Class subframe
     Friend WithEvents lbl_error As Label
     Friend WithEvents btn_close As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents LoanApprovalToolStripMenuItem As ToolStripMenuItem
 End Class

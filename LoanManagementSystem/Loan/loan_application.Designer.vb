@@ -31,7 +31,6 @@ Partial Class loan_application
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.tabcontrol = New Guna.UI2.WinForms.Guna2TabControl()
         Me.panel_compute = New System.Windows.Forms.TabPage()
         Me.lbl_interest = New System.Windows.Forms.Label()
@@ -194,18 +193,10 @@ Partial Class loan_application
         Me.Guna2Panel1.Controls.Add(Me.Label1)
         Me.Guna2Panel1.Controls.Add(Me.lbl_fullname)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 38)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1073, 171)
         Me.Guna2Panel1.TabIndex = 39
-        '
-        'Guna2Panel2
-        '
-        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(1073, 38)
-        Me.Guna2Panel2.TabIndex = 40
         '
         'tabcontrol
         '
@@ -214,10 +205,10 @@ Partial Class loan_application
         Me.tabcontrol.Controls.Add(Me.panel_apply)
         Me.tabcontrol.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tabcontrol.ItemSize = New System.Drawing.Size(180, 40)
-        Me.tabcontrol.Location = New System.Drawing.Point(0, 209)
+        Me.tabcontrol.Location = New System.Drawing.Point(0, 171)
         Me.tabcontrol.Name = "tabcontrol"
         Me.tabcontrol.SelectedIndex = 0
-        Me.tabcontrol.Size = New System.Drawing.Size(1073, 535)
+        Me.tabcontrol.Size = New System.Drawing.Size(1073, 573)
         Me.tabcontrol.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty
         Me.tabcontrol.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.tabcontrol.TabButtonHoverState.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
@@ -254,7 +245,7 @@ Partial Class loan_application
         Me.panel_compute.Location = New System.Drawing.Point(4, 44)
         Me.panel_compute.Name = "panel_compute"
         Me.panel_compute.Padding = New System.Windows.Forms.Padding(3)
-        Me.panel_compute.Size = New System.Drawing.Size(1065, 487)
+        Me.panel_compute.Size = New System.Drawing.Size(1065, 525)
         Me.panel_compute.TabIndex = 0
         Me.panel_compute.Text = "1. Compute"
         Me.panel_compute.UseVisualStyleBackColor = True
@@ -966,7 +957,6 @@ Partial Class loan_application
         Me.ClientSize = New System.Drawing.Size(1073, 744)
         Me.Controls.Add(Me.tabcontrol)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.Guna2Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "loan_application"
         Me.Text = "loan_application"
@@ -994,7 +984,6 @@ Partial Class loan_application
     Friend WithEvents lbl_reference As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents tabcontrol As Guna.UI2.WinForms.Guna2TabControl
     Friend WithEvents panel_compute As TabPage
     Friend WithEvents lbl_interest As Label

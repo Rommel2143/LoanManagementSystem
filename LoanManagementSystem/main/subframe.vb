@@ -37,4 +37,7 @@
         error_panel.Visible = False
     End Sub
 
+    Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanApprovalToolStripMenuItem.Click
+        display_formsub(loan_approval, "Loan Approval")
+    End Sub
 End Class
