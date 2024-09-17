@@ -47,10 +47,11 @@ Public Class loan_application
                                                                         `mode`, `purpose`,
                                                                         `comaker_1`,
                                                                         `comaker_2`,
-                                                                         `interest_rate`,
-                                                                          `service_fee`,
-                                                                         `interest`,
-                                                                            `collateral`)
+                                                                        `interest_rate`,
+                                                                        `service_fee`,
+                                                                        `interest`,
+                                                                        `collateral`,
+                                                                        `status`)
                                                                 VALUES (@referenceno,
                                                                         @account_no,
                                                                         @amount,
@@ -67,7 +68,8 @@ Public Class loan_application
                                                                         @interest_rate,
                                                                         @service_fee,
                                                                         @interest,
-                                                                        @collateral)", con)
+                                                                        @collateral,
+                                                                        @status)", con)
 
             ' Add parameters
             cmdinsert.Parameters.AddWithValue("@referenceno", lbl_reference.Text)
@@ -88,6 +90,7 @@ Public Class loan_application
             cmdinsert.Parameters.AddWithValue("@service_fee", Convert.ToDecimal(lbl_servicefee.Text))
             cmdinsert.Parameters.AddWithValue("@interest", Convert.ToDecimal(lbl_interest.Text))
             cmdinsert.Parameters.AddWithValue("@collateral", cmb_collateral.Text)
+            cmdinsert.Parameters.AddWithValue("@status", 0)
             cmdinsert.ExecuteNonQuery()
             MessageBox.Show("Record saved successfully.")
 

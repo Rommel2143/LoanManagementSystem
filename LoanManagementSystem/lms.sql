@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2024 at 04:05 PM
+-- Generation Time: Sep 17, 2024 at 10:40 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -89,18 +89,19 @@ CREATE TABLE `loan_app` (
   `purpose` varchar(30) NOT NULL,
   `collateral` varchar(100) NOT NULL,
   `comaker_1` varchar(100) NOT NULL,
-  `comaker_2` varchar(100) NOT NULL
+  `comaker_2` varchar(100) NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `loan_app`
 --
 
-INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest_rate`, `service_fee`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `collateral`, `comaker_1`, `comaker_2`) VALUES
-(13, 'LPOV-335280-24', '03200728', 10000.00, 1740.34, 0.15, 150.00, 442.04, '2024-09-16', NULL, NULL, 6, '03200728', '', 'Check', 'Car Loan', 'Real State', '', ''),
-(14, 'LBQZ-773016-24', '03200728', 10000.00, 902.58, 0.15, 300.00, 830.96, '2024-09-16', NULL, NULL, 12, '03200728', '', 'Cash', 'Car Loan', 'Real State', '', ''),
-(15, 'LKMR-581126-24', '03200728', 100000.00, 4848.66, 0.15, 3000.00, 16367.84, '2024-09-16', NULL, NULL, 24, '03200728', '', 'Bank Transfer', 'Car Loan', 'Real State', '03200728', '03200728'),
-(16, 'LHUM-454259-24', '03200728', 1000.00, 1012.50, 0.15, 15.00, 12.50, '2024-09-16', NULL, NULL, 1, '03200728', '', '', 'Car Loan', 'Real State', '03200728', '03200728');
+INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest_rate`, `service_fee`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `collateral`, `comaker_1`, `comaker_2`, `status`) VALUES
+(13, 'LPOV-335280-24', '03200728', 10000.00, 1740.34, 0.15, 150.00, 442.04, '2024-09-16', NULL, NULL, 6, '03200728', '', 'Check', 'Car Loan', 'Real State', '', '', 0),
+(14, 'LBQZ-773016-24', '03200728', 10000.00, 902.58, 0.15, 300.00, 830.96, '2024-09-16', NULL, NULL, 12, '03200728', '', 'Cash', 'Car Loan', 'Real State', '', '', 0),
+(15, 'LKMR-581126-24', '03200728', 100000.00, 4848.66, 0.15, 3000.00, 16367.84, '2024-09-16', NULL, NULL, 24, '03200728', '', 'Bank Transfer', 'Car Loan', 'Real State', '03200728', '03200728', 0),
+(16, 'LHUM-454259-24', '03200728', 1000.00, 1012.50, 0.15, 15.00, 12.50, '2024-09-16', NULL, NULL, 1, '03200728', '', '', 'Car Loan', 'Real State', '03200728', '03200728', 0);
 
 -- --------------------------------------------------------
 

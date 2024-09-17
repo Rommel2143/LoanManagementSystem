@@ -32,25 +32,25 @@ Partial Class subframe
         Me.logout = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.add_user = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoanApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_calendar = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_tittle = New System.Windows.Forms.Label()
-        Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoanApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.error_panel = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.lbl_error = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btn_close = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lbl_error = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.error_panel.SuspendLayout()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -117,6 +117,21 @@ Partial Class subframe
         Me.add_user.Size = New System.Drawing.Size(224, 24)
         Me.add_user.Text = "Add User"
         Me.add_user.Visible = False
+        '
+        'LoanToolStripMenuItem
+        '
+        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanApplicationToolStripMenuItem})
+        Me.LoanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
+        Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.LoanToolStripMenuItem.Text = "Loan"
+        '
+        'LoanApplicationToolStripMenuItem
+        '
+        Me.LoanApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LoanApplicationToolStripMenuItem.Name = "LoanApplicationToolStripMenuItem"
+        Me.LoanApplicationToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
+        Me.LoanApplicationToolStripMenuItem.Text = "Loan Application"
         '
         'Panel1
         '
@@ -187,21 +202,6 @@ Partial Class subframe
         Me.lbl_tittle.Size = New System.Drawing.Size(0, 20)
         Me.lbl_tittle.TabIndex = 0
         '
-        'LoanToolStripMenuItem
-        '
-        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanApplicationToolStripMenuItem})
-        Me.LoanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
-        Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
-        Me.LoanToolStripMenuItem.Text = "Loan"
-        '
-        'LoanApplicationToolStripMenuItem
-        '
-        Me.LoanApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LoanApplicationToolStripMenuItem.Name = "LoanApplicationToolStripMenuItem"
-        Me.LoanApplicationToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
-        Me.LoanApplicationToolStripMenuItem.Text = "Loan Application"
-        '
         'error_panel
         '
         Me.error_panel.Controls.Add(Me.btn_close)
@@ -209,7 +209,7 @@ Partial Class subframe
         Me.error_panel.Controls.Add(Me.lbl_error)
         Me.error_panel.Dock = System.Windows.Forms.DockStyle.Top
         Me.error_panel.FillColor = System.Drawing.Color.Red
-        Me.error_panel.FillColor2 = System.Drawing.Color.Tomato
+        Me.error_panel.FillColor2 = System.Drawing.Color.Salmon
         Me.error_panel.Location = New System.Drawing.Point(0, 52)
         Me.error_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.error_panel.Name = "error_panel"
@@ -217,17 +217,19 @@ Partial Class subframe
         Me.error_panel.TabIndex = 32
         Me.error_panel.Visible = False
         '
-        'lbl_error
+        'btn_close
         '
-        Me.lbl_error.AutoSize = True
-        Me.lbl_error.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_error.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_error.ForeColor = System.Drawing.Color.White
-        Me.lbl_error.Location = New System.Drawing.Point(41, 6)
-        Me.lbl_error.Name = "lbl_error"
-        Me.lbl_error.Size = New System.Drawing.Size(119, 17)
-        Me.lbl_error.TabIndex = 0
-        Me.lbl_error.Text = "Invalid Credentials"
+        Me.btn_close.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_close.BackColor = System.Drawing.Color.Transparent
+        Me.btn_close.Image = CType(resources.GetObject("btn_close.Image"), System.Drawing.Image)
+        Me.btn_close.ImageRotate = 0!
+        Me.btn_close.Location = New System.Drawing.Point(1322, 5)
+        Me.btn_close.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(15, 15)
+        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btn_close.TabIndex = 2
+        Me.btn_close.TabStop = False
         '
         'Guna2PictureBox3
         '
@@ -242,19 +244,17 @@ Partial Class subframe
         Me.Guna2PictureBox3.TabIndex = 1
         Me.Guna2PictureBox3.TabStop = False
         '
-        'btn_close
+        'lbl_error
         '
-        Me.btn_close.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btn_close.BackColor = System.Drawing.Color.Transparent
-        Me.btn_close.Image = CType(resources.GetObject("btn_close.Image"), System.Drawing.Image)
-        Me.btn_close.ImageRotate = 0!
-        Me.btn_close.Location = New System.Drawing.Point(1316, 0)
-        Me.btn_close.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_close.Name = "btn_close"
-        Me.btn_close.Size = New System.Drawing.Size(23, 23)
-        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btn_close.TabIndex = 2
-        Me.btn_close.TabStop = False
+        Me.lbl_error.AutoSize = True
+        Me.lbl_error.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_error.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_error.ForeColor = System.Drawing.Color.White
+        Me.lbl_error.Location = New System.Drawing.Point(41, 6)
+        Me.lbl_error.Name = "lbl_error"
+        Me.lbl_error.Size = New System.Drawing.Size(119, 17)
+        Me.lbl_error.TabIndex = 0
+        Me.lbl_error.Text = "Invalid Credentials"
         '
         'subframe
         '
@@ -278,8 +278,8 @@ Partial Class subframe
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.error_panel.ResumeLayout(False)
         Me.error_panel.PerformLayout()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
