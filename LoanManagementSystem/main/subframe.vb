@@ -28,7 +28,7 @@
         display_formsub(manage_profiles, "Manage my profile")
     End Sub
 
-    Private Sub LoanApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanApplicationToolStripMenuItem.Click
+    Private Sub LoanApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_apply.Click
 
         display_formsub(loan_application, "Loan Application")
     End Sub
@@ -37,7 +37,7 @@
         error_panel.Visible = False
     End Sub
 
-    Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanApprovalToolStripMenuItem.Click
+    Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_approve.Click
         display_formsub(loan_approval, "Loan Approval")
     End Sub
 End Class

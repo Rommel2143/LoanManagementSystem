@@ -142,6 +142,12 @@
     <Compile Include="Loan\loan_approval.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\loan_approval_set.Designer.vb">
+      <DependentUpon>loan_approval_set.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_approval_set.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\search_name.designer.vb">
       <DependentUpon>search_name.vb</DependentUpon>
     </Compile>
@@ -221,6 +227,9 @@
     <EmbeddedResource Include="Loan\loan_approval.resx">
       <DependentUpon>loan_approval.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_approval_set.resx">
+      <DependentUpon>loan_approval_set.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\search_name.resx">
       <DependentUpon>search_name.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +288,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

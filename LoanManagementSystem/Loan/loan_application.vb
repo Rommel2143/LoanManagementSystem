@@ -103,6 +103,7 @@ Public Class loan_application
             lbl_cm2.Text = "Please select name..."
             lbl_comaker1.Text = ""
             lbl_comaker2.Text = ""
+            loan_approval.LoadMemberProfiles()
         Catch ex As Exception
             display_error("Error: " & ex.Message)
         Finally

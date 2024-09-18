@@ -64,7 +64,7 @@ Public Class Login
 
             con.Close()
             con.Open()
-            Dim cmd As New MySqlCommand("SELECT u.account_no,u.username, u.pass, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,mp.firstname  FROM `user` u
+            Dim cmd As New MySqlCommand("SELECT u.account_no,u.username, u.pass, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,mp.firstname, u.loan_apply,u.loan_approve  FROM `user` u
                                         JOIN member_profile mp ON u.account_no= mp.account_no
                                         WHERE (u.username = '" & txt_user.Text & "' or u.account_no= '" & txt_user.Text & "') and u.pass = '" & txt_password.Text & "' ", con)
             dr = cmd.ExecuteReader
@@ -73,11 +73,29 @@ Public Class Login
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
 
+                If dr.GetInt32("loan_apply") = 1 Then
+                    subframe.btn_loan_apply.Visible = True
+                Else
+                    subframe.btn_loan_apply.Visible = False
+                End If
+
+                If dr.GetInt32("loan_approve") = 1 Then
+                    subframe.btn_loan_approve.Visible = True
+                Else
+                    subframe.btn_loan_approve.Visible = False
+                End If
+
+
+
+
+
+
+
                 display_mainframe(subframe)
-                subframe.userstrip.Text = "Hello, " & user_firstname
-                error_panel.Visible = False
-            Else
-                error_panel.Visible = True
+                    subframe.userstrip.Text = "Hello, " & user_firstname
+                    error_panel.Visible = False
+                Else
+                    error_panel.Visible = True
                 txt_password.Clear()
             End If
 
@@ -103,6 +121,10 @@ Public Class Login
     End Sub
 
     Private Sub btn_see_Click(sender As Object, e As EventArgs) Handles btn_see.Click
+
+    End Sub
+
+    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
 
     End Sub
 End Class

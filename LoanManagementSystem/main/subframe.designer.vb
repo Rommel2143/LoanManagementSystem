@@ -33,7 +33,8 @@ Partial Class subframe
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.add_user = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoanApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_loan_apply = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_loan_approve = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -44,7 +45,6 @@ Partial Class subframe
         Me.btn_close = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_error = New System.Windows.Forms.Label()
-        Me.LoanApprovalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,18 +121,24 @@ Partial Class subframe
         '
         'LoanToolStripMenuItem
         '
-        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoanApplicationToolStripMenuItem, Me.LoanApprovalToolStripMenuItem})
+        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_loan_apply, Me.btn_loan_approve})
         Me.LoanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
         Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
         Me.LoanToolStripMenuItem.Text = "Loan"
         '
-        'LoanApplicationToolStripMenuItem
+        'btn_loan_apply
         '
-        Me.LoanApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LoanApplicationToolStripMenuItem.Name = "LoanApplicationToolStripMenuItem"
-        Me.LoanApplicationToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
-        Me.LoanApplicationToolStripMenuItem.Text = "Loan Application"
+        Me.btn_loan_apply.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btn_loan_apply.Name = "btn_loan_apply"
+        Me.btn_loan_apply.Size = New System.Drawing.Size(191, 24)
+        Me.btn_loan_apply.Text = "Loan Application"
+        '
+        'btn_loan_approve
+        '
+        Me.btn_loan_approve.Name = "btn_loan_approve"
+        Me.btn_loan_approve.Size = New System.Drawing.Size(191, 24)
+        Me.btn_loan_approve.Text = "Loan Approval"
         '
         'Panel1
         '
@@ -257,12 +263,6 @@ Partial Class subframe
         Me.lbl_error.TabIndex = 0
         Me.lbl_error.Text = "Invalid Credentials"
         '
-        'LoanApprovalToolStripMenuItem
-        '
-        Me.LoanApprovalToolStripMenuItem.Name = "LoanApprovalToolStripMenuItem"
-        Me.LoanApprovalToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
-        Me.LoanApprovalToolStripMenuItem.Text = "Loan Approval"
-        '
         'subframe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -308,10 +308,10 @@ Partial Class subframe
     Friend WithEvents add_user As ToolStripMenuItem
     Friend WithEvents ManageMyProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LoanApplicationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_loan_apply As ToolStripMenuItem
     Friend WithEvents error_panel As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents lbl_error As Label
     Friend WithEvents btn_close As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents LoanApprovalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_loan_approve As ToolStripMenuItem
 End Class

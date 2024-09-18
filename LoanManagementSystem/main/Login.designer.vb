@@ -24,18 +24,18 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.error_panel = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.lbl_error = New System.Windows.Forms.Label()
         Me.btn_login = New Guna.UI2.WinForms.Guna2Button()
-        Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblversion = New System.Windows.Forms.Label()
         Me.txtpcmac = New System.Windows.Forms.Label()
         Me.txtpcname = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_user = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.error_panel = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.lbl_error = New System.Windows.Forms.Label()
         Me.btn_see = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txt_user = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.error_panel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +65,32 @@ Partial Class Login
         Me.Guna2Panel1.Size = New System.Drawing.Size(523, 350)
         Me.Guna2Panel1.TabIndex = 0
         '
+        'error_panel
+        '
+        Me.error_panel.Controls.Add(Me.Guna2PictureBox1)
+        Me.error_panel.Controls.Add(Me.lbl_error)
+        Me.error_panel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.error_panel.FillColor = System.Drawing.Color.Red
+        Me.error_panel.FillColor2 = System.Drawing.Color.Tomato
+        Me.error_panel.Location = New System.Drawing.Point(0, 316)
+        Me.error_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.error_panel.Name = "error_panel"
+        Me.error_panel.Size = New System.Drawing.Size(523, 34)
+        Me.error_panel.TabIndex = 30
+        Me.error_panel.Visible = False
+        '
+        'lbl_error
+        '
+        Me.lbl_error.AutoSize = True
+        Me.lbl_error.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_error.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_error.ForeColor = System.Drawing.Color.White
+        Me.lbl_error.Location = New System.Drawing.Point(50, 7)
+        Me.lbl_error.Name = "lbl_error"
+        Me.lbl_error.Size = New System.Drawing.Size(135, 20)
+        Me.lbl_error.TabIndex = 0
+        Me.lbl_error.Text = "Invalid Credentials"
+        '
         'btn_login
         '
         Me.btn_login.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -79,28 +105,6 @@ Partial Class Login
         Me.btn_login.Size = New System.Drawing.Size(217, 39)
         Me.btn_login.TabIndex = 27
         Me.btn_login.Text = "Login"
-        '
-        'txt_password
-        '
-        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_password.DefaultText = ""
-        Me.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
-        Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(153, 177)
-        Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_password.Name = "txt_password"
-        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_password.PlaceholderText = "Password..."
-        Me.txt_password.SelectedText = ""
-        Me.txt_password.Size = New System.Drawing.Size(217, 40)
-        Me.txt_password.TabIndex = 25
         '
         'lblversion
         '
@@ -151,6 +155,54 @@ Partial Class Login
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Philippines TRC Inc."
         '
+        'btn_see
+        '
+        Me.btn_see.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.btn_see.Image = CType(resources.GetObject("btn_see.Image"), System.Drawing.Image)
+        Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.btn_see.ImageRotate = 0!
+        Me.btn_see.ImageSize = New System.Drawing.Size(20, 20)
+        Me.btn_see.Location = New System.Drawing.Point(338, 189)
+        Me.btn_see.Name = "btn_see"
+        Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        Me.btn_see.Size = New System.Drawing.Size(22, 18)
+        Me.btn_see.TabIndex = 29
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(15, 1)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(27, 29)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 1
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'txt_password
+        '
+        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_password.DefaultText = ""
+        Me.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
+        Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.txt_password.Location = New System.Drawing.Point(153, 177)
+        Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_password.PlaceholderText = "Password..."
+        Me.txt_password.SelectedText = ""
+        Me.txt_password.Size = New System.Drawing.Size(217, 40)
+        Me.txt_password.TabIndex = 25
+        '
         'txt_user
         '
         Me.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -174,58 +226,6 @@ Partial Class Login
         Me.txt_user.Size = New System.Drawing.Size(217, 42)
         Me.txt_user.TabIndex = 0
         Me.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'error_panel
-        '
-        Me.error_panel.Controls.Add(Me.Guna2PictureBox1)
-        Me.error_panel.Controls.Add(Me.lbl_error)
-        Me.error_panel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.error_panel.FillColor = System.Drawing.Color.Red
-        Me.error_panel.FillColor2 = System.Drawing.Color.Tomato
-        Me.error_panel.Location = New System.Drawing.Point(0, 316)
-        Me.error_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.error_panel.Name = "error_panel"
-        Me.error_panel.Size = New System.Drawing.Size(523, 34)
-        Me.error_panel.TabIndex = 30
-        Me.error_panel.Visible = False
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(15, 1)
-        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(27, 29)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 1
-        Me.Guna2PictureBox1.TabStop = False
-        '
-        'lbl_error
-        '
-        Me.lbl_error.AutoSize = True
-        Me.lbl_error.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_error.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_error.ForeColor = System.Drawing.Color.White
-        Me.lbl_error.Location = New System.Drawing.Point(50, 7)
-        Me.lbl_error.Name = "lbl_error"
-        Me.lbl_error.Size = New System.Drawing.Size(135, 20)
-        Me.lbl_error.TabIndex = 0
-        Me.lbl_error.Text = "Invalid Credentials"
-        '
-        'btn_see
-        '
-        Me.btn_see.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.btn_see.Image = CType(resources.GetObject("btn_see.Image"), System.Drawing.Image)
-        Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.btn_see.ImageRotate = 0!
-        Me.btn_see.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_see.Location = New System.Drawing.Point(338, 189)
-        Me.btn_see.Name = "btn_see"
-        Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        Me.btn_see.Size = New System.Drawing.Size(22, 18)
-        Me.btn_see.TabIndex = 29
         '
         'Login
         '
