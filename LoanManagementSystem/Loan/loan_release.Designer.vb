@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class test
+Partial Class loan_release
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,22 +22,22 @@ Partial Class test
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.flow_loan = New System.Windows.Forms.FlowLayoutPanel()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'FlowLayoutPanel1
+        'flow_loan
         '
-        Me.FlowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(108, 91)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1201, 571)
-        Me.FlowLayoutPanel1.TabIndex = 0
+        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Left
+        Me.flow_loan.Location = New System.Drawing.Point(0, 112)
+        Me.flow_loan.Name = "flow_loan"
+        Me.flow_loan.Size = New System.Drawing.Size(591, 338)
+        Me.flow_loan.TabIndex = 3
         '
         'txt_search
         '
-        Me.txt_search.BorderColor = System.Drawing.Color.Blue
         Me.txt_search.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_search.DefaultText = ""
         Me.txt_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -47,29 +47,40 @@ Partial Class test
         Me.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_search.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_search.Location = New System.Drawing.Point(108, 30)
+        Me.txt_search.Location = New System.Drawing.Point(42, 28)
         Me.txt_search.Name = "txt_search"
         Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_search.PlaceholderText = "Search Keywords..."
+        Me.txt_search.PlaceholderText = "Search reference or account..."
         Me.txt_search.SelectedText = ""
-        Me.txt_search.Size = New System.Drawing.Size(290, 40)
-        Me.txt_search.TabIndex = 2
+        Me.txt_search.Size = New System.Drawing.Size(314, 36)
+        Me.txt_search.TabIndex = 0
         '
-        'test
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Controls.Add(Me.txt_search)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(800, 112)
+        Me.Guna2Panel1.TabIndex = 2
+        '
+        'loan_release
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1417, 703)
-        Me.Controls.Add(Me.txt_search)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.flow_loan)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "test"
-        Me.Text = "test"
+        Me.Name = "loan_release"
+        Me.Text = "loan_release"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents flow_loan As FlowLayoutPanel
     Friend WithEvents txt_search As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
 End Class

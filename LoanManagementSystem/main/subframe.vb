@@ -40,4 +40,8 @@
     Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_approve.Click
         display_formsub(loan_approval, "Loan Approval")
     End Sub
+
+    Private Sub ReleaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseToolStripMenuItem.Click
+        display_formsub(loan_release, "Release Loan")
+    End Sub
 End Class

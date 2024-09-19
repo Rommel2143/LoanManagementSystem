@@ -12,15 +12,24 @@
         If txt_search.Text = "" Then
             reloadgrid()
         Else
-            reload("SELECT account_no, CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname, savings, sharecap FROM member_profile
-                   
-                 WHERE account_no REGEXP '" & txt_search.Text & "' or firstname  REGEXP '" & txt_search.Text & "' or lastname  REGEXP '" & txt_search.Text & "' ", datagrid1)
+            reload("Select account_no AS Account_no, 
+                       CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname, 
+                       sharecap AS Share_Capital,
+                       TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age
+                From member_profile
+                Where account_no REGEXP '" & txt_search.Text & "' 
+                   Or firstname REGEXP '" & txt_search.Text & "' 
+                   Or lastname REGEXP '" & txt_search.Text & "' ", datagrid1)
         End If
 
     End Sub
 
     Private Sub reloadgrid()
-        reload("SELECT account_no, CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname,savings, sharecap FROM member_profile", datagrid1)
+        reload("Select account_no AS Account_no, 
+                       CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname, 
+                       sharecap AS Share_Capital,
+                       TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age
+                From member_profile", datagrid1)
     End Sub
 
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick

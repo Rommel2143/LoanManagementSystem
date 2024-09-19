@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2024 at 10:40 AM
+-- Generation Time: Sep 19, 2024 at 04:59 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -88,6 +88,7 @@ CREATE TABLE `loan_app` (
   `mode` varchar(30) NOT NULL,
   `purpose` varchar(30) NOT NULL,
   `collateral` varchar(100) NOT NULL,
+  `collateral_value` decimal(9,2) NOT NULL,
   `comaker_1` varchar(100) NOT NULL,
   `comaker_2` varchar(100) NOT NULL,
   `status` int(1) NOT NULL
@@ -97,11 +98,10 @@ CREATE TABLE `loan_app` (
 -- Dumping data for table `loan_app`
 --
 
-INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest_rate`, `service_fee`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `collateral`, `comaker_1`, `comaker_2`, `status`) VALUES
-(13, 'LPOV-335280-24', '03200728', 10000.00, 1740.34, 0.15, 150.00, 442.04, '2024-09-16', NULL, NULL, 6, '03200728', '', 'Check', 'Car Loan', 'Real State', '', '', 0),
-(14, 'LBQZ-773016-24', '03200728', 10000.00, 902.58, 0.15, 300.00, 830.96, '2024-09-16', NULL, NULL, 12, '03200728', '', 'Cash', 'Car Loan', 'Real State', '', '', 0),
-(15, 'LKMR-581126-24', '03200728', 100000.00, 4848.66, 0.15, 3000.00, 16367.84, '2024-09-16', NULL, NULL, 24, '03200728', '', 'Bank Transfer', 'Car Loan', 'Real State', '03200728', '03200728', 0),
-(16, 'LHUM-454259-24', '03200728', 1000.00, 1012.50, 0.15, 15.00, 12.50, '2024-09-16', NULL, NULL, 1, '03200728', '', '', 'Car Loan', 'Real State', '03200728', '03200728', 0);
+INSERT INTO `loan_app` (`id`, `referenceno`, `account_no`, `amount`, `ammortization`, `interest_rate`, `service_fee`, `interest`, `date_apply`, `date_approved`, `date_start`, `months_count`, `teller`, `teller_approved`, `mode`, `purpose`, `collateral`, `collateral_value`, `comaker_1`, `comaker_2`, `status`) VALUES
+(30, 'LPCA-387584-24', '03200728', 10000.00, 192.97, 0.15, 300.00, 6209.48, '2024-09-19', '2024-09-19', NULL, 84, '03200728', '03200728', 'Cash', 'Car Loan', 'Real State', 10000.00, '', '', 3),
+(31, 'LUOE-139920-24', '03200729', 100000.00, 9025.83, 0.15, 3000.00, 8309.96, '2024-09-18', '2024-09-18', NULL, 12, '03200728', '03200728', 'Cash', 'Car Loan', 'Vehicle', 10000.00, '', '', 1),
+(32, 'LEZS-746075-24', '03200728', 1000000.00, 27830.75, 0.15, 30000.00, 335876.00, '2024-09-19', NULL, NULL, 48, '03200728', '', 'Cash', 'Car Loan', 'Real State', 10000.00, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -146,8 +146,8 @@ CREATE TABLE `member_profile` (
   `emp_status` varchar(20) NOT NULL,
   `idtype` varchar(20) NOT NULL,
   `idtype_no` varchar(20) NOT NULL,
-  `sharecap` int(30) NOT NULL,
-  `savings` int(100) NOT NULL,
+  `sharecap` decimal(9,2) NOT NULL,
+  `savings` decimal(9,2) NOT NULL,
   `image` blob NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -157,7 +157,9 @@ CREATE TABLE `member_profile` (
 --
 
 INSERT INTO `member_profile` (`id`, `account_no`, `firstname`, `middlename`, `lastname`, `birthdate`, `civilstatus`, `gender`, `place_birth`, `present_address`, `contact1`, `contact2`, `emp_status`, `idtype`, `idtype_no`, `sharecap`, `savings`, `image`, `status`) VALUES
-(21, '03200728', 'Rommel', 'Cueto', 'Magnaye', '2024-04-03', 'S', 'M', '', '', '', '', '', '', '', 0, 0, '', 1);
+(21, '03200728', 'Rommel', 'Cueto', 'Magnaye', '1998-04-03', 'S', 'M', '', '', '', '', '', '', '', 0.00, 0.00, '', 1),
+(22, '03200729', 'Juan', 'De la', 'Cruz', '2000-04-03', 'S', 'M', '', '', '', '', '', '', '', 0.00, 0.00, '', 1),
+(23, '03200730', 'Maria', 'De la', 'Clara', '1968-04-03', 'S', 'F', '', '', '', '', '', '', '', 0.00, 0.00, '', 1);
 
 -- --------------------------------------------------------
 
@@ -170,15 +172,17 @@ CREATE TABLE `user` (
   `account_no` varchar(20) NOT NULL,
   `username` varchar(100) NOT NULL,
   `pass` varchar(100) NOT NULL,
-  `level` int(3) NOT NULL
+  `level` int(3) NOT NULL,
+  `loan_apply` int(1) NOT NULL DEFAULT 0,
+  `loan_approve` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `account_no`, `username`, `pass`, `level`) VALUES
-(1, '03200728', 'momel', '123', 0);
+INSERT INTO `user` (`id`, `account_no`, `username`, `pass`, `level`, `loan_apply`, `loan_approve`) VALUES
+(1, '03200728', 'momel', '123', 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -241,7 +245,7 @@ ALTER TABLE `computer_location`
 -- AUTO_INCREMENT for table `loan_app`
 --
 ALTER TABLE `loan_app`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `loan_types`
@@ -253,7 +257,7 @@ ALTER TABLE `loan_types`
 -- AUTO_INCREMENT for table `member_profile`
 --
 ALTER TABLE `member_profile`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user`

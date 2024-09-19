@@ -148,16 +148,16 @@
     <Compile Include="Loan\loan_approval_set.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\loan_release.Designer.vb">
+      <DependentUpon>loan_release.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_release.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\search_name.designer.vb">
       <DependentUpon>search_name.vb</DependentUpon>
     </Compile>
     <Compile Include="Loan\search_name.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Loan\test.Designer.vb">
-      <DependentUpon>test.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Loan\test.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main\lms_mainframe.designer.vb">
@@ -230,11 +230,11 @@
     <EmbeddedResource Include="Loan\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_release.resx">
+      <DependentUpon>loan_release.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\search_name.resx">
       <DependentUpon>search_name.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Loan\test.resx">
-      <DependentUpon>test.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\lms_mainframe.resx">
       <DependentUpon>lms_mainframe.vb</DependentUpon>
@@ -287,10 +287,13 @@
     <None Include="Resources\addimage.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="report\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="report\" />
+    <None Include="Resources\send_cash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

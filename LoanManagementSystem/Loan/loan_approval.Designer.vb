@@ -48,7 +48,7 @@ Partial Class loan_approval
         Me.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_search.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_search.Location = New System.Drawing.Point(39, 24)
+        Me.txt_search.Location = New System.Drawing.Point(42, 28)
         Me.txt_search.Name = "txt_search"
         Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_search.PlaceholderText = "Search reference or account..."
@@ -58,10 +58,10 @@ Partial Class loan_approval
         '
         'flow_loan
         '
-        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Left
         Me.flow_loan.Location = New System.Drawing.Point(0, 112)
         Me.flow_loan.Name = "flow_loan"
-        Me.flow_loan.Size = New System.Drawing.Size(982, 362)
+        Me.flow_loan.Size = New System.Drawing.Size(591, 362)
         Me.flow_loan.TabIndex = 1
         '
         'loan_approval

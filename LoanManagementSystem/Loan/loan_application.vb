@@ -7,8 +7,8 @@ Public Class loan_application
     Dim interest_rate As Decimal = 0.00
     Dim monthly_ammo As Decimal
     Dim month_count As Integer
-    Public comaker1 As String
-    Public comaker2 As String
+    Public comaker1 As String = ""
+    Public comaker2 As String = ""
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         search_name.Show()
@@ -51,6 +51,7 @@ Public Class loan_application
                                                                         `service_fee`,
                                                                         `interest`,
                                                                         `collateral`,
+                                                                        `collateral_value`,
                                                                         `status`)
                                                                 VALUES (@referenceno,
                                                                         @account_no,
@@ -69,6 +70,7 @@ Public Class loan_application
                                                                         @service_fee,
                                                                         @interest,
                                                                         @collateral,
+                                                                        @collateral_value,
                                                                         @status)", con)
 
             ' Add parameters
@@ -90,6 +92,7 @@ Public Class loan_application
             cmdinsert.Parameters.AddWithValue("@service_fee", Convert.ToDecimal(lbl_servicefee.Text))
             cmdinsert.Parameters.AddWithValue("@interest", Convert.ToDecimal(lbl_interest.Text))
             cmdinsert.Parameters.AddWithValue("@collateral", cmb_collateral.Text)
+            cmdinsert.Parameters.AddWithValue("@collateral_value", Convert.ToDecimal(txt_collavalue.Text))
             cmdinsert.Parameters.AddWithValue("@status", 0)
             cmdinsert.ExecuteNonQuery()
             MessageBox.Show("Record saved successfully.")
@@ -265,6 +268,35 @@ Public Class loan_application
     End Sub
 
     Private Sub panel_details_Click(sender As Object, e As EventArgs) Handles panel_details.Click
+
+    End Sub
+
+    Private Sub Guna2CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txt_collavalue.TextChanged
+        Dim textBox As Guna.UI2.WinForms.Guna2TextBox = DirectCast(sender, Guna.UI2.WinForms.Guna2TextBox)
+
+
+        Dim numericText As String = New String(textBox.Text.Where(Function(c) Char.IsDigit(c) Or c = "."c).ToArray())
+
+        ' Remove existing event handler to prevent infinite loop
+        RemoveHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
+
+        ' Format the numeric text as currency
+        If Decimal.TryParse(numericText, NumberStyles.Any, CultureInfo.InvariantCulture, Nothing) Then
+            Dim formattedText As String = String.Format(CultureInfo.CurrentCulture, "{0:N0}", Convert.ToDecimal(numericText))
+            textBox.Text = formattedText
+            ' Move the cursor to the end of the text
+            textBox.SelectionStart = textBox.Text.Length
+        End If
+
+        ' Re-add the event handler
+        AddHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
+    End Sub
+
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
 End Class
