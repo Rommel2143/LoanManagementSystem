@@ -13,8 +13,8 @@ Public Class loan_release
             flow_loan.Controls.Clear()
             con.Close()
             con.Open()
-            Dim query As String = "SELECT la.id,la.amount, la.referenceno, la.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
-                                    JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 1 ORDER BY la.date_approved ASC"
+            Dim query As String = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
+                                    JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 1 ORDER BY la.date_approved DESC"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -34,9 +34,9 @@ Public Class loan_release
                 memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
                 memberLabel.AutoSize = True
                 memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
-                                    $"{reader("referenceno")}" & Environment.NewLine &
-                                     $"Php {Convert.ToDecimal(reader("amount")).ToString("N0")}" & Environment.NewLine &
-                                    $"Date Approved: {reader("date_approved")}"
+                                    $"  {reader("referenceno")}" & Environment.NewLine &
+                                     $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
+                                    $"  Date Approved: {reader("date_approved")}"
 
                 memberLabel.Location = New Point(10, 15)
 
@@ -77,10 +77,9 @@ Public Class loan_release
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)
-                                              loan_approval_set.loadprofile(loanreference)
-                                              loan_approval_set.ShowDialog()
-                                              loan_approval_set.BringToFront()
-
+                                              loan_release_set.loadprofile(loanreference)
+                                              loan_release_set.ShowDialog()
+                                              loan_release_set.BringToFront()
 
                                           End Sub
             End While
@@ -99,7 +98,7 @@ Public Class loan_release
             flow_loan.Controls.Clear()
             con.Close()
             con.Open()
-            Dim query As String = "SELECT la.id,la.amount, la.referenceno, la.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
+            Dim query As String = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
                                     JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 1 and (la.referenceno REGEXP '" & txt_search.Text & "' or mp.lastname='" & txt_search.Text & "' or la.account_no REGEXP '" & txt_search.Text & "')"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -120,9 +119,9 @@ Public Class loan_release
                 memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
                 memberLabel.AutoSize = True
                 memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
-                                    $"{reader("referenceno")}" & Environment.NewLine &
-                                     $"Php {Convert.ToDecimal(reader("amount")).ToString("N0")}" & Environment.NewLine &
-                                    $"Date Approved: {reader("date_approved")}"
+                                    $"  {reader("referenceno")}" & Environment.NewLine &
+                                     $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
+                                    $"  Date Approved: {reader("date_approved")}"
 
                 memberLabel.Location = New Point(10, 15)
 
@@ -163,9 +162,9 @@ Public Class loan_release
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)
-                                              loan_approval_set.loadprofile(loanreference)
-                                              loan_approval_set.ShowDialog()
-                                              loan_approval_set.BringToFront()
+                                              loan_release_set.loadprofile(loanreference)
+                                              loan_release_set.ShowDialog()
+                                              loan_release_set.BringToFront()
 
 
                                           End Sub

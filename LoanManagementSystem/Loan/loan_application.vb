@@ -133,6 +133,7 @@ Public Class loan_application
             dr = cmdselect.ExecuteReader()
             If dr.Read() Then
                 interest_rate = dr.GetDecimal(dr.GetOrdinal("interest"))
+                lbl_rate.Text = (interest_rate * 100) & "%"
             Else
                 MessageBox.Show("No matching loan type found.")
             End If

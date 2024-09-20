@@ -49,6 +49,10 @@ Partial Class loan_application
         Me.cmb_purpose = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.panel_details = New System.Windows.Forms.TabPage()
+        Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txt_collavalue = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.lbl_cm2 = New System.Windows.Forms.Label()
         Me.lbl_cm1 = New System.Windows.Forms.Label()
@@ -85,10 +89,8 @@ Partial Class loan_application
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lbl_purpose = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txt_collavalue = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.lbl_rate = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.tabcontrol.SuspendLayout()
         Me.panel_compute.SuspendLayout()
@@ -486,6 +488,57 @@ Partial Class loan_application
         Me.panel_details.Text = "2. Select Details"
         Me.panel_details.UseVisualStyleBackColor = True
         '
+        'Guna2Separator3
+        '
+        Me.Guna2Separator3.Location = New System.Drawing.Point(72, 238)
+        Me.Guna2Separator3.Name = "Guna2Separator3"
+        Me.Guna2Separator3.Size = New System.Drawing.Size(627, 23)
+        Me.Guna2Separator3.TabIndex = 60
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.DimGray
+        Me.Label21.Location = New System.Drawing.Point(406, 47)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(116, 20)
+        Me.Label21.TabIndex = 59
+        Me.Label21.Text = "Appraised value"
+        '
+        'txt_collavalue
+        '
+        Me.txt_collavalue.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_collavalue.DefaultText = "0"
+        Me.txt_collavalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_collavalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_collavalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_collavalue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_collavalue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_collavalue.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_collavalue.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_collavalue.Location = New System.Drawing.Point(410, 70)
+        Me.txt_collavalue.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_collavalue.Name = "txt_collavalue"
+        Me.txt_collavalue.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_collavalue.PlaceholderText = ""
+        Me.txt_collavalue.SelectedText = ""
+        Me.txt_collavalue.Size = New System.Drawing.Size(266, 36)
+        Me.txt_collavalue.TabIndex = 58
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.DimGray
+        Me.Label13.Location = New System.Drawing.Point(100, 276)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(80, 20)
+        Me.Label13.TabIndex = 57
+        Me.Label13.Text = "Co-makers"
+        '
         'Guna2Button4
         '
         Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -622,6 +675,8 @@ Partial Class loan_application
         '
         'panel_apply
         '
+        Me.panel_apply.Controls.Add(Me.lbl_rate)
+        Me.panel_apply.Controls.Add(Me.Label24)
         Me.panel_apply.Controls.Add(Me.lbl_comaker2)
         Me.panel_apply.Controls.Add(Me.lbl_comaker1)
         Me.panel_apply.Controls.Add(Me.lbl_collateral)
@@ -771,9 +826,9 @@ Partial Class loan_application
         Me.lbl_transfer.ForeColor = System.Drawing.Color.DimGray
         Me.lbl_transfer.Location = New System.Drawing.Point(324, 180)
         Me.lbl_transfer.Name = "lbl_transfer"
-        Me.lbl_transfer.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_transfer.Size = New System.Drawing.Size(44, 21)
         Me.lbl_transfer.TabIndex = 37
-        Me.lbl_transfer.Text = "---"
+        Me.lbl_transfer.Text = "Cash"
         '
         'lbl_disbursement
         '
@@ -872,7 +927,7 @@ Partial Class loan_application
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DimGray
-        Me.Label17.Location = New System.Drawing.Point(41, 254)
+        Me.Label17.Location = New System.Drawing.Point(41, 236)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(114, 20)
         Me.Label17.TabIndex = 28
@@ -945,56 +1000,29 @@ Partial Class loan_application
         Me.lbl_purpose.TabIndex = 23
         Me.lbl_purpose.Text = "---"
         '
-        'Label13
+        'lbl_rate
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.DimGray
-        Me.Label13.Location = New System.Drawing.Point(100, 276)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(80, 20)
-        Me.Label13.TabIndex = 57
-        Me.Label13.Text = "Co-makers"
+        Me.lbl_rate.AutoSize = True
+        Me.lbl_rate.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_rate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_rate.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_rate.Location = New System.Drawing.Point(324, 266)
+        Me.lbl_rate.Name = "lbl_rate"
+        Me.lbl_rate.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_rate.TabIndex = 64
+        Me.lbl_rate.Text = "---"
         '
-        'txt_collavalue
+        'Label24
         '
-        Me.txt_collavalue.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_collavalue.DefaultText = "0"
-        Me.txt_collavalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_collavalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_collavalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_collavalue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_collavalue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_collavalue.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_collavalue.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_collavalue.Location = New System.Drawing.Point(410, 70)
-        Me.txt_collavalue.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.txt_collavalue.Name = "txt_collavalue"
-        Me.txt_collavalue.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_collavalue.PlaceholderText = ""
-        Me.txt_collavalue.SelectedText = ""
-        Me.txt_collavalue.Size = New System.Drawing.Size(266, 36)
-        Me.txt_collavalue.TabIndex = 58
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.Color.Transparent
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.DimGray
-        Me.Label21.Location = New System.Drawing.Point(406, 47)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(116, 20)
-        Me.Label21.TabIndex = 59
-        Me.Label21.Text = "Appraised value"
-        '
-        'Guna2Separator3
-        '
-        Me.Guna2Separator3.Location = New System.Drawing.Point(72, 238)
-        Me.Guna2Separator3.Name = "Guna2Separator3"
-        Me.Guna2Separator3.Size = New System.Drawing.Size(627, 23)
-        Me.Guna2Separator3.TabIndex = 60
+        Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.Transparent
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.DimGray
+        Me.Label24.Location = New System.Drawing.Point(41, 267)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(39, 20)
+        Me.Label24.TabIndex = 63
+        Me.Label24.Text = "Rate"
         '
         'loan_application
         '
@@ -1088,4 +1116,6 @@ Partial Class loan_application
     Friend WithEvents Label13 As Label
     Friend WithEvents Guna2Separator3 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Label21 As Label
+    Friend WithEvents lbl_rate As Label
+    Friend WithEvents Label24 As Label
 End Class

@@ -148,10 +148,22 @@
     <Compile Include="Loan\loan_approval_set.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\loan_records.Designer.vb">
+      <DependentUpon>loan_records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_records.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\loan_release.Designer.vb">
       <DependentUpon>loan_release.vb</DependentUpon>
     </Compile>
     <Compile Include="Loan\loan_release.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\loan_release_set.Designer.vb">
+      <DependentUpon>loan_release_set.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_release_set.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loan\search_name.designer.vb">
@@ -230,8 +242,14 @@
     <EmbeddedResource Include="Loan\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_records.resx">
+      <DependentUpon>loan_records.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\loan_release.resx">
       <DependentUpon>loan_release.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_release_set.resx">
+      <DependentUpon>loan_release_set.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\search_name.resx">
       <DependentUpon>search_name.vb</DependentUpon>

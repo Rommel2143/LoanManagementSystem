@@ -39,9 +39,16 @@
 
     Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_approve.Click
         display_formsub(loan_approval, "Loan Approval")
+        loan_approval.LoadMemberProfiles()
     End Sub
 
     Private Sub ReleaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseToolStripMenuItem.Click
         display_formsub(loan_release, "Release Loan")
+        loan_release.LoadMemberProfiles()
+    End Sub
+
+    Private Sub LoanRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanRecordsToolStripMenuItem.Click
+        display_formsub(loan_records, "Loan Records")
+        loan_records.loadrecords()
     End Sub
 End Class

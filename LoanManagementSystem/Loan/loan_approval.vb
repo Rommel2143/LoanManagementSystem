@@ -12,8 +12,8 @@ Public Class loan_approval
             flow_loan.Controls.Clear()
             con.Close()
             con.Open()
-            Dim query As String = "SELECT la.id,la.amount, la.referenceno, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
-                                    JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 ORDER BY la.date_apply ASC"
+            Dim query As String = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
+                                    JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 ORDER BY la.date_apply DESC"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -33,9 +33,9 @@ Public Class loan_approval
                 memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
                 memberLabel.AutoSize = True
                 memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
-                                    $"{reader("referenceno")}" & Environment.NewLine &
-                                     $"Php {Convert.ToDecimal(reader("amount")).ToString("N0")}" & Environment.NewLine &
-                                    $"Date Filed: {reader("date_apply")}"
+                                    $"  {reader("referenceno")}" & Environment.NewLine &
+                                      $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
+                                    $"  Date Filed: {reader("date_apply")}"
 
                 memberLabel.Location = New Point(10, 15)
 
@@ -98,7 +98,7 @@ Public Class loan_approval
             flow_loan.Controls.Clear()
             con.Close()
             con.Open()
-            Dim query As String = "SELECT la.id,la.amount, la.referenceno, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
+            Dim query As String = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
                                     JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 and (la.referenceno REGEXP '" & txt_search.Text & "' or mp.lastname='" & txt_search.Text & "' or la.account_no REGEXP '" & txt_search.Text & "')"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -119,9 +119,9 @@ Public Class loan_approval
                 memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
                 memberLabel.AutoSize = True
                 memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
-                                    $"{reader("referenceno")}" & Environment.NewLine &
-                                     $"Php {Convert.ToDecimal(reader("amount")).ToString("N0")}" & Environment.NewLine &
-                                    $"Date Filed: {reader("date_apply")}"
+                                    $"  {reader("referenceno")}" & Environment.NewLine &
+                                    $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
+                                    $"  Date Filed: {reader("date_apply")}"
 
                 memberLabel.Location = New Point(10, 15)
 
