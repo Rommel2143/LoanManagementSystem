@@ -11,7 +11,7 @@ Public Class loan_application
     Public comaker2 As String = ""
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        search_name.Show()
+        search_name.ShowDialog()
         search_name.BringToFront()
         search_name.lbl_who.Text = "Borrower :"
     End Sub

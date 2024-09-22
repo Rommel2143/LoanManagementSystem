@@ -22,19 +22,11 @@ Partial Class loan_release
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.flow_loan = New System.Windows.Forms.FlowLayoutPanel()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.flow_loan = New System.Windows.Forms.FlowLayoutPanel()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'flow_loan
-        '
-        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Left
-        Me.flow_loan.Location = New System.Drawing.Point(0, 112)
-        Me.flow_loan.Name = "flow_loan"
-        Me.flow_loan.Size = New System.Drawing.Size(591, 338)
-        Me.flow_loan.TabIndex = 3
         '
         'txt_search
         '
@@ -64,6 +56,14 @@ Partial Class loan_release
         Me.Guna2Panel1.Size = New System.Drawing.Size(800, 112)
         Me.Guna2Panel1.TabIndex = 2
         '
+        'flow_loan
+        '
+        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Left
+        Me.flow_loan.Location = New System.Drawing.Point(0, 112)
+        Me.flow_loan.Name = "flow_loan"
+        Me.flow_loan.Size = New System.Drawing.Size(591, 338)
+        Me.flow_loan.TabIndex = 3
+        '
         'loan_release
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -80,7 +80,7 @@ Partial Class loan_release
 
     End Sub
 
-    Friend WithEvents flow_loan As FlowLayoutPanel
     Friend WithEvents txt_search As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents flow_loan As FlowLayoutPanel
 End Class

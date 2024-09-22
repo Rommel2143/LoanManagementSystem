@@ -1,5 +1,8 @@
 ﻿Public Class subframe
 
+    Private Sub subframe_load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_calendar.Text = date1
+    End Sub
     Private Sub MasterlistToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -50,5 +53,10 @@
     Private Sub LoanRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanRecordsToolStripMenuItem.Click
         display_formsub(loan_records, "Loan Records")
         loan_records.loadrecords()
+    End Sub
+
+    Private Sub CollectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CollectionToolStripMenuItem.Click
+        display_formsub(loan_active, "Acive Loan")
+        loan_active.LoadMemberProfiles()
     End Sub
 End Class

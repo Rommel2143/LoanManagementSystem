@@ -190,11 +190,4 @@ Public Class loan_release
         End If
     End Sub
 
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
-
-    End Sub
-
-    Private Sub flow_loan_Paint(sender As Object, e As PaintEventArgs) Handles flow_loan.Paint
-
-    End Sub
 End Class

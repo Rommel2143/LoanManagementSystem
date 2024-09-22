@@ -46,6 +46,8 @@ Partial Class loan_release_set
         Me.lbl_purpose = New System.Windows.Forms.Label()
         Me.lbl_insurance = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbl_first = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -64,7 +66,7 @@ Partial Class loan_release_set
         Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
         Me.btn_see.ImageRotate = 0!
         Me.btn_see.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_see.Location = New System.Drawing.Point(253, 326)
+        Me.btn_see.Location = New System.Drawing.Point(290, 368)
         Me.btn_see.Name = "btn_see"
         Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.btn_see.Size = New System.Drawing.Size(22, 18)
@@ -139,7 +141,7 @@ Partial Class loan_release_set
         Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(312, 315)
+        Me.Guna2Button1.Location = New System.Drawing.Point(349, 357)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(82, 40)
         Me.Guna2Button1.TabIndex = 53
@@ -158,7 +160,7 @@ Partial Class loan_release_set
         Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
         Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(88, 315)
+        Me.txt_password.Location = New System.Drawing.Point(125, 357)
         Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -173,7 +175,7 @@ Partial Class loan_release_set
         Me.lbl_transfer.BackColor = System.Drawing.Color.Transparent
         Me.lbl_transfer.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_transfer.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_transfer.Location = New System.Drawing.Point(328, 243)
+        Me.lbl_transfer.Location = New System.Drawing.Point(328, 233)
         Me.lbl_transfer.Name = "lbl_transfer"
         Me.lbl_transfer.Size = New System.Drawing.Size(28, 21)
         Me.lbl_transfer.TabIndex = 77
@@ -221,7 +223,7 @@ Partial Class loan_release_set
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.DimGray
-        Me.Label22.Location = New System.Drawing.Point(45, 244)
+        Me.Label22.Location = New System.Drawing.Point(45, 234)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(91, 20)
         Me.Label22.TabIndex = 73
@@ -318,11 +320,37 @@ Partial Class loan_release_set
         Me.Label3.TabIndex = 78
         Me.Label3.Text = "Insurance fee"
         '
+        'lbl_first
+        '
+        Me.lbl_first.AutoSize = True
+        Me.lbl_first.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_first.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_first.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_first.Location = New System.Drawing.Point(328, 267)
+        Me.lbl_first.Name = "lbl_first"
+        Me.lbl_first.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_first.TabIndex = 81
+        Me.lbl_first.Text = "---"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.DimGray
+        Me.Label5.Location = New System.Drawing.Point(45, 268)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(96, 20)
+        Me.Label5.TabIndex = 80
+        Me.Label5.Text = "First Payment"
+        '
         'loan_release_set
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(556, 387)
+        Me.ClientSize = New System.Drawing.Size(556, 435)
+        Me.Controls.Add(Me.lbl_first)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lbl_insurance)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lbl_transfer)
@@ -375,4 +403,6 @@ Partial Class loan_release_set
     Friend WithEvents lbl_purpose As Label
     Friend WithEvents lbl_insurance As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents lbl_first As Label
+    Friend WithEvents Label5 As Label
 End Class

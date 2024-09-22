@@ -148,6 +148,24 @@
     <Compile Include="Loan\loan_approval_set.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\loan_active.Designer.vb">
+      <DependentUpon>loan_active.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_active.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\loan_collection.Designer.vb">
+      <DependentUpon>loan_collection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_collection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\loan_collection_set.Designer.vb">
+      <DependentUpon>loan_collection_set.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_collection_set.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\loan_records.Designer.vb">
       <DependentUpon>loan_records.vb</DependentUpon>
     </Compile>
@@ -242,6 +260,15 @@
     <EmbeddedResource Include="Loan\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_active.resx">
+      <DependentUpon>loan_active.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_collection.resx">
+      <DependentUpon>loan_collection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_collection_set.resx">
+      <DependentUpon>loan_collection_set.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\loan_records.resx">
       <DependentUpon>loan_records.vb</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +339,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\send_cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property cash_payment() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cash_payment", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property DefaultProfileImage() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DefaultProfileImage", resourceCulture)
@@ -86,6 +96,36 @@ Namespace My.Resources
         Friend ReadOnly Property edit() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("edit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property paid() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("paid", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property pay() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pay", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property process() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("process", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

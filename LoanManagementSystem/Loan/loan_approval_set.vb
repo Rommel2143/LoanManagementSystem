@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class loan_approval_set
+
     Private Sub loan_approval_set_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_password.UseSystemPasswordChar = True
     End Sub
@@ -14,8 +15,8 @@ Public Class loan_approval_set
                                         WHERE u.referenceno='" & reference & "'", con)
             dr = cmd.ExecuteReader
             If dr.Read = True Then
-                lbl_account.Text = dr.GetString("account_no")
-                lbl_fullname.Text = dr.GetString("fullname")
+                lbl_account.Text = dr.GetString("fullname") & "(" & dr.GetString("account_no") & ")"
+
                 lbl_reference.Text = dr.GetString("referenceno")
                 lbl_loanamount.Text = dr.GetDecimal("amount").ToString("N0")
                 lbl_share.Text = dr.GetDecimal("sharecap").ToString("N0")

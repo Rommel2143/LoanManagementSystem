@@ -2,7 +2,7 @@
 
 Imports MySql.Data.MySqlClient
     Imports Guna.UI2.WinForms
-Public Class loan_approval
+Public Class loan_active
     Private Sub loan_approval(sender As Object, e As EventArgs) Handles MyBase.Load
 
         LoadMemberProfiles()
@@ -13,8 +13,11 @@ Public Class loan_approval
             flow_loan.Controls.Clear()
             con.Close()
             con.Open()
-            Dim query As String = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
-                                    JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 ORDER BY la.date_apply DESC"
+            Dim query As String = "SELECT lc.id,la.amount, lc.referenceno,la.purpose, lc.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_collection lc
+                                    JOIN member_profile mp ON mp.account_no = lc.account_no
+                                    JOIN loan_app la ON la.account_no = lc.account_no
+                                    WHERE lc.status= 0
+                                    GROUP BY lc.referenceno"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -36,7 +39,7 @@ Public Class loan_approval
                 memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
                                     $"  {reader("referenceno")}" & Environment.NewLine &
                                      $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
-                                    $"  Date Applied: {reader("date_apply")}"
+                                    $"  Date Approved: {reader("date_approved")}"
 
                 memberLabel.Location = New Point(10, 15)
 
@@ -45,7 +48,7 @@ Public Class loan_approval
                 ' Button for edit
                 Dim editbtn As New Guna2Button() With {
                                 .Text = "",
-                                .Image = My.Resources.edit,
+                                .Image = My.Resources.cash_payment,
                                 .Width = 65,
                                 .Height = 30,
                                 .ImageSize = New Size(40, 40),
@@ -77,9 +80,9 @@ Public Class loan_approval
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)
-                                              loan_approval_set.loadprofile(loanreference)
-                                              loan_approval_set.ShowDialog()
-                                              loan_approval_set.BringToFront()
+                                              Dim loancollect As New loan_collection
+                                              display_formsub(loancollect, "Loan Collection")
+                                              loancollect.loadmonths(loanreference)
 
                                           End Sub
             End While
@@ -98,8 +101,11 @@ Public Class loan_approval
             flow_loan.Controls.Clear()
             con.Close()
             con.Open()
-            Dim query As String = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
-                                    JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 and (la.referenceno REGEXP '" & txt_search.Text & "' or mp.lastname='" & txt_search.Text & "' or la.account_no REGEXP '" & txt_search.Text & "')"
+            Dim query As String = "SELECT lc.id,la.amount, lc.referenceno,la.purpose, lc.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_collection lc
+                                    JOIN member_profile mp ON mp.account_no = lc.account_no
+                                    JOIN loan_app la ON la.account_no = lc.account_no
+                                    WHERE lc.status= 0 and referenceno REGEXP '" & txt_search.Text & "'
+                                    GROUP BY lc.referenceno"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -121,7 +127,7 @@ Public Class loan_approval
                 memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
                                     $"  {reader("referenceno")}" & Environment.NewLine &
                                      $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
-                                    $"  Date Applied: {reader("date_apply")}"
+                                    $"  Date Approved: {reader("date_approved")}"
 
                 memberLabel.Location = New Point(10, 15)
 
@@ -130,7 +136,7 @@ Public Class loan_approval
                 ' Button for edit
                 Dim editbtn As New Guna2Button() With {
                                 .Text = "",
-                                .Image = My.Resources.edit,
+                                .Image = My.Resources.cash_payment,
                                 .Width = 65,
                                 .Height = 30,
                                 .ImageSize = New Size(40, 40),
@@ -162,9 +168,9 @@ Public Class loan_approval
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)
-                                              loan_approval_set.loadprofile(loanreference)
-                                              loan_approval_set.ShowDialog()
-                                              loan_approval_set.BringToFront()
+                                              display_formsub(loan_collection, "Loan Collection")
+                                              loan_collection.loadmonths(loanreference)
+
 
 
                                           End Sub
