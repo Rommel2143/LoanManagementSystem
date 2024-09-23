@@ -168,10 +168,11 @@ Public Class loan_active
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)
-                                              display_formsub(loan_collection, "Loan Collection")
-                                              loan_collection.loadmonths(loanreference)
 
 
+                                              Dim loancollect As New loan_collection
+                                              display_formsub(loancollect, "Loan Collection")
+                                              loancollect.loadmonths(loanreference)
 
                                           End Sub
             End While

@@ -1,9 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class loan_collection
     Dim referenceno As String
-    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
-
-    End Sub
 
     Public Sub loadmonths(reference As String)
         Try
@@ -81,12 +78,16 @@ Public Class loan_collection
                 ' Retrieve the value of the "id" column in the clicked row
 
                 Dim id As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
-                Dim datepay As String = datagrid1.Rows(e.RowIndex).Cells("Due_date").Value.ToString()
+                Dim datepay As Date = datagrid1.Rows(e.RowIndex).Cells("Due_date").Value.ToString()
                 Dim payment As String = datagrid1.Rows(e.RowIndex).Cells("Payment").Value.ToString()
                 loan_collection_set.loadprofile(lbl_reference.Text, id, datepay, payment, lbl_fullname.Text)
                 loan_collection_set.ShowDialog()
                 loan_collection_set.BringToFront()
             End If
             End If
+    End Sub
+
+    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
+
     End Sub
 End Class

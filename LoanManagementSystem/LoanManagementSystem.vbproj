@@ -333,6 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="report\" />
+    <Folder Include="Sharecap\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit.png" />

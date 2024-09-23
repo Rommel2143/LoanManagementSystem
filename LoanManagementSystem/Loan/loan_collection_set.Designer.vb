@@ -37,6 +37,8 @@ Partial Class loan_collection_set
         Me.lbl_payment = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_cdate = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbl_duefines = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -52,7 +54,7 @@ Partial Class loan_collection_set
         Me.Guna2ControlBox1.BorderRadius = 5
         Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(396, 22)
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(400, 22)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 62
@@ -114,7 +116,7 @@ Partial Class loan_collection_set
         Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(296, 176)
+        Me.Guna2Button1.Location = New System.Drawing.Point(307, 205)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(82, 40)
         Me.Guna2Button1.TabIndex = 53
@@ -129,7 +131,7 @@ Partial Class loan_collection_set
         Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
         Me.btn_see.ImageRotate = 0!
         Me.btn_see.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_see.Location = New System.Drawing.Point(262, 187)
+        Me.btn_see.Location = New System.Drawing.Point(273, 216)
         Me.btn_see.Name = "btn_see"
         Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.btn_see.Size = New System.Drawing.Size(22, 18)
@@ -149,7 +151,7 @@ Partial Class loan_collection_set
         Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
         Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(72, 176)
+        Me.txt_password.Location = New System.Drawing.Point(83, 205)
         Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -176,7 +178,7 @@ Partial Class loan_collection_set
         Me.lbl_payment.BackColor = System.Drawing.Color.Transparent
         Me.lbl_payment.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_payment.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_payment.Location = New System.Drawing.Point(194, 105)
+        Me.lbl_payment.Location = New System.Drawing.Point(206, 105)
         Me.lbl_payment.Name = "lbl_payment"
         Me.lbl_payment.Size = New System.Drawing.Size(28, 21)
         Me.lbl_payment.TabIndex = 66
@@ -206,11 +208,37 @@ Partial Class loan_collection_set
         Me.lbl_cdate.TabIndex = 68
         Me.lbl_cdate.Text = "---"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DimGray
+        Me.Label3.Location = New System.Drawing.Point(68, 144)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 20)
+        Me.Label3.TabIndex = 69
+        Me.Label3.Text = "Penalty :"
+        '
+        'lbl_duefines
+        '
+        Me.lbl_duefines.AutoSize = True
+        Me.lbl_duefines.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_duefines.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_duefines.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_duefines.Location = New System.Drawing.Point(135, 144)
+        Me.lbl_duefines.Name = "lbl_duefines"
+        Me.lbl_duefines.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_duefines.TabIndex = 70
+        Me.lbl_duefines.Text = "---"
+        '
         'loan_collection_set
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 244)
+        Me.ClientSize = New System.Drawing.Size(472, 301)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lbl_duefines)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lbl_cdate)
         Me.Controls.Add(Me.Label2)
@@ -244,4 +272,6 @@ Partial Class loan_collection_set
     Friend WithEvents lbl_payment As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents lbl_cdate As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lbl_duefines As Label
 End Class

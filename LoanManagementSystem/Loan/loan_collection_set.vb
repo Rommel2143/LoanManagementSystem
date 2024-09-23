@@ -2,17 +2,28 @@
 Imports MySql.Data.MySqlClient
 Public Class loan_collection_set
     Dim collection_id As Integer
+    Dim duefines As Decimal
     Private Sub loan_approval_set_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_password.UseSystemPasswordChar = True
     End Sub
 
-    Public Sub loadprofile(reference As String, id As Integer, collectdate As String, payment As Decimal, account As String)
+    Public Sub loadprofile(reference As String, id As Integer, collectdate As Date, payment As Decimal, account As String)
         Try
             lbl_reference.Text = reference
             collection_id = id
             lbl_account.Text = account
-            lbl_cdate.Text = collectdate
-            lbl_payment.Text = payment
+            lbl_cdate.Text = collectdate.ToString("MMMM dd, yyyy")
+            lbl_payment.Text = payment.ToString("N2")
+
+            ' Check if collection date is in the past
+            If collectdate < Date.Today Then
+                duefines = payment * 0.02 ' Apply 2% fine if the due date is in the past
+            Else
+                duefines = 0.00 ' No fine if the due date is today or in the future
+            End If
+
+
+            lbl_duefines.Text = duefines.ToString("N2")
         Catch ex As Exception
             display_error(ex.Message)
         Finally
@@ -35,13 +46,13 @@ Public Class loan_collection_set
             con.Close()
             con.Open()
             ' Update the status_inspect for the selected row
-            Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_collection SET status = 1, date_paid='" & datedb & "' WHERE id = '" & collection_id & "'", con)
+            Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_collection SET status = 1,due_fines='" & duefines & "', teller='" & user_account & "',date_paid='" & datedb & "' WHERE id = '" & collection_id & "'", con)
             cmdUpdateStatus.ExecuteNonQuery()
             display_formsub(loan_active, "Acive Loan")
-            loan_active.LoadMemberProfiles()
+
+            display_formsub(loan_collection, "Loan Collection")
+            loan_collection.loadmonths(lbl_reference.Text)
             Me.Close()
-
-
             txt_password.Clear()
         Else
             display_error("Invalid Password!")
