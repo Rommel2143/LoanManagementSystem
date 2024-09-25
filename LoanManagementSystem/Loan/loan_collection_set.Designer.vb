@@ -253,6 +253,7 @@ Partial Class loan_collection_set
         Me.Controls.Add(Me.txt_password)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "loan_collection_set"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "loan_collection_set"
         Me.ResumeLayout(False)
         Me.PerformLayout()

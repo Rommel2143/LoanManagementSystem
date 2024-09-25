@@ -59,4 +59,9 @@
         display_formsub(loan_active, "Acive Loan")
         loan_active.LoadMemberProfiles()
     End Sub
+
+    Private Sub AccountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccountsToolStripMenuItem.Click
+        display_formsub(member_accounts, "Acive Loan")
+        member_accounts.LoadData()
+    End Sub
 End Class

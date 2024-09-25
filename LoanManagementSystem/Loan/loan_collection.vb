@@ -84,10 +84,7 @@ Public Class loan_collection
                 loan_collection_set.ShowDialog()
                 loan_collection_set.BringToFront()
             End If
-            End If
+        End If
     End Sub
 
-    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
-
-    End Sub
 End Class

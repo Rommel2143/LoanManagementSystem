@@ -104,7 +104,7 @@ Public Class loan_active
             Dim query As String = "SELECT lc.id,la.amount, lc.referenceno,la.purpose, lc.account_no,  DATE_FORMAT(la.date_approved, '%M %d, %Y') AS date_approved,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_collection lc
                                     JOIN member_profile mp ON mp.account_no = lc.account_no
                                     JOIN loan_app la ON la.account_no = lc.account_no
-                                    WHERE lc.status= 0 and referenceno REGEXP '" & txt_search.Text & "'
+                                    WHERE lc.status= 0 and lc.referenceno REGEXP '" & txt_search.Text & "'
                                     GROUP BY lc.referenceno"
             Dim cmd As New MySqlCommand(query, con)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
