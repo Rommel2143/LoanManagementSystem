@@ -11,7 +11,9 @@
     End Sub
 
     Private Sub Guna2TileButton3_Click(sender As Object, e As EventArgs) Handles Guna2TileButton3.Click
-        display_formsub(sharecap_collection, "Share Capital")
+        Dim sc As New sharecap_collection
+        sc.loaddata(accountno, lbl_fullname.Text)
+        display_formsub(sc, "Share Capital")
 
         Me.Close()
     End Sub

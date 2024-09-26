@@ -2,60 +2,60 @@
 Public Class member_accounts
 
     Public Sub LoadData()
+        Try
+            reload("SELECT account_no, CONCAT(lastname, ', ', firstname, ' ', middlename, ' (',account_no,')') AS Member, `birthdate`, TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age, `civilstatus`, `sharecap`, `savings` FROM `member_profile`", datagrid1)
 
-        Dim query As String = "SELECT  account_no, CONCAT(lastname, ', ', firstname, ' ', middlename, ' (',account_no,')') AS Member,  `birthdate`,TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age, `civilstatus`, `sharecap`, `savings` FROM `member_profile`"
+            ' Add handler for DataBindingComplete to hide the account_no column
+            AddHandler datagrid1.DataBindingComplete, AddressOf OnDataBindingComplete
 
-        Using command As New MySqlCommand(query, con)
-            Dim adapter As New MySqlDataAdapter(command)
-            Dim table As New DataTable()
-            adapter.Fill(table)
-
-            ' Bind the DataTable to datagrid1
-            datagrid1.DataSource = table
-        End Using
-
-        ' Check if the "Edit" column already exists to avoid duplication
-        If datagrid1.Columns("Edit") Is Nothing Then
-            Dim editButton As New DataGridViewImageColumn()
-            editButton.Name = "Edit"
-            editButton.HeaderText = "Action"
-
-            editButton.ImageLayout = DataGridViewImageCellLayout.Zoom ' Optional: Adjust the image layout
-
-            ' Add the column to the DataGridView
-            datagrid1.Columns.Add(editButton)
-            datagrid1.Columns("Edit").DefaultCellStyle.Padding = New Padding(10)
-            datagrid1.Columns("Edit").Width = 60
-            datagrid1.Columns(0).Visible = False
-        End If
-
+        Catch ex As Exception
+            display_error("Error: " & ex.Message)
+        Finally
+            con.Close()
+        End Try
     End Sub
 
-    Private Sub datagrid1_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles datagrid1.CellPainting
-        ' Check if the current cell is in the "Edit" column
-        If e.ColumnIndex = datagrid1.Columns("Edit").Index AndAlso e.RowIndex >= 0 Then
-            e.Paint(e.CellBounds, DataGridViewPaintParts.All)
-
-            ' Get the icon (image) from your resources
-            Dim icon As Image = My.Resources.info
-
-            ' Define the icon size and calculate position to center the image
-            Dim iconSize As New Size(25, 25) ' Adjust the size as needed
-            Dim iconX As Integer = e.CellBounds.Left + (e.CellBounds.Width - iconSize.Width) \ 2
-            Dim iconY As Integer = e.CellBounds.Top + (e.CellBounds.Height - iconSize.Height) \ 2
-
-            ' Draw the icon in the calculated position
-            e.Graphics.DrawImage(icon, New Rectangle(iconX, iconY, iconSize.Width, iconSize.Height))
-
-            ' Prevent default painting to avoid overriding the icon
-            e.Handled = True
-        End If
+    Private Sub OnDataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs)
+        ' Hide the account_no column after data binding is complete
+        datagrid1.Columns("account_no").Visible = False
     End Sub
-    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
-        ' Check if the click was in the "Edit" column and not the header row
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = datagrid1.Columns("Edit").Index Then
-            ' Get the account_no of the clicked row
-            Dim accountNo As String = datagrid1.Rows(e.RowIndex).Cells("account_no").Value.ToString()
+
+
+
+
+    Private Sub txt_amount_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
+        Try
+
+            If txt_search.Text = "" Then
+                LoadData()
+            Else
+                con.Close()
+                con.Open()
+                Dim query As String = "SELECT  account_no, CONCAT(lastname, ', ', firstname, ' ', middlename, ' (',account_no,')') AS Member,  `birthdate`,TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age, `civilstatus`, `sharecap`, `savings` FROM `member_profile`
+                                WHERE account_no REGEXP '" & txt_search.Text & "' or lastname REGEXP '" & txt_search.Text & "'"
+
+                Using command As New MySqlCommand(query, con)
+                    Dim adapter As New MySqlDataAdapter(command)
+                    Dim table As New DataTable()
+                    adapter.Fill(table)
+
+                    ' Bind the DataTable to datagrid1
+                    datagrid1.DataSource = table
+                    datagrid1.Columns(0).Visible = False
+                End Using
+            End If
+
+        Catch ex As Exception
+            display_error("Error: " & ex.Message)
+        Finally
+            con.Close()
+        End Try
+    End Sub
+
+    Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
+
+        ' Get the account_no of the clicked row
+        Dim accountNo As String = datagrid1.Rows(e.RowIndex).Cells("account_no").Value.ToString()
             Dim member As String = datagrid1.Rows(e.RowIndex).Cells("Member").Value.ToString()
 
             Dim options As New member_options
@@ -63,7 +63,10 @@ Public Class member_accounts
             options.load_data(accountNo, member)
             options.ShowDialog()
 
-        End If
+
     End Sub
 
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
+    End Sub
 End Class

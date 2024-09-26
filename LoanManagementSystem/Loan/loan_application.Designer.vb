@@ -68,6 +68,8 @@ Partial Class loan_application
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmb_collateral = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.panel_apply = New System.Windows.Forms.TabPage()
+        Me.lbl_insurancefee = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.lbl_rate = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.lbl_comaker2 = New System.Windows.Forms.Label()
@@ -95,8 +97,6 @@ Partial Class loan_application
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lbl_purpose = New System.Windows.Forms.Label()
-        Me.lbl_insurancefee = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.tabcontrol.SuspendLayout()
         Me.panel_compute.SuspendLayout()
@@ -178,7 +178,7 @@ Partial Class loan_application
         Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
         Me.Guna2Button1.Location = New System.Drawing.Point(24, 21)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(105, 41)
+        Me.Guna2Button1.Size = New System.Drawing.Size(87, 41)
         Me.Guna2Button1.TabIndex = 17
         Me.Guna2Button1.Text = "Search"
         '
@@ -777,6 +777,30 @@ Partial Class loan_application
         Me.panel_apply.Text = "3. Summary"
         Me.panel_apply.UseVisualStyleBackColor = True
         '
+        'lbl_insurancefee
+        '
+        Me.lbl_insurancefee.AutoSize = True
+        Me.lbl_insurancefee.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_insurancefee.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_insurancefee.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_insurancefee.Location = New System.Drawing.Point(324, 125)
+        Me.lbl_insurancefee.Name = "lbl_insurancefee"
+        Me.lbl_insurancefee.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_insurancefee.TabIndex = 66
+        Me.lbl_insurancefee.Text = "---"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.DimGray
+        Me.Label29.Location = New System.Drawing.Point(41, 126)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(96, 20)
+        Me.Label29.TabIndex = 65
+        Me.Label29.Text = "Insurance fee"
+        '
         'lbl_rate
         '
         Me.lbl_rate.AutoSize = True
@@ -1091,30 +1115,6 @@ Partial Class loan_application
         Me.lbl_purpose.Size = New System.Drawing.Size(28, 21)
         Me.lbl_purpose.TabIndex = 23
         Me.lbl_purpose.Text = "---"
-        '
-        'lbl_insurancefee
-        '
-        Me.lbl_insurancefee.AutoSize = True
-        Me.lbl_insurancefee.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_insurancefee.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_insurancefee.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_insurancefee.Location = New System.Drawing.Point(324, 125)
-        Me.lbl_insurancefee.Name = "lbl_insurancefee"
-        Me.lbl_insurancefee.Size = New System.Drawing.Size(28, 21)
-        Me.lbl_insurancefee.TabIndex = 66
-        Me.lbl_insurancefee.Text = "---"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.Color.Transparent
-        Me.Label29.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.DimGray
-        Me.Label29.Location = New System.Drawing.Point(41, 126)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(96, 20)
-        Me.Label29.TabIndex = 65
-        Me.Label29.Text = "Insurance fee"
         '
         'loan_application
         '
