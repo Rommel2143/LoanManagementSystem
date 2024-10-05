@@ -30,6 +30,9 @@ Partial Class member_options
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton3 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.lbl_fullname = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -45,7 +48,7 @@ Partial Class member_options
         Me.Guna2ControlBox1.BorderRadius = 5
         Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(619, 12)
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(559, 12)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 77
@@ -63,11 +66,11 @@ Partial Class member_options
         Me.Guna2TileButton1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Guna2TileButton1.Image = CType(resources.GetObject("Guna2TileButton1.Image"), System.Drawing.Image)
         Me.Guna2TileButton1.ImageSize = New System.Drawing.Size(40, 40)
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(77, 114)
+        Me.Guna2TileButton1.Location = New System.Drawing.Point(50, 155)
         Me.Guna2TileButton1.Name = "Guna2TileButton1"
         Me.Guna2TileButton1.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2TileButton1.ShadowDecoration.Enabled = True
-        Me.Guna2TileButton1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Guna2TileButton1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 3, 5, 5)
         Me.Guna2TileButton1.Size = New System.Drawing.Size(145, 146)
         Me.Guna2TileButton1.TabIndex = 78
         Me.Guna2TileButton1.Text = "Information"
@@ -85,11 +88,11 @@ Partial Class member_options
         Me.Guna2TileButton2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Guna2TileButton2.Image = CType(resources.GetObject("Guna2TileButton2.Image"), System.Drawing.Image)
         Me.Guna2TileButton2.ImageSize = New System.Drawing.Size(40, 40)
-        Me.Guna2TileButton2.Location = New System.Drawing.Point(260, 114)
+        Me.Guna2TileButton2.Location = New System.Drawing.Point(233, 155)
         Me.Guna2TileButton2.Name = "Guna2TileButton2"
         Me.Guna2TileButton2.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2TileButton2.ShadowDecoration.Enabled = True
-        Me.Guna2TileButton2.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Guna2TileButton2.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 3, 5, 5)
         Me.Guna2TileButton2.Size = New System.Drawing.Size(145, 146)
         Me.Guna2TileButton2.TabIndex = 79
         Me.Guna2TileButton2.Text = "Savings"
@@ -107,11 +110,11 @@ Partial Class member_options
         Me.Guna2TileButton3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Guna2TileButton3.Image = CType(resources.GetObject("Guna2TileButton3.Image"), System.Drawing.Image)
         Me.Guna2TileButton3.ImageSize = New System.Drawing.Size(40, 40)
-        Me.Guna2TileButton3.Location = New System.Drawing.Point(448, 114)
+        Me.Guna2TileButton3.Location = New System.Drawing.Point(421, 155)
         Me.Guna2TileButton3.Name = "Guna2TileButton3"
         Me.Guna2TileButton3.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2TileButton3.ShadowDecoration.Enabled = True
-        Me.Guna2TileButton3.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Guna2TileButton3.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 3, 5, 5)
         Me.Guna2TileButton3.Size = New System.Drawing.Size(145, 146)
         Me.Guna2TileButton3.TabIndex = 80
         Me.Guna2TileButton3.Text = "Share Capital"
@@ -122,27 +125,50 @@ Partial Class member_options
         Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(72, 47)
+        Me.lbl_fullname.Location = New System.Drawing.Point(101, 70)
         Me.lbl_fullname.Name = "lbl_fullname"
-        Me.lbl_fullname.Size = New System.Drawing.Size(36, 25)
+        Me.lbl_fullname.Size = New System.Drawing.Size(235, 25)
         Me.lbl_fullname.TabIndex = 82
-        Me.lbl_fullname.Text = "---"
+        Me.lbl_fullname.Text = "Juan Dela Cruz (03200728)"
         Me.lbl_fullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.LoanManagementSystem.My.Resources.Resources.DefaultProfileImage
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(35, 52)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(60, 60)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 83
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'Guna2Separator1
+        '
+        Me.Guna2Separator1.Location = New System.Drawing.Point(-30, 120)
+        Me.Guna2Separator1.Name = "Guna2Separator1"
+        Me.Guna2Separator1.Size = New System.Drawing.Size(693, 10)
+        Me.Guna2Separator1.TabIndex = 84
         '
         'member_options
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(676, 306)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(616, 333)
+        Me.Controls.Add(Me.Guna2Separator1)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.lbl_fullname)
+        Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.Guna2TileButton3)
         Me.Controls.Add(Me.Guna2TileButton2)
         Me.Controls.Add(Me.Guna2TileButton1)
-        Me.Controls.Add(Me.Guna2ControlBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "member_options"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "member_options"
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -154,4 +180,6 @@ Partial Class member_options
     Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents lbl_fullname As Label
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
 End Class

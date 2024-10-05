@@ -24,7 +24,7 @@ Public Class loan_active
             While reader.Read()
                 ' Create a new Guna2Panel for each member
                 Dim memberPanel As New Guna2Panel()
-                memberPanel.Width = flow_loan.Width - 20
+                memberPanel.Width = (flow_loan.Width / 3)
                 memberPanel.Height = 120
                 memberPanel.BackColor = Color.FromArgb(250, 250, 250)
                 memberPanel.BorderRadius = 10
@@ -112,7 +112,7 @@ Public Class loan_active
             While reader.Read()
                 ' Create a new Guna2Panel for each member
                 Dim memberPanel As New Guna2Panel()
-                memberPanel.Width = flow_loan.Width - 20
+                memberPanel.Width = (flow_loan.Width / 3)
                 memberPanel.Height = 120
                 memberPanel.BackColor = Color.FromArgb(250, 250, 250)
                 memberPanel.BorderRadius = 10
