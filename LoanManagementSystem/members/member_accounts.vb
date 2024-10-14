@@ -69,4 +69,8 @@ Public Class member_accounts
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
+
+    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
+
+    End Sub
 End Class

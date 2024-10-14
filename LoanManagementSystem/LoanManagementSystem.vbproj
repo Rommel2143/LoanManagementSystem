@@ -261,6 +261,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="savings\savings.Designer.vb">
+      <DependentUpon>savings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="savings\savings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Sharecap\sharecap_collection.Designer.vb">
       <DependentUpon>sharecap_collection.vb</DependentUpon>
     </Compile>
@@ -331,6 +337,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="savings\savings.resx">
+      <DependentUpon>savings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sharecap\sharecap_collection.resx">
       <DependentUpon>sharecap_collection.vb</DependentUpon>

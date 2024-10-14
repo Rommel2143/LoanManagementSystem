@@ -18,6 +18,7 @@ Module Module1
     Public user_fullname As String
     Public user_firstname As String
     Public user_level As String
+    Public user_pass As String
     'credentials of PC used
     Public user_account As String
 
@@ -78,6 +79,10 @@ Module Module1
         subframe.error_panel.Show()
         subframe.lbl_error.Text = text
     End Sub
+
+    Public Sub hide_error()
+        subframe.error_panel.Hide()
+    End Sub
     Public Sub reload(ByVal sql As String, ByVal DTG As Object)
         Try
             dt = New DataTable
@@ -125,15 +130,13 @@ Module Module1
         Dim rand As New Random()
 
         reference.Append(transcode) ' Add hyphen separator
-        ' Generate 6 random letters
+        reference.Append("-") ' Add hyphen separator
+
         For i As Integer = 1 To 3
             reference.Append(letters(rand.Next(letters.Length)))
         Next
 
-        reference.Append("-") ' Add hyphen separator
-
-        ' Generate 9 random digits
-        For i As Integer = 1 To 6
+        For i As Integer = 1 To 3
             reference.Append(digits(rand.Next(digits.Length)))
         Next
         reference.Append("-") ' Add hyphen separator
@@ -141,5 +144,39 @@ Module Module1
         Return reference.ToString()
     End Function
 
+
+    Public Function checksavings(accountno As String) As Decimal
+        Try
+            ' Ensure the connection is closed before opening it
+            con.Close()
+            con.Open()
+
+            ' Define the SQL command to check balance
+            Dim check As New MySqlCommand("SELECT 
+            SUM(CASE WHEN `status` = 'D' THEN `amount` ELSE 0 END) - 
+            SUM(CASE WHEN `status` = 'W' THEN `amount` ELSE 0 END) AS balance
+            FROM `savings`
+            WHERE `account_no` = @accountno", con)
+
+            ' Add the parameter for account number
+            check.Parameters.AddWithValue("@accountno", accountno)
+
+            ' Execute the command and retrieve the balance
+            Dim balance As Object = check.ExecuteScalar()
+
+            ' Check if the result is not null and return the balance as Decimal
+            If balance IsNot DBNull.Value Then
+                Return Convert.ToDecimal(balance)
+            Else
+                Return 0 ' Return 0 if no balance is found
+            End If
+        Catch ex As Exception
+            ' Handle any errors that occur during the execution
+            MessageBox.Show("Error: " & ex.Message)
+            Return 0 ' Return 0 in case of an error
+        Finally
+            con.Close() ' Ensure the connection is closed
+        End Try
+    End Function
 
 End Module

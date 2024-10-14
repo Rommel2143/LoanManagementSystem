@@ -72,7 +72,7 @@ Public Class Login
                 user_account = dr("account_no").ToString
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
-
+                user_pass = dr.GetString("pass")
                 If dr.GetInt32("loan_apply") = 1 Then
                     subframe.btn_loan_apply.Visible = True
                 Else

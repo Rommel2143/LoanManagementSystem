@@ -9,7 +9,7 @@
             user_account = "03200728"
             user_fullname = "Rommel Cueto Magnaye"
             user_firstname = "Dev Rommel"
-
+            user_pass = "123"
             display_mainframe(subframe)
             subframe.userstrip.Text = "Hello, " & user_firstname
 
