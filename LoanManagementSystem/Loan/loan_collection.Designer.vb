@@ -131,7 +131,7 @@ Partial Class loan_collection
         Me.lbl_loanamount.BackColor = System.Drawing.Color.Transparent
         Me.lbl_loanamount.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_loanamount.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_loanamount.Location = New System.Drawing.Point(701, 36)
+        Me.lbl_loanamount.Location = New System.Drawing.Point(704, 37)
         Me.lbl_loanamount.Name = "lbl_loanamount"
         Me.lbl_loanamount.Size = New System.Drawing.Size(28, 21)
         Me.lbl_loanamount.TabIndex = 82
@@ -143,7 +143,7 @@ Partial Class loan_collection
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DimGray
-        Me.Label6.Location = New System.Drawing.Point(599, 36)
+        Me.Label6.Location = New System.Drawing.Point(599, 37)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(96, 20)
         Me.Label6.TabIndex = 81
@@ -167,7 +167,7 @@ Partial Class loan_collection
         Me.lbl_purpose.BackColor = System.Drawing.Color.Transparent
         Me.lbl_purpose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_purpose.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_purpose.Location = New System.Drawing.Point(701, 11)
+        Me.lbl_purpose.Location = New System.Drawing.Point(704, 11)
         Me.lbl_purpose.Name = "lbl_purpose"
         Me.lbl_purpose.Size = New System.Drawing.Size(28, 21)
         Me.lbl_purpose.TabIndex = 80
@@ -179,7 +179,7 @@ Partial Class loan_collection
         Me.lbl_reference.BackColor = System.Drawing.Color.Transparent
         Me.lbl_reference.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_reference.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_reference.Location = New System.Drawing.Point(155, 16)
+        Me.lbl_reference.Location = New System.Drawing.Point(159, 16)
         Me.lbl_reference.Name = "lbl_reference"
         Me.lbl_reference.Size = New System.Drawing.Size(27, 20)
         Me.lbl_reference.TabIndex = 78
@@ -203,7 +203,7 @@ Partial Class loan_collection
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.Location = New System.Drawing.Point(47, 37)
+        Me.Label1.Location = New System.Drawing.Point(49, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 20)
         Me.Label1.TabIndex = 75
@@ -215,7 +215,7 @@ Partial Class loan_collection
         Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(125, 36)
+        Me.lbl_fullname.Location = New System.Drawing.Point(132, 36)
         Me.lbl_fullname.Name = "lbl_fullname"
         Me.lbl_fullname.Size = New System.Drawing.Size(28, 21)
         Me.lbl_fullname.TabIndex = 76

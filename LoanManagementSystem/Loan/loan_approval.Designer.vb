@@ -49,10 +49,10 @@ Partial Class loan_approval
         '
         'flow_loan
         '
-        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Left
+        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flow_loan.Location = New System.Drawing.Point(0, 112)
         Me.flow_loan.Name = "flow_loan"
-        Me.flow_loan.Size = New System.Drawing.Size(591, 489)
+        Me.flow_loan.Size = New System.Drawing.Size(1001, 489)
         Me.flow_loan.TabIndex = 5
         '
         'Guna2Panel1

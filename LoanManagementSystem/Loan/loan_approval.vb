@@ -21,12 +21,16 @@ Public Class loan_approval
             While reader.Read()
                 ' Create a new Guna2Panel for each member
                 Dim memberPanel As New Guna2Panel()
-                memberPanel.Width = flow_loan.Width - 20
+                memberPanel.Width = (flow_loan.Width / 5)
                 memberPanel.Height = 120
                 memberPanel.BackColor = Color.FromArgb(250, 250, 250)
-                memberPanel.BorderRadius = 10
+                ' memberPanel.BorderRadius = 10
                 memberPanel.Margin = New Padding(10)
+                memberPanel.FillColor = Color.White
 
+                memberPanel.ShadowDecoration.Enabled = True
+                memberPanel.ShadowDecoration.Color = Color.Silver
+                memberPanel.ShadowDecoration.BorderRadius = 10
 
                 ' Label for member information
                 Dim memberLabel As New Label()
@@ -45,12 +49,13 @@ Public Class loan_approval
                 ' Button for edit
                 Dim editbtn As New Guna2Button() With {
                                 .Text = "",
-                                .Image = My.Resources.edit,
+                                .Image = My.Resources.balance,
                                 .Width = 65,
                                 .Height = 30,
                                 .ImageSize = New Size(40, 40),
                                 .Dock = DockStyle.Right,
                                 .Tag = reader("referenceno"),
+                                .BorderRadius = 10,
                                 .FillColor = Color.Transparent}
 
 
@@ -62,17 +67,27 @@ Public Class loan_approval
                 ' Add Panel to the FlowLayoutPanel
                 flow_loan.Controls.Add(memberPanel)
 
-                ' Optional hover effect
                 AddHandler memberPanel.MouseEnter, Sub(senderObj, eArgs)
-                                                       memberPanel.BackColor = Color.FromArgb(240, 240, 240)
-                                                       memberLabel.ForeColor = Color.FromArgb(30, 30, 30)
+
+
+
+                                                       memberPanel.ShadowDecoration.Color = Color.DimGray
 
                                                    End Sub
+                AddHandler editbtn.MouseEnter, Sub(senderObj, eArgs)
+                                                   editbtn.ImageSize = New Size(50, 50)
+                                                   editbtn.FillColor = Color.FromArgb(250, 250, 250)
+                                               End Sub
+                AddHandler editbtn.MouseLeave, Sub(senderObj, eArgs)
+                                                   editbtn.ImageSize = New Size(40, 40)
+
+                                               End Sub
 
                 AddHandler memberPanel.MouseLeave, Sub(senderObj, eArgs)
-                                                       memberPanel.BackColor = Color.FromArgb(250, 250, 250)
+                                                       memberPanel.FillColor = Color.FromArgb(250, 250, 250)
                                                        memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
-
+                                                       memberPanel.ShadowDecoration.Color = Color.Silver
+                                                       memberLabel.BackColor = Color.FromArgb(250, 250, 250)
                                                    End Sub
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
@@ -106,7 +121,7 @@ Public Class loan_approval
             While reader.Read()
                 ' Create a new Guna2Panel for each member
                 Dim memberPanel As New Guna2Panel()
-                memberPanel.Width = flow_loan.Width - 20
+                memberPanel.Width = (flow_loan.Width / 3) - 5
                 memberPanel.Height = 120
                 memberPanel.BackColor = Color.FromArgb(250, 250, 250)
                 memberPanel.BorderRadius = 10
@@ -130,7 +145,7 @@ Public Class loan_approval
                 ' Button for edit
                 Dim editbtn As New Guna2Button() With {
                                 .Text = "",
-                                .Image = My.Resources.edit,
+                                .Image = My.Resources.balance,
                                 .Width = 65,
                                 .Height = 30,
                                 .ImageSize = New Size(40, 40),
@@ -151,14 +166,15 @@ Public Class loan_approval
                 AddHandler memberPanel.MouseEnter, Sub(senderObj, eArgs)
                                                        memberPanel.BackColor = Color.FromArgb(240, 240, 240)
                                                        memberLabel.ForeColor = Color.FromArgb(30, 30, 30)
-
+                                                       memberPanel.BorderRadius = 10
                                                    End Sub
 
                 AddHandler memberPanel.MouseLeave, Sub(senderObj, eArgs)
                                                        memberPanel.BackColor = Color.FromArgb(250, 250, 250)
                                                        memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
-
+                                                       memberPanel.BorderRadius = 10
                                                    End Sub
+
                 AddHandler editbtn.Click, Sub(senderObj, eArgs)
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)

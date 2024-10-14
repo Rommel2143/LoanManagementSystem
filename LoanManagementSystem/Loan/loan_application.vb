@@ -44,11 +44,14 @@ Public Class loan_application
                                                                         `months_count`,
                                                                         `teller`,
                                                                         `teller_approved`,
-                                                                        `mode`, `purpose`,
+                                                                         `teller_release`, 
+                                                                        `mode`,
+                                                                        `purpose`,
                                                                         `comaker_1`,
                                                                         `comaker_2`,
                                                                         `interest_rate`,
                                                                         `service_fee`,
+                                                                        `insurance_fee`,
                                                                         `interest`,
                                                                         `collateral`,
                                                                         `collateral_value`,
@@ -63,11 +66,13 @@ Public Class loan_application
                                                                         @months_count,
                                                                         @teller,
                                                                         @teller_approved,
+                                                                        @teller_release,
                                                                         @mode, @purpose,
                                                                         @comaker_1,
                                                                         @comaker_2,
                                                                         @interest_rate,
                                                                         @service_fee,
+                                                                        @insurance_fee,
                                                                         @interest,
                                                                         @collateral,
                                                                         @collateral_value,
@@ -84,12 +89,14 @@ Public Class loan_application
             cmdinsert.Parameters.AddWithValue("@months_count", month_count)
             cmdinsert.Parameters.AddWithValue("@teller", user_account)
             cmdinsert.Parameters.AddWithValue("@teller_approved", String.Empty)
+            cmdinsert.Parameters.AddWithValue("@teller_release", String.Empty)
             cmdinsert.Parameters.AddWithValue("@mode", cmb_mode.Text)
             cmdinsert.Parameters.AddWithValue("@purpose", cmb_purpose.Text)
             cmdinsert.Parameters.AddWithValue("@comaker_1", comaker1)
             cmdinsert.Parameters.AddWithValue("@comaker_2", comaker2)
             cmdinsert.Parameters.AddWithValue("@interest_rate", interest_rate)
             cmdinsert.Parameters.AddWithValue("@service_fee", Convert.ToDecimal(lbl_servicefee.Text))
+            cmdinsert.Parameters.AddWithValue("@insurance_fee", Convert.ToDecimal(txt_insurance.Text))
             cmdinsert.Parameters.AddWithValue("@interest", Convert.ToDecimal(lbl_interest.Text))
             cmdinsert.Parameters.AddWithValue("@collateral", cmb_collateral.Text)
             cmdinsert.Parameters.AddWithValue("@collateral_value", Convert.ToDecimal(txt_collavalue.Text))
@@ -168,7 +175,19 @@ Public Class loan_application
         AddHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
 
     End Sub
-    Private Sub num_plan_ValueChanged(sender As Object, e As EventArgs) Handles num_plan.ValueChanged, btn_month.CheckedChanged, btn_year.CheckedChanged, txt_amount.TextChanged, cmb_purpose.SelectedIndexChanged
+    Private Sub txt_amount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_amount.KeyPress, txt_insurance.KeyPress
+        ' Allow only digits, one decimal point, and backspace
+        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) AndAlso (e.KeyChar <> "."c) Then
+            e.Handled = True
+        End If
+
+        ' Allow only one decimal point
+        If (e.KeyChar = "."c) AndAlso (txt_amount.Text.IndexOf("."c) > -1) Then
+            e.Handled = True
+        End If
+
+    End Sub
+    Private Sub num_plan_ValueChanged(sender As Object, e As EventArgs) Handles num_plan.ValueChanged, num_plan.TextChanged, btn_month.CheckedChanged, btn_year.CheckedChanged, txt_amount.TextChanged, cmb_purpose.SelectedIndexChanged
         Try
 
             If txt_amount.Text = "" Then
@@ -188,20 +207,21 @@ Public Class loan_application
                 ' Calculate monthly amortization
                 monthly_ammo = Math.Round((loan_amount * monthly_interest_rate) / (1 - (1 + monthly_interest_rate) ^ -month_count), 2)
                 txt_ma.Text = monthly_ammo.ToString("N2") & "/ month"
-
+                lbl_percentinterest.Text = (interest_rate * 100) & "%"
                 'service fee
                 If month_count <= 6 Then
                     lbl_servicefee.Text = loan_amount * 0.015
                 Else
                     lbl_servicefee.Text = loan_amount * 0.03
                 End If
-                lbl_interest.Text = (monthly_ammo * month_count) - loan_amount
+                lbl_interest.Text = Convert.ToDecimal((monthly_ammo * month_count) - loan_amount).ToString("N2")
 
 
-                lbl_loanamount.Text = loan_amount
-                lbl_processfee.Text = "-" & lbl_servicefee.Text
+                lbl_loanamount.Text = loan_amount.ToString("N0")
+                lbl_processfee.Text = "-" & Convert.ToDecimal(lbl_servicefee.Text).ToString("N0")
                 lbl_purpose.Text = cmb_purpose.Text
-                lbl_disbursement.Text = loan_amount - (Convert.ToDecimal(lbl_servicefee.Text))
+
+                lbl_disbursement.Text = (loan_amount - (Convert.ToDecimal(lbl_servicefee.Text) + Convert.ToDecimal(txt_insurance.Text))).ToString("N0")
                 lbl_term.Text = month_count & " months"
                 lbl_ma.Text = txt_ma.Text
             End If
@@ -212,9 +232,7 @@ Public Class loan_application
         End Try
     End Sub
 
-    Private Sub txt_amount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_amount.KeyPress
 
-    End Sub
 
     Private Sub lbl_account_Click(sender As Object, e As EventArgs) Handles lbl_account.Click
 
@@ -298,6 +316,22 @@ Public Class loan_application
     End Sub
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
+    End Sub
+
+    Private Sub txt_insurance_TextChanged(sender As Object, e As EventArgs) Handles txt_insurance.TextChanged
+        If txt_insurance.Text = "" Then
+
+        Else
+            lbl_insurancefee.Text = (Convert.ToDecimal(txt_insurance.Text) * -1).ToString("N0")
+        End If
+    End Sub
+
+    Private Sub lbl_loanamount_Click(sender As Object, e As EventArgs) Handles lbl_loanamount.Click
+
+    End Sub
+
+    Private Sub lbl_loanamount_TextChanged(sender As Object, e As EventArgs) Handles lbl_loanamount.TextChanged
 
     End Sub
 End Class

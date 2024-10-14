@@ -58,10 +58,10 @@ Partial Class loan_release
         '
         'flow_loan
         '
-        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Left
+        Me.flow_loan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flow_loan.Location = New System.Drawing.Point(0, 112)
         Me.flow_loan.Name = "flow_loan"
-        Me.flow_loan.Size = New System.Drawing.Size(591, 338)
+        Me.flow_loan.Size = New System.Drawing.Size(800, 338)
         Me.flow_loan.TabIndex = 3
         '
         'loan_release
