@@ -20,7 +20,7 @@
 
     Private Sub Guna2TileButton2_Click(sender As Object, e As EventArgs) Handles Guna2TileButton2.Click
         Dim sav As New savings
-        sav.loaddata(accountno)
+        sav.loaddata(accountno, lbl_fullname.Text)
         display_formsub(sav, "Savings")
         Me.Close()
     End Sub

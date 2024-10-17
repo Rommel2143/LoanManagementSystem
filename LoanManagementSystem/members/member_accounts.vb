@@ -3,7 +3,9 @@ Public Class member_accounts
 
     Public Sub LoadData()
         Try
-            reload("SELECT account_no, CONCAT(lastname, ', ', firstname, ' ', middlename, ' (',account_no,')') AS Member, `birthdate`, TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age, `civilstatus`, `sharecap`, `savings` FROM `member_profile`", datagrid1)
+            reload("SELECT  mp.account_no, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename, ' (',mp.account_no,')') AS Member,  mp.birthdate,TIMESTAMPDIFF(Year, mp.birthdate, CURDATE()) AS Age, mp.civilstatus FROM `member_profile` mp
+                               
+                               ", datagrid1)
 
             ' Add handler for DataBindingComplete to hide the account_no column
             AddHandler datagrid1.DataBindingComplete, AddressOf OnDataBindingComplete
@@ -31,7 +33,8 @@ Public Class member_accounts
             Else
                 con.Close()
                 con.Open()
-                Dim query As String = "SELECT  account_no, CONCAT(lastname, ', ', firstname, ' ', middlename, ' (',account_no,')') AS Member,  `birthdate`,TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age, `civilstatus`, `sharecap`, `savings` FROM `member_profile`
+                Dim query As String = "SELECT  mp.account_no, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename, ' (',mp.account_no,')') AS Member,  mp.birthdate,TIMESTAMPDIFF(Year, mp.birthdate, CURDATE()) AS Age, mp.civilstatus FROM `member_profile` mp
+                               
                                 WHERE account_no REGEXP '" & txt_search.Text & "' or lastname REGEXP '" & txt_search.Text & "'"
 
                 Using command As New MySqlCommand(query, con)
@@ -53,9 +56,11 @@ Public Class member_accounts
     End Sub
 
     Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
+        Try
 
-        ' Get the account_no of the clicked row
-        Dim accountNo As String = datagrid1.Rows(e.RowIndex).Cells("account_no").Value.ToString()
+
+            ' Get the account_no of the clicked row
+            Dim accountNo As String = datagrid1.Rows(e.RowIndex).Cells("account_no").Value.ToString()
             Dim member As String = datagrid1.Rows(e.RowIndex).Cells("Member").Value.ToString()
 
             Dim options As New member_options
@@ -63,7 +68,9 @@ Public Class member_accounts
             options.load_data(accountNo, member)
             options.ShowDialog()
 
+        Catch ex As Exception
 
+        End Try
     End Sub
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint

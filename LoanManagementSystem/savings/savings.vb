@@ -5,28 +5,39 @@ Public Class savings
     Private Sub savings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-    Public Sub loaddata(account As String)
+    Public Sub loaddata(account As String, fname As String)
         account_no = account
-        lbl_balance.Text = checksavings(account)
+        lbl_balance.Text = String.Format("₱{0:N2}", checksavings(account))
+        lbl_accountname.Text = fname
         reload("SELECT `referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `savings` WHERE account_no='" & account & "' ", datagrid1)
+        datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Try
 
             If user_pass = txt_password.Text Then
 
+                Dim trans As String = Nothing
+                Select Case cmb_deptrans.Text
+                    Case "Cash"
+                        trans = "CD"
+                    Case "Check"
+                        trans = "CHKD"
+                    Case "Initial"
+                        trans = "ID"
+                End Select
 
                 con.Close()
                 con.Open()
 
                 ' Use parameterized query
                 Dim cmdinsert As New MySqlCommand("INSERT INTO savings (`referenceno`, `account_no`, `amount`, `date_transac`, `time`,`status`, `teller`)
-                                                                VALUES ('" & GenerateReferenceNumber("D") & "',
+                                                                VALUES ('" & GenerateReferenceNumber("S") & "',
                                                                        '" & account_no & "',
                                                                         @amount,
                                                                        '" & datedb & "',
                                                                        '" & Date.Now.ToString("HH:mm") & "',
-                                                                       'D',
+                                                                       '" & trans & "',
                                                                        '" & user_account & "')", con)
 
                 ' Add parameters
@@ -36,7 +47,7 @@ Public Class savings
                 MessageBox.Show("Record saved successfully.")
                 txt_amountdeposit.Clear()
                 txt_password.Clear()
-                loaddata(account_no)
+                loaddata(account_no, lbl_accountname.Text)
             Else
                 display_error("Invalid Password!")
             End If
@@ -60,17 +71,26 @@ Public Class savings
                     display_error("Available balance to low!")
                     Exit Sub
                 End If
+
+                Dim trans As String = Nothing
+                Select Case cmb_withtrans.Text
+                    Case "Cash"
+                        trans = "CW"
+                    Case "Check"
+                        trans = "CHKW"
+
+                End Select
                 con.Close()
                     con.Open()
 
                 ' Use parameterized query
                 Dim cmdinsert As New MySqlCommand("INSERT INTO savings (`referenceno`, `account_no`, `amount`, `date_transac`, `time`, `status`, `teller`)
-                                                                VALUES ('" & GenerateReferenceNumber("W") & "',
+                                                                VALUES ('" & GenerateReferenceNumber("S") & "',
                                                                        '" & account_no & "',
                                                                         @amount,
                                                                        '" & datedb & "',
                                                                        '" & Date.Now.ToString("HH:mm") & "',
-                                                                       'W',
+                                                                       '" & trans & "',
                                                                        '" & user_account & "')", con)
 
                 ' Add parameters
@@ -80,7 +100,7 @@ Public Class savings
                 MessageBox.Show("Record saved successfully.")
                     txt_amountwithdraw.Clear()
                     txt_passwithdraw.Clear()
-                    loaddata(account_no)
+                loaddata(account_no, lbl_accountname.Text)
 
 
             Else
@@ -129,6 +149,14 @@ Public Class savings
     End Sub
 
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
+
+    End Sub
+
+    Private Sub cmb_purpose_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_deptrans.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
 End Class
