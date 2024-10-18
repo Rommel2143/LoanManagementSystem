@@ -4,8 +4,9 @@ Imports System.Text
 Module Module1
 
     Public Function connection() As MySqlConnection
-        Return New MySqlConnection("server=localhost;user id=lms;password=Magnaye2143@#;database=lms")
-        'Return New MySqlConnection("server=localhost;user id=Inventorysystem;password=admin@2024;database=trcsystem")
+        '  Return New MySqlConnection("server=localhost;user id=lms;password=Magnaye2143@#;database=lms")
+        Return New MySqlConnection("server=localhost;user id=root;password= ;database=lms")
+
     End Function
     Public con As MySqlConnection = connection()
     Public result As String
@@ -26,7 +27,7 @@ Module Module1
     Public PCmac As String = GetMacAddress()
 
 
-    Public date1 As String = Date.Now.ToString("MMMM-dd-yyyy")
+    Public date1 As String = Date.Now.ToString("MMMM dd, yyyy")
     Public datedb As String = Date.Now.ToString("yyyy-MM-dd")
     Public shift1 As String
 

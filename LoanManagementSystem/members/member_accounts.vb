@@ -80,4 +80,8 @@ Public Class member_accounts
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
 
     End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        display_formsub(New add_member, "Add Member")
+    End Sub
 End Class
