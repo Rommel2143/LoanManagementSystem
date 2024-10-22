@@ -61,6 +61,20 @@ Partial Class add_member
         Me.Label14 = New System.Windows.Forms.Label()
         Me.cmb_empstatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.lbl_id = New System.Windows.Forms.Label()
+        Me.lbl_idtype = New System.Windows.Forms.Label()
+        Me.lbl_employ = New System.Windows.Forms.Label()
+        Me.lbl_email = New System.Windows.Forms.Label()
+        Me.lbl_contact2 = New System.Windows.Forms.Label()
+        Me.lbl_contact1 = New System.Windows.Forms.Label()
+        Me.lbl_present = New System.Windows.Forms.Label()
+        Me.lbl_birthplace = New System.Windows.Forms.Label()
+        Me.lbl_gender = New System.Windows.Forms.Label()
+        Me.lbl_civil = New System.Windows.Forms.Label()
+        Me.lbl_birthdate = New System.Windows.Forms.Label()
+        Me.lbl_fullname = New System.Windows.Forms.Label()
+        Me.lbl_account = New System.Windows.Forms.Label()
+        Me.btn_submit = New Guna.UI2.WinForms.Guna2Button()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -74,20 +88,6 @@ Partial Class add_member
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.btn_submit = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.lbl_fullname = New System.Windows.Forms.Label()
-        Me.lbl_birthdate = New System.Windows.Forms.Label()
-        Me.lbl_civil = New System.Windows.Forms.Label()
-        Me.lbl_gender = New System.Windows.Forms.Label()
-        Me.lbl_birthplace = New System.Windows.Forms.Label()
-        Me.lbl_present = New System.Windows.Forms.Label()
-        Me.lbl_contact1 = New System.Windows.Forms.Label()
-        Me.lbl_contact2 = New System.Windows.Forms.Label()
-        Me.lbl_email = New System.Windows.Forms.Label()
-        Me.lbl_employ = New System.Windows.Forms.Label()
-        Me.lbl_idtype = New System.Windows.Forms.Label()
-        Me.lbl_id = New System.Windows.Forms.Label()
         Me.Guna2TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.pic_user, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -711,7 +711,7 @@ Partial Class add_member
         Me.TabPage4.Controls.Add(Me.lbl_civil)
         Me.TabPage4.Controls.Add(Me.lbl_birthdate)
         Me.TabPage4.Controls.Add(Me.lbl_fullname)
-        Me.TabPage4.Controls.Add(Me.Label30)
+        Me.TabPage4.Controls.Add(Me.lbl_account)
         Me.TabPage4.Controls.Add(Me.btn_submit)
         Me.TabPage4.Controls.Add(Me.Label27)
         Me.TabPage4.Controls.Add(Me.Label28)
@@ -732,6 +732,177 @@ Partial Class add_member
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "4. Review & Submit"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'lbl_id
+        '
+        Me.lbl_id.AutoSize = True
+        Me.lbl_id.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_id.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_id.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_id.Location = New System.Drawing.Point(180, 698)
+        Me.lbl_id.Name = "lbl_id"
+        Me.lbl_id.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_id.TabIndex = 92
+        Me.lbl_id.Text = "---"
+        '
+        'lbl_idtype
+        '
+        Me.lbl_idtype.AutoSize = True
+        Me.lbl_idtype.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_idtype.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_idtype.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_idtype.Location = New System.Drawing.Point(180, 649)
+        Me.lbl_idtype.Name = "lbl_idtype"
+        Me.lbl_idtype.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_idtype.TabIndex = 91
+        Me.lbl_idtype.Text = "---"
+        '
+        'lbl_employ
+        '
+        Me.lbl_employ.AutoSize = True
+        Me.lbl_employ.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_employ.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_employ.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_employ.Location = New System.Drawing.Point(180, 603)
+        Me.lbl_employ.Name = "lbl_employ"
+        Me.lbl_employ.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_employ.TabIndex = 90
+        Me.lbl_employ.Text = "---"
+        '
+        'lbl_email
+        '
+        Me.lbl_email.AutoSize = True
+        Me.lbl_email.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_email.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_email.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_email.Location = New System.Drawing.Point(180, 562)
+        Me.lbl_email.Name = "lbl_email"
+        Me.lbl_email.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_email.TabIndex = 89
+        Me.lbl_email.Text = "---"
+        '
+        'lbl_contact2
+        '
+        Me.lbl_contact2.AutoSize = True
+        Me.lbl_contact2.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_contact2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_contact2.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_contact2.Location = New System.Drawing.Point(180, 516)
+        Me.lbl_contact2.Name = "lbl_contact2"
+        Me.lbl_contact2.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_contact2.TabIndex = 88
+        Me.lbl_contact2.Text = "---"
+        '
+        'lbl_contact1
+        '
+        Me.lbl_contact1.AutoSize = True
+        Me.lbl_contact1.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_contact1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_contact1.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_contact1.Location = New System.Drawing.Point(180, 469)
+        Me.lbl_contact1.Name = "lbl_contact1"
+        Me.lbl_contact1.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_contact1.TabIndex = 87
+        Me.lbl_contact1.Text = "---"
+        '
+        'lbl_present
+        '
+        Me.lbl_present.AutoSize = True
+        Me.lbl_present.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_present.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_present.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_present.Location = New System.Drawing.Point(180, 420)
+        Me.lbl_present.Name = "lbl_present"
+        Me.lbl_present.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_present.TabIndex = 86
+        Me.lbl_present.Text = "---"
+        '
+        'lbl_birthplace
+        '
+        Me.lbl_birthplace.AutoSize = True
+        Me.lbl_birthplace.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_birthplace.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_birthplace.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_birthplace.Location = New System.Drawing.Point(180, 365)
+        Me.lbl_birthplace.Name = "lbl_birthplace"
+        Me.lbl_birthplace.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_birthplace.TabIndex = 85
+        Me.lbl_birthplace.Text = "---"
+        '
+        'lbl_gender
+        '
+        Me.lbl_gender.AutoSize = True
+        Me.lbl_gender.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_gender.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_gender.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_gender.Location = New System.Drawing.Point(180, 305)
+        Me.lbl_gender.Name = "lbl_gender"
+        Me.lbl_gender.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_gender.TabIndex = 84
+        Me.lbl_gender.Text = "---"
+        '
+        'lbl_civil
+        '
+        Me.lbl_civil.AutoSize = True
+        Me.lbl_civil.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_civil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_civil.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_civil.Location = New System.Drawing.Point(180, 245)
+        Me.lbl_civil.Name = "lbl_civil"
+        Me.lbl_civil.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_civil.TabIndex = 83
+        Me.lbl_civil.Text = "---"
+        '
+        'lbl_birthdate
+        '
+        Me.lbl_birthdate.AutoSize = True
+        Me.lbl_birthdate.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_birthdate.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_birthdate.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_birthdate.Location = New System.Drawing.Point(180, 186)
+        Me.lbl_birthdate.Name = "lbl_birthdate"
+        Me.lbl_birthdate.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_birthdate.TabIndex = 82
+        Me.lbl_birthdate.Text = "---"
+        '
+        'lbl_fullname
+        '
+        Me.lbl_fullname.AutoSize = True
+        Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_fullname.Location = New System.Drawing.Point(180, 125)
+        Me.lbl_fullname.Name = "lbl_fullname"
+        Me.lbl_fullname.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_fullname.TabIndex = 81
+        Me.lbl_fullname.Text = "---"
+        '
+        'lbl_account
+        '
+        Me.lbl_account.AutoSize = True
+        Me.lbl_account.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_account.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_account.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_account.Location = New System.Drawing.Point(180, 80)
+        Me.lbl_account.Name = "lbl_account"
+        Me.lbl_account.Size = New System.Drawing.Size(23, 17)
+        Me.lbl_account.TabIndex = 80
+        Me.lbl_account.Text = "---"
+        '
+        'btn_submit
+        '
+        Me.btn_submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btn_submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btn_submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btn_submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btn_submit.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.btn_submit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btn_submit.ForeColor = System.Drawing.Color.White
+        Me.btn_submit.Location = New System.Drawing.Point(55, 753)
+        Me.btn_submit.Name = "btn_submit"
+        Me.btn_submit.Size = New System.Drawing.Size(119, 46)
+        Me.btn_submit.TabIndex = 79
+        Me.btn_submit.Text = "Submit"
         '
         'Label27
         '
@@ -889,177 +1060,6 @@ Partial Class add_member
         Me.Label25.TabIndex = 62
         Me.Label25.Text = "Fullname"
         '
-        'btn_submit
-        '
-        Me.btn_submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn_submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn_submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn_submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn_submit.FillColor = System.Drawing.Color.DarkSlateBlue
-        Me.btn_submit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn_submit.ForeColor = System.Drawing.Color.White
-        Me.btn_submit.Location = New System.Drawing.Point(55, 753)
-        Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Size = New System.Drawing.Size(119, 46)
-        Me.btn_submit.TabIndex = 79
-        Me.btn_submit.Text = "Submit"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.DimGray
-        Me.Label30.Location = New System.Drawing.Point(180, 80)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(23, 17)
-        Me.Label30.TabIndex = 80
-        Me.Label30.Text = "---"
-        '
-        'lbl_fullname
-        '
-        Me.lbl_fullname.AutoSize = True
-        Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(180, 125)
-        Me.lbl_fullname.Name = "lbl_fullname"
-        Me.lbl_fullname.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_fullname.TabIndex = 81
-        Me.lbl_fullname.Text = "---"
-        '
-        'lbl_birthdate
-        '
-        Me.lbl_birthdate.AutoSize = True
-        Me.lbl_birthdate.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_birthdate.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_birthdate.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_birthdate.Location = New System.Drawing.Point(180, 186)
-        Me.lbl_birthdate.Name = "lbl_birthdate"
-        Me.lbl_birthdate.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_birthdate.TabIndex = 82
-        Me.lbl_birthdate.Text = "---"
-        '
-        'lbl_civil
-        '
-        Me.lbl_civil.AutoSize = True
-        Me.lbl_civil.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_civil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_civil.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_civil.Location = New System.Drawing.Point(180, 245)
-        Me.lbl_civil.Name = "lbl_civil"
-        Me.lbl_civil.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_civil.TabIndex = 83
-        Me.lbl_civil.Text = "---"
-        '
-        'lbl_gender
-        '
-        Me.lbl_gender.AutoSize = True
-        Me.lbl_gender.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_gender.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_gender.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_gender.Location = New System.Drawing.Point(180, 305)
-        Me.lbl_gender.Name = "lbl_gender"
-        Me.lbl_gender.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_gender.TabIndex = 84
-        Me.lbl_gender.Text = "---"
-        '
-        'lbl_birthplace
-        '
-        Me.lbl_birthplace.AutoSize = True
-        Me.lbl_birthplace.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_birthplace.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_birthplace.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_birthplace.Location = New System.Drawing.Point(180, 365)
-        Me.lbl_birthplace.Name = "lbl_birthplace"
-        Me.lbl_birthplace.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_birthplace.TabIndex = 85
-        Me.lbl_birthplace.Text = "---"
-        '
-        'lbl_present
-        '
-        Me.lbl_present.AutoSize = True
-        Me.lbl_present.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_present.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_present.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_present.Location = New System.Drawing.Point(180, 420)
-        Me.lbl_present.Name = "lbl_present"
-        Me.lbl_present.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_present.TabIndex = 86
-        Me.lbl_present.Text = "---"
-        '
-        'lbl_contact1
-        '
-        Me.lbl_contact1.AutoSize = True
-        Me.lbl_contact1.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_contact1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_contact1.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_contact1.Location = New System.Drawing.Point(180, 469)
-        Me.lbl_contact1.Name = "lbl_contact1"
-        Me.lbl_contact1.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_contact1.TabIndex = 87
-        Me.lbl_contact1.Text = "---"
-        '
-        'lbl_contact2
-        '
-        Me.lbl_contact2.AutoSize = True
-        Me.lbl_contact2.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_contact2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_contact2.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_contact2.Location = New System.Drawing.Point(180, 516)
-        Me.lbl_contact2.Name = "lbl_contact2"
-        Me.lbl_contact2.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_contact2.TabIndex = 88
-        Me.lbl_contact2.Text = "---"
-        '
-        'lbl_email
-        '
-        Me.lbl_email.AutoSize = True
-        Me.lbl_email.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_email.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_email.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_email.Location = New System.Drawing.Point(180, 562)
-        Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_email.TabIndex = 89
-        Me.lbl_email.Text = "---"
-        '
-        'lbl_employ
-        '
-        Me.lbl_employ.AutoSize = True
-        Me.lbl_employ.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_employ.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_employ.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_employ.Location = New System.Drawing.Point(180, 603)
-        Me.lbl_employ.Name = "lbl_employ"
-        Me.lbl_employ.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_employ.TabIndex = 90
-        Me.lbl_employ.Text = "---"
-        '
-        'lbl_idtype
-        '
-        Me.lbl_idtype.AutoSize = True
-        Me.lbl_idtype.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_idtype.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_idtype.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_idtype.Location = New System.Drawing.Point(180, 649)
-        Me.lbl_idtype.Name = "lbl_idtype"
-        Me.lbl_idtype.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_idtype.TabIndex = 91
-        Me.lbl_idtype.Text = "---"
-        '
-        'lbl_id
-        '
-        Me.lbl_id.AutoSize = True
-        Me.lbl_id.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_id.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_id.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_id.Location = New System.Drawing.Point(180, 698)
-        Me.lbl_id.Name = "lbl_id"
-        Me.lbl_id.Size = New System.Drawing.Size(23, 17)
-        Me.lbl_id.TabIndex = 92
-        Me.lbl_id.Text = "---"
-        '
         'add_member
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1147,6 +1147,6 @@ Partial Class add_member
     Friend WithEvents lbl_civil As Label
     Friend WithEvents lbl_birthdate As Label
     Friend WithEvents lbl_fullname As Label
-    Friend WithEvents Label30 As Label
+    Friend WithEvents lbl_account As Label
     Friend WithEvents btn_submit As Guna.UI2.WinForms.Guna2Button
 End Class

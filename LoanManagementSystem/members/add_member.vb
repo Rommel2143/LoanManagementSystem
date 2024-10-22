@@ -58,4 +58,11 @@ Public Class add_member
         End Try
     End Sub
 
+    Private Sub txt_account_TextChanged(sender As Object, e As EventArgs) Handles txt_account.TextChanged
+        lbl_account.Text = txt_account.Text
+    End Sub
+
+    Private Sub txt_firstname_TextChanged(sender As Object, e As EventArgs) Handles txt_firstname.TextChanged, txt_lastname.TextChanged, txt_midlename.TextChanged
+        lbl_fullname.Text = txt_lastname.Text & ", " & txt_firstname.Text & " " & txt_midlename.Text
+    End Sub
 End Class
