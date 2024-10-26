@@ -32,12 +32,7 @@ Partial Class manage_profiles
         Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ImageButton2 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.btn_login = New Guna.UI2.WinForms.Guna2Button()
-        Me.error_panel = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.lbl_error = New System.Windows.Forms.Label()
         Me.img_notequal = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.error_panel.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.img_notequal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -193,45 +188,6 @@ Partial Class manage_profiles
         Me.btn_login.TabIndex = 32
         Me.btn_login.Text = "Change my password"
         '
-        'error_panel
-        '
-        Me.error_panel.Controls.Add(Me.Guna2PictureBox1)
-        Me.error_panel.Controls.Add(Me.lbl_error)
-        Me.error_panel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.error_panel.FillColor = System.Drawing.Color.Red
-        Me.error_panel.FillColor2 = System.Drawing.Color.Tomato
-        Me.error_panel.Location = New System.Drawing.Point(0, 0)
-        Me.error_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.error_panel.Name = "error_panel"
-        Me.error_panel.Size = New System.Drawing.Size(1198, 34)
-        Me.error_panel.TabIndex = 33
-        Me.error_panel.Visible = False
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(15, 1)
-        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(27, 29)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 1
-        Me.Guna2PictureBox1.TabStop = False
-        '
-        'lbl_error
-        '
-        Me.lbl_error.AutoSize = True
-        Me.lbl_error.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_error.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_error.ForeColor = System.Drawing.Color.White
-        Me.lbl_error.Location = New System.Drawing.Point(50, 7)
-        Me.lbl_error.Name = "lbl_error"
-        Me.lbl_error.Size = New System.Drawing.Size(135, 20)
-        Me.lbl_error.TabIndex = 0
-        Me.lbl_error.Text = "Invalid Credentials"
-        '
         'img_notequal
         '
         Me.img_notequal.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -253,7 +209,6 @@ Partial Class manage_profiles
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1198, 771)
         Me.Controls.Add(Me.img_notequal)
-        Me.Controls.Add(Me.error_panel)
         Me.Controls.Add(Me.btn_login)
         Me.Controls.Add(Me.Guna2ImageButton2)
         Me.Controls.Add(Me.Guna2ImageButton1)
@@ -267,9 +222,6 @@ Partial Class manage_profiles
         Me.Name = "manage_profiles"
         Me.Text = "manage_profiles"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.error_panel.ResumeLayout(False)
-        Me.error_panel.PerformLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.img_notequal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -284,8 +236,5 @@ Partial Class manage_profiles
     Friend WithEvents txt_password As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2ImageButton2 As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents btn_login As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents error_panel As Guna.UI2.WinForms.Guna2GradientPanel
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents lbl_error As Label
     Friend WithEvents img_notequal As Guna.UI2.WinForms.Guna2PictureBox
 End Class

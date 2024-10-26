@@ -11,9 +11,14 @@ Public Class loan_application
     Public comaker2 As String = ""
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        search_name.ShowDialog()
-        search_name.BringToFront()
-        search_name.lbl_who.Text = "Borrower :"
+        Dim search As New search_name
+        With search
+            .lbl_who.Text = "Borrower :"
+            .ShowDialog()
+            .BringToFront()
+
+        End With
+
     End Sub
 
     Private Sub loan_application_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -275,15 +280,24 @@ Public Class loan_application
     End Sub
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
-        search_name.Show()
-        search_name.BringToFront()
-        search_name.lbl_who.Text = "Co-maker 1 :"
+
+        Dim search As New search_name
+        With search
+            .lbl_who.Text = "Co-maker 1 :"
+            .ShowDialog()
+            .BringToFront()
+
+        End With
     End Sub
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
-        search_name.Show()
-        search_name.BringToFront()
-        search_name.lbl_who.Text = "Co-maker 2 :"
+        Dim search As New search_name
+        With search
+            .lbl_who.Text = "Co-maker 2 :"
+            .ShowDialog()
+            .BringToFront()
+
+        End With
     End Sub
 
     Private Sub panel_details_Click(sender As Object, e As EventArgs) Handles panel_details.Click

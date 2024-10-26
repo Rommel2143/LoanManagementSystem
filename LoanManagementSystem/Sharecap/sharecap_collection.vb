@@ -36,7 +36,7 @@ Public Class sharecap_collection
                 ' Add parameters
                 cmdinsert.Parameters.AddWithValue("@amount", Convert.ToDecimal(txt_amountdeposit.Text))
                 cmdinsert.ExecuteNonQuery()
-                hide_error()
+
                 MessageBox.Show("Record saved successfully.")
                 txt_amountdeposit.Clear()
                 txt_password.Clear()
@@ -114,6 +114,10 @@ Public Class sharecap_collection
     End Sub
 
     Private Sub TabPage3_Click(sender As Object, e As EventArgs) Handles TabPage3.Click
+
+    End Sub
+
+    Private Sub Guna2Panel1_Paint_1(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
 End Class

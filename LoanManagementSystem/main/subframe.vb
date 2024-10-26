@@ -36,9 +36,6 @@
         display_formsub(loan_application, "Loan Application")
     End Sub
 
-    Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
-        error_panel.Visible = False
-    End Sub
 
     Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_approve.Click
         display_formsub(loan_approval, "Loan Approval")

@@ -93,9 +93,9 @@ Public Class Login
 
                 display_mainframe(subframe)
                     subframe.userstrip.Text = "Hello, " & user_firstname
-                    error_panel.Visible = False
-                Else
-                    error_panel.Visible = True
+
+            Else
+                ShowSnackbar("Invalid Credentials")
                 txt_password.Clear()
             End If
 

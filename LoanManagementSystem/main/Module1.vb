@@ -77,13 +77,10 @@ Module Module1
         End With
     End Sub
     Public Sub display_error(text As String)
-        subframe.error_panel.Show()
-        subframe.lbl_error.Text = text
+        ShowSnackbar(text)
     End Sub
 
-    Public Sub hide_error()
-        subframe.error_panel.Hide()
-    End Sub
+
     Public Sub reload(ByVal sql As String, ByVal DTG As Object)
         Try
             dt = New DataTable
@@ -145,6 +142,52 @@ Module Module1
         Return reference.ToString()
     End Function
 
+    Public Sub ShowSnackbar(message As String)
+        ' Create a new Form to act as the snackbar
+        Dim snackbarForm As New Form()
+
+        ' Set basic properties
+        snackbarForm.FormBorderStyle = FormBorderStyle.None
+        snackbarForm.StartPosition = FormStartPosition.Manual
+        snackbarForm.BackColor = Color.FromArgb(60, 63, 65) ' Dark background
+        snackbarForm.ForeColor = Color.White ' White text
+        snackbarForm.Height = 40 ' Set the height of the snackbar
+        snackbarForm.Width = Screen.PrimaryScreen.Bounds.Width ' Set the width to screen width
+        snackbarForm.TopMost = True ' Ensure it's on top
+        snackbarForm.ShowInTaskbar = False
+
+        ' Set the position at the top of the screen (90 pixels from the top)
+        snackbarForm.Location = New Point(0, 90) ' Start at the top-left corner of the screen
+
+        ' Add a label to display the message
+        Dim messageLabel As New Label()
+        messageLabel.Text = message
+        messageLabel.Font = New Font("Segoe UI", 10)
+        messageLabel.ForeColor = Color.White ' White text for better contrast
+        messageLabel.AutoSize = False
+        messageLabel.TextAlign = ContentAlignment.MiddleCenter
+        messageLabel.Dock = DockStyle.Fill ' Fill the entire form with the label
+        snackbarForm.Controls.Add(messageLabel)
+
+
+
+        snackbarForm.Show()
+
+
+        ' Set up a timer to close the snackbar after a few seconds
+        Dim closeTimer As New Timer()
+        AddHandler closeTimer.Tick, Sub(sender, e)
+                                        ' Fade out effect
+                                        For i As Integer = 10 To 0 Step -1
+                                            snackbarForm.Opacity = i / 10.0
+                                            Threading.Thread.Sleep(30)
+                                        Next
+                                        snackbarForm.Close() ' Close the snackbar
+                                        closeTimer.Stop()
+                                    End Sub
+        closeTimer.Interval = 3000 ' Show for specified duration
+        closeTimer.Start()
+    End Sub
 
     Public Function checksavings(accountno As String) As Decimal
         Try
@@ -220,4 +263,10 @@ Module Module1
             con.Close() ' Ensure the connection is closed
         End Try
     End Function
+    Public Sub Format_currency(column As String, dt As Object)
+        ' Set currency format for Sharecap column in datagrid1
+        If dt.Columns.Contains(column) Then
+            dt.Columns(column).DefaultCellStyle.Format = "₱#,##0.00"
+        End If
+    End Sub
 End Module

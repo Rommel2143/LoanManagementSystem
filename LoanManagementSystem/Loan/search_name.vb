@@ -1,36 +1,56 @@
-﻿Public Class search_name
+﻿Imports MySql.Data.MySqlClient
+Public Class search_name
     Dim account As String
     Dim fullname As String
     Dim sharecap As Integer
 
     Private Sub search_name_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        reloadgrid()
     End Sub
 
-
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
-        If txt_search.Text = "" Then
-            reloadgrid()
-        Else
-            reload("Select account_no AS Account_no, 
-                       CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname, 
-                       sharecap AS Share_Capital,
-                       TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age
-                From member_profile
-                Where account_no REGEXP '" & txt_search.Text & "' 
-                   Or firstname REGEXP '" & txt_search.Text & "' 
-                   Or lastname REGEXP '" & txt_search.Text & "' ", datagrid1)
-        End If
+        Try
+            If txt_search.Text = "" Then
+                reloadgrid()
+            Else
+                Dim query As String = "SELECT mp.account_no AS Account_no, 
+                                       TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
+                                      CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
+                                      COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
+                                               SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap
+                                   FROM member_profile mp
+                                   LEFT JOIN sharecap sc ON sc.account_no = mp.account_no
+                                  WHERE mp.account_no REGEXP '" & txt_search.Text & "' 
+                   OR firstname REGEXP '" & txt_search.Text & "' 
+                   OR lastname REGEXP '" & txt_search.Text & "'
+                                   GROUP BY mp.account_no"
 
+                reload(query, datagrid1)
+                Format_currency("Sharecap", datagrid1) ' Format Sharecap column
+            End If
+        Catch ex As Exception
+            ' Handle the exception, e.g., display a custom message or log the error
+            MessageBox.Show("An error occurred while searching. Please try again.")
+        End Try
     End Sub
 
     Private Sub reloadgrid()
-        reload("Select account_no AS Account_no, 
-                       CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname, 
-                       sharecap AS Share_Capital,
-                       TIMESTAMPDIFF(Year, birthdate, CURDATE()) AS Age
-                From member_profile", datagrid1)
+        Dim query As String="SELECT mp.account_no AS Account_no, 
+                                      CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
+                                      TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
+                                      COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
+                                               SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap
+                                   FROM member_profile mp
+                                   LEFT JOIN sharecap sc ON sc.account_no = mp.account_no
+                                     GROUP BY mp.account_no"
+        reload(query, datagrid1)
+        Format_currency("Sharecap", datagrid1) ' Format Sharecap column
     End Sub
+
+
+
+
+
 
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
 

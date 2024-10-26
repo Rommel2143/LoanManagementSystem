@@ -43,7 +43,6 @@ Public Class savings
                 ' Add parameters
                 cmdinsert.Parameters.AddWithValue("@amount", Convert.ToDecimal(txt_amountdeposit.Text))
                 cmdinsert.ExecuteNonQuery()
-                hide_error()
                 MessageBox.Show("Record saved successfully.")
                 txt_amountdeposit.Clear()
                 txt_password.Clear()
@@ -96,7 +95,6 @@ Public Class savings
                 ' Add parameters
                 cmdinsert.Parameters.AddWithValue("@amount", Convert.ToDecimal(txt_amountwithdraw.Text))
                 cmdinsert.ExecuteNonQuery()
-                hide_error()
                 MessageBox.Show("Record saved successfully.")
                     txt_amountwithdraw.Clear()
                     txt_passwithdraw.Clear()

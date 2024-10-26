@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class add_member
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class add_member
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(add_member))
         Me.Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
@@ -88,6 +88,7 @@ Partial Class add_member
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
+        Me.Guna2CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.Guna2TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.pic_user, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,6 +190,7 @@ Partial Class add_member
         '
         'pic_user
         '
+        Me.pic_user.BackColor = System.Drawing.Color.White
         Me.pic_user.ImageRotate = 0!
         Me.pic_user.Location = New System.Drawing.Point(87, 493)
         Me.pic_user.Name = "pic_user"
@@ -257,7 +259,6 @@ Partial Class add_member
         Me.cmb_gender.Location = New System.Drawing.Point(571, 259)
         Me.cmb_gender.Name = "cmb_gender"
         Me.cmb_gender.Size = New System.Drawing.Size(147, 36)
-        Me.cmb_gender.StartIndex = 0
         Me.cmb_gender.TabIndex = 56
         '
         'Label5
@@ -441,11 +442,11 @@ Partial Class add_member
         Me.cmb_civil.Location = New System.Drawing.Point(385, 259)
         Me.cmb_civil.Name = "cmb_civil"
         Me.cmb_civil.Size = New System.Drawing.Size(147, 36)
-        Me.cmb_civil.StartIndex = 0
         Me.cmb_civil.TabIndex = 45
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Guna2CheckBox1)
         Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.txt_contact2)
         Me.TabPage2.Controls.Add(Me.Label12)
@@ -663,7 +664,6 @@ Partial Class add_member
         Me.cmb_idtype.Location = New System.Drawing.Point(74, 162)
         Me.cmb_idtype.Name = "cmb_idtype"
         Me.cmb_idtype.Size = New System.Drawing.Size(226, 36)
-        Me.cmb_idtype.StartIndex = 0
         Me.cmb_idtype.TabIndex = 72
         '
         'Label14
@@ -692,7 +692,6 @@ Partial Class add_member
         Me.cmb_empstatus.Location = New System.Drawing.Point(74, 69)
         Me.cmb_empstatus.Name = "cmb_empstatus"
         Me.cmb_empstatus.Size = New System.Drawing.Size(226, 36)
-        Me.cmb_empstatus.StartIndex = 0
         Me.cmb_empstatus.TabIndex = 70
         '
         'TabPage4
@@ -739,7 +738,7 @@ Partial Class add_member
         Me.lbl_id.BackColor = System.Drawing.Color.Transparent
         Me.lbl_id.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_id.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_id.Location = New System.Drawing.Point(180, 698)
+        Me.lbl_id.Location = New System.Drawing.Point(256, 541)
         Me.lbl_id.Name = "lbl_id"
         Me.lbl_id.Size = New System.Drawing.Size(23, 17)
         Me.lbl_id.TabIndex = 92
@@ -751,7 +750,7 @@ Partial Class add_member
         Me.lbl_idtype.BackColor = System.Drawing.Color.Transparent
         Me.lbl_idtype.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_idtype.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_idtype.Location = New System.Drawing.Point(180, 649)
+        Me.lbl_idtype.Location = New System.Drawing.Point(256, 497)
         Me.lbl_idtype.Name = "lbl_idtype"
         Me.lbl_idtype.Size = New System.Drawing.Size(23, 17)
         Me.lbl_idtype.TabIndex = 91
@@ -763,7 +762,7 @@ Partial Class add_member
         Me.lbl_employ.BackColor = System.Drawing.Color.Transparent
         Me.lbl_employ.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_employ.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_employ.Location = New System.Drawing.Point(180, 603)
+        Me.lbl_employ.Location = New System.Drawing.Point(256, 453)
         Me.lbl_employ.Name = "lbl_employ"
         Me.lbl_employ.Size = New System.Drawing.Size(23, 17)
         Me.lbl_employ.TabIndex = 90
@@ -775,7 +774,7 @@ Partial Class add_member
         Me.lbl_email.BackColor = System.Drawing.Color.Transparent
         Me.lbl_email.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_email.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_email.Location = New System.Drawing.Point(180, 562)
+        Me.lbl_email.Location = New System.Drawing.Point(256, 409)
         Me.lbl_email.Name = "lbl_email"
         Me.lbl_email.Size = New System.Drawing.Size(23, 17)
         Me.lbl_email.TabIndex = 89
@@ -787,7 +786,7 @@ Partial Class add_member
         Me.lbl_contact2.BackColor = System.Drawing.Color.Transparent
         Me.lbl_contact2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_contact2.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_contact2.Location = New System.Drawing.Point(180, 516)
+        Me.lbl_contact2.Location = New System.Drawing.Point(256, 365)
         Me.lbl_contact2.Name = "lbl_contact2"
         Me.lbl_contact2.Size = New System.Drawing.Size(23, 17)
         Me.lbl_contact2.TabIndex = 88
@@ -799,7 +798,7 @@ Partial Class add_member
         Me.lbl_contact1.BackColor = System.Drawing.Color.Transparent
         Me.lbl_contact1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_contact1.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_contact1.Location = New System.Drawing.Point(180, 469)
+        Me.lbl_contact1.Location = New System.Drawing.Point(256, 321)
         Me.lbl_contact1.Name = "lbl_contact1"
         Me.lbl_contact1.Size = New System.Drawing.Size(23, 17)
         Me.lbl_contact1.TabIndex = 87
@@ -811,7 +810,7 @@ Partial Class add_member
         Me.lbl_present.BackColor = System.Drawing.Color.Transparent
         Me.lbl_present.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_present.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_present.Location = New System.Drawing.Point(180, 420)
+        Me.lbl_present.Location = New System.Drawing.Point(256, 277)
         Me.lbl_present.Name = "lbl_present"
         Me.lbl_present.Size = New System.Drawing.Size(23, 17)
         Me.lbl_present.TabIndex = 86
@@ -823,7 +822,7 @@ Partial Class add_member
         Me.lbl_birthplace.BackColor = System.Drawing.Color.Transparent
         Me.lbl_birthplace.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_birthplace.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_birthplace.Location = New System.Drawing.Point(180, 365)
+        Me.lbl_birthplace.Location = New System.Drawing.Point(256, 233)
         Me.lbl_birthplace.Name = "lbl_birthplace"
         Me.lbl_birthplace.Size = New System.Drawing.Size(23, 17)
         Me.lbl_birthplace.TabIndex = 85
@@ -835,7 +834,7 @@ Partial Class add_member
         Me.lbl_gender.BackColor = System.Drawing.Color.Transparent
         Me.lbl_gender.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_gender.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_gender.Location = New System.Drawing.Point(180, 305)
+        Me.lbl_gender.Location = New System.Drawing.Point(256, 189)
         Me.lbl_gender.Name = "lbl_gender"
         Me.lbl_gender.Size = New System.Drawing.Size(23, 17)
         Me.lbl_gender.TabIndex = 84
@@ -847,7 +846,7 @@ Partial Class add_member
         Me.lbl_civil.BackColor = System.Drawing.Color.Transparent
         Me.lbl_civil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_civil.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_civil.Location = New System.Drawing.Point(180, 245)
+        Me.lbl_civil.Location = New System.Drawing.Point(256, 145)
         Me.lbl_civil.Name = "lbl_civil"
         Me.lbl_civil.Size = New System.Drawing.Size(23, 17)
         Me.lbl_civil.TabIndex = 83
@@ -859,7 +858,7 @@ Partial Class add_member
         Me.lbl_birthdate.BackColor = System.Drawing.Color.Transparent
         Me.lbl_birthdate.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_birthdate.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_birthdate.Location = New System.Drawing.Point(180, 186)
+        Me.lbl_birthdate.Location = New System.Drawing.Point(256, 101)
         Me.lbl_birthdate.Name = "lbl_birthdate"
         Me.lbl_birthdate.Size = New System.Drawing.Size(23, 17)
         Me.lbl_birthdate.TabIndex = 82
@@ -871,7 +870,7 @@ Partial Class add_member
         Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(180, 125)
+        Me.lbl_fullname.Location = New System.Drawing.Point(256, 57)
         Me.lbl_fullname.Name = "lbl_fullname"
         Me.lbl_fullname.Size = New System.Drawing.Size(23, 17)
         Me.lbl_fullname.TabIndex = 81
@@ -883,7 +882,7 @@ Partial Class add_member
         Me.lbl_account.BackColor = System.Drawing.Color.Transparent
         Me.lbl_account.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_account.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_account.Location = New System.Drawing.Point(180, 80)
+        Me.lbl_account.Location = New System.Drawing.Point(256, 31)
         Me.lbl_account.Name = "lbl_account"
         Me.lbl_account.Size = New System.Drawing.Size(23, 17)
         Me.lbl_account.TabIndex = 80
@@ -898,7 +897,7 @@ Partial Class add_member
         Me.btn_submit.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.btn_submit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btn_submit.ForeColor = System.Drawing.Color.White
-        Me.btn_submit.Location = New System.Drawing.Point(55, 753)
+        Me.btn_submit.Location = New System.Drawing.Point(54, 629)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(119, 46)
         Me.btn_submit.TabIndex = 79
@@ -910,7 +909,7 @@ Partial Class add_member
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.DimGray
-        Me.Label27.Location = New System.Drawing.Point(53, 698)
+        Me.Label27.Location = New System.Drawing.Point(51, 541)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(45, 17)
         Me.Label27.TabIndex = 78
@@ -922,7 +921,7 @@ Partial Class add_member
         Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.DimGray
-        Me.Label28.Location = New System.Drawing.Point(53, 649)
+        Me.Label28.Location = New System.Drawing.Point(52, 497)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(51, 17)
         Me.Label28.TabIndex = 77
@@ -934,7 +933,7 @@ Partial Class add_member
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.DimGray
-        Me.Label29.Location = New System.Drawing.Point(52, 603)
+        Me.Label29.Location = New System.Drawing.Point(53, 453)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(119, 17)
         Me.Label29.TabIndex = 76
@@ -946,7 +945,7 @@ Partial Class add_member
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DimGray
-        Me.Label17.Location = New System.Drawing.Point(53, 516)
+        Me.Label17.Location = New System.Drawing.Point(54, 365)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(85, 17)
         Me.Label17.TabIndex = 73
@@ -958,11 +957,11 @@ Partial Class add_member
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.DimGray
-        Me.Label23.Location = New System.Drawing.Point(52, 562)
+        Me.Label23.Location = New System.Drawing.Point(52, 409)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(44, 17)
+        Me.Label23.Size = New System.Drawing.Size(104, 17)
         Me.Label23.TabIndex = 72
-        Me.Label23.Text = "E-mail"
+        Me.Label23.Text = "E-mail (optional)"
         '
         'Label24
         '
@@ -970,7 +969,7 @@ Partial Class add_member
         Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.DimGray
-        Me.Label24.Location = New System.Drawing.Point(53, 469)
+        Me.Label24.Location = New System.Drawing.Point(54, 321)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(85, 17)
         Me.Label24.TabIndex = 71
@@ -982,7 +981,7 @@ Partial Class add_member
         Me.Label26.BackColor = System.Drawing.Color.Transparent
         Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.DimGray
-        Me.Label26.Location = New System.Drawing.Point(53, 420)
+        Me.Label26.Location = New System.Drawing.Point(54, 277)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(103, 17)
         Me.Label26.TabIndex = 70
@@ -994,7 +993,7 @@ Partial Class add_member
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.DimGray
-        Me.Label18.Location = New System.Drawing.Point(53, 365)
+        Me.Label18.Location = New System.Drawing.Point(54, 233)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(84, 17)
         Me.Label18.TabIndex = 69
@@ -1006,7 +1005,7 @@ Partial Class add_member
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.DimGray
-        Me.Label19.Location = New System.Drawing.Point(53, 305)
+        Me.Label19.Location = New System.Drawing.Point(54, 189)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(51, 17)
         Me.Label19.TabIndex = 68
@@ -1018,11 +1017,11 @@ Partial Class add_member
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.DimGray
-        Me.Label20.Location = New System.Drawing.Point(53, 245)
+        Me.Label20.Location = New System.Drawing.Point(52, 145)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(70, 17)
+        Me.Label20.Size = New System.Drawing.Size(74, 17)
         Me.Label20.TabIndex = 67
-        Me.Label20.Text = "Civil Status"
+        Me.Label20.Text = "Civil Status "
         '
         'Label21
         '
@@ -1030,11 +1029,11 @@ Partial Class add_member
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.DimGray
-        Me.Label21.Location = New System.Drawing.Point(53, 186)
+        Me.Label21.Location = New System.Drawing.Point(54, 101)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(60, 17)
+        Me.Label21.Size = New System.Drawing.Size(64, 17)
         Me.Label21.TabIndex = 66
-        Me.Label21.Text = "Birthdate"
+        Me.Label21.Text = "Birthdate "
         '
         'Label22
         '
@@ -1042,11 +1041,11 @@ Partial Class add_member
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.DimGray
-        Me.Label22.Location = New System.Drawing.Point(53, 80)
+        Me.Label22.Location = New System.Drawing.Point(53, 31)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(79, 17)
+        Me.Label22.Size = New System.Drawing.Size(83, 17)
         Me.Label22.TabIndex = 65
-        Me.Label22.Text = "Account No."
+        Me.Label22.Text = "Account No. "
         '
         'Label25
         '
@@ -1054,11 +1053,30 @@ Partial Class add_member
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.DimGray
-        Me.Label25.Location = New System.Drawing.Point(53, 125)
+        Me.Label25.Location = New System.Drawing.Point(54, 57)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(59, 17)
+        Me.Label25.Size = New System.Drawing.Size(63, 17)
         Me.Label25.TabIndex = 62
-        Me.Label25.Text = "Fullname"
+        Me.Label25.Text = "Fullname "
+        '
+        'Guna2CheckBox1
+        '
+        Me.Guna2CheckBox1.AutoSize = True
+        Me.Guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2CheckBox1.CheckedState.BorderRadius = 0
+        Me.Guna2CheckBox1.CheckedState.BorderThickness = 0
+        Me.Guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2CheckBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.Guna2CheckBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Guna2CheckBox1.Location = New System.Drawing.Point(405, 43)
+        Me.Guna2CheckBox1.Name = "Guna2CheckBox1"
+        Me.Guna2CheckBox1.Size = New System.Drawing.Size(138, 21)
+        Me.Guna2CheckBox1.TabIndex = 68
+        Me.Guna2CheckBox1.Text = "Same as birthplace"
+        Me.Guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2CheckBox1.UncheckedState.BorderRadius = 0
+        Me.Guna2CheckBox1.UncheckedState.BorderThickness = 0
+        Me.Guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         '
         'add_member
         '
@@ -1149,4 +1167,5 @@ Partial Class add_member
     Friend WithEvents lbl_fullname As Label
     Friend WithEvents lbl_account As Label
     Friend WithEvents btn_submit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
 End Class

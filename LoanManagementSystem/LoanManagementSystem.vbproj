@@ -233,6 +233,12 @@
     <Compile Include="members\member_accounts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="members\member_info.Designer.vb">
+      <DependentUpon>member_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="members\member_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="members\member_options.Designer.vb">
       <DependentUpon>member_options.vb</DependentUpon>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="members\member_accounts.resx">
       <DependentUpon>member_accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="members\member_info.resx">
+      <DependentUpon>member_info.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="members\member_options.resx">
       <DependentUpon>member_options.vb</DependentUpon>

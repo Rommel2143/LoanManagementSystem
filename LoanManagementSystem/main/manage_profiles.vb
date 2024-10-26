@@ -50,16 +50,15 @@ Public Class manage_profiles
                 cmdUpdateStatus.Parameters.AddWithValue("@newpass", txt_newpass.Text)
                 cmdUpdateStatus.Parameters.AddWithValue("@id", user_account)
                 cmdUpdateStatus.ExecuteNonQuery()
-                error_panel.Visible = False
+
                 subframe.Panel1.Controls.Clear()
                 subframe.logout.PerformClick()
                 Me.Close()
             Else
-                error_panel.Visible = True
+                ShowSnackbar("Invalid Credentials")
             End If
         Catch ex As Exception
-            error_panel.Visible = True
-            lbl_error.Text = "Unable to Change Password"
+            ShowSnackbar("Unable to Change Password")
 
         Finally
             con.Close()

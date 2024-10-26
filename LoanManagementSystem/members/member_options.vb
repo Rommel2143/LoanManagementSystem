@@ -24,4 +24,11 @@
         display_formsub(sav, "Savings")
         Me.Close()
     End Sub
+
+    Private Sub Guna2TileButton1_Click(sender As Object, e As EventArgs) Handles Guna2TileButton1.Click
+        Dim member As New member_info
+        member.member_load(accountno)
+        display_formsub(member, "Member Information")
+        Me.Close()
+    End Sub
 End Class
