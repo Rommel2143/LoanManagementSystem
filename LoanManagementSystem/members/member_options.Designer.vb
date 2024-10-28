@@ -30,9 +30,9 @@ Partial Class member_options
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton3 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.lbl_fullname = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.pic_user = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pic_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -125,24 +125,24 @@ Partial Class member_options
         Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(101, 70)
+        Me.lbl_fullname.Location = New System.Drawing.Point(159, 67)
         Me.lbl_fullname.Name = "lbl_fullname"
         Me.lbl_fullname.Size = New System.Drawing.Size(235, 25)
         Me.lbl_fullname.TabIndex = 82
         Me.lbl_fullname.Text = "Juan Dela Cruz (03200728)"
         Me.lbl_fullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2PictureBox1
+        'pic_user
         '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.LoanManagementSystem.My.Resources.Resources.DefaultProfileImage
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(35, 52)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(60, 60)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 83
-        Me.Guna2PictureBox1.TabStop = False
+        Me.pic_user.BackColor = System.Drawing.Color.Transparent
+        Me.pic_user.Image = Global.LoanManagementSystem.My.Resources.Resources.DefaultProfileImage
+        Me.pic_user.ImageRotate = 0!
+        Me.pic_user.Location = New System.Drawing.Point(61, 34)
+        Me.pic_user.Name = "pic_user"
+        Me.pic_user.Size = New System.Drawing.Size(80, 80)
+        Me.pic_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pic_user.TabIndex = 83
+        Me.pic_user.TabStop = False
         '
         'Guna2Separator1
         '
@@ -158,7 +158,7 @@ Partial Class member_options
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(616, 333)
         Me.Controls.Add(Me.Guna2Separator1)
-        Me.Controls.Add(Me.Guna2PictureBox1)
+        Me.Controls.Add(Me.pic_user)
         Me.Controls.Add(Me.lbl_fullname)
         Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.Guna2TileButton3)
@@ -168,7 +168,7 @@ Partial Class member_options
         Me.Name = "member_options"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "member_options"
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pic_user, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -180,6 +180,6 @@ Partial Class member_options
     Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents lbl_fullname As Label
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents pic_user As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
 End Class

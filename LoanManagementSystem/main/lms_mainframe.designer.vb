@@ -29,6 +29,7 @@ Partial Class lms_mainframe
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_error = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.message_success = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.error_panel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -83,6 +84,15 @@ Partial Class lms_mainframe
         'Timer1
         '
         '
+        'message_success
+        '
+        Me.message_success.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        Me.message_success.Caption = "Account Creation"
+        Me.message_success.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        Me.message_success.Parent = Me
+        Me.message_success.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
+        Me.message_success.Text = "Success!"
+        '
         'lms_mainframe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -92,6 +102,7 @@ Partial Class lms_mainframe
         Me.Controls.Add(Me.error_panel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "lms_mainframe"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HR- System"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.error_panel.ResumeLayout(False)
@@ -106,4 +117,5 @@ Partial Class lms_mainframe
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents lbl_error As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents message_success As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

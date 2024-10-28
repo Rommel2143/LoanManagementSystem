@@ -6,43 +6,62 @@ Public Class member_info
     End Sub
 
     Public Sub member_load(accountno As String)
-        LoadImage(accountno)
-
-
-    End Sub
-
-
-
-
-    Private Sub LoadImage(accountNo As String)
         Try
             con.Close()
             con.Open()
 
-            ' Prepare the query to retrieve the image based on account_no
-            Dim query As String = "SELECT `image` FROM `member_profile` WHERE `account_no` = @account_no"
+            ' Prepare the query to retrieve member details based on account_no
+            Dim query As String = "SELECT `account_no`, `firstname`, `middlename`, `lastname`, `birthdate`, `civilstatus`, `gender`, `place_birth`, `present_address`, `contact1`, `contact2`, `emp_status`, `idtype`, `idtype_no`, `image`, `status` FROM `member_profile` WHERE `account_no` = @accountno"
             Dim cmd As New MySqlCommand(query, con)
-            cmd.Parameters.AddWithValue("@account_no", accountNo)
+            cmd.Parameters.AddWithValue("@accountno", accountno)
 
-            ' Execute the command and retrieve the image
-            Dim imageData As Byte() = CType(cmd.ExecuteScalar(), Byte())
+            ' Execute the command and retrieve the data
+            Using dr As MySqlDataReader = cmd.ExecuteReader()
+                If dr.Read() Then
 
-            ' Check if the image data is not null
-            If imageData IsNot Nothing Then
-                ' Convert the byte array back to an image
-                Using ms As New MemoryStream(imageData)
-                    pic_user.Image = Image.FromStream(ms)
-                End Using
-            Else
-                ' Set default image if no image found in the database
-                pic_user.Image = Image.FromFile("resources.defaultprofileimage.png")
-            End If
+                    lbl_account.Text = dr.GetString("account_no")
+
+
+                    'for image
+                    ' Check if image column is not DBNull before attempting to read
+                    If Not IsDBNull(dr("image")) Then
+                        Dim imageData As Byte() = CType(dr("image"), Byte())
+
+                        ' Convert the byte array back to an image
+                        Using ms As New MemoryStream(imageData)
+                            pic_user.Image = Image.FromStream(ms)
+                        End Using
+                    Else
+                        ' Set default image if no image found in the database
+                        pic_user.Image = My.Resources.DefaultProfileImage
+                    End If
+
+
+
+
+
+
+
+                Else
+                    display_error("Account not found.")
+                End If
+
+            End Using
 
         Catch ex As Exception
-
-            pic_user.Image = My.Resources.DefaultProfileImage
+            display_error("Oops! Something Went Wrong")
         Finally
             con.Close()
         End Try
+    End Sub
+
+
+
+    Private Sub LoadImage(accountNo As String)
+
+    End Sub
+
+    Private Sub pic_user_Click(sender As Object, e As EventArgs) Handles pic_user.Click
+
     End Sub
 End Class
