@@ -89,7 +89,8 @@ Public Class add_member
             ' Execute the query
             insertaccount.ExecuteNonQuery()
             lms_mainframe.message_success.Show("The new member has been added successfully.", "Account Created!")
-
+            Me.Close()
+            display_formsub(New add_member, "Add Member")
 
         Catch ex As MySqlException When ex.Number = 1062
             ' Handle duplicate entry error

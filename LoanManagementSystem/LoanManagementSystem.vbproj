@@ -139,6 +139,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dashboard\dashboard.Designer.vb">
+      <DependentUpon>dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard\dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\loan_application.Designer.vb">
       <DependentUpon>loan_application.vb</DependentUpon>
     </Compile>
@@ -296,6 +302,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="dashboard\dashboard.resx">
+      <DependentUpon>dashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\loan_application.resx">
       <DependentUpon>loan_application.vb</DependentUpon>
     </EmbeddedResource>

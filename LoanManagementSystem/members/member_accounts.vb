@@ -3,9 +3,7 @@ Public Class member_accounts
 
     Public Sub LoadData()
         Try
-            reload("SELECT  mp.account_no, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename, ' (',mp.account_no,')') AS Member,  mp.birthdate,TIMESTAMPDIFF(Year, mp.birthdate, CURDATE()) AS Age, mp.civilstatus FROM `member_profile` mp
-                               
-                               ", datagrid1)
+            reload("SELECT mp.account_no, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename, ' (', mp.account_no, ')') AS Member, DATE_FORMAT(mp.birthdate, '%M %d, %Y') AS Birthday, TIMESTAMPDIFF(Year, mp.birthdate, CURDATE()) AS Age, mp.contact1 AS Primary_Contact, mp.email AS Email FROM `member_profile` mp", datagrid1)
 
             ' Add handler for DataBindingComplete to hide the account_no column
             AddHandler datagrid1.DataBindingComplete, AddressOf OnDataBindingComplete
@@ -16,6 +14,7 @@ Public Class member_accounts
             con.Close()
         End Try
     End Sub
+
 
     Private Sub OnDataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs)
         ' Hide the account_no column after data binding is complete
@@ -33,8 +32,7 @@ Public Class member_accounts
             Else
                 con.Close()
                 con.Open()
-                Dim query As String = "SELECT  mp.account_no, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename, ' (',mp.account_no,')') AS Member,  mp.birthdate,TIMESTAMPDIFF(Year, mp.birthdate, CURDATE()) AS Age, mp.civilstatus FROM `member_profile` mp
-                               
+                Dim query As String = "SELECT mp.account_no, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename, ' (', mp.account_no, ')') AS Member, DATE_FORMAT(mp.birthdate, '%M %d, %Y') AS Birthday, TIMESTAMPDIFF(Year, mp.birthdate, CURDATE()) AS Age, mp.contact1 AS Primary_Contact, mp.email AS Email FROM `member_profile` mp
                                 WHERE account_no REGEXP '" & txt_search.Text & "' or lastname REGEXP '" & txt_search.Text & "'"
 
                 Using command As New MySqlCommand(query, con)

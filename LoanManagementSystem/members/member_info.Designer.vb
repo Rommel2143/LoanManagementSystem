@@ -22,6 +22,7 @@ Partial Class member_info
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(member_info))
         Me.pic_user = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_birthplace = New Guna.UI2.WinForms.Guna2TextBox()
@@ -55,12 +56,19 @@ Partial Class member_info
         Me.Label14 = New System.Windows.Forms.Label()
         Me.cmb_empstatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btn_submit = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2ToggleSwitch1 = New Guna.UI2.WinForms.Guna2ToggleSwitch()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.toogle_active = New Guna.UI2.WinForms.Guna2ToggleSwitch()
+        Me.lbl_status = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.whiteb = New Guna.UI2.WinForms.Guna2ToggleSwitch()
+        Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
+        Me.upload_pic = New Guna.UI2.WinForms.Guna2Button()
+        Me.open_cam = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.pic_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'pic_user
@@ -558,40 +566,40 @@ Partial Class member_info
         Me.btn_submit.TabIndex = 136
         Me.btn_submit.Text = "Save Changes"
         '
-        'Guna2ToggleSwitch1
+        'toogle_active
         '
-        Me.Guna2ToggleSwitch1.Checked = True
-        Me.Guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.ForestGreen
-        Me.Guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.ForestGreen
-        Me.Guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White
-        Me.Guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2ToggleSwitch1.Location = New System.Drawing.Point(34, 18)
-        Me.Guna2ToggleSwitch1.Name = "Guna2ToggleSwitch1"
-        Me.Guna2ToggleSwitch1.Size = New System.Drawing.Size(35, 20)
-        Me.Guna2ToggleSwitch1.TabIndex = 137
-        Me.Guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White
-        Me.Guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.toogle_active.Checked = True
+        Me.toogle_active.CheckedState.BorderColor = System.Drawing.Color.ForestGreen
+        Me.toogle_active.CheckedState.FillColor = System.Drawing.Color.ForestGreen
+        Me.toogle_active.CheckedState.InnerBorderColor = System.Drawing.Color.White
+        Me.toogle_active.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.toogle_active.Location = New System.Drawing.Point(34, 18)
+        Me.toogle_active.Name = "toogle_active"
+        Me.toogle_active.Size = New System.Drawing.Size(35, 20)
+        Me.toogle_active.TabIndex = 137
+        Me.toogle_active.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.toogle_active.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.toogle_active.UncheckedState.InnerBorderColor = System.Drawing.Color.White
+        Me.toogle_active.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Label3
+        'lbl_status
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(75, 18)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 17)
-        Me.Label3.TabIndex = 138
-        Me.Label3.Text = "Active"
+        Me.lbl_status.AutoSize = True
+        Me.lbl_status.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_status.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_status.Location = New System.Drawing.Point(75, 18)
+        Me.lbl_status.Name = "lbl_status"
+        Me.lbl_status.Size = New System.Drawing.Size(42, 17)
+        Me.lbl_status.TabIndex = 138
+        Me.lbl_status.Text = "Active"
         '
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 3
-        Me.Guna2Panel1.Controls.Add(Me.Guna2ToggleSwitch1)
-        Me.Guna2Panel1.Controls.Add(Me.Label3)
+        Me.Guna2Panel1.Controls.Add(Me.toogle_active)
+        Me.Guna2Panel1.Controls.Add(Me.lbl_status)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
         Me.Guna2Panel1.Location = New System.Drawing.Point(601, 696)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -602,6 +610,101 @@ Partial Class member_info
         Me.Guna2Panel1.Size = New System.Drawing.Size(170, 56)
         Me.Guna2Panel1.TabIndex = 139
         '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderRadius = 5
+        Me.Guna2Panel2.Controls.Add(Me.Label30)
+        Me.Guna2Panel2.Controls.Add(Me.whiteb)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2VSeparator1)
+        Me.Guna2Panel2.Controls.Add(Me.upload_pic)
+        Me.Guna2Panel2.Controls.Add(Me.open_cam)
+        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Location = New System.Drawing.Point(304, 45)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.ShadowDecoration.BorderRadius = 7
+        Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Silver
+        Me.Guna2Panel2.ShadowDecoration.Enabled = True
+        Me.Guna2Panel2.Size = New System.Drawing.Size(194, 145)
+        Me.Guna2Panel2.TabIndex = 140
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.DimGray
+        Me.Label30.Location = New System.Drawing.Point(52, 19)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(128, 17)
+        Me.Label30.TabIndex = 139
+        Me.Label30.Text = "Remove Background"
+        '
+        'whiteb
+        '
+        Me.whiteb.Animated = True
+        Me.whiteb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.whiteb.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.whiteb.CheckedState.InnerBorderColor = System.Drawing.Color.White
+        Me.whiteb.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.whiteb.Location = New System.Drawing.Point(11, 18)
+        Me.whiteb.Name = "whiteb"
+        Me.whiteb.Size = New System.Drawing.Size(35, 20)
+        Me.whiteb.TabIndex = 138
+        Me.whiteb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.whiteb.UncheckedState.BorderThickness = 2
+        Me.whiteb.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.whiteb.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.whiteb.UncheckedState.InnerBorderThickness = 2
+        Me.whiteb.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        '
+        'Guna2VSeparator1
+        '
+        Me.Guna2VSeparator1.Location = New System.Drawing.Point(92, 54)
+        Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
+        Me.Guna2VSeparator1.Size = New System.Drawing.Size(10, 63)
+        Me.Guna2VSeparator1.TabIndex = 67
+        '
+        'upload_pic
+        '
+        Me.upload_pic.Animated = True
+        Me.upload_pic.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.upload_pic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.upload_pic.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.upload_pic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.upload_pic.FillColor = System.Drawing.Color.Transparent
+        Me.upload_pic.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.upload_pic.ForeColor = System.Drawing.Color.Gray
+        Me.upload_pic.Image = CType(resources.GetObject("upload_pic.Image"), System.Drawing.Image)
+        Me.upload_pic.ImageSize = New System.Drawing.Size(35, 35)
+        Me.upload_pic.Location = New System.Drawing.Point(106, 54)
+        Me.upload_pic.Name = "upload_pic"
+        Me.upload_pic.PressedColor = System.Drawing.Color.DimGray
+        Me.upload_pic.Size = New System.Drawing.Size(74, 74)
+        Me.upload_pic.TabIndex = 62
+        Me.upload_pic.Text = "Upload"
+        Me.upload_pic.Tile = True
+        '
+        'open_cam
+        '
+        Me.open_cam.Animated = True
+        Me.open_cam.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.open_cam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.open_cam.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.open_cam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.open_cam.FillColor = System.Drawing.Color.Transparent
+        Me.open_cam.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.open_cam.ForeColor = System.Drawing.Color.Gray
+        Me.open_cam.Image = CType(resources.GetObject("open_cam.Image"), System.Drawing.Image)
+        Me.open_cam.ImageSize = New System.Drawing.Size(30, 30)
+        Me.open_cam.Location = New System.Drawing.Point(15, 54)
+        Me.open_cam.Name = "open_cam"
+        Me.open_cam.PressedColor = System.Drawing.Color.DimGray
+        Me.open_cam.Size = New System.Drawing.Size(74, 74)
+        Me.open_cam.TabIndex = 63
+        Me.open_cam.Text = "Camera"
+        Me.open_cam.Tile = True
+        '
         'member_info
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -609,6 +712,7 @@ Partial Class member_info
         Me.AutoScroll = True
         Me.AutoScrollMargin = New System.Drawing.Size(0, 80)
         Me.ClientSize = New System.Drawing.Size(1247, 754)
+        Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.Label16)
@@ -650,6 +754,8 @@ Partial Class member_info
         Me.Guna2Panel3.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -688,7 +794,13 @@ Partial Class member_info
     Friend WithEvents Label14 As Label
     Friend WithEvents cmb_empstatus As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents btn_submit As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2ToggleSwitch1 As Guna.UI2.WinForms.Guna2ToggleSwitch
-    Friend WithEvents Label3 As Label
+    Friend WithEvents toogle_active As Guna.UI2.WinForms.Guna2ToggleSwitch
+    Friend WithEvents lbl_status As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label30 As Label
+    Friend WithEvents whiteb As Guna.UI2.WinForms.Guna2ToggleSwitch
+    Friend WithEvents Guna2VSeparator1 As Guna.UI2.WinForms.Guna2VSeparator
+    Friend WithEvents upload_pic As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents open_cam As Guna.UI2.WinForms.Guna2Button
 End Class
