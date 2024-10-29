@@ -10,7 +10,7 @@ Public Class loan_approval_set
 
             con.Close()
             con.Open()
-            Dim cmd As New MySqlCommand("SELECT u.account_no,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,u.amount,u.ammortization,u.referenceno,mp.sharecap FROM `loan_app` u
+            Dim cmd As New MySqlCommand("SELECT u.account_no,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,u.amount,u.ammortization,u.referenceno FROM `loan_app` u
                                         JOIN member_profile mp ON u.account_no= mp.account_no
                                         WHERE u.referenceno='" & reference & "'", con)
             dr = cmd.ExecuteReader
@@ -19,7 +19,7 @@ Public Class loan_approval_set
 
                 lbl_reference.Text = dr.GetString("referenceno")
                 lbl_loanamount.Text = dr.GetDecimal("amount").ToString("N0")
-                lbl_share.Text = dr.GetDecimal("sharecap").ToString("N0")
+                lbl_share.Text = checksharecap(dr.GetString("account_no"))
             End If
         Catch ex As Exception
             display_error(ex.Message)

@@ -13,7 +13,7 @@ Public Class loan_collection
 
             con.Close()
             con.Open()
-            Dim cmd As New MySqlCommand("SELECT u.account_no,u.mode,u.service_fee,u.purpose,u.insurance_fee,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,u.amount,u.ammortization,u.referenceno,mp.sharecap,u.months_count FROM `loan_app` u
+            Dim cmd As New MySqlCommand("SELECT u.account_no,u.mode,u.service_fee,u.purpose,u.insurance_fee,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,u.amount,u.ammortization,u.referenceno,u.months_count FROM `loan_app` u
                                         JOIN member_profile mp ON u.account_no= mp.account_no
                                         WHERE u.referenceno='" & reference & "'", con)
             dr = cmd.ExecuteReader

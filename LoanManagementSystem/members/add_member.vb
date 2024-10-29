@@ -49,6 +49,9 @@ Public Class add_member
             If lbl_civil.Text = "---" Then missingFields.Add("Civil Status")
             If lbl_gender.Text = "---" Then missingFields.Add("Gender")
             If lbl_contact1.Text = "---" Then missingFields.Add("Contact 1")
+            If lbl_employ.Text = "---" Then missingFields.Add("Employment Status")
+            If lbl_idtype.Text = "---" Then missingFields.Add("ID")
+            If lbl_id.Text = "---" Then missingFields.Add("ID Number")
 
             If missingFields.Count > 0 Then
                 display_error("The following information is missing: " & String.Join(", ", missingFields) & ". Please review and complete all required fields.")
@@ -58,8 +61,8 @@ Public Class add_member
             con.Open()
 
             ' Prepare the query to include the image parameter
-            Dim query As String = "INSERT INTO `member_profile` ( `account_no`, `firstname`, `middlename`, `lastname`, `birthdate`, `civilstatus`, `gender`, `place_birth`, `present_address`, `contact1`, `contact2`, `emp_status`, `idtype`, `idtype_no`, `image`, `status`) 
-                               VALUES (@account_no, @firstname, @middlename, @lastname, @birthdate, @civilstatus, @gender, @place_birth, @present_address, @contact1, @contact2, @emp_status, @idtype, @idtype_no, @image, 1)"
+            Dim query As String = "INSERT INTO `member_profile` ( `account_no`, `firstname`, `middlename`, `lastname`, `birthdate`, `civilstatus`, `gender`, `place_birth`, `present_address`, `contact1`, `contact2`,`email`, `emp_status`, `idtype`, `idtype_no`, `image`, `status`) 
+                               VALUES (@account_no, @firstname, @middlename, @lastname, @birthdate, @civilstatus, @gender, @place_birth, @present_address, @contact1, @contact2, @email, @emp_status, @idtype, @idtype_no, @image, 1)"
 
             Dim insertaccount As New MySqlCommand(query, con)
 
@@ -75,8 +78,9 @@ Public Class add_member
             insertaccount.Parameters.AddWithValue("@present_address", txt_presentadd.Text)
             insertaccount.Parameters.AddWithValue("@contact1", txt_contact1.Text)
             insertaccount.Parameters.AddWithValue("@contact2", txt_contact2.Text)
-            insertaccount.Parameters.AddWithValue("@emp_status", cmb_empstatus.Text)
-            insertaccount.Parameters.AddWithValue("@idtype", cmb_idtype.Text)
+            insertaccount.Parameters.AddWithValue("@email", txt_email.Text)
+            insertaccount.Parameters.AddWithValue("@emp_status", cmb_empstatus.Text.Substring(0, 1))
+            insertaccount.Parameters.AddWithValue("@idtype", cmb_idtype.Text.Substring(0, 1))
             insertaccount.Parameters.AddWithValue("@idtype_no", txt_id.Text)
 
             ' Convert the image in the PictureBox to a byte array and add it as a parameter
@@ -263,12 +267,8 @@ Public Class add_member
 
 
 
-    Private Sub Guna2CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles whiteb.CheckedChanged
-        If whiteb.Checked = True Then
-            iswbackground = True
-        Else
-            iswbackground = False
-        End If
+    Private Sub Guna2CheckBox2_CheckedChanged(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub Guna2CheckBox2_CheckedChanged_1(sender As Object, e As EventArgs) Handles Guna2CheckBox2.CheckedChanged
@@ -281,5 +281,13 @@ Public Class add_member
 
     Private Sub Guna2Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel12.Paint
 
+    End Sub
+
+    Private Sub Guna2ToggleSwitch1_CheckedChanged(sender As Object, e As EventArgs) Handles whiteb.CheckedChanged
+        If whiteb.Checked = True Then
+            iswbackground = True
+        Else
+            iswbackground = False
+        End If
     End Sub
 End Class
