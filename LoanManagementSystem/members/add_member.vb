@@ -280,7 +280,7 @@ Public Class add_member
         End If
     End Sub
 
-    Private Sub Guna2Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel12.Paint
+    Private Sub Guna2Panel12_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -290,5 +290,9 @@ Public Class add_member
         Else
             iswbackground = False
         End If
+    End Sub
+
+    Private Sub Label27_Click(sender As Object, e As EventArgs) Handles Label27.Click
+
     End Sub
 End Class

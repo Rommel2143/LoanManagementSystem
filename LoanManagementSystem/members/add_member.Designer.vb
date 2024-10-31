@@ -27,6 +27,8 @@ Partial Class add_member
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.whiteb = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.upload_pic = New Guna.UI2.WinForms.Guna2Button()
         Me.open_cam = New Guna.UI2.WinForms.Guna2Button()
@@ -49,7 +51,6 @@ Partial Class add_member
         Me.txt_firstname = New Guna.UI2.WinForms.Guna2TextBox()
         Me.cmb_civil = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2CheckBox2 = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txt_contact2 = New Guna.UI2.WinForms.Guna2TextBox()
@@ -67,70 +68,68 @@ Partial Class add_member
         Me.Label14 = New System.Windows.Forms.Label()
         Me.cmb_empstatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Guna2Panel14 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.lbl_email = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.lbl_id = New System.Windows.Forms.Label()
-        Me.Guna2Panel13 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lbl_birthplace = New System.Windows.Forms.Label()
-        Me.Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.lbl_present = New System.Windows.Forms.Label()
-        Me.Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.lbl_contact2 = New System.Windows.Forms.Label()
-        Me.Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.lbl_email = New System.Windows.Forms.Label()
         Me.lbl_employ = New System.Windows.Forms.Label()
-        Me.Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.lbl_idtype = New System.Windows.Forms.Label()
-        Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.lbl_birthdate = New System.Windows.Forms.Label()
-        Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.lbl_civil = New System.Windows.Forms.Label()
-        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.lbl_gender = New System.Windows.Forms.Label()
-        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.lbl_contact1 = New System.Windows.Forms.Label()
-        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.lbl_fullname = New System.Windows.Forms.Label()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.lbl_account = New System.Windows.Forms.Label()
         Me.btn_submit = New Guna.UI2.WinForms.Guna2Button()
-        Me.whiteb = New Guna.UI2.WinForms.Guna2ToggleSwitch()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Guna2Panel15 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel3 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel4 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel5 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel6 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel7 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel8 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel9 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel10 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel11 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel12 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel13 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel14 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.Guna2TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.pic_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
-        Me.Guna2Panel14.SuspendLayout()
-        Me.Guna2Panel13.SuspendLayout()
-        Me.Guna2Panel12.SuspendLayout()
-        Me.Guna2Panel11.SuspendLayout()
-        Me.Guna2Panel10.SuspendLayout()
-        Me.Guna2Panel9.SuspendLayout()
-        Me.Guna2Panel8.SuspendLayout()
-        Me.Guna2Panel7.SuspendLayout()
-        Me.Guna2Panel6.SuspendLayout()
-        Me.Guna2Panel5.SuspendLayout()
-        Me.Guna2Panel4.SuspendLayout()
-        Me.Guna2Panel3.SuspendLayout()
-        Me.Guna2Panel15.SuspendLayout()
+        Me.Guna2ShadowPanel1.SuspendLayout()
+        Me.Guna2ShadowPanel2.SuspendLayout()
+        Me.Guna2ShadowPanel3.SuspendLayout()
+        Me.Guna2ShadowPanel4.SuspendLayout()
+        Me.Guna2ShadowPanel5.SuspendLayout()
+        Me.Guna2ShadowPanel6.SuspendLayout()
+        Me.Guna2ShadowPanel7.SuspendLayout()
+        Me.Guna2ShadowPanel8.SuspendLayout()
+        Me.Guna2ShadowPanel9.SuspendLayout()
+        Me.Guna2ShadowPanel10.SuspendLayout()
+        Me.Guna2ShadowPanel11.SuspendLayout()
+        Me.Guna2ShadowPanel12.SuspendLayout()
+        Me.Guna2ShadowPanel13.SuspendLayout()
+        Me.Guna2ShadowPanel14.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2TabControl1
@@ -222,6 +221,36 @@ Partial Class add_member
         Me.Guna2Panel1.ShadowDecoration.Enabled = True
         Me.Guna2Panel1.Size = New System.Drawing.Size(194, 145)
         Me.Guna2Panel1.TabIndex = 66
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.DimGray
+        Me.Label30.Location = New System.Drawing.Point(52, 19)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(128, 17)
+        Me.Label30.TabIndex = 139
+        Me.Label30.Text = "Remove Background"
+        '
+        'whiteb
+        '
+        Me.whiteb.Animated = True
+        Me.whiteb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.whiteb.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.whiteb.CheckedState.InnerBorderColor = System.Drawing.Color.White
+        Me.whiteb.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.whiteb.Location = New System.Drawing.Point(11, 18)
+        Me.whiteb.Name = "whiteb"
+        Me.whiteb.Size = New System.Drawing.Size(35, 20)
+        Me.whiteb.TabIndex = 138
+        Me.whiteb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.whiteb.UncheckedState.BorderThickness = 2
+        Me.whiteb.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.whiteb.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.whiteb.UncheckedState.InnerBorderThickness = 2
+        Me.whiteb.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         '
         'Guna2VSeparator1
         '
@@ -540,7 +569,7 @@ Partial Class add_member
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Guna2Panel2)
+        Me.TabPage2.Controls.Add(Me.Guna2ShadowPanel14)
         Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.txt_contact2)
         Me.TabPage2.Controls.Add(Me.Label12)
@@ -557,19 +586,6 @@ Partial Class add_member
         Me.TabPage2.Text = "2. Contact Info"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Guna2Panel2
-        '
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.BorderRadius = 5
-        Me.Guna2Panel2.Controls.Add(Me.Guna2CheckBox2)
-        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(551, 68)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Silver
-        Me.Guna2Panel2.ShadowDecoration.Enabled = True
-        Me.Guna2Panel2.Size = New System.Drawing.Size(122, 41)
-        Me.Guna2Panel2.TabIndex = 69
-        '
         'Guna2CheckBox2
         '
         Me.Guna2CheckBox2.AutoSize = True
@@ -580,7 +596,7 @@ Partial Class add_member
         Me.Guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2CheckBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2CheckBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Guna2CheckBox2.Location = New System.Drawing.Point(13, 3)
+        Me.Guna2CheckBox2.Location = New System.Drawing.Point(19, 9)
         Me.Guna2CheckBox2.Name = "Guna2CheckBox2"
         Me.Guna2CheckBox2.Size = New System.Drawing.Size(96, 34)
         Me.Guna2CheckBox2.TabIndex = 65
@@ -826,19 +842,19 @@ Partial Class add_member
         '
         Me.TabPage4.AutoScroll = True
         Me.TabPage4.AutoScrollMargin = New System.Drawing.Size(0, 50)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel15)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel14)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel13)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel12)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel11)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel10)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel9)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel8)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel7)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel6)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel5)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel4)
-        Me.TabPage4.Controls.Add(Me.Guna2Panel3)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel13)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel12)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel11)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel10)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel9)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel8)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel7)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel6)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel5)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel4)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel3)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel2)
+        Me.TabPage4.Controls.Add(Me.Guna2ShadowPanel1)
         Me.TabPage4.Controls.Add(Me.btn_submit)
         Me.TabPage4.Location = New System.Drawing.Point(184, 4)
         Me.TabPage4.Name = "TabPage4"
@@ -847,21 +863,29 @@ Partial Class add_member
         Me.TabPage4.Text = "4. Review & Submit"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Guna2Panel14
+        'Label31
         '
-        Me.Guna2Panel14.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel14.BorderRadius = 6
-        Me.Guna2Panel14.Controls.Add(Me.Label27)
-        Me.Guna2Panel14.Controls.Add(Me.lbl_id)
-        Me.Guna2Panel14.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel14.Location = New System.Drawing.Point(54, 788)
-        Me.Guna2Panel14.Name = "Guna2Panel14"
-        Me.Guna2Panel14.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel14.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel14.ShadowDecoration.Depth = 10
-        Me.Guna2Panel14.ShadowDecoration.Enabled = True
-        Me.Guna2Panel14.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel14.TabIndex = 100
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.Transparent
+        Me.Label31.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.Color.DimGray
+        Me.Label31.Location = New System.Drawing.Point(20, 20)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(39, 17)
+        Me.Label31.TabIndex = 77
+        Me.Label31.Text = "Email"
+        '
+        'lbl_email
+        '
+        Me.lbl_email.AutoSize = True
+        Me.lbl_email.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_email.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_email.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_email.Location = New System.Drawing.Point(198, 17)
+        Me.lbl_email.Name = "lbl_email"
+        Me.lbl_email.Size = New System.Drawing.Size(27, 20)
+        Me.lbl_email.TabIndex = 89
+        Me.lbl_email.Text = "---"
         '
         'Label27
         '
@@ -869,7 +893,7 @@ Partial Class add_member
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.DimGray
-        Me.Label27.Location = New System.Drawing.Point(26, 20)
+        Me.Label27.Location = New System.Drawing.Point(19, 20)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(45, 17)
         Me.Label27.TabIndex = 78
@@ -881,27 +905,11 @@ Partial Class add_member
         Me.lbl_id.BackColor = System.Drawing.Color.Transparent
         Me.lbl_id.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_id.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_id.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_id.Location = New System.Drawing.Point(198, 20)
         Me.lbl_id.Name = "lbl_id"
         Me.lbl_id.Size = New System.Drawing.Size(27, 20)
         Me.lbl_id.TabIndex = 92
         Me.lbl_id.Text = "---"
-        '
-        'Guna2Panel13
-        '
-        Me.Guna2Panel13.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel13.BorderRadius = 6
-        Me.Guna2Panel13.Controls.Add(Me.Label18)
-        Me.Guna2Panel13.Controls.Add(Me.lbl_birthplace)
-        Me.Guna2Panel13.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel13.Location = New System.Drawing.Point(54, 344)
-        Me.Guna2Panel13.Name = "Guna2Panel13"
-        Me.Guna2Panel13.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel13.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel13.ShadowDecoration.Depth = 10
-        Me.Guna2Panel13.ShadowDecoration.Enabled = True
-        Me.Guna2Panel13.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel13.TabIndex = 103
         '
         'Label18
         '
@@ -909,7 +917,7 @@ Partial Class add_member
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.DimGray
-        Me.Label18.Location = New System.Drawing.Point(29, 20)
+        Me.Label18.Location = New System.Drawing.Point(19, 20)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(84, 17)
         Me.Label18.TabIndex = 69
@@ -921,27 +929,11 @@ Partial Class add_member
         Me.lbl_birthplace.BackColor = System.Drawing.Color.Transparent
         Me.lbl_birthplace.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_birthplace.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_birthplace.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_birthplace.Location = New System.Drawing.Point(198, 17)
         Me.lbl_birthplace.Name = "lbl_birthplace"
         Me.lbl_birthplace.Size = New System.Drawing.Size(27, 20)
         Me.lbl_birthplace.TabIndex = 85
         Me.lbl_birthplace.Text = "---"
-        '
-        'Guna2Panel12
-        '
-        Me.Guna2Panel12.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel12.BorderRadius = 6
-        Me.Guna2Panel12.Controls.Add(Me.Label26)
-        Me.Guna2Panel12.Controls.Add(Me.lbl_present)
-        Me.Guna2Panel12.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel12.Location = New System.Drawing.Point(54, 408)
-        Me.Guna2Panel12.Name = "Guna2Panel12"
-        Me.Guna2Panel12.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel12.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel12.ShadowDecoration.Depth = 10
-        Me.Guna2Panel12.ShadowDecoration.Enabled = True
-        Me.Guna2Panel12.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel12.TabIndex = 102
         '
         'Label26
         '
@@ -949,7 +941,7 @@ Partial Class add_member
         Me.Label26.BackColor = System.Drawing.Color.Transparent
         Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.DimGray
-        Me.Label26.Location = New System.Drawing.Point(29, 20)
+        Me.Label26.Location = New System.Drawing.Point(20, 20)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(103, 17)
         Me.Label26.TabIndex = 70
@@ -961,27 +953,11 @@ Partial Class add_member
         Me.lbl_present.BackColor = System.Drawing.Color.Transparent
         Me.lbl_present.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_present.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_present.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_present.Location = New System.Drawing.Point(198, 18)
         Me.lbl_present.Name = "lbl_present"
         Me.lbl_present.Size = New System.Drawing.Size(27, 20)
         Me.lbl_present.TabIndex = 86
         Me.lbl_present.Text = "---"
-        '
-        'Guna2Panel11
-        '
-        Me.Guna2Panel11.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel11.BorderRadius = 6
-        Me.Guna2Panel11.Controls.Add(Me.Label17)
-        Me.Guna2Panel11.Controls.Add(Me.lbl_contact2)
-        Me.Guna2Panel11.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel11.Location = New System.Drawing.Point(54, 536)
-        Me.Guna2Panel11.Name = "Guna2Panel11"
-        Me.Guna2Panel11.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel11.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel11.ShadowDecoration.Depth = 10
-        Me.Guna2Panel11.ShadowDecoration.Enabled = True
-        Me.Guna2Panel11.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel11.TabIndex = 101
         '
         'Label17
         '
@@ -989,7 +965,7 @@ Partial Class add_member
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DimGray
-        Me.Label17.Location = New System.Drawing.Point(29, 20)
+        Me.Label17.Location = New System.Drawing.Point(18, 20)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(85, 17)
         Me.Label17.TabIndex = 73
@@ -1001,28 +977,11 @@ Partial Class add_member
         Me.lbl_contact2.BackColor = System.Drawing.Color.Transparent
         Me.lbl_contact2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_contact2.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_contact2.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_contact2.Location = New System.Drawing.Point(198, 18)
         Me.lbl_contact2.Name = "lbl_contact2"
         Me.lbl_contact2.Size = New System.Drawing.Size(27, 20)
         Me.lbl_contact2.TabIndex = 88
         Me.lbl_contact2.Text = "---"
-        '
-        'Guna2Panel10
-        '
-        Me.Guna2Panel10.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel10.BorderRadius = 6
-        Me.Guna2Panel10.Controls.Add(Me.Label29)
-        Me.Guna2Panel10.Controls.Add(Me.Label23)
-        Me.Guna2Panel10.Controls.Add(Me.lbl_employ)
-        Me.Guna2Panel10.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel10.Location = New System.Drawing.Point(54, 662)
-        Me.Guna2Panel10.Name = "Guna2Panel10"
-        Me.Guna2Panel10.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel10.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel10.ShadowDecoration.Depth = 10
-        Me.Guna2Panel10.ShadowDecoration.Enabled = True
-        Me.Guna2Panel10.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel10.TabIndex = 100
         '
         'Label29
         '
@@ -1030,35 +989,11 @@ Partial Class add_member
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.DimGray
-        Me.Label29.Location = New System.Drawing.Point(29, 18)
+        Me.Label29.Location = New System.Drawing.Point(20, 20)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(119, 17)
         Me.Label29.TabIndex = 76
         Me.Label29.Text = "Employment Status"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.Transparent
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.DimGray
-        Me.Label23.Location = New System.Drawing.Point(26, 16)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(104, 17)
-        Me.Label23.TabIndex = 72
-        Me.Label23.Text = "E-mail (optional)"
-        '
-        'lbl_email
-        '
-        Me.lbl_email.AutoSize = True
-        Me.lbl_email.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_email.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_email.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_email.Location = New System.Drawing.Point(230, 18)
-        Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(27, 20)
-        Me.lbl_email.TabIndex = 89
-        Me.lbl_email.Text = "---"
         '
         'lbl_employ
         '
@@ -1066,27 +1001,11 @@ Partial Class add_member
         Me.lbl_employ.BackColor = System.Drawing.Color.Transparent
         Me.lbl_employ.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_employ.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_employ.Location = New System.Drawing.Point(230, 18)
+        Me.lbl_employ.Location = New System.Drawing.Point(198, 17)
         Me.lbl_employ.Name = "lbl_employ"
         Me.lbl_employ.Size = New System.Drawing.Size(27, 20)
         Me.lbl_employ.TabIndex = 90
         Me.lbl_employ.Text = "---"
-        '
-        'Guna2Panel9
-        '
-        Me.Guna2Panel9.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel9.BorderRadius = 6
-        Me.Guna2Panel9.Controls.Add(Me.Label28)
-        Me.Guna2Panel9.Controls.Add(Me.lbl_idtype)
-        Me.Guna2Panel9.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel9.Location = New System.Drawing.Point(54, 724)
-        Me.Guna2Panel9.Name = "Guna2Panel9"
-        Me.Guna2Panel9.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel9.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel9.ShadowDecoration.Depth = 10
-        Me.Guna2Panel9.ShadowDecoration.Enabled = True
-        Me.Guna2Panel9.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel9.TabIndex = 99
         '
         'Label28
         '
@@ -1094,7 +1013,7 @@ Partial Class add_member
         Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.DimGray
-        Me.Label28.Location = New System.Drawing.Point(29, 20)
+        Me.Label28.Location = New System.Drawing.Point(19, 22)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(51, 17)
         Me.Label28.TabIndex = 77
@@ -1106,27 +1025,11 @@ Partial Class add_member
         Me.lbl_idtype.BackColor = System.Drawing.Color.Transparent
         Me.lbl_idtype.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_idtype.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_idtype.Location = New System.Drawing.Point(233, 20)
+        Me.lbl_idtype.Location = New System.Drawing.Point(198, 19)
         Me.lbl_idtype.Name = "lbl_idtype"
         Me.lbl_idtype.Size = New System.Drawing.Size(27, 20)
         Me.lbl_idtype.TabIndex = 91
         Me.lbl_idtype.Text = "---"
-        '
-        'Guna2Panel8
-        '
-        Me.Guna2Panel8.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel8.BorderRadius = 3
-        Me.Guna2Panel8.Controls.Add(Me.Label21)
-        Me.Guna2Panel8.Controls.Add(Me.lbl_birthdate)
-        Me.Guna2Panel8.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel8.Location = New System.Drawing.Point(54, 152)
-        Me.Guna2Panel8.Name = "Guna2Panel8"
-        Me.Guna2Panel8.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel8.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel8.ShadowDecoration.Depth = 10
-        Me.Guna2Panel8.ShadowDecoration.Enabled = True
-        Me.Guna2Panel8.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel8.TabIndex = 98
         '
         'Label21
         '
@@ -1134,7 +1037,7 @@ Partial Class add_member
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.DimGray
-        Me.Label21.Location = New System.Drawing.Point(29, 20)
+        Me.Label21.Location = New System.Drawing.Point(19, 20)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(64, 17)
         Me.Label21.TabIndex = 66
@@ -1146,27 +1049,11 @@ Partial Class add_member
         Me.lbl_birthdate.BackColor = System.Drawing.Color.Transparent
         Me.lbl_birthdate.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_birthdate.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_birthdate.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_birthdate.Location = New System.Drawing.Point(198, 17)
         Me.lbl_birthdate.Name = "lbl_birthdate"
         Me.lbl_birthdate.Size = New System.Drawing.Size(27, 20)
         Me.lbl_birthdate.TabIndex = 82
         Me.lbl_birthdate.Text = "---"
-        '
-        'Guna2Panel7
-        '
-        Me.Guna2Panel7.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel7.BorderRadius = 3
-        Me.Guna2Panel7.Controls.Add(Me.Label20)
-        Me.Guna2Panel7.Controls.Add(Me.lbl_civil)
-        Me.Guna2Panel7.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel7.Location = New System.Drawing.Point(54, 216)
-        Me.Guna2Panel7.Name = "Guna2Panel7"
-        Me.Guna2Panel7.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel7.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel7.ShadowDecoration.Depth = 10
-        Me.Guna2Panel7.ShadowDecoration.Enabled = True
-        Me.Guna2Panel7.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel7.TabIndex = 97
         '
         'Label20
         '
@@ -1174,7 +1061,7 @@ Partial Class add_member
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.DimGray
-        Me.Label20.Location = New System.Drawing.Point(29, 20)
+        Me.Label20.Location = New System.Drawing.Point(20, 20)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(74, 17)
         Me.Label20.TabIndex = 67
@@ -1186,27 +1073,11 @@ Partial Class add_member
         Me.lbl_civil.BackColor = System.Drawing.Color.Transparent
         Me.lbl_civil.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_civil.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_civil.Location = New System.Drawing.Point(233, 20)
+        Me.lbl_civil.Location = New System.Drawing.Point(198, 17)
         Me.lbl_civil.Name = "lbl_civil"
         Me.lbl_civil.Size = New System.Drawing.Size(27, 20)
         Me.lbl_civil.TabIndex = 83
         Me.lbl_civil.Text = "---"
-        '
-        'Guna2Panel6
-        '
-        Me.Guna2Panel6.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel6.BorderRadius = 6
-        Me.Guna2Panel6.Controls.Add(Me.Label19)
-        Me.Guna2Panel6.Controls.Add(Me.lbl_gender)
-        Me.Guna2Panel6.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel6.Location = New System.Drawing.Point(54, 280)
-        Me.Guna2Panel6.Name = "Guna2Panel6"
-        Me.Guna2Panel6.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel6.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel6.ShadowDecoration.Depth = 10
-        Me.Guna2Panel6.ShadowDecoration.Enabled = True
-        Me.Guna2Panel6.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel6.TabIndex = 96
         '
         'Label19
         '
@@ -1214,7 +1085,7 @@ Partial Class add_member
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.DimGray
-        Me.Label19.Location = New System.Drawing.Point(29, 20)
+        Me.Label19.Location = New System.Drawing.Point(20, 20)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(51, 17)
         Me.Label19.TabIndex = 68
@@ -1226,27 +1097,11 @@ Partial Class add_member
         Me.lbl_gender.BackColor = System.Drawing.Color.Transparent
         Me.lbl_gender.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_gender.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_gender.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_gender.Location = New System.Drawing.Point(198, 18)
         Me.lbl_gender.Name = "lbl_gender"
         Me.lbl_gender.Size = New System.Drawing.Size(27, 20)
         Me.lbl_gender.TabIndex = 84
         Me.lbl_gender.Text = "---"
-        '
-        'Guna2Panel5
-        '
-        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel5.BorderRadius = 6
-        Me.Guna2Panel5.Controls.Add(Me.Label24)
-        Me.Guna2Panel5.Controls.Add(Me.lbl_contact1)
-        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel5.Location = New System.Drawing.Point(54, 472)
-        Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel5.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel5.ShadowDecoration.Depth = 10
-        Me.Guna2Panel5.ShadowDecoration.Enabled = True
-        Me.Guna2Panel5.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel5.TabIndex = 95
         '
         'Label24
         '
@@ -1254,7 +1109,7 @@ Partial Class add_member
         Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.DimGray
-        Me.Label24.Location = New System.Drawing.Point(29, 20)
+        Me.Label24.Location = New System.Drawing.Point(20, 20)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(85, 17)
         Me.Label24.TabIndex = 71
@@ -1266,27 +1121,11 @@ Partial Class add_member
         Me.lbl_contact1.BackColor = System.Drawing.Color.Transparent
         Me.lbl_contact1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_contact1.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_contact1.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_contact1.Location = New System.Drawing.Point(198, 18)
         Me.lbl_contact1.Name = "lbl_contact1"
         Me.lbl_contact1.Size = New System.Drawing.Size(27, 20)
         Me.lbl_contact1.TabIndex = 87
         Me.lbl_contact1.Text = "---"
-        '
-        'Guna2Panel4
-        '
-        Me.Guna2Panel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel4.BorderRadius = 3
-        Me.Guna2Panel4.Controls.Add(Me.Label25)
-        Me.Guna2Panel4.Controls.Add(Me.lbl_fullname)
-        Me.Guna2Panel4.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel4.Location = New System.Drawing.Point(54, 88)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel4.ShadowDecoration.Depth = 10
-        Me.Guna2Panel4.ShadowDecoration.Enabled = True
-        Me.Guna2Panel4.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel4.TabIndex = 94
         '
         'Label25
         '
@@ -1294,7 +1133,7 @@ Partial Class add_member
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.DimGray
-        Me.Label25.Location = New System.Drawing.Point(29, 20)
+        Me.Label25.Location = New System.Drawing.Point(23, 20)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(63, 17)
         Me.Label25.TabIndex = 62
@@ -1306,27 +1145,11 @@ Partial Class add_member
         Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(231, 20)
+        Me.lbl_fullname.Location = New System.Drawing.Point(198, 17)
         Me.lbl_fullname.Name = "lbl_fullname"
         Me.lbl_fullname.Size = New System.Drawing.Size(27, 20)
         Me.lbl_fullname.TabIndex = 81
         Me.lbl_fullname.Text = "---"
-        '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel3.BorderRadius = 3
-        Me.Guna2Panel3.Controls.Add(Me.Label22)
-        Me.Guna2Panel3.Controls.Add(Me.lbl_account)
-        Me.Guna2Panel3.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Location = New System.Drawing.Point(54, 24)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel3.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel3.ShadowDecoration.Depth = 10
-        Me.Guna2Panel3.ShadowDecoration.Enabled = True
-        Me.Guna2Panel3.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel3.TabIndex = 93
         '
         'Label22
         '
@@ -1334,7 +1157,7 @@ Partial Class add_member
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.DimGray
-        Me.Label22.Location = New System.Drawing.Point(29, 20)
+        Me.Label22.Location = New System.Drawing.Point(23, 20)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(83, 17)
         Me.Label22.TabIndex = 65
@@ -1346,7 +1169,7 @@ Partial Class add_member
         Me.lbl_account.BackColor = System.Drawing.Color.Transparent
         Me.lbl_account.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_account.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_account.Location = New System.Drawing.Point(232, 20)
+        Me.lbl_account.Location = New System.Drawing.Point(198, 17)
         Me.lbl_account.Name = "lbl_account"
         Me.lbl_account.Size = New System.Drawing.Size(27, 20)
         Me.lbl_account.TabIndex = 80
@@ -1361,69 +1184,191 @@ Partial Class add_member
         Me.btn_submit.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.btn_submit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btn_submit.ForeColor = System.Drawing.Color.White
-        Me.btn_submit.Location = New System.Drawing.Point(568, 867)
+        Me.btn_submit.Location = New System.Drawing.Point(559, 819)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(130, 55)
         Me.btn_submit.TabIndex = 79
         Me.btn_submit.Text = "Submit"
         '
-        'whiteb
+        'Guna2ShadowPanel1
         '
-        Me.whiteb.Animated = True
-        Me.whiteb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.whiteb.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.whiteb.CheckedState.InnerBorderColor = System.Drawing.Color.White
-        Me.whiteb.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.whiteb.Location = New System.Drawing.Point(11, 18)
-        Me.whiteb.Name = "whiteb"
-        Me.whiteb.Size = New System.Drawing.Size(35, 20)
-        Me.whiteb.TabIndex = 138
-        Me.whiteb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.whiteb.UncheckedState.BorderThickness = 2
-        Me.whiteb.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.whiteb.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.whiteb.UncheckedState.InnerBorderThickness = 2
-        Me.whiteb.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label22)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.lbl_account)
+        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(57, 33)
+        Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
+        Me.Guna2ShadowPanel1.Radius = 5
+        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel1.TabIndex = 105
         '
-        'Label30
+        'Guna2ShadowPanel2
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.DimGray
-        Me.Label30.Location = New System.Drawing.Point(52, 19)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(128, 17)
-        Me.Label30.TabIndex = 139
-        Me.Label30.Text = "Remove Background"
+        Me.Guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel2.Controls.Add(Me.Label25)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.lbl_fullname)
+        Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(57, 90)
+        Me.Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
+        Me.Guna2ShadowPanel2.Radius = 5
+        Me.Guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel2.TabIndex = 106
         '
-        'Guna2Panel15
+        'Guna2ShadowPanel3
         '
-        Me.Guna2Panel15.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel15.BorderRadius = 6
-        Me.Guna2Panel15.Controls.Add(Me.Label31)
-        Me.Guna2Panel15.Controls.Add(Me.lbl_email)
-        Me.Guna2Panel15.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel15.Location = New System.Drawing.Point(54, 600)
-        Me.Guna2Panel15.Name = "Guna2Panel15"
-        Me.Guna2Panel15.ShadowDecoration.BorderRadius = 8
-        Me.Guna2Panel15.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel15.ShadowDecoration.Depth = 10
-        Me.Guna2Panel15.ShadowDecoration.Enabled = True
-        Me.Guna2Panel15.Size = New System.Drawing.Size(644, 56)
-        Me.Guna2Panel15.TabIndex = 104
+        Me.Guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel3.Controls.Add(Me.Label21)
+        Me.Guna2ShadowPanel3.Controls.Add(Me.lbl_birthdate)
+        Me.Guna2ShadowPanel3.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel3.Location = New System.Drawing.Point(57, 147)
+        Me.Guna2ShadowPanel3.Name = "Guna2ShadowPanel3"
+        Me.Guna2ShadowPanel3.Radius = 5
+        Me.Guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel3.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel3.TabIndex = 107
         '
-        'Label31
+        'Guna2ShadowPanel4
         '
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.Transparent
-        Me.Label31.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.ForeColor = System.Drawing.Color.DimGray
-        Me.Label31.Location = New System.Drawing.Point(29, 20)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(39, 17)
-        Me.Label31.TabIndex = 77
-        Me.Label31.Text = "Email"
+        Me.Guna2ShadowPanel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel4.Controls.Add(Me.Label20)
+        Me.Guna2ShadowPanel4.Controls.Add(Me.lbl_civil)
+        Me.Guna2ShadowPanel4.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel4.Location = New System.Drawing.Point(57, 204)
+        Me.Guna2ShadowPanel4.Name = "Guna2ShadowPanel4"
+        Me.Guna2ShadowPanel4.Radius = 5
+        Me.Guna2ShadowPanel4.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel4.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel4.TabIndex = 107
+        '
+        'Guna2ShadowPanel5
+        '
+        Me.Guna2ShadowPanel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel5.Controls.Add(Me.Label19)
+        Me.Guna2ShadowPanel5.Controls.Add(Me.lbl_gender)
+        Me.Guna2ShadowPanel5.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel5.Location = New System.Drawing.Point(57, 261)
+        Me.Guna2ShadowPanel5.Name = "Guna2ShadowPanel5"
+        Me.Guna2ShadowPanel5.Radius = 5
+        Me.Guna2ShadowPanel5.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel5.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel5.TabIndex = 107
+        '
+        'Guna2ShadowPanel6
+        '
+        Me.Guna2ShadowPanel6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel6.Controls.Add(Me.Label18)
+        Me.Guna2ShadowPanel6.Controls.Add(Me.lbl_birthplace)
+        Me.Guna2ShadowPanel6.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel6.Location = New System.Drawing.Point(57, 318)
+        Me.Guna2ShadowPanel6.Name = "Guna2ShadowPanel6"
+        Me.Guna2ShadowPanel6.Radius = 5
+        Me.Guna2ShadowPanel6.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel6.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel6.TabIndex = 107
+        '
+        'Guna2ShadowPanel7
+        '
+        Me.Guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel7.Controls.Add(Me.Label26)
+        Me.Guna2ShadowPanel7.Controls.Add(Me.lbl_present)
+        Me.Guna2ShadowPanel7.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel7.Location = New System.Drawing.Point(57, 375)
+        Me.Guna2ShadowPanel7.Name = "Guna2ShadowPanel7"
+        Me.Guna2ShadowPanel7.Radius = 5
+        Me.Guna2ShadowPanel7.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel7.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel7.TabIndex = 107
+        '
+        'Guna2ShadowPanel8
+        '
+        Me.Guna2ShadowPanel8.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel8.Controls.Add(Me.Label24)
+        Me.Guna2ShadowPanel8.Controls.Add(Me.lbl_contact1)
+        Me.Guna2ShadowPanel8.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel8.Location = New System.Drawing.Point(57, 432)
+        Me.Guna2ShadowPanel8.Name = "Guna2ShadowPanel8"
+        Me.Guna2ShadowPanel8.Radius = 5
+        Me.Guna2ShadowPanel8.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel8.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel8.TabIndex = 107
+        '
+        'Guna2ShadowPanel9
+        '
+        Me.Guna2ShadowPanel9.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel9.Controls.Add(Me.Label17)
+        Me.Guna2ShadowPanel9.Controls.Add(Me.lbl_contact2)
+        Me.Guna2ShadowPanel9.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel9.Location = New System.Drawing.Point(57, 489)
+        Me.Guna2ShadowPanel9.Name = "Guna2ShadowPanel9"
+        Me.Guna2ShadowPanel9.Radius = 5
+        Me.Guna2ShadowPanel9.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel9.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel9.TabIndex = 107
+        '
+        'Guna2ShadowPanel10
+        '
+        Me.Guna2ShadowPanel10.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel10.Controls.Add(Me.Label31)
+        Me.Guna2ShadowPanel10.Controls.Add(Me.lbl_email)
+        Me.Guna2ShadowPanel10.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel10.Location = New System.Drawing.Point(57, 546)
+        Me.Guna2ShadowPanel10.Name = "Guna2ShadowPanel10"
+        Me.Guna2ShadowPanel10.Radius = 5
+        Me.Guna2ShadowPanel10.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel10.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel10.TabIndex = 107
+        '
+        'Guna2ShadowPanel11
+        '
+        Me.Guna2ShadowPanel11.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel11.Controls.Add(Me.Label29)
+        Me.Guna2ShadowPanel11.Controls.Add(Me.lbl_employ)
+        Me.Guna2ShadowPanel11.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel11.Location = New System.Drawing.Point(57, 603)
+        Me.Guna2ShadowPanel11.Name = "Guna2ShadowPanel11"
+        Me.Guna2ShadowPanel11.Radius = 5
+        Me.Guna2ShadowPanel11.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel11.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel11.TabIndex = 107
+        '
+        'Guna2ShadowPanel12
+        '
+        Me.Guna2ShadowPanel12.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel12.Controls.Add(Me.Label28)
+        Me.Guna2ShadowPanel12.Controls.Add(Me.lbl_idtype)
+        Me.Guna2ShadowPanel12.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel12.Location = New System.Drawing.Point(57, 660)
+        Me.Guna2ShadowPanel12.Name = "Guna2ShadowPanel12"
+        Me.Guna2ShadowPanel12.Radius = 5
+        Me.Guna2ShadowPanel12.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel12.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel12.TabIndex = 107
+        '
+        'Guna2ShadowPanel13
+        '
+        Me.Guna2ShadowPanel13.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel13.Controls.Add(Me.Label27)
+        Me.Guna2ShadowPanel13.Controls.Add(Me.lbl_id)
+        Me.Guna2ShadowPanel13.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel13.Location = New System.Drawing.Point(57, 717)
+        Me.Guna2ShadowPanel13.Name = "Guna2ShadowPanel13"
+        Me.Guna2ShadowPanel13.Radius = 5
+        Me.Guna2ShadowPanel13.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel13.Size = New System.Drawing.Size(644, 57)
+        Me.Guna2ShadowPanel13.TabIndex = 108
+        '
+        'Guna2ShadowPanel14
+        '
+        Me.Guna2ShadowPanel14.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel14.Controls.Add(Me.Guna2CheckBox2)
+        Me.Guna2ShadowPanel14.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel14.Location = New System.Drawing.Point(548, 61)
+        Me.Guna2ShadowPanel14.Name = "Guna2ShadowPanel14"
+        Me.Guna2ShadowPanel14.ShadowColor = System.Drawing.Color.Silver
+        Me.Guna2ShadowPanel14.Size = New System.Drawing.Size(135, 52)
+        Me.Guna2ShadowPanel14.TabIndex = 70
         '
         'add_member
         '
@@ -1443,37 +1388,37 @@ Partial Class add_member
         CType(Me.pic_user, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
-        Me.Guna2Panel14.ResumeLayout(False)
-        Me.Guna2Panel14.PerformLayout()
-        Me.Guna2Panel13.ResumeLayout(False)
-        Me.Guna2Panel13.PerformLayout()
-        Me.Guna2Panel12.ResumeLayout(False)
-        Me.Guna2Panel12.PerformLayout()
-        Me.Guna2Panel11.ResumeLayout(False)
-        Me.Guna2Panel11.PerformLayout()
-        Me.Guna2Panel10.ResumeLayout(False)
-        Me.Guna2Panel10.PerformLayout()
-        Me.Guna2Panel9.ResumeLayout(False)
-        Me.Guna2Panel9.PerformLayout()
-        Me.Guna2Panel8.ResumeLayout(False)
-        Me.Guna2Panel8.PerformLayout()
-        Me.Guna2Panel7.ResumeLayout(False)
-        Me.Guna2Panel7.PerformLayout()
-        Me.Guna2Panel6.ResumeLayout(False)
-        Me.Guna2Panel6.PerformLayout()
-        Me.Guna2Panel5.ResumeLayout(False)
-        Me.Guna2Panel5.PerformLayout()
-        Me.Guna2Panel4.ResumeLayout(False)
-        Me.Guna2Panel4.PerformLayout()
-        Me.Guna2Panel3.ResumeLayout(False)
-        Me.Guna2Panel3.PerformLayout()
-        Me.Guna2Panel15.ResumeLayout(False)
-        Me.Guna2Panel15.PerformLayout()
+        Me.Guna2ShadowPanel1.ResumeLayout(False)
+        Me.Guna2ShadowPanel1.PerformLayout()
+        Me.Guna2ShadowPanel2.ResumeLayout(False)
+        Me.Guna2ShadowPanel2.PerformLayout()
+        Me.Guna2ShadowPanel3.ResumeLayout(False)
+        Me.Guna2ShadowPanel3.PerformLayout()
+        Me.Guna2ShadowPanel4.ResumeLayout(False)
+        Me.Guna2ShadowPanel4.PerformLayout()
+        Me.Guna2ShadowPanel5.ResumeLayout(False)
+        Me.Guna2ShadowPanel5.PerformLayout()
+        Me.Guna2ShadowPanel6.ResumeLayout(False)
+        Me.Guna2ShadowPanel6.PerformLayout()
+        Me.Guna2ShadowPanel7.ResumeLayout(False)
+        Me.Guna2ShadowPanel7.PerformLayout()
+        Me.Guna2ShadowPanel8.ResumeLayout(False)
+        Me.Guna2ShadowPanel8.PerformLayout()
+        Me.Guna2ShadowPanel9.ResumeLayout(False)
+        Me.Guna2ShadowPanel9.PerformLayout()
+        Me.Guna2ShadowPanel10.ResumeLayout(False)
+        Me.Guna2ShadowPanel10.PerformLayout()
+        Me.Guna2ShadowPanel11.ResumeLayout(False)
+        Me.Guna2ShadowPanel11.PerformLayout()
+        Me.Guna2ShadowPanel12.ResumeLayout(False)
+        Me.Guna2ShadowPanel12.PerformLayout()
+        Me.Guna2ShadowPanel13.ResumeLayout(False)
+        Me.Guna2ShadowPanel13.PerformLayout()
+        Me.Guna2ShadowPanel14.ResumeLayout(False)
+        Me.Guna2ShadowPanel14.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1520,7 +1465,6 @@ Partial Class add_member
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label18 As Label
@@ -1545,24 +1489,24 @@ Partial Class add_member
     Friend WithEvents btn_submit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents open_cam As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2CheckBox2 As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents Guna2VSeparator1 As Guna.UI2.WinForms.Guna2VSeparator
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
-    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel14 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel13 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel10 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents whiteb As Guna.UI2.WinForms.Guna2ToggleSwitch
     Friend WithEvents Label30 As Label
-    Friend WithEvents Guna2Panel15 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label31 As Label
+    Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel13 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel12 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel11 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel10 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel9 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel8 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel7 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel6 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel5 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel4 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel3 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel14 As Guna.UI2.WinForms.Guna2ShadowPanel
 End Class
