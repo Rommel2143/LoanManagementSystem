@@ -620,7 +620,7 @@ Partial Class member_info
         Me.Guna2Panel2.Controls.Add(Me.upload_pic)
         Me.Guna2Panel2.Controls.Add(Me.open_cam)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(304, 45)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(338, 45)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.BorderRadius = 7
         Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Silver
