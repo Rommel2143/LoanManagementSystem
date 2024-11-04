@@ -30,30 +30,31 @@ Partial Class dashboard
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel3 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel4 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
@@ -64,15 +65,26 @@ Partial Class dashboard
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2GradientPanel5 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Guna2Separator5 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2GradientPanel1.SuspendLayout()
-        Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GradientPanel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -84,6 +96,9 @@ Partial Class dashboard
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
+        Me.Guna2ShadowPanel1.SuspendLayout()
+        Me.Guna2GradientPanel5.SuspendLayout()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -165,6 +180,19 @@ Partial Class dashboard
         Me.Guna2GradientPanel1.Size = New System.Drawing.Size(150, 132)
         Me.Guna2GradientPanel1.TabIndex = 6
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(33, 17)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(105, 102)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -206,18 +234,61 @@ Partial Class dashboard
         Me.Guna2Panel1.Size = New System.Drawing.Size(303, 159)
         Me.Guna2Panel1.TabIndex = 7
         '
-        'Guna2PictureBox1
+        'Label16
         '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(33, 17)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(105, 102)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
-        Me.Guna2PictureBox1.UseTransparentBackground = True
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label16.Location = New System.Drawing.Point(232, 124)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(48, 25)
+        Me.Label16.TabIndex = 8
+        Me.Label16.Text = "50%"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label15.Location = New System.Drawing.Point(61, 123)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(48, 25)
+        Me.Label15.TabIndex = 7
+        Me.Label15.Text = "50%"
+        '
+        'Guna2Separator1
+        '
+        Me.Guna2Separator1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Separator1.Location = New System.Drawing.Point(10, 110)
+        Me.Guna2Separator1.Name = "Guna2Separator1"
+        Me.Guna2Separator1.Size = New System.Drawing.Size(271, 8)
+        Me.Guna2Separator1.TabIndex = 6
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label14.Location = New System.Drawing.Point(176, 131)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(62, 17)
+        Me.Label14.TabIndex = 5
+        Me.Label14.Text = "Females :"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label13.Location = New System.Drawing.Point(17, 130)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(50, 17)
+        Me.Label13.TabIndex = 4
+        Me.Label13.Text = "Males :"
         '
         'Guna2GradientPanel2
         '
@@ -247,6 +318,8 @@ Partial Class dashboard
         '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.Controls.Add(Me.Label28)
+        Me.Guna2Panel2.Controls.Add(Me.Label29)
         Me.Guna2Panel2.Controls.Add(Me.Label17)
         Me.Guna2Panel2.Controls.Add(Me.Guna2Separator2)
         Me.Guna2Panel2.Controls.Add(Me.Label18)
@@ -259,6 +332,38 @@ Partial Class dashboard
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
         Me.Guna2Panel2.Size = New System.Drawing.Size(303, 159)
         Me.Guna2Panel2.TabIndex = 9
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label17.Location = New System.Drawing.Point(81, 126)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(32, 25)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "10"
+        '
+        'Guna2Separator2
+        '
+        Me.Guna2Separator2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Separator2.Location = New System.Drawing.Point(10, 110)
+        Me.Guna2Separator2.Name = "Guna2Separator2"
+        Me.Guna2Separator2.Size = New System.Drawing.Size(271, 8)
+        Me.Guna2Separator2.TabIndex = 9
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label18.Location = New System.Drawing.Point(22, 132)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(62, 17)
+        Me.Label18.TabIndex = 8
+        Me.Label18.Text = "Pending :"
         '
         'Label9
         '
@@ -325,105 +430,17 @@ Partial Class dashboard
         Me.Guna2Panel3.Size = New System.Drawing.Size(303, 159)
         Me.Guna2Panel3.TabIndex = 11
         '
-        'Label11
+        'Label12
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label11.Location = New System.Drawing.Point(189, 55)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(92, 37)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "00000"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label13.Location = New System.Drawing.Point(17, 130)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(50, 17)
-        Me.Label13.TabIndex = 4
-        Me.Label13.Text = "Males :"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label14.Location = New System.Drawing.Point(176, 131)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(62, 17)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "Females :"
-        '
-        'Guna2Separator1
-        '
-        Me.Guna2Separator1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Separator1.Location = New System.Drawing.Point(10, 110)
-        Me.Guna2Separator1.Name = "Guna2Separator1"
-        Me.Guna2Separator1.Size = New System.Drawing.Size(271, 8)
-        Me.Guna2Separator1.TabIndex = 6
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label15.Location = New System.Drawing.Point(61, 123)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(48, 25)
-        Me.Label15.TabIndex = 7
-        Me.Label15.Text = "50%"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label16.Location = New System.Drawing.Point(232, 124)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(48, 25)
-        Me.Label16.TabIndex = 8
-        Me.Label16.Text = "50%"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label17.Location = New System.Drawing.Point(81, 126)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(32, 25)
-        Me.Label17.TabIndex = 10
-        Me.Label17.Text = "10"
-        '
-        'Guna2Separator2
-        '
-        Me.Guna2Separator2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Separator2.Location = New System.Drawing.Point(10, 110)
-        Me.Guna2Separator2.Name = "Guna2Separator2"
-        Me.Guna2Separator2.Size = New System.Drawing.Size(271, 8)
-        Me.Guna2Separator2.TabIndex = 9
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label18.Location = New System.Drawing.Point(22, 132)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(62, 17)
-        Me.Label18.TabIndex = 8
-        Me.Label18.Text = "Pending :"
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label12.Location = New System.Drawing.Point(193, 20)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(85, 17)
+        Me.Label12.TabIndex = 11
+        Me.Label12.Text = "Share Capital"
         '
         'Label21
         '
@@ -456,6 +473,18 @@ Partial Class dashboard
         Me.Label22.Size = New System.Drawing.Size(95, 17)
         Me.Label22.TabIndex = 8
         Me.Label22.Text = "No. of Shares :"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.White
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label11.Location = New System.Drawing.Point(189, 55)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(92, 37)
+        Me.Label11.TabIndex = 3
+        Me.Label11.Text = "00000"
         '
         'Guna2GradientPanel4
         '
@@ -580,18 +609,6 @@ Partial Class dashboard
         Me.Label26.TabIndex = 2
         Me.Label26.Text = "Transactions Today"
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label12.Location = New System.Drawing.Point(193, 20)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(85, 17)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "Share Capital"
-        '
         'Guna2Panel5
         '
         Me.Guna2Panel5.Controls.Add(Me.Label27)
@@ -605,29 +622,17 @@ Partial Class dashboard
         Me.Guna2Panel5.Size = New System.Drawing.Size(117, 118)
         Me.Guna2Panel5.TabIndex = 14
         '
-        'Label31
+        'Label27
         '
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.White
-        Me.Label31.Font = New System.Drawing.Font("Segoe UI Semibold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label31.Location = New System.Drawing.Point(26, 49)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(64, 50)
-        Me.Label31.TabIndex = 3
-        Me.Label31.Text = "30"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.BackColor = System.Drawing.Color.Transparent
-        Me.Label32.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(12, 11)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(86, 21)
-        Me.Label32.TabIndex = 2
-        Me.Label32.Text = "December"
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.White
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label27.Location = New System.Drawing.Point(68, 92)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(46, 21)
+        Me.Label27.TabIndex = 16
+        Me.Label27.Text = "2024"
         '
         'Guna2Panel6
         '
@@ -641,24 +646,187 @@ Partial Class dashboard
         Me.Guna2Panel6.Size = New System.Drawing.Size(117, 39)
         Me.Guna2Panel6.TabIndex = 15
         '
-        'Label27
+        'Label32
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.Color.White
-        Me.Label27.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label27.Location = New System.Drawing.Point(68, 92)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(46, 21)
-        Me.Label27.TabIndex = 16
-        Me.Label27.Text = "2024"
+        Me.Label32.AutoSize = True
+        Me.Label32.BackColor = System.Drawing.Color.Transparent
+        Me.Label32.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.White
+        Me.Label32.Location = New System.Drawing.Point(12, 11)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(86, 21)
+        Me.Label32.TabIndex = 2
+        Me.Label32.Text = "December"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.White
+        Me.Label31.Font = New System.Drawing.Font("Segoe UI Semibold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label31.Location = New System.Drawing.Point(26, 49)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(64, 50)
+        Me.Label31.TabIndex = 3
+        Me.Label31.Text = "30"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
+        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label28.Location = New System.Drawing.Point(252, 126)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(32, 25)
+        Me.Label28.TabIndex = 12
+        Me.Label28.Text = "10"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label29.Location = New System.Drawing.Point(217, 130)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(38, 17)
+        Me.Label29.TabIndex = 11
+        Me.Label29.Text = "Due :"
+        '
+        'Guna2ShadowPanel1
+        '
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Guna2Separator5)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label30)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label37)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label33)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label36)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label34)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Label35)
+        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(287, 530)
+        Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
+        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DimGray
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(286, 144)
+        Me.Guna2ShadowPanel1.TabIndex = 15
+        '
+        'Guna2GradientPanel5
+        '
+        Me.Guna2GradientPanel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GradientPanel5.BorderRadius = 10
+        Me.Guna2GradientPanel5.Controls.Add(Me.Guna2PictureBox5)
+        Me.Guna2GradientPanel5.FillColor = System.Drawing.Color.SlateBlue
+        Me.Guna2GradientPanel5.FillColor2 = System.Drawing.Color.DarkSlateBlue
+        Me.Guna2GradientPanel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
+        Me.Guna2GradientPanel5.Location = New System.Drawing.Point(287, 514)
+        Me.Guna2GradientPanel5.Name = "Guna2GradientPanel5"
+        Me.Guna2GradientPanel5.Size = New System.Drawing.Size(99, 88)
+        Me.Guna2GradientPanel5.TabIndex = 7
+        '
+        'Guna2PictureBox5
+        '
+        Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox5.ImageRotate = 0!
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(21, 16)
+        Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
+        Me.Guna2PictureBox5.Size = New System.Drawing.Size(75, 69)
+        Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox5.TabIndex = 0
+        Me.Guna2PictureBox5.TabStop = False
+        Me.Guna2PictureBox5.UseTransparentBackground = True
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label30.Location = New System.Drawing.Point(227, 110)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(48, 25)
+        Me.Label30.TabIndex = 21
+        Me.Label30.Text = "50%"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.Transparent
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label33.Location = New System.Drawing.Point(56, 109)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(48, 25)
+        Me.Label33.TabIndex = 20
+        Me.Label33.Text = "50%"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label34.Location = New System.Drawing.Point(171, 117)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(62, 17)
+        Me.Label34.TabIndex = 19
+        Me.Label34.Text = "Females :"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.Transparent
+        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label35.Location = New System.Drawing.Point(12, 116)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(50, 17)
+        Me.Label35.TabIndex = 18
+        Me.Label35.Text = "Males :"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.BackColor = System.Drawing.Color.White
+        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label36.Location = New System.Drawing.Point(127, 47)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(62, 25)
+        Me.Label36.TabIndex = 17
+        Me.Label36.Text = "00000"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label37.Location = New System.Drawing.Point(129, 30)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(64, 17)
+        Me.Label37.TabIndex = 16
+        Me.Label37.Text = "Members"
+        '
+        'Guna2Separator5
+        '
+        Me.Guna2Separator5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Separator5.Location = New System.Drawing.Point(10, 98)
+        Me.Guna2Separator5.Name = "Guna2Separator5"
+        Me.Guna2Separator5.Size = New System.Drawing.Size(271, 8)
+        Me.Guna2Separator5.TabIndex = 22
         '
         'dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.AutoScroll = True
+        Me.AutoScrollMargin = New System.Drawing.Size(0, 50)
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1109, 673)
+        Me.Controls.Add(Me.Guna2GradientPanel5)
+        Me.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Controls.Add(Me.Guna2Panel5)
         Me.Controls.Add(Me.Guna2GradientPanel4)
         Me.Controls.Add(Me.Guna2Panel4)
@@ -679,9 +847,9 @@ Partial Class dashboard
         Me.Text = "dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Guna2GradientPanel1.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2GradientPanel2.ResumeLayout(False)
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
@@ -698,6 +866,10 @@ Partial Class dashboard
         Me.Guna2Panel5.PerformLayout()
         Me.Guna2Panel6.ResumeLayout(False)
         Me.Guna2Panel6.PerformLayout()
+        Me.Guna2ShadowPanel1.ResumeLayout(False)
+        Me.Guna2ShadowPanel1.PerformLayout()
+        Me.Guna2GradientPanel5.ResumeLayout(False)
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -750,4 +922,16 @@ Partial Class dashboard
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label32 As Label
     Friend WithEvents Label31 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2Separator5 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Guna2GradientPanel5 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
 End Class
