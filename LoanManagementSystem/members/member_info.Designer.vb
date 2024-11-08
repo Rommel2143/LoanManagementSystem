@@ -747,7 +747,7 @@ Partial Class member_info
         Me.Controls.Add(Me.pic_user)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "member_info"
-        Me.Text = "member_info"
+        Me.Text = "6"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.pic_user, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel3.ResumeLayout(False)
