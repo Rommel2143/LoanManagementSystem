@@ -24,6 +24,13 @@ Partial Class subframe
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(subframe))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.userstrip = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageMyProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.logout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MembersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_loan_apply = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,19 +40,10 @@ Partial Class subframe
         Me.CollectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lbl_calendar = New System.Windows.Forms.Label()
-        Me.lbl_tittle = New System.Windows.Forms.Label()
-        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lbl_calendar = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.userstrip = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageMyProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SuggestImprovementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.logout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.add_user = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lbl_tittle = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +59,55 @@ Partial Class subframe
         Me.MenuStrip1.Size = New System.Drawing.Size(1346, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'userstrip
+        '
+        Me.userstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.logout, Me.ExitToolStripMenuItem})
+        Me.userstrip.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.userstrip.Image = CType(resources.GetObject("userstrip.Image"), System.Drawing.Image)
+        Me.userstrip.Name = "userstrip"
+        Me.userstrip.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.userstrip.Size = New System.Drawing.Size(66, 24)
+        Me.userstrip.Text = "User"
+        Me.userstrip.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
+        'ManageMyProfileToolStripMenuItem
+        '
+        Me.ManageMyProfileToolStripMenuItem.Name = "ManageMyProfileToolStripMenuItem"
+        Me.ManageMyProfileToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.ManageMyProfileToolStripMenuItem.Text = "Manage my profile"
+        '
+        'CheckForUpdatesToolStripMenuItem
+        '
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
+        '
+        'DeviceInfoToolStripMenuItem
+        '
+        Me.DeviceInfoToolStripMenuItem.Name = "DeviceInfoToolStripMenuItem"
+        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.DeviceInfoToolStripMenuItem.Text = "Device Info."
+        '
+        'logout
+        '
+        Me.logout.Name = "logout"
+        Me.logout.Size = New System.Drawing.Size(204, 24)
+        Me.logout.Text = "Logout"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'DashboardToolStripMenuItem
+        '
+        Me.DashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(94, 24)
+        Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'MembersToolStripMenuItem
         '
@@ -133,36 +180,6 @@ Partial Class subframe
         Me.Panel2.Size = New System.Drawing.Size(1346, 24)
         Me.Panel2.TabIndex = 2
         '
-        'lbl_calendar
-        '
-        Me.lbl_calendar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_calendar.AutoSize = True
-        Me.lbl_calendar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_calendar.ForeColor = System.Drawing.Color.White
-        Me.lbl_calendar.Location = New System.Drawing.Point(1235, 6)
-        Me.lbl_calendar.Name = "lbl_calendar"
-        Me.lbl_calendar.Size = New System.Drawing.Size(99, 15)
-        Me.lbl_calendar.TabIndex = 3
-        Me.lbl_calendar.Text = "MMMM-dd-yyyy"
-        '
-        'lbl_tittle
-        '
-        Me.lbl_tittle.AutoSize = True
-        Me.lbl_tittle.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.lbl_tittle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_tittle.ForeColor = System.Drawing.Color.White
-        Me.lbl_tittle.Location = New System.Drawing.Point(30, 30)
-        Me.lbl_tittle.Name = "lbl_tittle"
-        Me.lbl_tittle.Size = New System.Drawing.Size(0, 20)
-        Me.lbl_tittle.TabIndex = 0
-        '
-        'DashboardToolStripMenuItem
-        '
-        Me.DashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(94, 24)
-        Me.DashboardToolStripMenuItem.Text = "Dashboard"
-        '
         'Guna2PictureBox2
         '
         Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
@@ -174,6 +191,18 @@ Partial Class subframe
         Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox2.TabIndex = 4
         Me.Guna2PictureBox2.TabStop = False
+        '
+        'lbl_calendar
+        '
+        Me.lbl_calendar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_calendar.AutoSize = True
+        Me.lbl_calendar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_calendar.ForeColor = System.Drawing.Color.White
+        Me.lbl_calendar.Location = New System.Drawing.Point(1235, 6)
+        Me.lbl_calendar.Name = "lbl_calendar"
+        Me.lbl_calendar.Size = New System.Drawing.Size(99, 15)
+        Me.lbl_calendar.TabIndex = 3
+        Me.lbl_calendar.Text = "MMMM-dd-yyyy"
         '
         'Guna2PictureBox1
         '
@@ -188,60 +217,16 @@ Partial Class subframe
         Me.Guna2PictureBox1.TabIndex = 2
         Me.Guna2PictureBox1.TabStop = False
         '
-        'userstrip
+        'lbl_tittle
         '
-        Me.userstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.SuggestImprovementToolStripMenuItem, Me.logout, Me.ExitToolStripMenuItem, Me.add_user})
-        Me.userstrip.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.userstrip.Image = CType(resources.GetObject("userstrip.Image"), System.Drawing.Image)
-        Me.userstrip.Name = "userstrip"
-        Me.userstrip.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.userstrip.Size = New System.Drawing.Size(66, 24)
-        Me.userstrip.Text = "User"
-        Me.userstrip.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        '
-        'ManageMyProfileToolStripMenuItem
-        '
-        Me.ManageMyProfileToolStripMenuItem.Name = "ManageMyProfileToolStripMenuItem"
-        Me.ManageMyProfileToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
-        Me.ManageMyProfileToolStripMenuItem.Text = "Manage my profile"
-        '
-        'CheckForUpdatesToolStripMenuItem
-        '
-        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
-        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
-        '
-        'DeviceInfoToolStripMenuItem
-        '
-        Me.DeviceInfoToolStripMenuItem.Name = "DeviceInfoToolStripMenuItem"
-        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
-        Me.DeviceInfoToolStripMenuItem.Text = "Device Info."
-        '
-        'SuggestImprovementToolStripMenuItem
-        '
-        Me.SuggestImprovementToolStripMenuItem.Name = "SuggestImprovementToolStripMenuItem"
-        Me.SuggestImprovementToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
-        Me.SuggestImprovementToolStripMenuItem.Text = "Suggest improvement"
-        '
-        'logout
-        '
-        Me.logout.Name = "logout"
-        Me.logout.Size = New System.Drawing.Size(224, 24)
-        Me.logout.Text = "Logout"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'add_user
-        '
-        Me.add_user.Name = "add_user"
-        Me.add_user.Size = New System.Drawing.Size(224, 24)
-        Me.add_user.Text = "Add User"
-        Me.add_user.Visible = False
+        Me.lbl_tittle.AutoSize = True
+        Me.lbl_tittle.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.lbl_tittle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_tittle.ForeColor = System.Drawing.Color.White
+        Me.lbl_tittle.Location = New System.Drawing.Point(30, 30)
+        Me.lbl_tittle.Name = "lbl_tittle"
+        Me.lbl_tittle.Size = New System.Drawing.Size(0, 20)
+        Me.lbl_tittle.TabIndex = 0
         '
         'subframe
         '
@@ -274,14 +259,12 @@ Partial Class subframe
     Friend WithEvents logout As ToolStripMenuItem
     Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeviceInfoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SuggestImprovementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lbl_tittle As Label
     Friend WithEvents lbl_calendar As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents add_user As ToolStripMenuItem
     Friend WithEvents ManageMyProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btn_loan_apply As ToolStripMenuItem

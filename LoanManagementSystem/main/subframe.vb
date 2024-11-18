@@ -70,4 +70,8 @@
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
         display_formsub(New dashboard, "Dashboard")
     End Sub
+
+    Private Sub SuggestImprovementToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

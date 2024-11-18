@@ -107,7 +107,16 @@ Public Class loan_application
             cmdinsert.Parameters.AddWithValue("@collateral_value", Convert.ToDecimal(txt_collavalue.Text))
             cmdinsert.Parameters.AddWithValue("@status", 0)
             cmdinsert.ExecuteNonQuery()
-            MessageBox.Show("Record saved successfully.")
+
+            If MessageBox.Show("Record saved successfully.", "Print info?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+
+                Dim print As New print_loanapp
+                print.viewdata(lbl_reference.Text)
+                print.ShowDialog()
+
+            Else
+                ' Code to execute if the user clicks "No" (optional)
+            End If
 
             txt_amount.Clear()
             lbl_account.Text = "---"
