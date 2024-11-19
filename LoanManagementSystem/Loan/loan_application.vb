@@ -108,7 +108,7 @@ Public Class loan_application
             cmdinsert.Parameters.AddWithValue("@status", 0)
             cmdinsert.ExecuteNonQuery()
 
-            If MessageBox.Show("Record saved successfully.", "Print info?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            If MessageBox.Show("Application saved. Do you want to print info?", "Print info?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
 
                 Dim print As New print_loanapp
                 print.viewdata(lbl_reference.Text)

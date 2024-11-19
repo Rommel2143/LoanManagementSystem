@@ -495,7 +495,7 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddLoanappRow(ByVal Fullname As String, ByVal account_no As String, ByVal referenceno As String, ByVal date_apply As Date, ByVal purpose As String, ByVal amount As Decimal, ByVal ammortization As Decimal, ByVal months_count As Single, ByVal service_fee As Decimal, ByVal comaker_1 As String, ByVal comaker_2 As String, ByVal sharecap As Decimal, ByVal savings As Decimal, ByVal status As String) As LoanappRow
+        Public Overloads Function AddLoanappRow(ByVal Fullname As String, ByVal account_no As String, ByVal referenceno As String, ByVal date_apply As Date, ByVal purpose As String, ByVal amount As Decimal, ByVal ammortization As Decimal, ByVal months_count As String, ByVal service_fee As Decimal, ByVal comaker_1 As String, ByVal comaker_2 As String, ByVal sharecap As Decimal, ByVal savings As Decimal, ByVal status As String) As LoanappRow
             Dim rowLoanappRow As LoanappRow = CType(Me.NewRow,LoanappRow)
             Dim columnValuesArray() As Object = New Object() {Fullname, account_no, referenceno, date_apply, purpose, amount, ammortization, months_count, service_fee, comaker_1, comaker_2, sharecap, savings, status}
             rowLoanappRow.ItemArray = columnValuesArray
@@ -553,7 +553,7 @@ Partial Public Class LMSdataset
             MyBase.Columns.Add(Me.columnamount)
             Me.columnammortization = New Global.System.Data.DataColumn("ammortization", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnammortization)
-            Me.columnmonths_count = New Global.System.Data.DataColumn("months_count", GetType(Single), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnmonths_count = New Global.System.Data.DataColumn("months_count", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmonths_count)
             Me.columnservice_fee = New Global.System.Data.DataColumn("service_fee", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnservice_fee)
@@ -818,10 +818,10 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property months_count() As Single
+        Public Property months_count() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLoanapp.months_countColumn),Single)
+                    Return CType(Me(Me.tableLoanapp.months_countColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'months_count' in table 'Loanapp' is DBNull.", e)
                 End Try

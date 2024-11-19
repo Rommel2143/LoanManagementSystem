@@ -45,6 +45,7 @@
             FROM loan_app la
             JOIN member_profile mp ON mp.account_no = la.account_no 
             ORDER BY la.date_apply DESC", datagrid1)
+
         Catch ex As Exception
             display_error("Error:" & ex.Message)
         End Try
@@ -52,5 +53,22 @@
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
+    End Sub
+
+    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
+
+    End Sub
+
+    Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
+        If e.RowIndex >= 0 Then
+            Dim referenceNo As String = datagrid1.Rows(e.RowIndex).Cells("referenceno").Value.ToString()
+            Dim loanrecord As New print_loanapp
+            loanrecord.viewdata(referenceNo)
+            loanrecord.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        loadrecords()
     End Sub
 End Class

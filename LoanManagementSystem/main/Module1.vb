@@ -100,7 +100,7 @@ Module Module1
         Finally
             con.Close()
             da.Dispose()
-
+            dt.Dispose()
         End Try
     End Sub
 
