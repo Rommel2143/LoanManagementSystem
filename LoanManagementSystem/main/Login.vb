@@ -1,16 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.Reflection
+
 Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txt_password.UseSystemPasswordChar = True
-            txtpcname.Text = PCname
-            txtpcmac.Text = PCmac
-            Dim version As String = Assembly.GetExecutingAssembly().GetName().Version.ToString()
-            lblversion.Text = version
+
             con.Close()
             con.Open()
-            Dim cmdselect As New MySqlCommand("SELECT * FROM computer_location WHERE `PCname`='" & PCname & "' and `PCmac`='" & PCmac & "'", con)
+            Dim cmdselect As New MySqlCommand("SELECT * FROM trusted_devices WHERE `PCname`='" & PCname & "' and `PCmac`='" & PCmac & "'", con)
             dr = cmdselect.ExecuteReader
             If dr.Read = True Then
                 txt_user.Enabled = True
@@ -45,14 +42,6 @@ Public Class Login
 
     End Sub
 
-    Private Sub Guna2ImageButton1_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_see.MouseDown
-        txt_password.UseSystemPasswordChar = False
-    End Sub
-
-    ' This event will trigger when the button is released
-    Private Sub Guna2ImageButton1_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_see.MouseUp
-        txt_password.UseSystemPasswordChar = True
-    End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         login()
@@ -60,52 +49,50 @@ Public Class Login
     End Sub
 
     Private Sub login()
-        Try
+        If String.IsNullOrWhiteSpace(txt_user.Text) OrElse String.IsNullOrWhiteSpace(txt_password.Text) Then
+            ShowSnackbar("Please enter both username and password.")
+            Exit Sub
+        End If
 
+        Try
             con.Close()
             con.Open()
-            Dim cmd As New MySqlCommand("SELECT u.account_no,u.username, u.pass, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,mp.firstname, u.loan_apply,u.loan_approve  FROM `user` u
-                                        JOIN member_profile mp ON u.account_no= mp.account_no
-                                        WHERE (u.username = '" & txt_user.Text & "' or u.account_no= '" & txt_user.Text & "') and u.pass = '" & txt_password.Text & "' ", con)
-            dr = cmd.ExecuteReader
-            If dr.Read = True Then
-                user_account = dr("account_no").ToString
+
+            Dim query As String = "SELECT u.account_no, u.username, u.pass, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname, mp.firstname, u.loan_apply, u.loan_approve " &
+                              "FROM `user` u " &
+                              "JOIN member_profile mp ON u.account_no = mp.account_no " &
+                              "WHERE (u.username = @username OR u.account_no = @username) AND u.pass = @password"
+
+            Dim cmd As New MySqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@username", txt_user.Text.Trim())
+            cmd.Parameters.AddWithValue("@password", txt_password.Text.Trim()) ' Replace with hashed password in a real implementation
+
+            dr = cmd.ExecuteReader()
+
+            If dr.Read() Then
+                user_account = dr("account_no").ToString()
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
-                user_pass = dr.GetString("pass")
-                If dr.GetInt32("loan_apply") = 1 Then
-                    subframe.btn_loan_apply.Visible = True
-                Else
-                    subframe.btn_loan_apply.Visible = False
-                End If
-
-                If dr.GetInt32("loan_approve") = 1 Then
-                    subframe.btn_loan_approve.Visible = True
-                Else
-                    subframe.btn_loan_approve.Visible = False
-                End If
+                user_pass = dr.GetString("pass") ' Remove if unnecessary
 
 
 
+                subframe.btn_loan_apply.Visible = (dr.GetInt32("loan_apply") = 1)
+                subframe.btn_loan_approve.Visible = (dr.GetInt32("loan_approve") = 1)
 
 
 
 
                 display_mainframe(subframe)
-                    subframe.userstrip.Text = "Hello, " & user_firstname
-
+                subframe.userstrip.Text = "Hello, " & user_firstname
             Else
-                ShowSnackbar("Invalid Credentials")
+                ShowSnackbar("Invalid credentials.")
                 txt_password.Clear()
             End If
-
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
-
+            ShowSnackbar("An error occurred. Please try again later.")
         Finally
             con.Close()
-
-
         End Try
     End Sub
 
@@ -116,15 +103,13 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
-    End Sub
 
-    Private Sub btn_see_Click(sender As Object, e As EventArgs) Handles btn_see.Click
-
-    End Sub
-
-    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
-
+    Private Sub Guna2CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2CheckBox1.CheckedChanged
+        If Guna2CheckBox1.Checked = True Then
+            txt_password.UseSystemPasswordChar = False
+        Else
+            txt_password.UseSystemPasswordChar = True
+        End If
     End Sub
 End Class

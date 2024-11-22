@@ -22,13 +22,11 @@ Partial Class lms_mainframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lms_mainframe))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.error_panel = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_error = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.message_success = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.error_panel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,9 +79,6 @@ Partial Class lms_mainframe
         Me.lbl_error.TabIndex = 0
         Me.lbl_error.Text = "Test mode"
         '
-        'Timer1
-        '
-        '
         'message_success
         '
         Me.message_success.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
@@ -116,6 +111,5 @@ Partial Class lms_mainframe
     Friend WithEvents error_panel As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents lbl_error As Label
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents message_success As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

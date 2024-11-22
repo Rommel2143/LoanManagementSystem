@@ -3,6 +3,7 @@ Public Class search_name
     Dim account As String
     Dim fullname As String
     Dim sharecap As Integer
+    Dim age As Integer
 
     Private Sub search_name_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         reloadgrid()
@@ -14,8 +15,8 @@ Public Class search_name
                 reloadgrid()
             Else
                 Dim query As String = "SELECT mp.account_no AS Account_no, 
-                                       TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
                                       CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
+                                      TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
                                       COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
                                                SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap
                                    FROM member_profile mp
@@ -62,6 +63,7 @@ Public Class search_name
             fullname = datagrid1.Rows(e.RowIndex).Cells(1).Value.ToString()
             sharecap = datagrid1.Rows(e.RowIndex).Cells(3).Value.ToString()
             lbl_fullname.Text = datagrid1.Rows(e.RowIndex).Cells(1).Value.ToString()
+            age = datagrid1.Rows(e.RowIndex).Cells(2).Value.ToString()
         End If
     End Sub
 
@@ -73,6 +75,8 @@ Public Class search_name
                     .lbl_account.Text = account
                     .lbl_fullname.Text = fullname
                     .lbl_reference.Text = GenerateReferenceNumber("L")
+                    .lbl_sharecap.Text = "Php " & sharecap.ToString("N0")
+                    .lbl_age.Text = age.ToString
                 Case "Co-maker 1 :"
                     .lbl_cm1.Text = fullname & " (" & account & ")"
                     .comaker1 = account
@@ -84,4 +88,7 @@ Public Class search_name
         End With
     End Sub
 
+    Private Sub datagrid1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles datagrid1.MouseDoubleClick
+
+    End Sub
 End Class

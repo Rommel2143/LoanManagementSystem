@@ -9,7 +9,7 @@ Public Class Register_PC
         If txtuser.Text = "PTRCI" And txtpassword.Text = "redhorsE" Then
             con.Close()
             con.Open()
-            Dim cmdselect As New MySqlCommand("INSERT INTO `computer_location`(`PCname`, `PCmac`) VALUES ('" & PCname & "','" & PCmac & "')", con)
+            Dim cmdselect As New MySqlCommand("INSERT INTO `trusted_devices`(`PCname`, `PCmac`) VALUES ('" & PCname & "','" & PCmac & "')", con)
             dr = cmdselect.ExecuteReader
             Dim result As DialogResult = MessageBox.Show("Machine Verified!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 

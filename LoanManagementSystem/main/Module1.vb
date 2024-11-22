@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Net.NetworkInformation
 Imports System.Text
+Imports System.Reflection
 Module Module1
 
     Public Function connection() As MySqlConnection
@@ -25,10 +26,11 @@ Module Module1
 
     Public PCname As String = Environment.MachineName
     Public PCmac As String = GetMacAddress()
-
+    Public systemversion As String = Assembly.GetExecutingAssembly().GetName().Version.ToString()
 
     Public date1 As String = Date.Now.ToString("MMMM dd, yyyy")
     Public datedb As String = Date.Now.ToString("yyyy-MM-dd")
+    Public timedb As String = Date.Now.ToString("HH:mm:ss")
     Public shift1 As String
 
     Function GetMacAddress() As String

@@ -10,7 +10,7 @@ Public Class loan_application
     Public comaker1 As String = ""
     Public comaker2 As String = ""
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         Dim search As New search_name
         With search
             .lbl_who.Text = "Borrower :"
@@ -24,6 +24,7 @@ Public Class loan_application
     Private Sub loan_application_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmb_display("SELECT type from loan_types", "type", cmb_purpose)
         cmb_display("SELECT collateral from collateral_types", "collateral", cmb_collateral)
+        btn_search.PerformClick()
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click

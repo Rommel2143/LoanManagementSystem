@@ -3,6 +3,7 @@
     Private Sub subframe_load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbl_calendar.Text = date1
         display_formsub(New dashboard, "Dashboard")
+        Timer1.Start()
     End Sub
     Private Sub MasterlistToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
@@ -17,11 +18,7 @@
         Login.txt_password.Clear()
     End Sub
 
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        con.Close()
-        Application.Exit()
 
-    End Sub
 
     Private Sub DeviceInfoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeviceInfoToolStripMenuItem.Click
         MessageBox.Show("Mac:" & PCmac & "   /  Device:" & PCname & "", "This Device is Registered", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -54,7 +51,7 @@
     End Sub
 
     Private Sub CollectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CollectionToolStripMenuItem.Click
-        display_formsub(loan_active, "Acive Loan")
+        display_formsub(loan_active, "Active Loan")
         loan_active.LoadMemberProfiles()
     End Sub
 
@@ -73,5 +70,9 @@
 
     Private Sub SuggestImprovementToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lbl_calendar.Text = Date.Now.ToString("MMMM dd, yyyy  h:m tt")
     End Sub
 End Class

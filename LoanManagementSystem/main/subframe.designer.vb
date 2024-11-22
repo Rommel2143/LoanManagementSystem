@@ -22,6 +22,7 @@ Partial Class subframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(subframe))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.userstrip = New System.Windows.Forms.ToolStripMenuItem()
@@ -29,7 +30,6 @@ Partial Class subframe
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.logout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MembersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,6 +44,7 @@ Partial Class subframe
         Me.lbl_calendar = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_tittle = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,15 +57,15 @@ Partial Class subframe
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.userstrip, Me.DashboardToolStripMenuItem, Me.MembersToolStripMenuItem, Me.LoanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1346, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(937, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'userstrip
         '
         Me.userstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.logout, Me.ExitToolStripMenuItem})
-        Me.userstrip.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.logout})
+        Me.userstrip.ForeColor = System.Drawing.Color.Black
         Me.userstrip.Image = CType(resources.GetObject("userstrip.Image"), System.Drawing.Image)
         Me.userstrip.Name = "userstrip"
         Me.userstrip.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -74,131 +75,156 @@ Partial Class subframe
         '
         'ManageMyProfileToolStripMenuItem
         '
+        Me.ManageMyProfileToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageMyProfileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ManageMyProfileToolStripMenuItem.Image = CType(resources.GetObject("ManageMyProfileToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ManageMyProfileToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ManageMyProfileToolStripMenuItem.Name = "ManageMyProfileToolStripMenuItem"
-        Me.ManageMyProfileToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.ManageMyProfileToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ManageMyProfileToolStripMenuItem.Text = "Manage my profile"
         '
         'CheckForUpdatesToolStripMenuItem
         '
+        Me.CheckForUpdatesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckForUpdatesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CheckForUpdatesToolStripMenuItem.Image = CType(resources.GetObject("CheckForUpdatesToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CheckForUpdatesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
         '
         'DeviceInfoToolStripMenuItem
         '
+        Me.DeviceInfoToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeviceInfoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.DeviceInfoToolStripMenuItem.Image = CType(resources.GetObject("DeviceInfoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DeviceInfoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DeviceInfoToolStripMenuItem.Name = "DeviceInfoToolStripMenuItem"
-        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
+        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.DeviceInfoToolStripMenuItem.Text = "Device Info."
         '
         'logout
         '
+        Me.logout.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logout.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.logout.Image = CType(resources.GetObject("logout.Image"), System.Drawing.Image)
+        Me.logout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.logout.Name = "logout"
-        Me.logout.Size = New System.Drawing.Size(204, 24)
+        Me.logout.Size = New System.Drawing.Size(188, 22)
         Me.logout.Text = "Logout"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(204, 24)
-        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'DashboardToolStripMenuItem
         '
         Me.DashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.DashboardToolStripMenuItem.Image = CType(resources.GetObject("DashboardToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(94, 24)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(110, 28)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'MembersToolStripMenuItem
         '
         Me.MembersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.MembersToolStripMenuItem.Image = CType(resources.GetObject("MembersToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MembersToolStripMenuItem.Name = "MembersToolStripMenuItem"
-        Me.MembersToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
+        Me.MembersToolStripMenuItem.Size = New System.Drawing.Size(97, 28)
         Me.MembersToolStripMenuItem.Text = "Accounts"
         '
         'LoanToolStripMenuItem
         '
         Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_loan_apply, Me.btn_loan_approve, Me.ReleaseToolStripMenuItem, Me.LoanRecordsToolStripMenuItem, Me.CollectionToolStripMenuItem})
         Me.LoanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LoanToolStripMenuItem.Image = CType(resources.GetObject("LoanToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
-        Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.LoanToolStripMenuItem.Size = New System.Drawing.Size(69, 24)
         Me.LoanToolStripMenuItem.Text = "Loan"
         '
         'btn_loan_apply
         '
         Me.btn_loan_apply.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btn_loan_apply.Image = CType(resources.GetObject("btn_loan_apply.Image"), System.Drawing.Image)
+        Me.btn_loan_apply.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btn_loan_apply.Name = "btn_loan_apply"
-        Me.btn_loan_apply.Size = New System.Drawing.Size(191, 24)
+        Me.btn_loan_apply.Size = New System.Drawing.Size(199, 30)
         Me.btn_loan_apply.Text = "Loan Application"
         '
         'btn_loan_approve
         '
         Me.btn_loan_approve.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btn_loan_approve.Image = CType(resources.GetObject("btn_loan_approve.Image"), System.Drawing.Image)
+        Me.btn_loan_approve.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btn_loan_approve.Name = "btn_loan_approve"
-        Me.btn_loan_approve.Size = New System.Drawing.Size(191, 24)
+        Me.btn_loan_approve.Size = New System.Drawing.Size(199, 30)
         Me.btn_loan_approve.Text = "Approval"
         '
         'ReleaseToolStripMenuItem
         '
         Me.ReleaseToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ReleaseToolStripMenuItem.Image = CType(resources.GetObject("ReleaseToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReleaseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ReleaseToolStripMenuItem.Name = "ReleaseToolStripMenuItem"
-        Me.ReleaseToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
+        Me.ReleaseToolStripMenuItem.Size = New System.Drawing.Size(199, 30)
         Me.ReleaseToolStripMenuItem.Text = "Release"
         '
         'LoanRecordsToolStripMenuItem
         '
         Me.LoanRecordsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LoanRecordsToolStripMenuItem.Image = CType(resources.GetObject("LoanRecordsToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.LoanRecordsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.LoanRecordsToolStripMenuItem.Name = "LoanRecordsToolStripMenuItem"
-        Me.LoanRecordsToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
+        Me.LoanRecordsToolStripMenuItem.Size = New System.Drawing.Size(199, 30)
         Me.LoanRecordsToolStripMenuItem.Text = "Loan Records"
         '
         'CollectionToolStripMenuItem
         '
         Me.CollectionToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CollectionToolStripMenuItem.Image = CType(resources.GetObject("CollectionToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CollectionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CollectionToolStripMenuItem.Name = "CollectionToolStripMenuItem"
-        Me.CollectionToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
+        Me.CollectionToolStripMenuItem.Size = New System.Drawing.Size(199, 30)
         Me.CollectionToolStripMenuItem.Text = "Collection"
         '
         'Panel1
         '
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(0, 52)
+        Me.Panel1.Location = New System.Drawing.Point(0, 58)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1346, 733)
+        Me.Panel1.Size = New System.Drawing.Size(937, 727)
         Me.Panel1.TabIndex = 1
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.Panel2.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Panel2.Controls.Add(Me.Guna2PictureBox1)
+        Me.Panel2.Controls.Add(Me.lbl_tittle)
         Me.Panel2.Controls.Add(Me.Guna2PictureBox2)
         Me.Panel2.Controls.Add(Me.lbl_calendar)
-        Me.Panel2.Controls.Add(Me.Guna2PictureBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 28)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1346, 24)
+        Me.Panel2.Size = New System.Drawing.Size(937, 30)
         Me.Panel2.TabIndex = 2
         '
         'Guna2PictureBox2
         '
         Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
         Me.Guna2PictureBox2.ImageRotate = 0!
         Me.Guna2PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 24)
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 30)
         Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox2.TabIndex = 4
         Me.Guna2PictureBox2.TabStop = False
         '
         'lbl_calendar
         '
-        Me.lbl_calendar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_calendar.AutoSize = True
+        Me.lbl_calendar.Dock = System.Windows.Forms.DockStyle.Right
         Me.lbl_calendar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_calendar.ForeColor = System.Drawing.Color.White
-        Me.lbl_calendar.Location = New System.Drawing.Point(1235, 6)
+        Me.lbl_calendar.Location = New System.Drawing.Point(838, 0)
         Me.lbl_calendar.Name = "lbl_calendar"
         Me.lbl_calendar.Size = New System.Drawing.Size(99, 15)
         Me.lbl_calendar.TabIndex = 3
@@ -206,13 +232,14 @@ Partial Class subframe
         '
         'Guna2PictureBox1
         '
-        Me.Guna2PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(1209, 3)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(822, 0)
+        Me.Guna2PictureBox1.MaximumSize = New System.Drawing.Size(16, 16)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(20, 18)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(16, 16)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox1.TabIndex = 2
         Me.Guna2PictureBox1.TabStop = False
@@ -220,20 +247,22 @@ Partial Class subframe
         'lbl_tittle
         '
         Me.lbl_tittle.AutoSize = True
-        Me.lbl_tittle.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.lbl_tittle.BackColor = System.Drawing.Color.MidnightBlue
         Me.lbl_tittle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_tittle.ForeColor = System.Drawing.Color.White
-        Me.lbl_tittle.Location = New System.Drawing.Point(30, 30)
+        Me.lbl_tittle.Location = New System.Drawing.Point(26, 4)
         Me.lbl_tittle.Name = "lbl_tittle"
         Me.lbl_tittle.Size = New System.Drawing.Size(0, 20)
         Me.lbl_tittle.TabIndex = 0
+        '
+        'Timer1
+        '
         '
         'subframe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1346, 785)
-        Me.Controls.Add(Me.lbl_tittle)
+        Me.ClientSize = New System.Drawing.Size(937, 785)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.MenuStrip1)
@@ -259,7 +288,6 @@ Partial Class subframe
     Friend WithEvents logout As ToolStripMenuItem
     Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeviceInfoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lbl_tittle As Label
     Friend WithEvents lbl_calendar As Label
@@ -274,4 +302,5 @@ Partial Class subframe
     Friend WithEvents CollectionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MembersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DashboardToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class

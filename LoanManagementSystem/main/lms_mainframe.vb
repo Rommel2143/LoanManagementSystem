@@ -1,7 +1,8 @@
 ﻿Public Class lms_mainframe
     Private Sub Inventory_Mainframe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Start()
-        Dim testmode As Boolean = True
+
+        Dim testmode As Boolean = False
+
 
         If testmode = True Then
             error_panel.Visible = True
@@ -18,7 +19,5 @@
         End If
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        datedb = Date.Now.ToString("yyyy-MM-dd")
-    End Sub
+
 End Class
