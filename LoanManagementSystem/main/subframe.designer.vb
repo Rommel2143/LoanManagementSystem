@@ -40,15 +40,15 @@ Partial Class subframe
         Me.CollectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.lbl_calendar = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_tittle = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lbl_calendar = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -118,7 +118,7 @@ Partial Class subframe
         Me.DashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.DashboardToolStripMenuItem.Image = CType(resources.GetObject("DashboardToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(110, 28)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(110, 24)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'MembersToolStripMenuItem
@@ -126,7 +126,7 @@ Partial Class subframe
         Me.MembersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.MembersToolStripMenuItem.Image = CType(resources.GetObject("MembersToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MembersToolStripMenuItem.Name = "MembersToolStripMenuItem"
-        Me.MembersToolStripMenuItem.Size = New System.Drawing.Size(97, 28)
+        Me.MembersToolStripMenuItem.Size = New System.Drawing.Size(97, 24)
         Me.MembersToolStripMenuItem.Text = "Accounts"
         '
         'LoanToolStripMenuItem
@@ -205,31 +205,6 @@ Partial Class subframe
         Me.Panel2.Size = New System.Drawing.Size(937, 30)
         Me.Panel2.TabIndex = 2
         '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 30)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox2.TabIndex = 4
-        Me.Guna2PictureBox2.TabStop = False
-        '
-        'lbl_calendar
-        '
-        Me.lbl_calendar.AutoSize = True
-        Me.lbl_calendar.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lbl_calendar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_calendar.ForeColor = System.Drawing.Color.White
-        Me.lbl_calendar.Location = New System.Drawing.Point(838, 0)
-        Me.lbl_calendar.Name = "lbl_calendar"
-        Me.lbl_calendar.Size = New System.Drawing.Size(99, 15)
-        Me.lbl_calendar.TabIndex = 3
-        Me.lbl_calendar.Text = "MMMM-dd-yyyy"
-        '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -255,6 +230,31 @@ Partial Class subframe
         Me.lbl_tittle.Size = New System.Drawing.Size(0, 20)
         Me.lbl_tittle.TabIndex = 0
         '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 30)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 4
+        Me.Guna2PictureBox2.TabStop = False
+        '
+        'lbl_calendar
+        '
+        Me.lbl_calendar.AutoSize = True
+        Me.lbl_calendar.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lbl_calendar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_calendar.ForeColor = System.Drawing.Color.White
+        Me.lbl_calendar.Location = New System.Drawing.Point(838, 0)
+        Me.lbl_calendar.Name = "lbl_calendar"
+        Me.lbl_calendar.Size = New System.Drawing.Size(99, 15)
+        Me.lbl_calendar.TabIndex = 3
+        Me.lbl_calendar.Text = "MMMM-dd-yyyy"
+        '
         'Timer1
         '
         '
@@ -275,8 +275,8 @@ Partial Class subframe
         Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

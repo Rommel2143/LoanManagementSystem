@@ -61,7 +61,7 @@ Partial Class Login
         Me.Guna2CheckBox1.CheckMarkColor = System.Drawing.Color.MidnightBlue
         Me.Guna2CheckBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Guna2CheckBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Guna2CheckBox1.Location = New System.Drawing.Point(158, 245)
+        Me.Guna2CheckBox1.Location = New System.Drawing.Point(168, 245)
         Me.Guna2CheckBox1.Name = "Guna2CheckBox1"
         Me.Guna2CheckBox1.Size = New System.Drawing.Size(108, 17)
         Me.Guna2CheckBox1.TabIndex = 30
@@ -83,7 +83,7 @@ Partial Class Login
         Me.btn_login.ForeColor = System.Drawing.Color.White
         Me.btn_login.Location = New System.Drawing.Point(158, 278)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(262, 39)
+        Me.btn_login.Size = New System.Drawing.Size(262, 35)
         Me.btn_login.TabIndex = 27
         Me.btn_login.Text = "Login"
         '
