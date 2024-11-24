@@ -32,6 +32,26 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="loandetails" msprop:Generator_TableClassName="loandetailsDataTable" msprop:Generator_TableVarName="tableloandetails" msprop:Generator_RowChangedName="loandetailsRowChanged" msprop:Generator_TablePropName="loandetails" msprop:Generator_RowDeletingName="loandetailsRowDeleting" msprop:Generator_RowChangingName="loandetailsRowChanging" msprop:Generator_RowEvHandlerName="loandetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="loandetailsRowDeleted" msprop:Generator_RowClassName="loandetailsRow" msprop:Generator_UserTableName="loandetails" msprop:Generator_RowEvArgName="loandetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="referenceno" msprop:Generator_ColumnVarNameInTable="columnreferenceno" msprop:Generator_ColumnPropNameInRow="referenceno" msprop:Generator_ColumnPropNameInTable="referencenoColumn" msprop:Generator_UserColumnName="referenceno" type="xs:string" minOccurs="0" />
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname" type="xs:string" minOccurs="0" />
+              <xs:element name="present_address" msprop:Generator_ColumnVarNameInTable="columnpresent_address" msprop:Generator_ColumnPropNameInRow="present_address" msprop:Generator_ColumnPropNameInTable="present_addressColumn" msprop:Generator_UserColumnName="present_address" type="xs:string" minOccurs="0" />
+              <xs:element name="contact1" msprop:Generator_ColumnVarNameInTable="columncontact1" msprop:Generator_ColumnPropNameInRow="contact1" msprop:Generator_ColumnPropNameInTable="contact1Column" msprop:Generator_UserColumnName="contact1" type="xs:string" minOccurs="0" />
+              <xs:element name="contact2" msprop:Generator_ColumnVarNameInTable="columncontact2" msprop:Generator_ColumnPropNameInRow="contact2" msprop:Generator_ColumnPropNameInTable="contact2Column" msprop:Generator_UserColumnName="contact2" type="xs:string" minOccurs="0" />
+              <xs:element name="ammount" msprop:Generator_ColumnVarNameInTable="columnammount" msprop:Generator_ColumnPropNameInRow="ammount" msprop:Generator_ColumnPropNameInTable="ammountColumn" msprop:Generator_UserColumnName="ammount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="months_count" msprop:Generator_ColumnVarNameInTable="columnmonths_count" msprop:Generator_ColumnPropNameInRow="months_count" msprop:Generator_ColumnPropNameInTable="months_countColumn" msprop:Generator_UserColumnName="months_count" type="xs:int" minOccurs="0" />
+              <xs:element name="interest_rate" msprop:Generator_ColumnVarNameInTable="columninterest_rate" msprop:Generator_ColumnPropNameInRow="interest_rate" msprop:Generator_ColumnPropNameInTable="interest_rateColumn" msprop:Generator_UserColumnName="interest_rate" type="xs:int" minOccurs="0" />
+              <xs:element name="date_release" msprop:Generator_ColumnVarNameInTable="columndate_release" msprop:Generator_ColumnPropNameInRow="date_release" msprop:Generator_ColumnPropNameInTable="date_releaseColumn" msprop:Generator_UserColumnName="date_release" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="account_no" msprop:Generator_ColumnVarNameInTable="columnaccount_no" msprop:Generator_ColumnPropNameInRow="account_no" msprop:Generator_ColumnPropNameInTable="account_noColumn" msprop:Generator_UserColumnName="account_no" type="xs:string" minOccurs="0" />
+              <xs:element name="comaker_1" msprop:Generator_ColumnVarNameInTable="columncomaker_1" msprop:Generator_ColumnPropNameInRow="comaker_1" msprop:Generator_ColumnPropNameInTable="comaker_1Column" msprop:Generator_UserColumnName="comaker_1" type="xs:string" minOccurs="0" />
+              <xs:element name="comaker_2" msprop:Generator_ColumnVarNameInTable="columncomaker_2" msprop:Generator_ColumnPropNameInRow="comaker_2" msprop:Generator_ColumnPropNameInTable="comaker_2Column" msprop:Generator_UserColumnName="comaker_2" type="xs:string" minOccurs="0" />
+              <xs:element name="savings" msprop:Generator_ColumnVarNameInTable="columnsavings" msprop:Generator_ColumnPropNameInRow="savings" msprop:Generator_ColumnPropNameInTable="savingsColumn" msprop:Generator_UserColumnName="savings" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sharecap" msprop:Generator_ColumnVarNameInTable="columnsharecap" msprop:Generator_ColumnPropNameInRow="sharecap" msprop:Generator_ColumnPropNameInTable="sharecapColumn" msprop:Generator_UserColumnName="sharecap" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

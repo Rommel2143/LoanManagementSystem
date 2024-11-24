@@ -4,7 +4,7 @@ Public Class print_loanapp
 
     End Sub
 
-    Public Sub viewdata(referenceno As String)
+    Public Sub printapplication(referenceno As String)
         Dim myrpt As New loanapplication_rpt
         dt.Clear()
 
@@ -57,6 +57,67 @@ WHERE la.referenceno = @referenceno
             Dim da As New MySqlDataAdapter(showreport)
             da.Fill(dt)
             myrpt.Database.Tables("Loanapp").SetDataSource(dt)
+            CrystalReportViewer1.ReportSource = Nothing
+            CrystalReportViewer1.ReportSource = myrpt
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        End Try
+    End Sub
+
+    Public Sub printdetails(referenceno As String)
+        Dim myrpt As New loandetails
+        dt.Clear()
+
+        Try
+            con.Close()
+            con.Open()
+
+            Dim showreport As New MySqlCommand("
+              SELECT la.referenceno,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname,
+      mp.present_address,
+      mp.contact1,
+      mp.contact2,
+      la.amount,
+      la.months_count,
+      (la.interest_rate * 100) AS interest_rate,
+      la.date_release,
+      la.account_no,
+       CONCAT(mp1.lastname, ', ', mp1.firstname, ' ', mp1.middlename) AS comaker_1,
+CONCAT(mp2.lastname, ', ', mp2.firstname, ' ', mp2.middlename) AS comaker_2,
+  
+     
+       SUM(COALESCE(CASE 
+           WHEN sv.status IN ('ID', 'CHKD', 'CD') THEN sv.amount 
+           ELSE 0 END, 0)) 
+       - 
+       SUM(COALESCE(CASE 
+           WHEN sv.status IN ('CW', 'CHKW') THEN sv.amount 
+           ELSE 0 END, 0)) AS savings,
+     
+  SUM(COALESCE(CASE 
+           WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount 
+           ELSE 0 END, 0)) 
+       - 
+       SUM(COALESCE(CASE 
+           WHEN sc.status IN ('DM', 'CA') THEN sc.amount 
+           ELSE 0 END, 0)) AS sharecap
+
+FROM loan_app la
+JOIN member_profile mp ON mp.account_no = la.account_no
+LEFT JOIN sharecap sc ON sc.account_no = la.account_no
+LEFT JOIN savings sv ON sv.account_no = la.account_no
+LEFT JOIN member_profile mp1 ON mp1.account_no = la.comaker_1
+LEFT JOIN member_profile mp2 ON mp2.account_no = la.comaker_2
+WHERE la.referenceno = @referenceno
+", con)
+            showreport.Parameters.AddWithValue("@referenceno", referenceno)
+            Dim da As New MySqlDataAdapter(showreport)
+            da.Fill(dt)
+            myrpt.Database.Tables("loandetails").SetDataSource(dt)
             CrystalReportViewer1.ReportSource = Nothing
             CrystalReportViewer1.ReportSource = myrpt
         Catch ex As Exception

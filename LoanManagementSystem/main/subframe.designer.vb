@@ -257,6 +257,7 @@ Partial Class subframe
         '
         'Timer1
         '
+        Me.Timer1.Interval = 1000
         '
         'subframe
         '

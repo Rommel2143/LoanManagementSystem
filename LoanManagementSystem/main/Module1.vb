@@ -21,9 +21,11 @@ Module Module1
     Public user_firstname As String
     Public user_level As String
     Public user_pass As String
-    'credentials of PC used
+    Public user_initial As String
     Public user_account As String
 
+
+    'credentials of PC used
     Public PCname As String = Environment.MachineName
     Public PCmac As String = GetMacAddress()
     Public systemversion As String = Assembly.GetExecutingAssembly().GetName().Version.ToString()

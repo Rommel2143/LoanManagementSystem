@@ -67,6 +67,9 @@
     <Reference Include="Google.Protobuf, Version=3.28.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.28.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.1.0\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -121,6 +124,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -208,6 +212,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>loanapplication_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Loan\loan_records_select.Designer.vb">
+      <DependentUpon>loan_records_select.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\loan_records_select.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\reports\loandetails.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loandetails.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Loan\reports\print_loanapp.Designer.vb">
@@ -351,6 +367,9 @@
     <EmbeddedResource Include="Loan\loan_records.resx">
       <DependentUpon>loan_records.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\loan_records_select.resx">
+      <DependentUpon>loan_records_select.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\loan_release.resx">
       <DependentUpon>loan_release.vb</DependentUpon>
     </EmbeddedResource>
@@ -360,6 +379,10 @@
     <EmbeddedResource Include="Loan\reports\loanapplication_rpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>loanapplication_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\reports\loandetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>loandetails.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\reports\print_loanapp.resx">
       <DependentUpon>print_loanapp.vb</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿Public Class lms_mainframe
     Private Sub Inventory_Mainframe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Dim testmode As Boolean = False
+        Timer1.Start()
+        Dim testmode As Boolean = True
 
 
         If testmode = True Then
@@ -19,5 +19,8 @@
         End If
     End Sub
 
-
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        datedb = Date.Now.ToString("yyyy-MM-dd")
+        timedb = Date.Now.ToString("HH:mm:ss")
+    End Sub
 End Class

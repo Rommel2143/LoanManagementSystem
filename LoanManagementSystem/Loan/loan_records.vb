@@ -62,9 +62,10 @@
     Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
         If e.RowIndex >= 0 Then
             Dim referenceNo As String = datagrid1.Rows(e.RowIndex).Cells("referenceno").Value.ToString()
-            Dim loanrecord As New print_loanapp
-            loanrecord.viewdata(referenceNo)
-            loanrecord.ShowDialog()
+            Dim showoption As New loan_records_select
+            showoption.referenceno = referenceNo
+            showoption.ShowDialog()
+            showoption.BringToFront()
         End If
     End Sub
 
