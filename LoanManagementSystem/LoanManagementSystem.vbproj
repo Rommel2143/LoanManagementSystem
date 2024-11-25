@@ -208,6 +208,12 @@
     <Compile Include="Loan\loan_release_set.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\reports\comakerstatement.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comakerstatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Loan\reports\loanapplication_rpt.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -335,6 +341,18 @@
     <Compile Include="savings\savings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sharecap\reports\print_passbook.Designer.vb">
+      <DependentUpon>print_passbook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sharecap\reports\print_passbook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sharecap\reports\sharecappassbook.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sharecappassbook.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Sharecap\sharecap_collection.Designer.vb">
       <DependentUpon>sharecap_collection.vb</DependentUpon>
     </Compile>
@@ -375,6 +393,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\loan_release_set.resx">
       <DependentUpon>loan_release_set.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\reports\comakerstatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>comakerstatement.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\reports\loanapplication_rpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -431,6 +453,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="savings\savings.resx">
       <DependentUpon>savings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sharecap\reports\print_passbook.resx">
+      <DependentUpon>print_passbook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sharecap\reports\sharecappassbook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>sharecappassbook.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Sharecap\sharecap_collection.resx">
       <DependentUpon>sharecap_collection.vb</DependentUpon>

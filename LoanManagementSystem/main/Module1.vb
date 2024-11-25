@@ -84,29 +84,59 @@ Module Module1
         ShowSnackbar(text)
     End Sub
 
-
     Public Sub reload(ByVal sql As String, ByVal DTG As Object)
         Try
-            dt = New DataTable
+            ' Declare the necessary objects
+            Dim dt As New DataTable
+            Dim cmd As New MySqlCommand(sql, con)
+            Dim da As New MySqlDataAdapter(cmd)
             con.Close()
+            ' Open the connection
             con.Open()
-            With cmd
-                .Connection = con
-                .CommandText = sql
-            End With
-            da.SelectCommand = cmd
+
+            ' Fill the DataTable with data from the query
             da.Fill(dt)
+
+            ' Bind the DataTable to the DataGridView
             DTG.DataSource = dt
 
-
         Catch ex As Exception
+            ' Display error message
             MessageBox.Show(ex.Message)
         Finally
-            con.Close()
+            ' Ensure the connection is closed after use
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+
+            ' Dispose of the DataAdapter and DataTable
             da.Dispose()
             dt.Dispose()
         End Try
     End Sub
+
+    'Public Sub reload(ByVal sql As String, ByVal DTG As Object)
+    '    Try
+    '        dt = New DataTable
+    '        con.Close()
+    '        con.Open()
+    '        With cmd
+    '            .Connection = con
+    '            .CommandText = sql
+    '        End With
+    '        da.SelectCommand = cmd
+    '        da.Fill(dt)
+    '        DTG.DataSource = dt
+
+
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message)
+    '    Finally
+    '        con.Close()
+    '        da.Dispose()
+    '        dt.Dispose()
+    '    End Try
+    'End Sub
 
     Public Sub cmb_display(sql As String, column As String, cmb As Guna.UI2.WinForms.Guna2ComboBox)
         Try

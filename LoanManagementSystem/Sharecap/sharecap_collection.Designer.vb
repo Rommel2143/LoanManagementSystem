@@ -22,24 +22,25 @@ Partial Class sharecap_collection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sharecap_collection))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sharecap_collection))
         Me.cmb_transaction = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_amountdeposit = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbl_accountname = New System.Windows.Forms.Label()
         Me.lbl_balance = New System.Windows.Forms.Label()
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.tab1 = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -76,29 +77,6 @@ Partial Class sharecap_collection
         Me.Label7.Size = New System.Drawing.Size(84, 20)
         Me.Label7.TabIndex = 54
         Me.Label7.Text = "Transaction"
-        '
-        'txt_password
-        '
-        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_password.DefaultText = ""
-        Me.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
-        Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(53, 248)
-        Me.txt_password.Margin = New System.Windows.Forms.Padding(5)
-        Me.txt_password.Name = "txt_password"
-        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.txt_password.PlaceholderText = "Password..."
-        Me.txt_password.SelectedText = ""
-        Me.txt_password.Size = New System.Drawing.Size(179, 47)
-        Me.txt_password.TabIndex = 53
-        Me.txt_password.UseSystemPasswordChar = True
         '
         'Guna2Button1
         '
@@ -229,6 +207,7 @@ Partial Class sharecap_collection
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.lbl_accountname)
         Me.Guna2Panel1.Controls.Add(Me.lbl_balance)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -237,6 +216,22 @@ Partial Class sharecap_collection
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1189, 195)
         Me.Guna2Panel1.TabIndex = 3
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.Location = New System.Drawing.Point(12, 151)
+        Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.Size = New System.Drawing.Size(121, 36)
+        Me.Guna2Button2.TabIndex = 4
+        Me.Guna2Button2.Text = "Print Passbook"
         '
         'TabPage1
         '
@@ -286,10 +281,10 @@ Partial Class sharecap_collection
         '
         Me.TabPage3.Controls.Add(Me.cmb_transaction)
         Me.TabPage3.Controls.Add(Me.Label7)
-        Me.TabPage3.Controls.Add(Me.txt_password)
         Me.TabPage3.Controls.Add(Me.Guna2Button1)
         Me.TabPage3.Controls.Add(Me.txt_amountdeposit)
         Me.TabPage3.Controls.Add(Me.Label3)
+        Me.TabPage3.Controls.Add(Me.txt_password)
         Me.TabPage3.Location = New System.Drawing.Point(184, 4)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage3.Name = "TabPage3"
@@ -308,6 +303,29 @@ Partial Class sharecap_collection
         Me.Label3.Size = New System.Drawing.Size(121, 25)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Contribution"
+        '
+        'txt_password
+        '
+        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_password.DefaultText = ""
+        Me.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
+        Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.txt_password.Location = New System.Drawing.Point(53, 248)
+        Me.txt_password.Margin = New System.Windows.Forms.Padding(5)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txt_password.PlaceholderText = "Password..."
+        Me.txt_password.SelectedText = ""
+        Me.txt_password.Size = New System.Drawing.Size(179, 47)
+        Me.txt_password.TabIndex = 53
+        Me.txt_password.UseSystemPasswordChar = True
         '
         'sharecap_collection
         '
@@ -344,4 +362,5 @@ Partial Class sharecap_collection
     Friend WithEvents tab1 As Guna.UI2.WinForms.Guna2TabControl
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Label3 As Label
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
 End Class

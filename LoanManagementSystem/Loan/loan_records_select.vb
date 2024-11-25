@@ -16,4 +16,10 @@
         loanrecord.printdetails(referenceno)
         loanrecord.ShowDialog()
     End Sub
+
+    Private Sub Guna2TileButton4_Click(sender As Object, e As EventArgs) Handles Guna2TileButton4.Click
+        Dim loanrecord As New print_loanapp
+        loanrecord.printcomaker(referenceno)
+        loanrecord.ShowDialog()
+    End Sub
 End Class

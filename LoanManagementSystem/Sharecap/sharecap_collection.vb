@@ -120,4 +120,15 @@ Public Class sharecap_collection
     Private Sub Guna2Panel1_Paint_1(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        Dim printpass As New print_passbook
+        printpass.print_pass(account_share)
+
+        printpass.ShowDialog()
+    End Sub
+
+    Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
+
+    End Sub
 End Class

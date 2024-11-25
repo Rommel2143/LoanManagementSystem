@@ -128,4 +128,51 @@ WHERE la.referenceno = @referenceno
             End If
         End Try
     End Sub
+
+    Public Sub printcomaker(referenceno As String)
+        Dim myrpt As New comakerstatement
+        dt.Clear()
+
+        Try
+            con.Close()
+            con.Open()
+
+            Dim showreport As New MySqlCommand("
+    SELECT 
+        UPPER(CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename)) AS Fullname,
+        la.amount,
+        DATE_FORMAT(la.date_release, '%W, %M %d, %Y') AS date_release,
+        (la.amount - (la.service_fee + la.insurance_fee)) AS amount_release,
+        UPPER(CONCAT(mp1.lastname, ', ', mp1.firstname, ' ', mp1.middlename)) AS comaker_1,
+        UPPER(CONCAT(mp2.lastname, ', ', mp2.firstname, ' ', mp2.middlename)) AS comaker_2
+    FROM 
+        loan_app la
+    JOIN 
+        member_profile mp ON mp.account_no = la.account_no
+    LEFT JOIN 
+        sharecap sc ON sc.account_no = la.account_no
+    LEFT JOIN 
+        savings sv ON sv.account_no = la.account_no
+    LEFT JOIN 
+        member_profile mp1 ON mp1.account_no = la.comaker_1
+    LEFT JOIN 
+        member_profile mp2 ON mp2.account_no = la.comaker_2
+    WHERE 
+        la.referenceno = @referenceno
+", con)
+
+            showreport.Parameters.AddWithValue("@referenceno", referenceno)
+            Dim da As New MySqlDataAdapter(showreport)
+            da.Fill(dt)
+            myrpt.Database.Tables("comakerstatement").SetDataSource(dt)
+            CrystalReportViewer1.ReportSource = Nothing
+            CrystalReportViewer1.ReportSource = myrpt
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        End Try
+    End Sub
 End Class
