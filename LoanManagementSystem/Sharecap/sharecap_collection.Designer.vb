@@ -219,6 +219,7 @@ Partial Class sharecap_collection
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.BorderRadius = 3
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -226,12 +227,13 @@ Partial Class sharecap_collection
         Me.Guna2Button2.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
         Me.Guna2Button2.Location = New System.Drawing.Point(12, 151)
         Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(121, 36)
+        Me.Guna2Button2.Size = New System.Drawing.Size(75, 36)
         Me.Guna2Button2.TabIndex = 4
-        Me.Guna2Button2.Text = "Print Passbook"
+        Me.Guna2Button2.Text = "Print"
         '
         'TabPage1
         '

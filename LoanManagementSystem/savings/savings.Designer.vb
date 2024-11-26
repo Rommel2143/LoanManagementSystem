@@ -22,31 +22,32 @@ Partial Class savings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(savings))
         Me.tab1 = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.lbl_accountname = New System.Windows.Forms.Label()
         Me.lbl_balance = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.cmb_deptrans = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_amountdeposit = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmb_withtrans = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.txt_passwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btn_withdraw = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_amountwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.cmb_deptrans = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.cmb_withtrans = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.tab1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,43 +102,43 @@ Partial Class savings
         'datagrid1
         '
         Me.datagrid1.AllowUserToResizeRows = False
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.datagrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.Purple
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Purple
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datagrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.datagrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Purple
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Purple
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datagrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.datagrid1.ColumnHeadersHeight = 36
         Me.datagrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.datagrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datagrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.datagrid1.Location = New System.Drawing.Point(3, 169)
         Me.datagrid1.Name = "datagrid1"
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datagrid1.RowHeadersVisible = False
         Me.datagrid1.RowTemplate.Height = 42
         Me.datagrid1.Size = New System.Drawing.Size(858, 488)
@@ -166,6 +167,7 @@ Partial Class savings
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.lbl_accountname)
         Me.Guna2Panel1.Controls.Add(Me.lbl_balance)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -173,6 +175,23 @@ Partial Class savings
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(858, 166)
         Me.Guna2Panel1.TabIndex = 3
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.BorderRadius = 3
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
+        Me.Guna2Button2.Location = New System.Drawing.Point(12, 120)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.Size = New System.Drawing.Size(79, 40)
+        Me.Guna2Button2.TabIndex = 4
+        Me.Guna2Button2.Text = "Print"
         '
         'lbl_accountname
         '
@@ -212,6 +231,35 @@ Partial Class savings
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Deposit"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'cmb_deptrans
+        '
+        Me.cmb_deptrans.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_deptrans.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_deptrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_deptrans.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_deptrans.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_deptrans.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmb_deptrans.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_deptrans.ItemHeight = 30
+        Me.cmb_deptrans.Items.AddRange(New Object() {"Cash", "Check", "Initial"})
+        Me.cmb_deptrans.Location = New System.Drawing.Point(46, 168)
+        Me.cmb_deptrans.Name = "cmb_deptrans"
+        Me.cmb_deptrans.Size = New System.Drawing.Size(157, 36)
+        Me.cmb_deptrans.StartIndex = 0
+        Me.cmb_deptrans.TabIndex = 55
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.DimGray
+        Me.Label7.Location = New System.Drawing.Point(46, 145)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(84, 20)
+        Me.Label7.TabIndex = 54
+        Me.Label7.Text = "Transaction"
         '
         'txt_password
         '
@@ -298,6 +346,35 @@ Partial Class savings
         Me.TabPage2.Text = "Withdraw"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.DimGray
+        Me.Label1.Location = New System.Drawing.Point(42, 148)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(84, 20)
+        Me.Label1.TabIndex = 57
+        Me.Label1.Text = "Transaction"
+        '
+        'cmb_withtrans
+        '
+        Me.cmb_withtrans.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_withtrans.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_withtrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_withtrans.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_withtrans.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_withtrans.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmb_withtrans.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_withtrans.ItemHeight = 30
+        Me.cmb_withtrans.Items.AddRange(New Object() {"Cash", "Check"})
+        Me.cmb_withtrans.Location = New System.Drawing.Point(46, 171)
+        Me.cmb_withtrans.Name = "cmb_withtrans"
+        Me.cmb_withtrans.Size = New System.Drawing.Size(146, 36)
+        Me.cmb_withtrans.StartIndex = 0
+        Me.cmb_withtrans.TabIndex = 56
+        '
         'txt_passwithdraw
         '
         Me.txt_passwithdraw.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -367,64 +444,6 @@ Partial Class savings
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Withdraw Funds"
         '
-        'cmb_deptrans
-        '
-        Me.cmb_deptrans.BackColor = System.Drawing.Color.Transparent
-        Me.cmb_deptrans.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmb_deptrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_deptrans.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_deptrans.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_deptrans.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmb_deptrans.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmb_deptrans.ItemHeight = 30
-        Me.cmb_deptrans.Items.AddRange(New Object() {"Cash", "Check", "Initial"})
-        Me.cmb_deptrans.Location = New System.Drawing.Point(46, 168)
-        Me.cmb_deptrans.Name = "cmb_deptrans"
-        Me.cmb_deptrans.Size = New System.Drawing.Size(157, 36)
-        Me.cmb_deptrans.StartIndex = 0
-        Me.cmb_deptrans.TabIndex = 55
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.DimGray
-        Me.Label7.Location = New System.Drawing.Point(46, 145)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 20)
-        Me.Label7.TabIndex = 54
-        Me.Label7.Text = "Transaction"
-        '
-        'cmb_withtrans
-        '
-        Me.cmb_withtrans.BackColor = System.Drawing.Color.Transparent
-        Me.cmb_withtrans.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmb_withtrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_withtrans.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_withtrans.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_withtrans.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmb_withtrans.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmb_withtrans.ItemHeight = 30
-        Me.cmb_withtrans.Items.AddRange(New Object() {"Cash", "Check"})
-        Me.cmb_withtrans.Location = New System.Drawing.Point(46, 171)
-        Me.cmb_withtrans.Name = "cmb_withtrans"
-        Me.cmb_withtrans.Size = New System.Drawing.Size(146, 36)
-        Me.cmb_withtrans.StartIndex = 0
-        Me.cmb_withtrans.TabIndex = 56
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.Location = New System.Drawing.Point(42, 148)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 20)
-        Me.Label1.TabIndex = 57
-        Me.Label1.Text = "Transaction"
-        '
         'savings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -468,4 +487,5 @@ Partial Class savings
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_withtrans As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
 End Class

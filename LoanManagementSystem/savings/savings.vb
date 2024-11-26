@@ -66,11 +66,6 @@ Public Class savings
 
             If user_pass = txt_passwithdraw.Text Then
 
-                If Convert.ToDecimal(txt_amountwithdraw.Text) > Convert.ToDecimal(lbl_balance.Text) Then
-                    display_error("Available balance to low!")
-                    Exit Sub
-                End If
-
                 Dim trans As String = Nothing
                 Select Case cmb_withtrans.Text
                     Case "Cash"
@@ -79,11 +74,12 @@ Public Class savings
                         trans = "CHKW"
 
                 End Select
+
                 con.Close()
-                    con.Open()
+                con.Open()
 
                 ' Use parameterized query
-                Dim cmdinsert As New MySqlCommand("INSERT INTO savings (`referenceno`, `account_no`, `amount`, `date_transac`, `time`, `status`, `teller`)
+                Dim cmdinsert As New MySqlCommand("INSERT INTO savings (`referenceno`, `account_no`, `amount`, `date_transac`, `time`,`status`, `teller`)
                                                                 VALUES ('" & GenerateReferenceNumber("S") & "',
                                                                        '" & account_no & "',
                                                                         @amount,
@@ -96,13 +92,11 @@ Public Class savings
                 cmdinsert.Parameters.AddWithValue("@amount", Convert.ToDecimal(txt_amountwithdraw.Text))
                 cmdinsert.ExecuteNonQuery()
                 MessageBox.Show("Record saved successfully.")
-                    txt_amountwithdraw.Clear()
-                    txt_passwithdraw.Clear()
+                txt_amountwithdraw.Clear()
+                txt_passwithdraw.Clear()
                 loaddata(account_no, lbl_accountname.Text)
-
-
             Else
-                    display_error("Invalid Password!")
+                display_error("Invalid Password!")
             End If
         Catch ex As Exception
             display_error("Error: " & ex.Message)
@@ -156,5 +150,12 @@ Public Class savings
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        Dim printpass As New print_savings
+        printpass.print_savings(account_no)
+
+        printpass.ShowDialog()
     End Sub
 End Class

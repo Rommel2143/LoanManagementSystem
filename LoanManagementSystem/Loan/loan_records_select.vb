@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub loan_records_select_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lbl_fullname.Text = "Reference:" & referenceno
+        lbl_fullname.Text = "Reference: " & referenceno
     End Sub
 
     Private Sub Guna2TileButton2_Click(sender As Object, e As EventArgs) Handles Guna2TileButton2.Click

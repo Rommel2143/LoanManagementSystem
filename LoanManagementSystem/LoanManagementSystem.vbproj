@@ -335,6 +335,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="savings\report\print_savings.Designer.vb">
+      <DependentUpon>print_savings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="savings\report\print_savings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="savings\report\savings_transac.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>savings_transac.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="savings\savings.Designer.vb">
       <DependentUpon>savings.vb</DependentUpon>
     </Compile>
@@ -450,6 +462,13 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="savings\report\print_savings.resx">
+      <DependentUpon>print_savings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="savings\report\savings_transac.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>savings_transac.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="savings\savings.resx">
       <DependentUpon>savings.vb</DependentUpon>
