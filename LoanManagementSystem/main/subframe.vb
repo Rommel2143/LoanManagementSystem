@@ -45,9 +45,8 @@
         loan_release.LoadMemberProfiles()
     End Sub
 
-    Private Sub LoanRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoanRecordsToolStripMenuItem.Click
-        display_formsub(loan_records, "Loan Records")
-        loan_records.loadrecords()
+    Private Sub LoanRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub CollectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CollectionToolStripMenuItem.Click
@@ -78,5 +77,14 @@
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub LoanRecordsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LoanRecordsToolStripMenuItem1.Click
+        display_formsub(loan_records, "Loan Records")
+        loan_records.loadrecords()
+    End Sub
+
+    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
+        display_formsub(New user_management, "User Management")
     End Sub
 End Class

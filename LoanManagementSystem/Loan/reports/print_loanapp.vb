@@ -141,7 +141,7 @@ WHERE la.referenceno = @referenceno
     SELECT 
         UPPER(CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename)) AS Fullname,
         la.amount,
-        DATE_FORMAT(la.date_release, '%W, %M %d, %Y') AS date_release,
+        DATE_FORMAT(la.date_release, '%M %d, %Y') AS date_release,
         (la.amount - (la.service_fee + la.insurance_fee)) AS amount_release,
         UPPER(CONCAT(mp1.lastname, ', ', mp1.firstname, ' ', mp1.middlename)) AS comaker_1,
         UPPER(CONCAT(mp2.lastname, ', ', mp2.firstname, ' ', mp2.middlename)) AS comaker_2

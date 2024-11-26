@@ -24,13 +24,20 @@ Public Class loan_collection
                 lbl_reference.Text = dr.GetString("referenceno")
                 lbl_loanamount.Text = dr.GetDecimal("amount").ToString("N0")
                 lbl_purpose.Text = dr.GetString("purpose")
-                reload("SELECT `id`, DATE_FORMAT(date_month, '%M %d, %Y') AS Due_Date, `ammortization` AS Payment, `due_fines` AS Due_Fines,
-                        CASE status
-                        WHEN 0 THEN 'Unpaid'
-                        WHEN 1 THEN 'Paid'
-                         END AS Status
-                        FROM `loan_collection`
-                        WHERE referenceno ='" & reference & "'", datagrid1)
+                lbl_term.Text = dr.GetInt32("months_count") & " month/s"
+                reload("SELECT lc.id, 
+       DATE_FORMAT(date_month, '%M %d, %Y') AS Due_Date, 
+       `ammortization` AS Payment, 
+       `due_fines` AS Penalty, 
+       CONCAT(initials,' (',date_paid,')') AS Teller,
+       CASE status
+            WHEN 0 THEN 'Unpaid'
+            WHEN 1 THEN 'Paid'
+       END AS Status
+FROM loan_collection lc
+LEFT JOIN user u ON u.account_no = lc.teller
+WHERE referenceno ='" & reference & "'
+", datagrid1)
                 datagrid1.Columns("id").Visible = False
                 datagrid1.Columns("Status").Visible = False
 

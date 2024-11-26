@@ -36,6 +36,8 @@ Partial Class loan_collection
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fullname = New System.Windows.Forms.Label()
+        Me.lbl_term = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -71,7 +73,7 @@ Partial Class loan_collection
         Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.datagrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datagrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.datagrid1.Location = New System.Drawing.Point(0, 85)
+        Me.datagrid1.Location = New System.Drawing.Point(0, 94)
         Me.datagrid1.Name = "datagrid1"
         Me.datagrid1.ReadOnly = True
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -85,7 +87,7 @@ Partial Class loan_collection
         Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datagrid1.RowHeadersVisible = False
         Me.datagrid1.RowTemplate.Height = 39
-        Me.datagrid1.Size = New System.Drawing.Size(1004, 574)
+        Me.datagrid1.Size = New System.Drawing.Size(1004, 565)
         Me.datagrid1.TabIndex = 2
         Me.datagrid1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.datagrid1.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -111,6 +113,9 @@ Partial Class loan_collection
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel1.Controls.Add(Me.lbl_term)
+        Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.lbl_loanamount)
         Me.Guna2Panel1.Controls.Add(Me.Label6)
         Me.Guna2Panel1.Controls.Add(Me.Label10)
@@ -122,7 +127,7 @@ Partial Class loan_collection
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1004, 85)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1004, 94)
         Me.Guna2Panel1.TabIndex = 4
         '
         'lbl_loanamount
@@ -131,7 +136,7 @@ Partial Class loan_collection
         Me.lbl_loanamount.BackColor = System.Drawing.Color.Transparent
         Me.lbl_loanamount.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_loanamount.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_loanamount.Location = New System.Drawing.Point(704, 37)
+        Me.lbl_loanamount.Location = New System.Drawing.Point(520, 41)
         Me.lbl_loanamount.Name = "lbl_loanamount"
         Me.lbl_loanamount.Size = New System.Drawing.Size(28, 21)
         Me.lbl_loanamount.TabIndex = 82
@@ -143,11 +148,11 @@ Partial Class loan_collection
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DimGray
-        Me.Label6.Location = New System.Drawing.Point(599, 37)
+        Me.Label6.Location = New System.Drawing.Point(445, 42)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(96, 20)
+        Me.Label6.Size = New System.Drawing.Size(69, 20)
         Me.Label6.TabIndex = 81
-        Me.Label6.Text = "Loan amount"
+        Me.Label6.Text = "Amount :"
         '
         'Label10
         '
@@ -155,11 +160,11 @@ Partial Class loan_collection
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.DimGray
-        Me.Label10.Location = New System.Drawing.Point(599, 11)
+        Me.Label10.Location = New System.Drawing.Point(445, 16)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(99, 20)
+        Me.Label10.Size = New System.Drawing.Size(69, 20)
         Me.Label10.TabIndex = 79
-        Me.Label10.Text = "Loan purpose"
+        Me.Label10.Text = "Purpose :"
         '
         'lbl_purpose
         '
@@ -167,7 +172,7 @@ Partial Class loan_collection
         Me.lbl_purpose.BackColor = System.Drawing.Color.Transparent
         Me.lbl_purpose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_purpose.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_purpose.Location = New System.Drawing.Point(704, 11)
+        Me.lbl_purpose.Location = New System.Drawing.Point(520, 16)
         Me.lbl_purpose.Name = "lbl_purpose"
         Me.lbl_purpose.Size = New System.Drawing.Size(28, 21)
         Me.lbl_purpose.TabIndex = 80
@@ -221,6 +226,30 @@ Partial Class loan_collection
         Me.lbl_fullname.TabIndex = 76
         Me.lbl_fullname.Text = "---"
         '
+        'lbl_term
+        '
+        Me.lbl_term.AutoSize = True
+        Me.lbl_term.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_term.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_term.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_term.Location = New System.Drawing.Point(98, 57)
+        Me.lbl_term.Name = "lbl_term"
+        Me.lbl_term.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_term.TabIndex = 84
+        Me.lbl_term.Text = "---"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DimGray
+        Me.Label3.Location = New System.Drawing.Point(49, 57)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 20)
+        Me.Label3.TabIndex = 83
+        Me.Label3.Text = "Term :"
+        '
         'loan_collection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -248,4 +277,6 @@ Partial Class loan_collection
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_fullname As Label
+    Friend WithEvents lbl_term As Label
+    Friend WithEvents Label3 As Label
 End Class

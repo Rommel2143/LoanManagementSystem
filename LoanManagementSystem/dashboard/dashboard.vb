@@ -218,72 +218,70 @@ FROM (
 
 
             Dim app As New GunaLineDataset() ' Initialize the dataset
-            app.Label = "Applied" ' Set the label for the dataset
+            app.Label = "Total"
             app.PointRadius = 2
             app.PointFillColors = pointapp
             app.PointBorderColors = pointapp
             app.FillColor = Color.Blue
             ' Query for loan_app
-            Using cmd As New MySqlCommand("SELECT `date_apply`, COUNT(*) AS `loan_count` FROM `loan_app` WHERE date_apply IS NOT NULL AND  YEAR(`date_apply`) = YEAR(CURDATE()) GROUP BY MONTH(date_apply) ORDER BY date_apply DESC", con)
+
+
+            Using cmd As New MySqlCommand("SELECT 
+    CONCAT(YEAR(date_column), '-', LPAD(MONTH(date_column), 2, '0')) AS month,
+    SUM(transaction_count) AS total_transactions
+FROM (
+    -- Transactions from loan_app
+    SELECT 
+        date_apply AS date_column, COUNT(*) AS transaction_count
+    FROM loan_app
+    WHERE date_apply IS NOT NULL
+    GROUP BY YEAR(date_apply), MONTH(date_apply)
+    
+    UNION ALL
+    
+    SELECT 
+        date_approved AS date_column, COUNT(*) AS transaction_count
+    FROM loan_app
+    WHERE date_approved IS NOT NULL
+    GROUP BY YEAR(date_approved), MONTH(date_approved)
+    
+    UNION ALL
+    
+    SELECT 
+        date_release AS date_column, COUNT(*) AS transaction_count
+    FROM loan_app
+    WHERE date_release IS NOT NULL
+    GROUP BY YEAR(date_release), MONTH(date_release)
+    
+    UNION ALL
+    
+    -- Transactions from loan_collection
+    SELECT 
+        date_paid AS date_column, COUNT(*) AS transaction_count
+    FROM loan_collection
+    WHERE date_paid IS NOT NULL
+    GROUP BY YEAR(date_paid), MONTH(date_paid)
+) AS combined_data
+GROUP BY YEAR(date_column), MONTH(date_column)
+ORDER BY YEAR(date_column), MONTH(date_column);
+
+", con)
                 Using dr = cmd.ExecuteReader()
                     While dr.Read()
                         ' Convert date_apply to a formatted date and add the data points
-                        Dim dateApply As String = DateTime.Parse(dr("date_apply")).ToString("MMM")
-                        Dim loanCount As Integer = dr.GetInt32("loan_count")
+                        Dim dateApply As String = DateTime.Parse(dr("month")).ToString("MMM")
+                        Dim loanCount As Integer = dr.GetInt32("total_transactions")
                         app.DataPoints.Add(dateApply, loanCount)
                     End While
                 End Using
             End Using
 
 
-
-
-            Dim release As New GunaLineDataset() ' Initialize the dataset
-            release.Label = "Released" ' Set the label for the dataset
-            release.PointRadius = 2
-            release.PointFillColors = pointrelease
-            release.PointBorderColors = pointrelease
-            release.FillColor = Color.Red
-            ' Query for loan_app
-            Using cmdrelease As New MySqlCommand("SELECT `date_release`, COUNT(*) AS `loan_count` FROM `loan_app` WHERE date_release IS NOT NULL AND  YEAR(`date_release`) = YEAR(CURDATE()) GROUP BY MONTH(date_release) ORDER BY date_release DESC", con)
-                Using dr = cmdrelease.ExecuteReader()
-                    While dr.Read()
-                        ' Convert date_apply to a formatted date and add the data points
-                        Dim dateApply As String = DateTime.Parse(dr("date_release")).ToString("MMM")
-                        Dim loanCount As Integer = dr.GetInt32("loan_count")
-                        release.DataPoints.Add(dateApply, loanCount)
-                    End While
-                End Using
-            End Using
-
-
-            Dim collection As New GunaLineDataset()
-            collection.Label = "Collected"
-            collection.PointRadius = 2
-            collection.PointFillColors = pointcollect
-            collection.PointBorderColors = pointcollect
-            collection.FillColor = Color.Green
-
-            ' Query for loan_collection
-            Using collect As New MySqlCommand("SELECT date_paid, COUNT(*) AS totalcount FROM `loan_collection` WHERE date_paid IS NOT NULL AND YEAR(`date_paid`) = YEAR(CURDATE()) GROUP BY MONTH(date_paid) ORDER BY date_paid DESC", con)
-                Using dr = collect.ExecuteReader()
-                    While dr.Read()
-
-                        Dim monthPaid As String = DateTime.Parse(dr("date_paid")).ToString("MMM")
-                        Dim loanCount As Integer = dr.GetInt32("totalcount")
-
-                        ' Add data points to the dataset
-                        collection.DataPoints.Add(monthPaid, loanCount)
-                    End While
-                End Using
-            End Using
             con.Close()
 
             ' Add the dataset to the chart
             GunaChart1.Datasets.Clear()
             GunaChart1.Datasets.Add(app)
-            GunaChart1.Datasets.Add(release)
-            GunaChart1.Datasets.Add(collection)
 
             GunaChart1.Update()
 
@@ -295,45 +293,49 @@ FROM (
 
     Private Function collectiontoday() As String
         Try
+            Dim query As String = "SELECT IFNULL(SUM(ammortization + due_fines), 0) FROM loan_collection WHERE date_paid IS NOT NULL AND DATE(date_paid) = CURDATE()"
 
-
-            Dim query As String = "SELECT SUM(ammortization + due_fines) FROM loan_collection WHERE date_paid IS NOT NULL and date_paid=CURDATE()"
             con.Close()
             con.Open()
             Dim selectdata As New MySqlCommand(query, con)
             dr = selectdata.ExecuteReader
-            If dr.Read = True Then
 
-
-                Return "Php " & dr.GetDecimal(0).ToString("N2")
+            If dr.Read() Then
+                Dim totalCollection As Decimal = dr.GetDecimal(0)
+                Return "Php " & totalCollection.ToString("N2")
             Else
-                Return "Unable to load data."
+                Return "Php 0.00"
             End If
         Catch ex As Exception
-            Return "Unable to load data."
-
+            Return "Unable to load data"
+        Finally
+            If dr IsNot Nothing Then dr.Close()
+            If con.State = ConnectionState.Open Then con.Close()
         End Try
     End Function
 
+
     Private Function releasedtoday() As String
         Try
+            Dim query As String = "SELECT IFNULL(SUM(amount - (service_fee + insurance_fee)), 0) " &
+                              "FROM loan_app WHERE date_release IS NOT NULL AND DATE(date_release) = CURDATE()"
 
-
-            Dim query As String = "SELECT SUM(amount - (service_fee + insurance_fee)) FROM loan_app WHERE date_release IS NOT NULL and date_release=CURDATE()"
             con.Close()
             con.Open()
             Dim selectdata As New MySqlCommand(query, con)
             dr = selectdata.ExecuteReader
-            If dr.Read = True Then
 
-
-                Return "Php " & dr.GetDecimal(0).ToString("N2")
+            If dr.Read() Then
+                Dim totalReleased As Decimal = dr.GetDecimal(0)
+                Return "Php " & totalReleased.ToString("N2")
             Else
-                Return "Unable to load data."
+                Return "Php 0.00"
             End If
         Catch ex As Exception
             Return "Unable to load data."
-
+        Finally
+            If dr IsNot Nothing Then dr.Close()
+            If con.State = ConnectionState.Open Then con.Close()
         End Try
     End Function
 
@@ -341,4 +343,7 @@ FROM (
 
     End Sub
 
+    Private Sub Guna2Panel10_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel10.Paint
+
+    End Sub
 End Class

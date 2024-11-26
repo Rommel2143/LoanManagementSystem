@@ -46,8 +46,8 @@ Partial Class loan_release_set
         Me.lbl_purpose = New System.Windows.Forms.Label()
         Me.lbl_insurance = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbl_first = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.dtpicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -320,18 +320,6 @@ Partial Class loan_release_set
         Me.Label3.TabIndex = 78
         Me.Label3.Text = "Insurance fee"
         '
-        'lbl_first
-        '
-        Me.lbl_first.AutoSize = True
-        Me.lbl_first.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_first.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_first.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_first.Location = New System.Drawing.Point(328, 267)
-        Me.lbl_first.Name = "lbl_first"
-        Me.lbl_first.Size = New System.Drawing.Size(28, 21)
-        Me.lbl_first.TabIndex = 81
-        Me.lbl_first.Text = "---"
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -344,12 +332,25 @@ Partial Class loan_release_set
         Me.Label5.TabIndex = 80
         Me.Label5.Text = "First Payment"
         '
+        'dtpicker1
+        '
+        Me.dtpicker1.Checked = True
+        Me.dtpicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.dtpicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.dtpicker1.Location = New System.Drawing.Point(253, 291)
+        Me.dtpicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.dtpicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtpicker1.Name = "dtpicker1"
+        Me.dtpicker1.Size = New System.Drawing.Size(247, 36)
+        Me.dtpicker1.TabIndex = 82
+        Me.dtpicker1.Value = New Date(2024, 11, 26, 20, 35, 42, 305)
+        '
         'loan_release_set
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(556, 435)
-        Me.Controls.Add(Me.lbl_first)
+        Me.Controls.Add(Me.dtpicker1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lbl_insurance)
         Me.Controls.Add(Me.Label3)
@@ -403,6 +404,6 @@ Partial Class loan_release_set
     Friend WithEvents lbl_purpose As Label
     Friend WithEvents lbl_insurance As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents lbl_first As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents dtpicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
 End Class

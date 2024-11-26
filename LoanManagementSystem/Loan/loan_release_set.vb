@@ -8,6 +8,7 @@ Public Class loan_release_set
 
     Private Sub loan_approval_set_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_password.UseSystemPasswordChar = True
+        dtpicker1.Value = Date.Now
     End Sub
 
     Public Sub loadprofile(reference As String)
@@ -38,7 +39,8 @@ Public Class loan_release_set
                 lbl_insurance.Text = dr.GetDecimal("insurance_fee").ToString("N0") * -1
                 lbl_purpose.Text = dr.GetString("purpose")
                 lbl_transfer.Text = dr.GetString("mode")
-                lbl_first.Text = New Date(currentYear, currentMonth + 1, currentDay).ToString("MMMM dd, yyyyy")
+
+
             End If
         Catch ex As Exception
             display_error(ex.Message)
@@ -86,48 +88,47 @@ Public Class loan_release_set
         con.Close()
         con.Open()
 
-        ' Get the current date
-        Dim currentDate As Date = Date.Now
-        Dim currentDay As Integer = currentDate.Day
-        Dim currentMonth As Integer = currentDate.Month
-        Dim currentYear As Integer = currentDate.Year
+        ' Get the current date from dtpicker1
+        Dim startDate As Date = dtpicker1.Value
+        Dim startDay As Integer = startDate.Day
+        Dim startMonth As Integer = startDate.Month
+        Dim startYear As Integer = startDate.Year
 
-        For i As Integer = 1 To months_count - 1
-            ' Calculate the year and month for the next months
-            Dim month As Integer = (currentMonth + i - 1) Mod 12 + 1
-            Dim year As Integer = currentYear + (currentMonth + i - 1) \ 12 ' Increment year if month exceeds December
-
-            ' Ensure the day is valid for the calculated month
-            Dim date_month As Date
+        Using transaction As MySqlTransaction = con.BeginTransaction()
             Try
-                date_month = New Date(year, month, currentDay)
+                For i As Integer = 0 To months_count - 1 ' Start from 0 to include the first date
+                    Dim month As Integer = (startMonth + i - 1) Mod 12 + 1
+                    Dim year As Integer = startYear + (startMonth + i - 1) \ 12
+
+                    ' Clamp day to valid range
+                    Dim daysInMonth As Integer = Date.DaysInMonth(year, month)
+                    Dim validDay As Integer = Math.Min(startDay, daysInMonth)
+                    Dim date_month As Date = New Date(year, month, validDay)
+
+                    cmd.CommandText = "INSERT INTO loan_collection (referenceno, account_no, date_month, ammortization, due_fines, status) " &
+                                      "VALUES (@referenceno, @account_no, @date_month, @ammortization, @due_fines, @status)"
+                    cmd.Connection = con
+
+                    cmd.Parameters.Clear()
+                    cmd.Parameters.AddWithValue("@referenceno", referenceno)
+                    cmd.Parameters.AddWithValue("@account_no", account_no)
+                    cmd.Parameters.AddWithValue("@date_month", date_month)
+                    cmd.Parameters.AddWithValue("@ammortization", ammortization)
+                    cmd.Parameters.AddWithValue("@due_fines", 0)
+                    cmd.Parameters.AddWithValue("@status", 0)
+
+                    cmd.ExecuteNonQuery()
+                Next
+
+                transaction.Commit()
+                MessageBox.Show("Records inserted successfully.")
             Catch ex As Exception
-                MessageBox.Show("Error creating date: " & ex.Message)
-                Continue For
+                transaction.Rollback()
+                MessageBox.Show("Error during insertion: " & ex.Message)
             End Try
+        End Using
 
-            ' Create the insert query
-            cmd.CommandText = "INSERT INTO loan_collection (referenceno, account_no, date_month, ammortization, due_fines, status) " &
-                          "VALUES (@referenceno, @account_no, @date_month, @ammortization, @due_fines, @status)"
-            cmd.Connection = con
-
-            ' Add parameters
-            cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@referenceno", referenceno)
-            cmd.Parameters.AddWithValue("@account_no", account_no)
-            cmd.Parameters.AddWithValue("@date_month", date_month)
-            cmd.Parameters.AddWithValue("@ammortization", ammortization)
-            cmd.Parameters.AddWithValue("@due_fines", 0)
-            cmd.Parameters.AddWithValue("@status", 0)
-
-            ' Execute the query
-            cmd.ExecuteNonQuery()
-        Next
-
-        ' Close the connection
         con.Close()
-
-        MessageBox.Show("Records inserted successfully for the current day of each month for the next six months.")
     End Sub
 
 

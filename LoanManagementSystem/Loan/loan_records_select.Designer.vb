@@ -137,6 +137,7 @@ Partial Class loan_records_select
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(550, 245)
         Me.Controls.Add(Me.Guna2TileButton4)
         Me.Controls.Add(Me.Guna2Separator1)
@@ -146,6 +147,7 @@ Partial Class loan_records_select
         Me.Controls.Add(Me.Guna2TileButton1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "loan_records_select"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "loan_record_select"
         Me.ResumeLayout(False)
         Me.PerformLayout()

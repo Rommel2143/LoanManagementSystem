@@ -1397,7 +1397,7 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddcomakerstatementRow(ByVal Fullname As String, ByVal amount As Decimal, ByVal date_release As Date, ByVal amount_release As Decimal, ByVal comaker_1 As String, ByVal comaker_2 As String) As comakerstatementRow
+        Public Overloads Function AddcomakerstatementRow(ByVal Fullname As String, ByVal amount As Decimal, ByVal date_release As String, ByVal amount_release As Decimal, ByVal comaker_1 As String, ByVal comaker_2 As String) As comakerstatementRow
             Dim rowcomakerstatementRow As comakerstatementRow = CType(Me.NewRow,comakerstatementRow)
             Dim columnValuesArray() As Object = New Object() {Fullname, amount, date_release, amount_release, comaker_1, comaker_2}
             rowcomakerstatementRow.ItemArray = columnValuesArray
@@ -1437,7 +1437,7 @@ Partial Public Class LMSdataset
             MyBase.Columns.Add(Me.columnFullname)
             Me.columnamount = New Global.System.Data.DataColumn("amount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnamount)
-            Me.columndate_release = New Global.System.Data.DataColumn("date_release", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columndate_release = New Global.System.Data.DataColumn("date_release", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndate_release)
             Me.columnamount_release = New Global.System.Data.DataColumn("amount_release", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnamount_release)
@@ -3082,10 +3082,10 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property date_release() As Date
+        Public Property date_release() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablecomakerstatement.date_releaseColumn),Date)
+                    Return CType(Me(Me.tablecomakerstatement.date_releaseColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'date_release' in table 'comakerstatement' is DBNull.", e)
                 End Try
