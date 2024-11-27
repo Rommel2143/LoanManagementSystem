@@ -154,58 +154,70 @@
     <Compile Include="dashboard\dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_application.Designer.vb">
+    <Compile Include="Loan\Application\loan_application.Designer.vb">
       <DependentUpon>loan_application.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_application.vb">
+    <Compile Include="Loan\Application\loan_application.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_approval.Designer.vb">
+    <Compile Include="Loan\Application\loan_approval.Designer.vb">
       <DependentUpon>loan_approval.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_approval.vb">
+    <Compile Include="Loan\Application\loan_approval.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_approval_set.Designer.vb">
+    <Compile Include="Loan\Application\loan_approval_set.Designer.vb">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_approval_set.vb">
+    <Compile Include="Loan\Application\loan_approval_set.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_active.Designer.vb">
+    <Compile Include="Loan\Collection\loan_active.Designer.vb">
       <DependentUpon>loan_active.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_active.vb">
+    <Compile Include="Loan\Collection\loan_active.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_collection.Designer.vb">
+    <Compile Include="Loan\Collection\loan_collection.Designer.vb">
       <DependentUpon>loan_collection.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_collection.vb">
+    <Compile Include="Loan\Collection\loan_collection.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_collection_set.Designer.vb">
+    <Compile Include="Loan\Records\loan_records_collection.Designer.vb">
+      <DependentUpon>loan_records_collection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Records\loan_records_collection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\Collection\loan_collection_set.Designer.vb">
       <DependentUpon>loan_collection_set.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_collection_set.vb">
+    <Compile Include="Loan\Collection\loan_collection_set.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_records.Designer.vb">
+    <Compile Include="Loan\Records\loan_records.Designer.vb">
       <DependentUpon>loan_records.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_records.vb">
+    <Compile Include="Loan\Records\loan_records.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_release.Designer.vb">
+    <Compile Include="Loan\Records\loan_records_info.Designer.vb">
+      <DependentUpon>loan_records_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Records\loan_records_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\Release\loan_release.Designer.vb">
       <DependentUpon>loan_release.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_release.vb">
+    <Compile Include="Loan\Release\loan_release.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\loan_release_set.Designer.vb">
+    <Compile Include="Loan\Release\loan_release_set.Designer.vb">
       <DependentUpon>loan_release_set.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_release_set.vb">
+    <Compile Include="Loan\Release\loan_release_set.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loan\reports\comakerstatement.vb">
@@ -220,10 +232,10 @@
       <DependentUpon>loanapplication_rpt.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Loan\loan_records_select.Designer.vb">
+    <Compile Include="Loan\Records\loan_records_select.Designer.vb">
       <DependentUpon>loan_records_select.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\loan_records_select.vb">
+    <Compile Include="Loan\Records\loan_records_select.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loan\reports\loandetails.vb">
@@ -238,10 +250,10 @@
     <Compile Include="Loan\reports\print_loanapp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan\search_name.designer.vb">
+    <Compile Include="Loan\Application\search_name.designer.vb">
       <DependentUpon>search_name.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loan\search_name.vb">
+    <Compile Include="Loan\Application\search_name.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main\LMSdataset.Designer.vb">
@@ -382,34 +394,40 @@
     <EmbeddedResource Include="dashboard\dashboard.resx">
       <DependentUpon>dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_application.resx">
+    <EmbeddedResource Include="Loan\Application\loan_application.resx">
       <DependentUpon>loan_application.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_approval.resx">
+    <EmbeddedResource Include="Loan\Application\loan_approval.resx">
       <DependentUpon>loan_approval.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_approval_set.resx">
+    <EmbeddedResource Include="Loan\Application\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_active.resx">
+    <EmbeddedResource Include="Loan\Collection\loan_active.resx">
       <DependentUpon>loan_active.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_collection.resx">
+    <EmbeddedResource Include="Loan\Collection\loan_collection.resx">
       <DependentUpon>loan_collection.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_collection_set.resx">
+    <EmbeddedResource Include="Loan\Records\loan_records_collection.resx">
+      <DependentUpon>loan_records_collection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Collection\loan_collection_set.resx">
       <DependentUpon>loan_collection_set.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_records.resx">
+    <EmbeddedResource Include="Loan\Records\loan_records.resx">
       <DependentUpon>loan_records.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_records_select.resx">
+    <EmbeddedResource Include="Loan\Records\loan_records_info.resx">
+      <DependentUpon>loan_records_info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Records\loan_records_select.resx">
       <DependentUpon>loan_records_select.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_release.resx">
+    <EmbeddedResource Include="Loan\Release\loan_release.resx">
       <DependentUpon>loan_release.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\loan_release_set.resx">
+    <EmbeddedResource Include="Loan\Release\loan_release_set.resx">
       <DependentUpon>loan_release_set.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\reports\comakerstatement.rpt">
@@ -427,7 +445,7 @@
     <EmbeddedResource Include="Loan\reports\print_loanapp.resx">
       <DependentUpon>print_loanapp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loan\search_name.resx">
+    <EmbeddedResource Include="Loan\Application\search_name.resx">
       <DependentUpon>search_name.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\lms_mainframe.resx">
@@ -567,6 +585,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equality.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piggy-bank-budget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -23,7 +23,7 @@ Public Class loan_application
 
     Private Sub loan_application_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmb_display("SELECT type from loan_types", "type", cmb_purpose)
-        cmb_display("SELECT collateral from collateral_types", "collateral", cmb_collateral)
+
         btn_search.PerformClick()
     End Sub
 

@@ -30,6 +30,8 @@ Partial Class loan_records_select
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton4 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.Guna2TileButton3 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.Guna2TileButton5 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -65,7 +67,7 @@ Partial Class loan_records_select
         Me.Guna2ControlBox1.BorderRadius = 5
         Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(493, 12)
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(430, 12)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 85
@@ -82,7 +84,7 @@ Partial Class loan_records_select
         Me.Guna2TileButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2TileButton2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Guna2TileButton2.ImageSize = New System.Drawing.Size(40, 40)
-        Me.Guna2TileButton2.Location = New System.Drawing.Point(213, 105)
+        Me.Guna2TileButton2.Location = New System.Drawing.Point(184, 106)
         Me.Guna2TileButton2.Name = "Guna2TileButton2"
         Me.Guna2TileButton2.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2TileButton2.ShadowDecoration.Enabled = True
@@ -103,12 +105,12 @@ Partial Class loan_records_select
         Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2TileButton1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Guna2TileButton1.ImageSize = New System.Drawing.Size(40, 40)
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(68, 105)
+        Me.Guna2TileButton1.Location = New System.Drawing.Point(40, 106)
         Me.Guna2TileButton1.Name = "Guna2TileButton1"
         Me.Guna2TileButton1.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2TileButton1.ShadowDecoration.Enabled = True
         Me.Guna2TileButton1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 3, 5, 5)
-        Me.Guna2TileButton1.Size = New System.Drawing.Size(111, 99)
+        Me.Guna2TileButton1.Size = New System.Drawing.Size(115, 99)
         Me.Guna2TileButton1.TabIndex = 86
         Me.Guna2TileButton1.Text = "Application Form"
         '
@@ -124,7 +126,7 @@ Partial Class loan_records_select
         Me.Guna2TileButton4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2TileButton4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Guna2TileButton4.ImageSize = New System.Drawing.Size(40, 40)
-        Me.Guna2TileButton4.Location = New System.Drawing.Point(367, 105)
+        Me.Guna2TileButton4.Location = New System.Drawing.Point(327, 106)
         Me.Guna2TileButton4.Name = "Guna2TileButton4"
         Me.Guna2TileButton4.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2TileButton4.ShadowDecoration.Enabled = True
@@ -133,12 +135,56 @@ Partial Class loan_records_select
         Me.Guna2TileButton4.TabIndex = 92
         Me.Guna2TileButton4.Text = "Co-makers Statement"
         '
+        'Guna2TileButton3
+        '
+        Me.Guna2TileButton3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2TileButton3.BorderRadius = 5
+        Me.Guna2TileButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2TileButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2TileButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2TileButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2TileButton3.FillColor = System.Drawing.Color.White
+        Me.Guna2TileButton3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TileButton3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Guna2TileButton3.ImageSize = New System.Drawing.Size(40, 40)
+        Me.Guna2TileButton3.Location = New System.Drawing.Point(184, 245)
+        Me.Guna2TileButton3.Name = "Guna2TileButton3"
+        Me.Guna2TileButton3.ShadowDecoration.Color = System.Drawing.Color.Silver
+        Me.Guna2TileButton3.ShadowDecoration.Enabled = True
+        Me.Guna2TileButton3.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 3, 5, 5)
+        Me.Guna2TileButton3.Size = New System.Drawing.Size(115, 99)
+        Me.Guna2TileButton3.TabIndex = 93
+        Me.Guna2TileButton3.Text = "Collection Record"
+        '
+        'Guna2TileButton5
+        '
+        Me.Guna2TileButton5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2TileButton5.BorderRadius = 5
+        Me.Guna2TileButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2TileButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2TileButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2TileButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2TileButton5.FillColor = System.Drawing.Color.White
+        Me.Guna2TileButton5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TileButton5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Guna2TileButton5.ImageSize = New System.Drawing.Size(40, 40)
+        Me.Guna2TileButton5.Location = New System.Drawing.Point(40, 245)
+        Me.Guna2TileButton5.Name = "Guna2TileButton5"
+        Me.Guna2TileButton5.ShadowDecoration.Color = System.Drawing.Color.Silver
+        Me.Guna2TileButton5.ShadowDecoration.Enabled = True
+        Me.Guna2TileButton5.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 3, 5, 5)
+        Me.Guna2TileButton5.Size = New System.Drawing.Size(115, 99)
+        Me.Guna2TileButton5.TabIndex = 94
+        Me.Guna2TileButton5.Text = "Loan Info."
+        '
         'loan_records_select
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(550, 245)
+        Me.ClientSize = New System.Drawing.Size(487, 377)
+        Me.Controls.Add(Me.Guna2TileButton5)
+        Me.Controls.Add(Me.Guna2TileButton3)
         Me.Controls.Add(Me.Guna2TileButton4)
         Me.Controls.Add(Me.Guna2Separator1)
         Me.Controls.Add(Me.lbl_fullname)
@@ -161,4 +207,6 @@ Partial Class loan_records_select
     Friend WithEvents Guna2TileButton2 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton4 As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents Guna2TileButton3 As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents Guna2TileButton5 As Guna.UI2.WinForms.Guna2TileButton
 End Class
