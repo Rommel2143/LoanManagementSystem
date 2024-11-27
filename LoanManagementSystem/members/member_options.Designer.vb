@@ -134,7 +134,7 @@ Partial Class member_options
         '
         'pic_user
         '
-        Me.pic_user.BackColor = System.Drawing.Color.White
+        Me.pic_user.BackColor = System.Drawing.Color.Transparent
         Me.pic_user.Image = Global.LoanManagementSystem.My.Resources.Resources.DefaultProfileImage
         Me.pic_user.ImageRotate = 0!
         Me.pic_user.Location = New System.Drawing.Point(61, 34)

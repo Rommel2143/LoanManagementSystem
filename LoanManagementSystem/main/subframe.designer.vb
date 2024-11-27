@@ -30,7 +30,6 @@ Partial Class subframe
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.logout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MembersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,6 +45,7 @@ Partial Class subframe
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_calendar = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,14 +113,6 @@ Partial Class subframe
         Me.logout.Name = "logout"
         Me.logout.Size = New System.Drawing.Size(188, 22)
         Me.logout.Text = "Logout"
-        '
-        'ManageUsersToolStripMenuItem
-        '
-        Me.ManageUsersToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ManageUsersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.ManageUsersToolStripMenuItem.Text = "User Management"
         '
         'DashboardToolStripMenuItem
         '
@@ -266,6 +258,14 @@ Partial Class subframe
         'Timer1
         '
         Me.Timer1.Interval = 1000
+        '
+        'ManageUsersToolStripMenuItem
+        '
+        Me.ManageUsersToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageUsersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.ManageUsersToolStripMenuItem.Text = "User Management"
         '
         'subframe
         '

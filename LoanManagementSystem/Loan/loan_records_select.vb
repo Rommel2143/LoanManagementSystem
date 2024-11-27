@@ -22,15 +22,4 @@
         loanrecord.printcomaker(referenceno)
         loanrecord.ShowDialog()
     End Sub
-
-    Private Sub Guna2TileButton3_Click(sender As Object, e As EventArgs) Handles Guna2TileButton3.Click
-        Dim loancollect As New loan_records_collection
-        display_formsub(loancollect, "Loan Collection")
-        loancollect.loadmonths(referenceno)
-        Me.Close()
-    End Sub
-
-    Private Sub Guna2TileButton5_Click(sender As Object, e As EventArgs) Handles Guna2TileButton5.Click
-
-    End Sub
 End Class

@@ -8,7 +8,7 @@
 
                 reload("SELECT la.referenceno,
                    CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename,' (', la.account_no,')') AS Borrower,
-                   FORMAT(la.amount, 0) AS Loan_Amount,la.months_count AS Term,la.ammortization AS Amortization,
+                   FORMAT(la.amount, 0) AS Loan_Amount,
                    la.purpose, 
                    DATE_FORMAT(la.date_apply, '%M %d, %Y') AS Date_Applied,
                    CASE la.status
@@ -33,7 +33,7 @@
 
             reload("SELECT la.referenceno,
                   CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename,' (', la.account_no,')') AS Borrower,
-                   FORMAT(la.amount, 0) AS Loan_Amount,la.months_count AS Term,la.ammortization AS Amortization,
+                   FORMAT(la.amount, 0) AS Loan_Amount,
                    la.purpose, 
                    DATE_FORMAT(la.date_apply, '%M %d, %Y') AS Date_Applied,
                    CASE la.status
@@ -69,5 +69,7 @@
         End If
     End Sub
 
-
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        loadrecords()
+    End Sub
 End Class

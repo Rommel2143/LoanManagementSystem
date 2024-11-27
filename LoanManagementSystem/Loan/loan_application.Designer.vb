@@ -31,14 +31,8 @@ Partial Class loan_application
         Me.btn_search = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lbl_age = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.lbl_sharecap = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
         Me.tabcontrol = New Guna.UI2.WinForms.Guna2TabControl()
         Me.panel_compute = New System.Windows.Forms.TabPage()
-        Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txt_insurance = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbl_percentinterest = New System.Windows.Forms.Label()
@@ -74,7 +68,6 @@ Partial Class loan_application
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmb_collateral = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.panel_apply = New System.Windows.Forms.TabPage()
-        Me.Guna2VSeparator2 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.lbl_insurancefee = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.lbl_rate = New System.Windows.Forms.Label()
@@ -104,14 +97,21 @@ Partial Class loan_application
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lbl_purpose = New System.Windows.Forms.Label()
+        Me.lbl_sharecap = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbl_age = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
+        Me.Guna2VSeparator2 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.Guna2Panel1.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
         Me.tabcontrol.SuspendLayout()
         Me.panel_compute.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         CType(Me.num_plan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_details.SuspendLayout()
         Me.panel_apply.SuspendLayout()
+        Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'lbl_reference
@@ -215,74 +215,6 @@ Partial Class loan_application
         Me.Guna2Panel1.Size = New System.Drawing.Size(1073, 171)
         Me.Guna2Panel1.TabIndex = 39
         '
-        'Guna2Panel2
-        '
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Controls.Add(Me.lbl_age)
-        Me.Guna2Panel2.Controls.Add(Me.Label30)
-        Me.Guna2Panel2.Controls.Add(Me.lbl_sharecap)
-        Me.Guna2Panel2.Controls.Add(Me.Label35)
-        Me.Guna2Panel2.Controls.Add(Me.btn_search)
-        Me.Guna2Panel2.Controls.Add(Me.lbl_account)
-        Me.Guna2Panel2.Controls.Add(Me.Label2)
-        Me.Guna2Panel2.Controls.Add(Me.Label1)
-        Me.Guna2Panel2.Controls.Add(Me.lbl_fullname)
-        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(19, 12)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Silver
-        Me.Guna2Panel2.ShadowDecoration.Enabled = True
-        Me.Guna2Panel2.Size = New System.Drawing.Size(777, 89)
-        Me.Guna2Panel2.TabIndex = 43
-        '
-        'lbl_age
-        '
-        Me.lbl_age.AutoSize = True
-        Me.lbl_age.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_age.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_age.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_age.Location = New System.Drawing.Point(96, 56)
-        Me.lbl_age.Name = "lbl_age"
-        Me.lbl_age.Size = New System.Drawing.Size(27, 20)
-        Me.lbl_age.TabIndex = 42
-        Me.lbl_age.Text = "---"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.DimGray
-        Me.Label30.Location = New System.Drawing.Point(47, 56)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(43, 20)
-        Me.Label30.TabIndex = 41
-        Me.Label30.Text = "Age :"
-        '
-        'lbl_sharecap
-        '
-        Me.lbl_sharecap.AutoSize = True
-        Me.lbl_sharecap.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_sharecap.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_sharecap.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_sharecap.Location = New System.Drawing.Point(558, 11)
-        Me.lbl_sharecap.Name = "lbl_sharecap"
-        Me.lbl_sharecap.Size = New System.Drawing.Size(27, 20)
-        Me.lbl_sharecap.TabIndex = 40
-        Me.lbl_sharecap.Text = "---"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.BackColor = System.Drawing.Color.Transparent
-        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.Color.DimGray
-        Me.Label35.Location = New System.Drawing.Point(448, 11)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(104, 20)
-        Me.Label35.TabIndex = 39
-        Me.Label35.Text = "Share Capital :"
-        '
         'tabcontrol
         '
         Me.tabcontrol.Controls.Add(Me.panel_compute)
@@ -339,13 +271,6 @@ Partial Class loan_application
         Me.panel_compute.TabIndex = 0
         Me.panel_compute.Text = "1. Compute"
         Me.panel_compute.UseVisualStyleBackColor = True
-        '
-        'Guna2VSeparator1
-        '
-        Me.Guna2VSeparator1.Location = New System.Drawing.Point(421, 23)
-        Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
-        Me.Guna2VSeparator1.Size = New System.Drawing.Size(17, 171)
-        Me.Guna2VSeparator1.TabIndex = 57
         '
         'Label23
         '
@@ -819,7 +744,6 @@ Partial Class loan_application
         Me.cmb_collateral.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmb_collateral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmb_collateral.ItemHeight = 30
-        Me.cmb_collateral.Items.AddRange(New Object() {"Real State", "Vehicle", "Insurance", "Other"})
         Me.cmb_collateral.Location = New System.Drawing.Point(98, 70)
         Me.cmb_collateral.Name = "cmb_collateral"
         Me.cmb_collateral.Size = New System.Drawing.Size(288, 36)
@@ -865,13 +789,6 @@ Partial Class loan_application
         Me.panel_apply.TabIndex = 2
         Me.panel_apply.Text = "3. Summary"
         Me.panel_apply.UseVisualStyleBackColor = True
-        '
-        'Guna2VSeparator2
-        '
-        Me.Guna2VSeparator2.Location = New System.Drawing.Point(572, 23)
-        Me.Guna2VSeparator2.Name = "Guna2VSeparator2"
-        Me.Guna2VSeparator2.Size = New System.Drawing.Size(17, 171)
-        Me.Guna2VSeparator2.TabIndex = 67
         '
         'lbl_insurancefee
         '
@@ -1214,6 +1131,88 @@ Partial Class loan_application
         Me.lbl_purpose.TabIndex = 23
         Me.lbl_purpose.Text = "---"
         '
+        'lbl_sharecap
+        '
+        Me.lbl_sharecap.AutoSize = True
+        Me.lbl_sharecap.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_sharecap.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_sharecap.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_sharecap.Location = New System.Drawing.Point(558, 11)
+        Me.lbl_sharecap.Name = "lbl_sharecap"
+        Me.lbl_sharecap.Size = New System.Drawing.Size(27, 20)
+        Me.lbl_sharecap.TabIndex = 40
+        Me.lbl_sharecap.Text = "---"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.Transparent
+        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.Color.DimGray
+        Me.Label35.Location = New System.Drawing.Point(448, 11)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(104, 20)
+        Me.Label35.TabIndex = 39
+        Me.Label35.Text = "Share Capital :"
+        '
+        'lbl_age
+        '
+        Me.lbl_age.AutoSize = True
+        Me.lbl_age.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_age.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_age.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_age.Location = New System.Drawing.Point(96, 56)
+        Me.lbl_age.Name = "lbl_age"
+        Me.lbl_age.Size = New System.Drawing.Size(27, 20)
+        Me.lbl_age.TabIndex = 42
+        Me.lbl_age.Text = "---"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.DimGray
+        Me.Label30.Location = New System.Drawing.Point(47, 56)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(43, 20)
+        Me.Label30.TabIndex = 41
+        Me.Label30.Text = "Age :"
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Controls.Add(Me.lbl_age)
+        Me.Guna2Panel2.Controls.Add(Me.Label30)
+        Me.Guna2Panel2.Controls.Add(Me.lbl_sharecap)
+        Me.Guna2Panel2.Controls.Add(Me.Label35)
+        Me.Guna2Panel2.Controls.Add(Me.btn_search)
+        Me.Guna2Panel2.Controls.Add(Me.lbl_account)
+        Me.Guna2Panel2.Controls.Add(Me.Label2)
+        Me.Guna2Panel2.Controls.Add(Me.Label1)
+        Me.Guna2Panel2.Controls.Add(Me.lbl_fullname)
+        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Location = New System.Drawing.Point(19, 12)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Silver
+        Me.Guna2Panel2.ShadowDecoration.Enabled = True
+        Me.Guna2Panel2.Size = New System.Drawing.Size(777, 89)
+        Me.Guna2Panel2.TabIndex = 43
+        '
+        'Guna2VSeparator1
+        '
+        Me.Guna2VSeparator1.Location = New System.Drawing.Point(421, 23)
+        Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
+        Me.Guna2VSeparator1.Size = New System.Drawing.Size(17, 171)
+        Me.Guna2VSeparator1.TabIndex = 57
+        '
+        'Guna2VSeparator2
+        '
+        Me.Guna2VSeparator2.Location = New System.Drawing.Point(572, 23)
+        Me.Guna2VSeparator2.Name = "Guna2VSeparator2"
+        Me.Guna2VSeparator2.Size = New System.Drawing.Size(17, 171)
+        Me.Guna2VSeparator2.TabIndex = 67
+        '
         'loan_application
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1227,8 +1226,6 @@ Partial Class loan_application
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
         Me.tabcontrol.ResumeLayout(False)
         Me.panel_compute.ResumeLayout(False)
         Me.panel_compute.PerformLayout()
@@ -1239,6 +1236,8 @@ Partial Class loan_application
         Me.panel_details.PerformLayout()
         Me.panel_apply.ResumeLayout(False)
         Me.panel_apply.PerformLayout()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
