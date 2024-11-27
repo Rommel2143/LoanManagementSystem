@@ -36,13 +36,7 @@ Public Class loan_collection_set
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        con.Close()
-        con.Open()
-        Dim cmd As New MySqlCommand("SELECT u.account_no,u.username, u.pass, CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,mp.firstname, u.loan_apply,u.loan_approve  FROM `user` u
-                                        JOIN member_profile mp ON u.account_no= mp.account_no
-                                        WHERE ( u.account_no= '" & user_account & "') and u.pass = '" & txt_password.Text & "' ", con)
-        dr = cmd.ExecuteReader
-        If dr.Read = True Then
+        If txt_password.Text = user_pass Then
             con.Close()
             con.Open()
             ' Update the status_inspect for the selected row

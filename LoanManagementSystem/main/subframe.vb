@@ -40,7 +40,7 @@
         loan_approval.LoadMemberProfiles()
     End Sub
 
-    Private Sub ReleaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseToolStripMenuItem.Click
+    Private Sub ReleaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnloan_release.Click
         display_formsub(loan_release, "Release Loan")
         loan_release.LoadMemberProfiles()
     End Sub
@@ -49,7 +49,7 @@
 
     End Sub
 
-    Private Sub CollectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CollectionToolStripMenuItem.Click
+    Private Sub CollectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnloan_collection.Click
         display_formsub(loan_active, "Active Loan")
         loan_active.LoadMemberProfiles()
     End Sub
@@ -84,7 +84,7 @@
         loan_records.loadrecords()
     End Sub
 
-    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageUsersToolStripMenuItem.Click
+    Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_manageuser.Click
         display_formsub(New user_management, "User Management")
     End Sub
 End Class

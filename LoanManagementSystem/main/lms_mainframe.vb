@@ -1,7 +1,9 @@
-﻿Public Class lms_mainframe
+﻿Imports System.ComponentModel
+
+Public Class lms_mainframe
     Private Sub Inventory_Mainframe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
-        Dim testmode As Boolean = True
+        Dim testmode As Boolean = False
 
 
         If testmode = True Then
@@ -23,4 +25,34 @@
         datedb = Date.Now.ToString("yyyy-MM-dd")
         timedb = Date.Now.ToString("HH:mm:ss")
     End Sub
+
+    Private Sub lms_mainframe_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Try
+            Panel1.Controls.Clear()
+            ' Close the database connection if it's open
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+
+            ' Dispose of the database connection object
+            con.Dispose()
+
+            ' Release data reader if it exists
+            If dr IsNot Nothing Then
+                dr.Close()
+                dr.Dispose()
+            End If
+
+            ' Release any additional resources if necessary
+            cmd.Dispose()
+            da.Dispose()
+            dt.Dispose()
+
+
+        Catch ex As Exception
+            ' Handle any exceptions
+            MessageBox.Show($"An error occurred while closing resources: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
 End Class

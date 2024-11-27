@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class manage_profiles
+    Dim crypto As New CryptoHelper
     Private Sub Guna2ImageButton1_MouseDown(sender As Object, e As MouseEventArgs) Handles Guna2ImageButton1.MouseDown
         ' Show password characters
         txt_password.PasswordChar = ""
@@ -32,22 +33,12 @@ Public Class manage_profiles
 
     Public Sub Changepass()
         Try
-            con.Close()
-            con.Open()
-
-            Dim cmd As New MySqlCommand("SELECT * FROM user WHERE account_no = @idno and pass = @password ", con)
-            With cmd.Parameters
-                .AddWithValue("@idno", user_account)
-                .AddWithValue("@password", txt_password.Text)
-
-            End With
-            dr = cmd.ExecuteReader
-            If dr.Read = True Then
+            If txt_password.Text = user_pass Then
                 con.Close()
                 con.Open()
                 ' Update the status_inspect for the selected row
                 Dim cmdUpdateStatus As New MySqlCommand("UPDATE user SET pass = @newpass WHERE account_no = @id", con)
-                cmdUpdateStatus.Parameters.AddWithValue("@newpass", txt_newpass.Text)
+                cmdUpdateStatus.Parameters.AddWithValue("@newpass", crypto.encrypt(txt_newpass.Text))
                 cmdUpdateStatus.Parameters.AddWithValue("@id", user_account)
                 cmdUpdateStatus.ExecuteNonQuery()
 

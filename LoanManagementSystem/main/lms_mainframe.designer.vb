@@ -104,7 +104,7 @@ Partial Class lms_mainframe
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "lms_mainframe"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "HR- System"
+        Me.Text = "LCPMPC"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.error_panel.ResumeLayout(False)
         Me.error_panel.PerformLayout()

@@ -2,6 +2,7 @@
 Imports System.Net.NetworkInformation
 Imports System.Text
 Imports System.Reflection
+Imports ClosedXML.Excel
 Module Module1
 
     Public Function connection() As MySqlConnection
@@ -56,7 +57,30 @@ Module Module1
 
         Return macAddress
     End Function
+    Function IsTrustedDevice() As Boolean
 
+        Try
+            Dim query As String = "SELECT * FROM trusted_devices WHERE PCname = @pcName AND PCmac = @pcMac"
+
+            Using cmd As New MySqlCommand(query, con)
+                cmd.Parameters.AddWithValue("@pcName", PCname)
+                cmd.Parameters.AddWithValue("@pcMac", PCmac)
+                con.Close()
+                con.Open()
+                dr = cmd.ExecuteReader
+                If dr.Read = True Then
+                    Return True
+                Else
+                    Return False
+                End If
+
+            End Using
+
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 
     Public Sub display_mainframe(form As Form)
         With form
@@ -70,16 +94,24 @@ Module Module1
     End Sub
 
     Public Sub display_formsub(form As Form, text As String)
+        ' Clear all existing controls in Panel1
+        subframe.Panel1.Controls.Clear()
+
         With form
             .Refresh()
             .TopLevel = False
+            ' Make the form fill the panel
+            .Dock = DockStyle.Fill
+            ' Add the new form to Panel1
             subframe.Panel1.Controls.Add(form)
+            ' Update the title label
             subframe.lbl_tittle.Text = text
             .BringToFront()
             .Show()
-
         End With
     End Sub
+
+
     Public Sub display_error(text As String)
         ShowSnackbar(text)
     End Sub
@@ -115,28 +147,48 @@ Module Module1
         End Try
     End Sub
 
-    'Public Sub reload(ByVal sql As String, ByVal DTG As Object)
-    '    Try
-    '        dt = New DataTable
-    '        con.Close()
-    '        con.Open()
-    '        With cmd
-    '            .Connection = con
-    '            .CommandText = sql
-    '        End With
-    '        da.SelectCommand = cmd
-    '        da.Fill(dt)
-    '        DTG.DataSource = dt
+    Public Sub exportexcel(datagrid As Guna.UI2.WinForms.Guna2DataGridView)
+        Try
+            If datagrid.Rows.Count > 0 Then
+                Dim dt As New DataTable()
 
+                ' Adding the Columns
+                For Each column As DataGridViewColumn In datagrid.Columns
+                    Dim colType As Type = If(column.ValueType IsNot Nothing, column.ValueType, GetType(String))
+                    dt.Columns.Add(column.HeaderText, colType)
+                Next
 
-    '    Catch ex As Exception
-    '        MessageBox.Show(ex.Message)
-    '    Finally
-    '        con.Close()
-    '        da.Dispose()
-    '        dt.Dispose()
-    '    End Try
-    'End Sub
+                ' Adding the Rows
+                For Each row As DataGridViewRow In datagrid.Rows
+                    If Not row.IsNewRow Then
+                        Dim newRow As DataRow = dt.NewRow()
+                        For Each cell As DataGridViewCell In row.Cells
+                            newRow(cell.ColumnIndex) = If(cell.Value IsNot Nothing, cell.Value.ToString(), "")
+                        Next
+                        dt.Rows.Add(newRow)
+                    End If
+                Next
+
+                ' Save the data to an Excel file
+                Using sfd As New SaveFileDialog()
+                    sfd.Filter = "Excel Workbook|*.xlsx"
+                    sfd.Title = "Save an Excel File"
+                    If sfd.ShowDialog() = DialogResult.OK AndAlso sfd.FileName <> "" Then
+                        Using wb As New XLWorkbook()
+                            wb.Worksheets.Add(dt, "Sheet1")
+                            wb.SaveAs(sfd.FileName)
+                        End Using
+                        MessageBox.Show("Data successfully exported to Excel.", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                End Using
+            Else
+                MessageBox.Show("No data available to export.", "Export Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
 
     Public Sub cmb_display(sql As String, column As String, cmb As Guna.UI2.WinForms.Guna2ComboBox)
         Try

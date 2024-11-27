@@ -26,6 +26,7 @@ Partial Class loan_records_collection
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loan_records_collection))
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbl_term = New System.Windows.Forms.Label()
@@ -38,6 +39,7 @@ Partial Class loan_records_collection
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fullname = New System.Windows.Forms.Label()
+        Me.export_excel = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -73,7 +75,7 @@ Partial Class loan_records_collection
         Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.datagrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datagrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.datagrid1.Location = New System.Drawing.Point(0, 94)
+        Me.datagrid1.Location = New System.Drawing.Point(0, 133)
         Me.datagrid1.Name = "datagrid1"
         Me.datagrid1.ReadOnly = True
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -87,7 +89,7 @@ Partial Class loan_records_collection
         Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datagrid1.RowHeadersVisible = False
         Me.datagrid1.RowTemplate.Height = 39
-        Me.datagrid1.Size = New System.Drawing.Size(1109, 648)
+        Me.datagrid1.Size = New System.Drawing.Size(1109, 609)
         Me.datagrid1.TabIndex = 5
         Me.datagrid1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.datagrid1.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -114,6 +116,7 @@ Partial Class loan_records_collection
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel1.Controls.Add(Me.export_excel)
         Me.Guna2Panel1.Controls.Add(Me.lbl_term)
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.lbl_loanamount)
@@ -127,7 +130,7 @@ Partial Class loan_records_collection
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1109, 94)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1109, 133)
         Me.Guna2Panel1.TabIndex = 6
         '
         'lbl_term
@@ -250,6 +253,25 @@ Partial Class loan_records_collection
         Me.lbl_fullname.TabIndex = 76
         Me.lbl_fullname.Text = "---"
         '
+        'export_excel
+        '
+        Me.export_excel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.export_excel.BorderColor = System.Drawing.Color.Green
+        Me.export_excel.BorderThickness = 2
+        Me.export_excel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.export_excel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.export_excel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.export_excel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.export_excel.FillColor = System.Drawing.Color.Transparent
+        Me.export_excel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.export_excel.ForeColor = System.Drawing.Color.Green
+        Me.export_excel.Image = CType(resources.GetObject("export_excel.Image"), System.Drawing.Image)
+        Me.export_excel.Location = New System.Drawing.Point(1005, 88)
+        Me.export_excel.Name = "export_excel"
+        Me.export_excel.Size = New System.Drawing.Size(92, 39)
+        Me.export_excel.TabIndex = 85
+        Me.export_excel.Text = "Export"
+        '
         'loan_records_collection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -280,4 +302,5 @@ Partial Class loan_records_collection
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_fullname As Label
+    Friend WithEvents export_excel As Guna.UI2.WinForms.Guna2Button
 End Class

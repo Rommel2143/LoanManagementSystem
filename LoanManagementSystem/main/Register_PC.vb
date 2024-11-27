@@ -6,7 +6,7 @@ Public Class Register_PC
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
-        If txtuser.Text = "PTRCI" And txtpassword.Text = "redhorsE" Then
+        If txtuser.Text = "LCPMPC" And txtpassword.Text = "lcpmpc123" Then
             con.Close()
             con.Open()
             Dim cmdselect As New MySqlCommand("INSERT INTO `trusted_devices`(`PCname`, `PCmac`) VALUES ('" & PCname & "','" & PCmac & "')", con)

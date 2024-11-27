@@ -73,4 +73,8 @@ WHERE referenceno ='" & reference & "' and status='1'
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
+
+    Private Sub export_excel_Click(sender As Object, e As EventArgs) Handles export_excel.Click
+        exportexcel(datagrid1)
+    End Sub
 End Class

@@ -30,14 +30,14 @@ Partial Class subframe
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.logout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_manageuser = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MembersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_loan_apply = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_loan_approve = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReleaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CollectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnloan_release = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnloan_collection = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanRecordsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -65,7 +65,7 @@ Partial Class subframe
         'userstrip
         '
         Me.userstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.logout, Me.ManageUsersToolStripMenuItem})
+        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.logout, Me.btn_manageuser})
         Me.userstrip.ForeColor = System.Drawing.Color.Black
         Me.userstrip.Image = CType(resources.GetObject("userstrip.Image"), System.Drawing.Image)
         Me.userstrip.Name = "userstrip"
@@ -114,13 +114,15 @@ Partial Class subframe
         Me.logout.Size = New System.Drawing.Size(188, 22)
         Me.logout.Text = "Logout"
         '
-        'ManageUsersToolStripMenuItem
+        'btn_manageuser
         '
-        Me.ManageUsersToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ManageUsersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.ManageUsersToolStripMenuItem.Text = "User Management"
+        Me.btn_manageuser.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageuser.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btn_manageuser.Image = CType(resources.GetObject("btn_manageuser.Image"), System.Drawing.Image)
+        Me.btn_manageuser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btn_manageuser.Name = "btn_manageuser"
+        Me.btn_manageuser.Size = New System.Drawing.Size(188, 22)
+        Me.btn_manageuser.Text = "User Management"
         '
         'DashboardToolStripMenuItem
         '
@@ -140,7 +142,7 @@ Partial Class subframe
         '
         'LoanToolStripMenuItem
         '
-        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_loan_apply, Me.btn_loan_approve, Me.ReleaseToolStripMenuItem, Me.CollectionToolStripMenuItem})
+        Me.LoanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_loan_apply, Me.btn_loan_approve, Me.btnloan_release, Me.btnloan_collection})
         Me.LoanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.LoanToolStripMenuItem.Image = CType(resources.GetObject("LoanToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LoanToolStripMenuItem.Name = "LoanToolStripMenuItem"
@@ -165,23 +167,23 @@ Partial Class subframe
         Me.btn_loan_approve.Size = New System.Drawing.Size(199, 30)
         Me.btn_loan_approve.Text = "Approval"
         '
-        'ReleaseToolStripMenuItem
+        'btnloan_release
         '
-        Me.ReleaseToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ReleaseToolStripMenuItem.Image = CType(resources.GetObject("ReleaseToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ReleaseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ReleaseToolStripMenuItem.Name = "ReleaseToolStripMenuItem"
-        Me.ReleaseToolStripMenuItem.Size = New System.Drawing.Size(199, 30)
-        Me.ReleaseToolStripMenuItem.Text = "Release"
+        Me.btnloan_release.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnloan_release.Image = CType(resources.GetObject("btnloan_release.Image"), System.Drawing.Image)
+        Me.btnloan_release.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnloan_release.Name = "btnloan_release"
+        Me.btnloan_release.Size = New System.Drawing.Size(199, 30)
+        Me.btnloan_release.Text = "Release"
         '
-        'CollectionToolStripMenuItem
+        'btnloan_collection
         '
-        Me.CollectionToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.CollectionToolStripMenuItem.Image = CType(resources.GetObject("CollectionToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CollectionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CollectionToolStripMenuItem.Name = "CollectionToolStripMenuItem"
-        Me.CollectionToolStripMenuItem.Size = New System.Drawing.Size(199, 30)
-        Me.CollectionToolStripMenuItem.Text = "Collection"
+        Me.btnloan_collection.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnloan_collection.Image = CType(resources.GetObject("btnloan_collection.Image"), System.Drawing.Image)
+        Me.btnloan_collection.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnloan_collection.Name = "btnloan_collection"
+        Me.btnloan_collection.Size = New System.Drawing.Size(199, 30)
+        Me.btnloan_collection.Text = "Collection"
         '
         'LoanRecordsToolStripMenuItem1
         '
@@ -306,11 +308,11 @@ Partial Class subframe
     Friend WithEvents LoanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btn_loan_apply As ToolStripMenuItem
     Friend WithEvents btn_loan_approve As ToolStripMenuItem
-    Friend WithEvents ReleaseToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CollectionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnloan_release As ToolStripMenuItem
+    Friend WithEvents btnloan_collection As ToolStripMenuItem
     Friend WithEvents MembersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DashboardToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer1 As Timer
     Friend WithEvents LoanRecordsToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ManageUsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_manageuser As ToolStripMenuItem
 End Class

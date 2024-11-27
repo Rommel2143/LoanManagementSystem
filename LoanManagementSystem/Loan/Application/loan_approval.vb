@@ -1,7 +1,7 @@
 ﻿
 
 Imports MySql.Data.MySqlClient
-    Imports Guna.UI2.WinForms
+Imports Guna.UI2.WinForms
 Public Class loan_approval
     Dim query As String
 
@@ -23,9 +23,9 @@ Public Class loan_approval
             con.Close()
             con.Open()
             Dim cmd As New MySqlCommand(query, con)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            dr = cmd.ExecuteReader()
 
-            While reader.Read()
+            While dr.Read()
                 Dim memberPanel As New Guna2Panel()
                 memberPanel.Width = 400
                 memberPanel.Height = 120
@@ -40,10 +40,10 @@ Public Class loan_approval
                 memberLabel.BackColor = Color.White
                 memberLabel.ForeColor = Color.FromArgb(50, 50, 50)
                 memberLabel.AutoSize = True
-                memberLabel.Text = $"{reader("Fullname")} ({reader("account_no")})" & Environment.NewLine &
-                                    $"  {reader("referenceno")}" & Environment.NewLine &
-                                     $"  {reader("purpose")} - ({Convert.ToDecimal(reader("amount")).ToString("N0")} pesos)" & Environment.NewLine &
-                                    $"  Date Applied: {reader("date_apply")}"
+                memberLabel.Text = $"{dr("Fullname")} ({dr("account_no")})" & Environment.NewLine &
+                                    $"  {dr("referenceno")}" & Environment.NewLine &
+                                     $"  {dr("purpose")} - ({Convert.ToDecimal(dr("amount")).ToString("N0")} pesos)" & Environment.NewLine &
+                                    $"  Date Applied: {dr("date_apply")}"
 
                 memberLabel.Location = New Point(10, 15)
 
@@ -57,7 +57,7 @@ Public Class loan_approval
                                 .Height = 30,
                                 .ImageSize = New Size(30, 30),
                                 .Dock = DockStyle.Right,
-                                .Tag = reader("referenceno"),
+                                .Tag = dr("referenceno"),
                                 .FillColor = Color.MidnightBlue}
 
 
@@ -79,13 +79,15 @@ Public Class loan_approval
                                           End Sub
             End While
 
-            reader.Close()
+
+            dr.Close()
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message)
         Finally
-
-            con.Close()
-
+            ' Cleanup resources
+            If dr IsNot Nothing Then dr.Close()
+            If cmd IsNot Nothing Then cmd.Dispose()
+            If con.State = ConnectionState.Open Then con.Close()
         End Try
     End Sub
 
@@ -100,11 +102,5 @@ Public Class loan_approval
         End If
     End Sub
 
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
-    End Sub
-
-    Private Sub flow_loan_Paint(sender As Object, e As PaintEventArgs) Handles flow_loan.Paint
-
-    End Sub
 End Class
