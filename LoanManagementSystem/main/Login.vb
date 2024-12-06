@@ -29,15 +29,15 @@ Public Class Login
 
     Private Sub login()
         Try
-
+            MessageBox.Show(crypto.Encrypt(txt_password.Text))
 
             Dim query As String = "SELECT u.account_no, u.username, u.pass,u.initials,
                           CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname, mp.firstname, 
                           u.loan_apply, u.loan_approve, u.loan_collection, u.loan_release, u.add_member, u.level 
                           FROM `user` u 
-                          JOIN member_profile mp ON u.account_no = mp.account_no  WHERE (username = @username OR u.account_no = @username) AND pass = @password "
+                          JOIN member_profile mp ON u.account_no = mp.account_no  WHERE (username = @username OR u.account_no = @username) AND pass =@password"
 
-            ' Dim query As String = "SELECT * FROM user WHERE (username = @username OR account_no = @username) AND pass = @password"
+
 
             con.Close()
             con.Open()
@@ -58,7 +58,7 @@ Public Class Login
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
                 user_level = manage
-                user_pass = crypto.Decrypt(dr.GetString("pass"))
+               user_pass = crypto.Decrypt(dr.GetString("pass"))
                 user_initial = dr.GetString("initials")
                 user_account = dr.GetString("account_no")
 
@@ -99,5 +99,35 @@ Public Class Login
 
     Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
 
+    End Sub
+
+    Private Sub txt_user_TextChanged(sender As Object, e As EventArgs) Handles txt_user.TextChanged
+
+    End Sub
+
+    Private Sub txt_user_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_user.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If txt_user.Text = "" Then
+            Else
+
+
+                Dim query As String = "SELECT * FROM `user` WHERE username =@username"
+
+
+
+                con.Close()
+                con.Open()
+                Dim logincred As New MySqlCommand(query, con)
+                logincred.Parameters.AddWithValue("@username", txt_user.Text)
+
+                dr = logincred.ExecuteReader()
+                If dr.Read = True Then
+
+                    MessageBox.Show(crypto.Decrypt("pass"))
+                Else
+
+                End If
+            End If
+        End If
     End Sub
 End Class
