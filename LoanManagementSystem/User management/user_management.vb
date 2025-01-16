@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class user_management
-    Dim crypto As New CryptoHelper
+
     Private Sub user_management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -17,7 +17,7 @@ Public Class user_management
         If dr.Read = True Then
             lbl_account.Text = dr.GetString("account_no")
             txt_username.Text = dr.GetString("username")
-            txt_password.Text = crypto.Decrypt(dr.GetString("pass"))
+            txt_password.Text = (dr.GetString("pass"))
             txt_initials.Text = dr.GetString("initials")
             chk_app.Checked = (dr.GetInt32("loan_apply") = 1)
             chk_appr.Checked = (dr.GetInt32("loan_approve") = 1)
@@ -54,7 +54,7 @@ Public Class user_management
         Dim updateUser As New MySqlCommand(query, con)
         updateUser.Parameters.AddWithValue("@username", txt_username.Text)
         updateUser.Parameters.AddWithValue("@level", cmb_level.SelectedIndex)
-        updateUser.Parameters.AddWithValue("@password", crypto.Encrypt(txt_password.Text))
+        updateUser.Parameters.AddWithValue("@password", txt_password.Text)
         updateUser.Parameters.AddWithValue("@initials", txt_initials.Text)
         updateUser.Parameters.AddWithValue("@loan_apply", If(chk_app.Checked, 1, 0))
         updateUser.Parameters.AddWithValue("@loan_approve", If(chk_appr.Checked, 1, 0))

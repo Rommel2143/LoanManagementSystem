@@ -790,7 +790,7 @@ Partial Class dashboard
         Me.Controls.Add(Me.Guna2Panel4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "dashboard"
-        Me.Text = "dashboard"
+        Me.Text = "ssss"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)

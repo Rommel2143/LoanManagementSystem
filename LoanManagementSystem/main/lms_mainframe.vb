@@ -6,6 +6,7 @@ Public Class lms_mainframe
         Dim testmode As Boolean = False
 
 
+
         If testmode = True Then
             error_panel.Visible = True
             display_mainframe(subframe)

@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class add_user
-    Dim crypto As New CryptoHelper
+
     Private Sub cmb_fullname_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
@@ -36,7 +36,7 @@ Public Class add_user
             insertUser.Parameters.AddWithValue("@account_no", lbl_account.Text)
             insertUser.Parameters.AddWithValue("@level", cmb_level.SelectedIndex)
             insertUser.Parameters.AddWithValue("@username", txt_username.Text)
-            insertUser.Parameters.AddWithValue("@password", crypto.Encrypt(txt_password.Text))
+            insertUser.Parameters.AddWithValue("@password", txt_password.Text)
             insertUser.Parameters.AddWithValue("@initials", txt_initials.Text)
             insertUser.Parameters.AddWithValue("@loan_apply", If(chk_app.Checked, 1, 0))
             insertUser.Parameters.AddWithValue("@loan_approve", If(chk_appr.Checked, 1, 0))

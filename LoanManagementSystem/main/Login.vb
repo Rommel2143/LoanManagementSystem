@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Login
-    Dim crypto As New CryptoHelper
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txt_password.UseSystemPasswordChar = True
@@ -29,7 +29,7 @@ Public Class Login
 
     Private Sub login()
         Try
-            MessageBox.Show(crypto.Encrypt(txt_password.Text))
+
 
             Dim query As String = "SELECT u.account_no, u.username, u.pass,u.initials,
                           CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname, mp.firstname, 
@@ -43,7 +43,7 @@ Public Class Login
             con.Open()
             Dim logincred As New MySqlCommand(query, con)
             logincred.Parameters.AddWithValue("@username", txt_user.Text)
-            logincred.Parameters.AddWithValue("@password", crypto.Encrypt(txt_password.Text))
+            logincred.Parameters.AddWithValue("@password", txt_password.Text)
 
             dr = logincred.ExecuteReader()
 
@@ -58,7 +58,7 @@ Public Class Login
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
                 user_level = manage
-               user_pass = crypto.Decrypt(dr.GetString("pass"))
+                user_pass = dr.GetString("pass")
                 user_initial = dr.GetString("initials")
                 user_account = dr.GetString("account_no")
 
@@ -123,7 +123,7 @@ Public Class Login
                 dr = logincred.ExecuteReader()
                 If dr.Read = True Then
 
-                    MessageBox.Show(crypto.Decrypt("pass"))
+
                 Else
 
                 End If
