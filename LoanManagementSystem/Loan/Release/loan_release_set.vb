@@ -6,6 +6,8 @@ Public Class loan_release_set
     Dim ammortization As Decimal
     Dim months_count As Integer
 
+    Dim loan_amount As Decimal
+    Dim interest_rate As Decimal
     Private Sub loan_approval_set_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_password.UseSystemPasswordChar = True
         dtpicker1.Value = Date.Now
@@ -21,7 +23,7 @@ Public Class loan_release_set
 
             con.Close()
             con.Open()
-            Dim cmd As New MySqlCommand("SELECT u.account_no,u.mode,u.service_fee,u.purpose,u.insurance_fee,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,u.amount,u.ammortization,u.referenceno,u.months_count FROM `loan_app` u
+            Dim cmd As New MySqlCommand("SELECT u.account_no,u.mode,u.service_fee,u.purpose,u.insurance_fee,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname,u.amount,u.ammortization,u.referenceno,u.months_count,u.interest_rate FROM `loan_app` u
                                         JOIN member_profile mp ON u.account_no= mp.account_no
                                         WHERE u.referenceno='" & reference & "'", con)
             dr = cmd.ExecuteReader
@@ -33,14 +35,15 @@ Public Class loan_release_set
                 Dim disburse As Decimal = dr.GetDecimal("amount") - (dr.GetDecimal("service_fee") + dr.GetDecimal("insurance_fee"))
                 lbl_fullname.Text = dr.GetString("fullname") & "(" & dr.GetString("account_no") & ")"
                 lbl_reference.Text = dr.GetString("referenceno")
-                lbl_loanamount.Text = dr.GetDecimal("amount").ToString("N0")
+                loan_amount = dr.GetDecimal("amount")
+                lbl_loanamount.Text = loan_amount.ToString("N0")
                 lbl_disbursement.Text = disburse.ToString("N0")
                 lbl_processfee.Text = dr.GetDecimal("service_fee").ToString("N0") * -1
                 lbl_insurance.Text = dr.GetDecimal("insurance_fee").ToString("N0") * -1
                 lbl_purpose.Text = dr.GetString("purpose")
                 lbl_transfer.Text = dr.GetString("mode")
-
-
+                interest_rate = dr.GetDecimal("interest_rate")
+                MessageBox.Show(interest_rate & "--" & loan_amount)
             End If
         Catch ex As Exception
             display_error(ex.Message)
@@ -90,6 +93,11 @@ Public Class loan_release_set
 
         Using transaction As MySqlTransaction = con.BeginTransaction()
             Try
+                Dim loan_bal As Decimal = (loan_amount - ammortization) + (loan_amount * (interest_rate / 12))
+                Dim loan_gross As Decimal = (ammortization * 12) - ammortization
+                Dim loan_interest As Decimal = loan_amount * (interest_rate / 12)
+                Dim principal As Decimal = loan_bal
+
                 For i As Integer = 0 To months_count - 1 ' Start from 0 to include the first date
                     Dim month As Integer = (startMonth + i - 1) Mod 12 + 1
                     Dim year As Integer = startYear + (startMonth + i - 1) \ 12
@@ -99,8 +107,10 @@ Public Class loan_release_set
                     Dim validDay As Integer = Math.Min(startDay, daysInMonth)
                     Dim date_month As Date = New Date(year, month, validDay)
 
-                    cmd.CommandText = "INSERT INTO loan_collection (referenceno, account_no, date_month, ammortization, due_fines, status) " &
-                                      "VALUES (@referenceno, @account_no, @date_month, @ammortization, @due_fines, @status)"
+
+
+                    cmd.CommandText = "INSERT INTO loan_collection (referenceno, account_no, date_month, ammortization,principal,interest,gross,loan_balance, due_fines,teller,date_paid, status) " &
+                                      "VALUES (@referenceno, @account_no, @date_month, @ammortization,@principal,@interest,@gross,@loan_balance, @due_fines,NULL,NULL, @status)"
                     cmd.Connection = con
 
                     cmd.Parameters.Clear()
@@ -108,10 +118,21 @@ Public Class loan_release_set
                     cmd.Parameters.AddWithValue("@account_no", account_no)
                     cmd.Parameters.AddWithValue("@date_month", date_month)
                     cmd.Parameters.AddWithValue("@ammortization", ammortization)
+                    cmd.Parameters.AddWithValue("@principal", principal)
+                    cmd.Parameters.AddWithValue("@interest", loan_interest)
+                    cmd.Parameters.AddWithValue("@gross", loan_gross)
+                    cmd.Parameters.AddWithValue("@loan_balance", loan_bal)
                     cmd.Parameters.AddWithValue("@due_fines", 0)
                     cmd.Parameters.AddWithValue("@status", 0)
 
                     cmd.ExecuteNonQuery()
+
+                    loan_interest = (loan_bal + ammortization) * (interest_rate / 12)
+                    principal -= loan_bal
+                    loan_bal -= ammortization
+                    loan_gross -= ammortization
+
+
                 Next
 
                 transaction.Commit()
