@@ -26,8 +26,11 @@ Partial Class loan_collection
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loan_collection))
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lbl_term = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_loanamount = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -36,8 +39,7 @@ Partial Class loan_collection
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fullname = New System.Windows.Forms.Label()
-        Me.lbl_term = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -114,6 +116,7 @@ Partial Class loan_collection
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.lbl_term)
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.lbl_loanamount)
@@ -129,6 +132,30 @@ Partial Class loan_collection
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1004, 94)
         Me.Guna2Panel1.TabIndex = 4
+        '
+        'lbl_term
+        '
+        Me.lbl_term.AutoSize = True
+        Me.lbl_term.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_term.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_term.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_term.Location = New System.Drawing.Point(98, 57)
+        Me.lbl_term.Name = "lbl_term"
+        Me.lbl_term.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_term.TabIndex = 84
+        Me.lbl_term.Text = "---"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DimGray
+        Me.Label3.Location = New System.Drawing.Point(49, 57)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 20)
+        Me.Label3.TabIndex = 83
+        Me.Label3.Text = "Term :"
         '
         'lbl_loanamount
         '
@@ -226,29 +253,23 @@ Partial Class loan_collection
         Me.lbl_fullname.TabIndex = 76
         Me.lbl_fullname.Text = "---"
         '
-        'lbl_term
+        'Guna2Button2
         '
-        Me.lbl_term.AutoSize = True
-        Me.lbl_term.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_term.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_term.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_term.Location = New System.Drawing.Point(98, 57)
-        Me.lbl_term.Name = "lbl_term"
-        Me.lbl_term.Size = New System.Drawing.Size(28, 21)
-        Me.lbl_term.TabIndex = 84
-        Me.lbl_term.Text = "---"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(49, 57)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 20)
-        Me.Label3.TabIndex = 83
-        Me.Label3.Text = "Term :"
+        Me.Guna2Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Button2.BorderRadius = 3
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
+        Me.Guna2Button2.Location = New System.Drawing.Point(854, 42)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.Size = New System.Drawing.Size(138, 46)
+        Me.Guna2Button2.TabIndex = 85
+        Me.Guna2Button2.Text = "Diminishing Loan"
         '
         'loan_collection
         '
@@ -279,4 +300,5 @@ Partial Class loan_collection
     Friend WithEvents lbl_fullname As Label
     Friend WithEvents lbl_term As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
 End Class

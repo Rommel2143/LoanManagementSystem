@@ -215,6 +215,26 @@
     <Compile Include="Loan\Application\loan_approval_set.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\Collection\collection_dset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collection_dset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Collection\collection_dset.vb">
+      <DependentUpon>collection_dset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Collection\diminishing_loan.Designer.vb">
+      <DependentUpon>diminishing_loan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Collection\diminishing_loan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\Collection\diminishing_loan_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>diminishing_loan_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Loan\Collection\loan_active.Designer.vb">
       <DependentUpon>loan_active.vb</DependentUpon>
     </Compile>
@@ -452,6 +472,13 @@
     <EmbeddedResource Include="Loan\Application\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Collection\diminishing_loan.resx">
+      <DependentUpon>diminishing_loan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Collection\diminishing_loan_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>diminishing_loan_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loan\Collection\loan_active.resx">
       <DependentUpon>loan_active.vb</DependentUpon>
     </EmbeddedResource>
@@ -564,6 +591,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Loan\Collection\collection_dset.xsc">
+      <DependentUpon>collection_dset.xsd</DependentUpon>
+    </None>
+    <None Include="Loan\Collection\collection_dset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>collection_dset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Loan\Collection\collection_dset.xss">
+      <DependentUpon>collection_dset.xsd</DependentUpon>
+    </None>
     <None Include="main\LMSdataset.xsc">
       <DependentUpon>LMSdataset.xsd</DependentUpon>
     </None>
@@ -655,6 +693,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="piggy-bank %281%29.ico" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\sand-clock.png" />
+    <None Include="Resources\sand-clock %281%29.png" />
+    <None Include="Resources\sand-clock %282%29.png" />
+    <None Include="Resources\sand-clock %283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

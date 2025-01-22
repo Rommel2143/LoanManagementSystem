@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="collection_dset" targetNamespace="http://tempuri.org/collection_dset.xsd" xmlns:mstns="http://tempuri.org/collection_dset.xsd" xmlns="http://tempuri.org/collection_dset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="collection_dset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="collection_dset" msprop:Generator_UserDSName="collection_dset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="diminishing" msprop:Generator_TableClassName="diminishingDataTable" msprop:Generator_TableVarName="tablediminishing" msprop:Generator_TablePropName="diminishing" msprop:Generator_RowDeletingName="diminishingRowDeleting" msprop:Generator_RowChangingName="diminishingRowChanging" msprop:Generator_RowEvHandlerName="diminishingRowChangeEventHandler" msprop:Generator_RowDeletedName="diminishingRowDeleted" msprop:Generator_UserTableName="diminishing" msprop:Generator_RowChangedName="diminishingRowChanged" msprop:Generator_RowEvArgName="diminishingRowChangeEvent" msprop:Generator_RowClassName="diminishingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
+              <xs:element name="month" msprop:Generator_ColumnVarNameInTable="columnmonth" msprop:Generator_ColumnPropNameInRow="month" msprop:Generator_ColumnPropNameInTable="monthColumn" msprop:Generator_UserColumnName="month" type="xs:int" minOccurs="0" />
+              <xs:element name="ammortization" msprop:Generator_ColumnVarNameInTable="columnammortization" msprop:Generator_ColumnPropNameInRow="ammortization" msprop:Generator_ColumnPropNameInTable="ammortizationColumn" msprop:Generator_UserColumnName="ammortization" type="xs:decimal" minOccurs="0" />
+              <xs:element name="principal" msprop:Generator_ColumnVarNameInTable="columnprincipal" msprop:Generator_ColumnPropNameInRow="principal" msprop:Generator_ColumnPropNameInTable="principalColumn" msprop:Generator_UserColumnName="principal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="interest" msprop:Generator_ColumnVarNameInTable="columninterest" msprop:Generator_ColumnPropNameInRow="interest" msprop:Generator_ColumnPropNameInTable="interestColumn" msprop:Generator_UserColumnName="interest" type="xs:decimal" minOccurs="0" />
+              <xs:element name="gross" msprop:Generator_ColumnVarNameInTable="columngross" msprop:Generator_ColumnPropNameInRow="gross" msprop:Generator_ColumnPropNameInTable="grossColumn" msprop:Generator_UserColumnName="gross" type="xs:decimal" minOccurs="0" />
+              <xs:element name="loan_balance" msprop:Generator_ColumnVarNameInTable="columnloan_balance" msprop:Generator_ColumnPropNameInRow="loan_balance" msprop:Generator_ColumnPropNameInTable="loan_balanceColumn" msprop:Generator_UserColumnName="loan_balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="gross_total" msprop:Generator_ColumnVarNameInTable="columngross_total" msprop:Generator_ColumnPropNameInRow="gross_total" msprop:Generator_ColumnPropNameInTable="gross_totalColumn" msprop:Generator_UserColumnName="gross_total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="loan_total" msprop:Generator_ColumnVarNameInTable="columnloan_total" msprop:Generator_ColumnPropNameInRow="loan_total" msprop:Generator_ColumnPropNameInTable="loan_totalColumn" msprop:Generator_UserColumnName="loan_total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="account" msprop:Generator_ColumnVarNameInTable="columnaccount" msprop:Generator_ColumnPropNameInRow="account" msprop:Generator_ColumnPropNameInTable="accountColumn" msprop:Generator_UserColumnName="account" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:diminishing" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
