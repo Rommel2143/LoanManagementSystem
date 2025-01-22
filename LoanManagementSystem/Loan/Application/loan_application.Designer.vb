@@ -778,7 +778,7 @@ Partial Class loan_application
         Me.cmb_mode.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmb_mode.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmb_mode.ItemHeight = 30
-        Me.cmb_mode.Items.AddRange(New Object() {"Cash", "Check", "Bank Transfer"})
+        Me.cmb_mode.Items.AddRange(New Object() {"Cash", "Check", "Bank Transfer", "Savings"})
         Me.cmb_mode.Location = New System.Drawing.Point(98, 163)
         Me.cmb_mode.Name = "cmb_mode"
         Me.cmb_mode.Size = New System.Drawing.Size(198, 36)

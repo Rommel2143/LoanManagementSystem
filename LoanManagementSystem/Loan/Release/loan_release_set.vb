@@ -64,6 +64,28 @@ Public Class loan_release_set
             Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_app SET status = 2, date_release='" & datedb & "', teller_release='" & user_account & "' WHERE referenceno = '" & lbl_reference.Text & "'", con)
             cmdUpdateStatus.ExecuteNonQuery()
             insert_monthly()
+
+            If lbl_transfer.Text = "Savings" Then
+
+                con.Close()
+                con.Open()
+
+                ' Use parameterized query
+                Dim cmdinserttosavings As New MySqlCommand("INSERT INTO savings (`referenceno`, `account_no`, `amount`, `date_transac`, `time`,`status`, `teller`)
+                                                                VALUES ('" & GenerateReferenceNumber("S") & "',
+                                                                       '" & account_no & "',
+                                                                        @amount,
+                                                                       CURDATE(),
+                                                                       '" & Date.Now.ToString("HH:mm") & "',
+                                                                       'CD',
+                                                                       '" & user_account & "')", con)
+
+                ' Add parameters
+                cmdinserttosavings.Parameters.AddWithValue("@amount", Convert.ToDecimal(lbl_loanamount.Text))
+                cmdinserttosavings.ExecuteNonQuery()
+            End If
+
+
             Me.Close()
 
             loan_release.LoadMemberProfiles()

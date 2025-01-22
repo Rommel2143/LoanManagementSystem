@@ -685,7 +685,7 @@ Partial Class dashboard
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.DimGray
-        Me.Label27.Location = New System.Drawing.Point(20, 20)
+        Me.Label27.Location = New System.Drawing.Point(20, 9)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(127, 40)
         Me.Label27.TabIndex = 17

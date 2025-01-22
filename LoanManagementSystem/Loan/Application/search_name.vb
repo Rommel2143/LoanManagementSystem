@@ -6,28 +6,29 @@ Public Class search_name
     Dim age As Integer
 
     Private Sub search_name_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        reloadgrid()
+        reloadgrid(1)
     End Sub
 
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
         Try
             If txt_search.Text = "" Then
-                reloadgrid()
+                reloadgrid(1)
             Else
-                Dim query As String = "SELECT mp.account_no AS Account_no, 
-                                      CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
-                                      TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
-                                      COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
-                                               SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap
-                                   FROM member_profile mp
-                                   LEFT JOIN sharecap sc ON sc.account_no = mp.account_no
-                                  WHERE mp.account_no REGEXP '" & txt_search.Text & "' 
-                   OR firstname REGEXP '" & txt_search.Text & "' 
-                   OR lastname REGEXP '" & txt_search.Text & "'
-                                   GROUP BY mp.account_no"
+                reloadgrid("mp.account_no REGEXP '" & txt_search.Text & "' OR firstname REGEXP '" & txt_search.Text & "'  OR lastname REGEXP '" & txt_search.Text & "'")
+                'Dim query As String = "SELECT mp.account_no AS Account_no, 
+                '                      CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
+                '                      TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
+                '                      COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
+                '                               SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap
+                '                   FROM member_profile mp
+                '                   LEFT JOIN sharecap sc ON sc.account_no = mp.account_no
+                '                  WHERE mp.account_no REGEXP '" & txt_search.Text & "' 
+                '   OR firstname REGEXP '" & txt_search.Text & "' 
+                '   OR lastname REGEXP '" & txt_search.Text & "'
+                '                   GROUP BY mp.account_no"
 
-                reload(query, datagrid1)
-                Format_currency("Sharecap", datagrid1) ' Format Sharecap column
+                'reload(query, datagrid1)
+                'Format_currency("Sharecap", datagrid1) ' Format Sharecap column
             End If
         Catch ex As Exception
             ' Handle the exception, e.g., display a custom message or log the error
@@ -35,19 +36,56 @@ Public Class search_name
         End Try
     End Sub
 
-    Private Sub reloadgrid()
-        Dim query As String="SELECT mp.account_no AS Account_no, 
-                                      CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
-                                      TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
-                                      COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
-                                               SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap
-                                   FROM member_profile mp
-                                   LEFT JOIN sharecap sc ON sc.account_no = mp.account_no
-                                     GROUP BY mp.account_no"
-        reload(query, datagrid1)
-        Format_currency("Sharecap", datagrid1) ' Format Sharecap column
-    End Sub
+    'Private Sub reloadgrid(search As String)
+    '    Dim query As String = "SELECT mp.account_no AS Account_no, 
+    '                                  CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
+    '                                  TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
+    '                                  COALESCE(SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
+    '                                           SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 0) AS Sharecap,
+    '                                    COUNT(id)
+    '                                    FROM member_profile mp
 
+    '                               LEFT JOIN sharecap sc ON sc.account_no = mp.account_no
+    '                                LEFT JOIN loan_collection lc ON lc.account_no = mp.account_no
+    '                                WHERE " & search & "
+    '                                 GROUP BY mp.account_no"
+    '    reload(query, datagrid1)
+    '    Format_currency("Sharecap", datagrid1) ' Format Sharecap column
+    'End Sub
+
+    Private Sub reloadgrid(search As String)
+        Dim query As String = "
+        SELECT 
+            mp.account_no AS Account_no, 
+            CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname, 
+            TIMESTAMPDIFF(YEAR, mp.birthdate, CURDATE()) AS Age,
+            COALESCE(
+                SUM(CASE WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR') THEN sc.amount ELSE 0 END) - 
+                SUM(CASE WHEN sc.status IN ('DM', 'CA') THEN sc.amount ELSE 0 END), 
+                0
+            ) AS Sharecap,  
+            COUNT(DISTINCT CASE WHEN EXISTS (
+            SELECT 1 
+            FROM loan_collection lc_sub 
+            WHERE lc_sub.referenceno = lc.referenceno AND lc_sub.status = 0
+        ) THEN lc.referenceno END) AS Pending_Loans
+        FROM 
+            member_profile mp
+        LEFT JOIN 
+            sharecap sc ON sc.account_no = mp.account_no
+        LEFT JOIN 
+            loan_collection lc ON lc.account_no = mp.account_no
+        WHERE 
+            " & search & "
+        GROUP BY 
+            mp.account_no"
+
+        ' Reload the DataGridView with the query
+        reload(query, datagrid1)
+
+        ' Format the Sharecap column as currency
+        Format_currency("Sharecap", datagrid1)
+    End Sub
 
 
 
