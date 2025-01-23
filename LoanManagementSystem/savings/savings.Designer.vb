@@ -37,17 +37,18 @@ Partial Class savings
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.cmb_deptrans = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_amountdeposit = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_withtrans = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.txt_passwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btn_withdraw = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_amountwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txt_passwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.tab1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +102,8 @@ Partial Class savings
         '
         'datagrid1
         '
+        Me.datagrid1.AllowUserToAddRows = False
+        Me.datagrid1.AllowUserToDeleteRows = False
         Me.datagrid1.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -130,6 +133,7 @@ Partial Class savings
         Me.datagrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.datagrid1.Location = New System.Drawing.Point(3, 169)
         Me.datagrid1.Name = "datagrid1"
+        Me.datagrid1.ReadOnly = True
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
@@ -156,7 +160,7 @@ Partial Class savings
         Me.datagrid1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.datagrid1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.datagrid1.ThemeStyle.HeaderStyle.Height = 36
-        Me.datagrid1.ThemeStyle.ReadOnly = False
+        Me.datagrid1.ThemeStyle.ReadOnly = True
         Me.datagrid1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.datagrid1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.datagrid1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -167,6 +171,7 @@ Partial Class savings
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.lbl_accountname)
         Me.Guna2Panel1.Controls.Add(Me.lbl_balance)
@@ -221,10 +226,10 @@ Partial Class savings
         '
         Me.TabPage3.Controls.Add(Me.cmb_deptrans)
         Me.TabPage3.Controls.Add(Me.Label7)
-        Me.TabPage3.Controls.Add(Me.txt_password)
         Me.TabPage3.Controls.Add(Me.Guna2Button1)
         Me.TabPage3.Controls.Add(Me.txt_amountdeposit)
         Me.TabPage3.Controls.Add(Me.Label3)
+        Me.TabPage3.Controls.Add(Me.txt_password)
         Me.TabPage3.Location = New System.Drawing.Point(184, 4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(864, 660)
@@ -260,29 +265,6 @@ Partial Class savings
         Me.Label7.Size = New System.Drawing.Size(84, 20)
         Me.Label7.TabIndex = 54
         Me.Label7.Text = "Transaction"
-        '
-        'txt_password
-        '
-        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_password.DefaultText = ""
-        Me.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
-        Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(46, 211)
-        Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_password.Name = "txt_password"
-        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.txt_password.PlaceholderText = "Password..."
-        Me.txt_password.SelectedText = ""
-        Me.txt_password.Size = New System.Drawing.Size(157, 40)
-        Me.txt_password.TabIndex = 53
-        Me.txt_password.UseSystemPasswordChar = True
         '
         'Guna2Button1
         '
@@ -330,14 +312,37 @@ Partial Class savings
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Deposit Funds"
         '
+        'txt_password
+        '
+        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_password.DefaultText = ""
+        Me.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
+        Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.txt_password.Location = New System.Drawing.Point(46, 211)
+        Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txt_password.PlaceholderText = "Password..."
+        Me.txt_password.SelectedText = ""
+        Me.txt_password.Size = New System.Drawing.Size(157, 40)
+        Me.txt_password.TabIndex = 53
+        Me.txt_password.UseSystemPasswordChar = True
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Label1)
         Me.TabPage2.Controls.Add(Me.cmb_withtrans)
-        Me.TabPage2.Controls.Add(Me.txt_passwithdraw)
         Me.TabPage2.Controls.Add(Me.btn_withdraw)
         Me.TabPage2.Controls.Add(Me.txt_amountwithdraw)
         Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.txt_passwithdraw)
         Me.TabPage2.Location = New System.Drawing.Point(184, 4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -374,29 +379,6 @@ Partial Class savings
         Me.cmb_withtrans.Size = New System.Drawing.Size(146, 36)
         Me.cmb_withtrans.StartIndex = 0
         Me.cmb_withtrans.TabIndex = 56
-        '
-        'txt_passwithdraw
-        '
-        Me.txt_passwithdraw.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_passwithdraw.DefaultText = ""
-        Me.txt_passwithdraw.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_passwithdraw.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_passwithdraw.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_passwithdraw.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_passwithdraw.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_passwithdraw.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txt_passwithdraw.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_passwithdraw.IconLeft = CType(resources.GetObject("txt_passwithdraw.IconLeft"), System.Drawing.Image)
-        Me.txt_passwithdraw.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_passwithdraw.Location = New System.Drawing.Point(46, 213)
-        Me.txt_passwithdraw.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_passwithdraw.Name = "txt_passwithdraw"
-        Me.txt_passwithdraw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.txt_passwithdraw.PlaceholderText = "Password..."
-        Me.txt_passwithdraw.SelectedText = ""
-        Me.txt_passwithdraw.Size = New System.Drawing.Size(157, 40)
-        Me.txt_passwithdraw.TabIndex = 54
-        Me.txt_passwithdraw.UseSystemPasswordChar = True
         '
         'btn_withdraw
         '
@@ -444,6 +426,46 @@ Partial Class savings
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Withdraw Funds"
         '
+        'txt_passwithdraw
+        '
+        Me.txt_passwithdraw.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_passwithdraw.DefaultText = ""
+        Me.txt_passwithdraw.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_passwithdraw.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_passwithdraw.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_passwithdraw.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_passwithdraw.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_passwithdraw.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txt_passwithdraw.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_passwithdraw.IconLeft = CType(resources.GetObject("txt_passwithdraw.IconLeft"), System.Drawing.Image)
+        Me.txt_passwithdraw.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.txt_passwithdraw.Location = New System.Drawing.Point(46, 213)
+        Me.txt_passwithdraw.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_passwithdraw.Name = "txt_passwithdraw"
+        Me.txt_passwithdraw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txt_passwithdraw.PlaceholderText = "Password..."
+        Me.txt_passwithdraw.SelectedText = ""
+        Me.txt_passwithdraw.Size = New System.Drawing.Size(157, 40)
+        Me.txt_passwithdraw.TabIndex = 54
+        Me.txt_passwithdraw.UseSystemPasswordChar = True
+        '
+        'Guna2Button3
+        '
+        Me.Guna2Button3.BorderRadius = 3
+        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button3.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
+        Me.Guna2Button3.Location = New System.Drawing.Point(97, 120)
+        Me.Guna2Button3.Name = "Guna2Button3"
+        Me.Guna2Button3.Size = New System.Drawing.Size(119, 40)
+        Me.Guna2Button3.TabIndex = 5
+        Me.Guna2Button3.Text = "Export to excel"
+        '
         'savings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -488,4 +510,5 @@ Partial Class savings
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_withtrans As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
 End Class

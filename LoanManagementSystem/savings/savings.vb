@@ -9,8 +9,29 @@ Public Class savings
         account_no = account
         lbl_balance.Text = String.Format("₱{0:N2}", checksavings(account))
         lbl_accountname.Text = fname
-        reload("SELECT `referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `savings` WHERE account_no='" & account & "' ", datagrid1)
+        reload("SELECT id,`referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `savings` WHERE account_no='" & account & "' ", datagrid1)
         datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
+
+        ' Check if "ActionImage" column already exists
+        Dim columnExists As Boolean = False
+        For Each column As DataGridViewColumn In datagrid1.Columns
+            If column.Name = "ActionImage" Then
+                columnExists = True
+                Exit For
+            End If
+        Next
+
+        ' Add an image column if not already added
+        If Not columnExists Then
+            Dim imgColumn As New DataGridViewImageColumn()
+            imgColumn.Name = "ActionImage"
+            imgColumn.HeaderText = "Action"
+            imgColumn.Image = My.Resources.edit_btn ' Replace with your actual resource
+
+            datagrid1.Columns.Insert(0, imgColumn) ' Insert at the first column
+            datagrid1.Columns(0).Width = 50
+            datagrid1.Columns("id").Visible = False
+        End If
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Try
@@ -157,5 +178,16 @@ Public Class savings
         printpass.print_savings(account_no)
 
         printpass.ShowDialog()
+    End Sub
+
+    Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
+        If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
+            Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
+
+        End If
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        exportexcel(datagrid1)
     End Sub
 End Class
