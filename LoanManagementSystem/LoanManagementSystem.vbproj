@@ -223,6 +223,18 @@
     <Compile Include="Loan\Collection\collection_dset.vb">
       <DependentUpon>collection_dset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Loan\Collection\collection_print.Designer.vb">
+      <DependentUpon>collection_print.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Collection\collection_print.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\Collection\collection_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collection_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Loan\Collection\diminishing_loan.Designer.vb">
       <DependentUpon>diminishing_loan.vb</DependentUpon>
     </Compile>
@@ -471,6 +483,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\Application\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Collection\collection_print.resx">
+      <DependentUpon>collection_print.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Collection\collection_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>collection_rpt.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\Collection\diminishing_loan.resx">
       <DependentUpon>diminishing_loan.vb</DependentUpon>

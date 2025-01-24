@@ -11,8 +11,30 @@ Public Class sharecap_collection
         account_share = acc
         lbl_balance.Text = String.Format("₱{0:N2}", checksharecap(acc))
         lbl_accountname.Text = fname
-        reload("SELECT `referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `sharecap` WHERE account_no='" & acc & "' ", datagrid1)
+        reload("SELECT id,`referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `sharecap` WHERE account_no='" & acc & "' ", datagrid1)
         datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
+
+
+        ' Check if "ActionImage" column already exists
+        Dim columnExists As Boolean = False
+        For Each column As DataGridViewColumn In datagrid1.Columns
+            If column.Name = "ActionImage" Then
+                columnExists = True
+                Exit For
+            End If
+        Next
+
+        ' Add an image column if not already added
+        If Not columnExists Then
+            Dim imgColumn As New DataGridViewImageColumn()
+            imgColumn.Name = "ActionImage"
+            imgColumn.HeaderText = "Action"
+            imgColumn.Image = My.Resources.print ' Replace with your actual resource
+
+            datagrid1.Columns.Insert(0, imgColumn) ' Insert at the first column
+            datagrid1.Columns(0).Width = 30
+            datagrid1.Columns("id").Visible = False
+        End If
     End Sub
     Private Sub insertshare()
         Try
@@ -121,7 +143,7 @@ Public Class sharecap_collection
 
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs)
         Dim printpass As New print_passbook
         printpass.print_pass(account_share)
 
@@ -130,5 +152,15 @@ Public Class sharecap_collection
 
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
 
+    End Sub
+
+    Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
+        If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
+            Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
+            Dim printpass As New print_passbook
+            printpass.print_pass(selectedPartCode)
+
+            printpass.ShowDialog()
+        End If
     End Sub
 End Class

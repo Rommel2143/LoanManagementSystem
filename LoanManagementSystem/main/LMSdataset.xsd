@@ -88,10 +88,16 @@
               <xs:element name="balance" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:decimal" minOccurs="0" />
               <xs:element name="teller" msprop:Generator_ColumnVarNameInTable="columnteller" msprop:Generator_ColumnPropNameInRow="teller" msprop:Generator_ColumnPropNameInTable="tellerColumn" msprop:Generator_UserColumnName="teller" type="xs:string" minOccurs="0" />
               <xs:element name="date_transac" msprop:Generator_ColumnVarNameInTable="columndate_transac" msprop:Generator_ColumnPropNameInRow="date_transac" msprop:Generator_ColumnPropNameInTable="date_transacColumn" msprop:Generator_UserColumnName="date_transac" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="number" msprop:Generator_ColumnVarNameInTable="columnnumber" msprop:Generator_ColumnPropNameInRow="number" msprop:Generator_ColumnPropNameInTable="numberColumn" msprop:Generator_UserColumnName="number" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:savings_transact" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

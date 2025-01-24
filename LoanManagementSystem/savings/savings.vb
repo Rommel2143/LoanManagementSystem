@@ -9,6 +9,7 @@ Public Class savings
         account_no = account
         lbl_balance.Text = String.Format("₱{0:N2}", checksavings(account))
         lbl_accountname.Text = fname
+
         reload("SELECT id,`referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `savings` WHERE account_no='" & account & "' ", datagrid1)
         datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
 
@@ -173,7 +174,7 @@ Public Class savings
 
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) 
         Dim printpass As New print_savings
         printpass.print_savings(account_no)
 

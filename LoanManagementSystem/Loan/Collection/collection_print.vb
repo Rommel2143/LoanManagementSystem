@@ -1,13 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class print_passbook
-    Dim passbook_id As Integer
+Public Class collection_print
+    Dim collection_id As Integer
     Private Sub print_passbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Public Sub print_pass(id As String)
-        passbook_id = id
-        Dim myrpt As New sharecappassbook
+    Public Sub print_collection(id As String)
+        collection_id = id
+        Dim myrpt As New collection_rpt
         Dim dt As New DataTable
         Dim datagridview1 As New DataGridView
         Try
@@ -25,43 +25,28 @@ Public Class print_passbook
             End If
 
             Dim showreport As New MySqlCommand("SELECT 
+sc.id,
    IF(@newprint = 1, UPPER(CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename)),'') AS Fullname,
     IF(@newprint = 1,sc.account_no,'') AS account_no,
-    sc.status,  -- Transaction Code = Status
-    -- Withdrawals: Amounts where status is 'DM' or 'CA'
-    CASE 
-        WHEN sc.status IN ('DM', 'CA') THEN sc.amount 
-        ELSE 0 
-    END AS `withdraw`,
-    -- Deposits: Amounts where status is NOT 'DM' or 'CA'
-    CASE 
-        WHEN sc.status NOT IN ('DM', 'CA') THEN sc.amount 
-        ELSE 0 
-    END AS `deposit`,
-    -- Balance: Running total of withdrawals and deposits
-    (
-        SELECT SUM(
-            CASE 
-                WHEN t2.status IN ('DM', 'CA') THEN -t2.amount  -- Withdrawals decrease balance
-                ELSE t2.amount  -- Deposits increase balance
-            END
-        ) 
-        FROM sharecap AS t2 
-        WHERE t2.account_no = sc.account_no 
-          AND t2.date_transac <= sc.date_transac
-          AND t2.id <= sc.id  -- Ensure the running balance is calculated up to this transaction
-    ) AS `balance`,
-  u.initials AS teller
-FROM sharecap sc
+   sc.referenceno AS reference,
+   la.amount,
+sc.ammortization,
+sc.interest,
+sc.due_fines,
+sc.loan_balance,
+ @num_count AS number,
+sc.date_paid
+FROM loan_collection sc
 JOIN member_profile mp ON mp.account_no = sc.account_no
-JOIN user u ON u.account_no = sc.teller
-WHERE sc.id = @id -- Parameterized query to avoid SQL injection
-ORDER BY sc.date_transac, sc.id;
+LEFT JOIN loan_app la ON la.referenceno=sc.referenceno
+WHERE sc.id = @id 
 ", con)
 
             ' Add parameters
             showreport.Parameters.AddWithValue("@id", id)
             showreport.Parameters.AddWithValue("@newprint", newprint)
+            showreport.Parameters.AddWithValue("@num_count", Convert.ToInt32(num_count.Value))
+
             Dim da As New MySqlDataAdapter(showreport)
             da.Fill(dt)
 
@@ -75,7 +60,7 @@ ORDER BY sc.date_transac, sc.id;
             datagridview1.DataSource = dt
 
             ' Load data into the Crystal Report
-            myrpt.Database.Tables("sharecap_passbook").SetDataSource(dt)
+            myrpt.Database.Tables("collection").SetDataSource(dt)
             If CrystalReportViewer1.ReportSource IsNot Nothing Then
                 CType(CrystalReportViewer1.ReportSource, IDisposable).Dispose()
             End If
@@ -92,6 +77,6 @@ ORDER BY sc.date_transac, sc.id;
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        print_pass(passbook_id)
+        print_collection(collection_id)
     End Sub
 End Class

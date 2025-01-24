@@ -42,12 +42,18 @@ Public Class loan_collection_set
             ' Update the status_inspect for the selected row
             Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_collection SET status = 1,due_fines='" & duefines & "', teller='" & user_account & "',date_paid='" & datedb & "' WHERE id = '" & collection_id & "'", con)
             cmdUpdateStatus.ExecuteNonQuery()
+            Dim printpass As New collection_print
+            printpass.print_collection(collection_id)
+
+            printpass.ShowDialog()
             display_formsub(loan_active, "Acive Loan")
 
             display_formsub(loan_collection, "Loan Collection")
             loan_collection.loadmonths(lbl_reference.Text)
             Me.Close()
             txt_password.Clear()
+
+
         Else
             display_error("Invalid Password!")
         End If

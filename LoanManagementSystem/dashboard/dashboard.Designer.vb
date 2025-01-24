@@ -23,21 +23,21 @@ Partial Class dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard))
-        Dim ChartFont1 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim ChartFont2 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim ChartFont3 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim ChartFont4 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Grid1 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
-        Dim Tick1 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
-        Dim ChartFont5 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Grid2 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
-        Dim Tick2 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
-        Dim ChartFont6 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Grid3 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
-        Dim PointLabel1 As Guna.Charts.WinForms.PointLabel = New Guna.Charts.WinForms.PointLabel()
-        Dim ChartFont7 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
-        Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim ChartFont9 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim ChartFont10 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim ChartFont11 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim ChartFont12 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim Grid4 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
+        Dim Tick4 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
+        Dim ChartFont13 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim Grid5 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
+        Dim Tick5 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
+        Dim ChartFont14 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim Grid6 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
+        Dim PointLabel2 As Guna.Charts.WinForms.PointLabel = New Guna.Charts.WinForms.PointLabel()
+        Dim ChartFont15 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
+        Dim Tick6 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
+        Dim ChartFont16 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_collecttotal = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -83,7 +83,7 @@ Partial Class dashboard
         Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Separator5 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbl_funds = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.GunaChart1 = New Guna.Charts.WinForms.GunaChart()
@@ -624,7 +624,7 @@ Partial Class dashboard
         '
         Me.Guna2Panel8.Controls.Add(Me.Guna2Separator5)
         Me.Guna2Panel8.Controls.Add(Me.Guna2PictureBox5)
-        Me.Guna2Panel8.Controls.Add(Me.Label14)
+        Me.Guna2Panel8.Controls.Add(Me.lbl_funds)
         Me.Guna2Panel8.Controls.Add(Me.Label15)
         Me.Guna2Panel8.FillColor = System.Drawing.Color.Teal
         Me.Guna2Panel8.Location = New System.Drawing.Point(27, 57)
@@ -656,17 +656,17 @@ Partial Class dashboard
         Me.Guna2PictureBox5.TabStop = False
         Me.Guna2PictureBox5.UseTransparentBackground = True
         '
-        'Label14
+        'lbl_funds
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(12, 33)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(24, 30)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "0"
+        Me.lbl_funds.AutoSize = True
+        Me.lbl_funds.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_funds.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_funds.ForeColor = System.Drawing.Color.White
+        Me.lbl_funds.Location = New System.Drawing.Point(12, 33)
+        Me.lbl_funds.Name = "lbl_funds"
+        Me.lbl_funds.Size = New System.Drawing.Size(24, 30)
+        Me.lbl_funds.TabIndex = 3
+        Me.lbl_funds.Text = "0"
         '
         'Label15
         '
@@ -696,37 +696,37 @@ Partial Class dashboard
         Me.GunaChart1.AutoScroll = True
         Me.GunaChart1.Legend.Align = Guna.Charts.WinForms.ChartTextAlignment.Start
         Me.GunaChart1.Legend.BoxWidth = 10
-        ChartFont1.FontName = "Arial"
-        Me.GunaChart1.Legend.LabelFont = ChartFont1
+        ChartFont9.FontName = "Arial"
+        Me.GunaChart1.Legend.LabelFont = ChartFont9
         Me.GunaChart1.Location = New System.Drawing.Point(20, 45)
         Me.GunaChart1.Name = "GunaChart1"
         Me.GunaChart1.Size = New System.Drawing.Size(512, 217)
         Me.GunaChart1.TabIndex = 18
-        ChartFont2.FontName = "Arial"
-        ChartFont2.Size = 12
-        ChartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        Me.GunaChart1.Title.Font = ChartFont2
-        ChartFont3.FontName = "Arial"
-        Me.GunaChart1.Tooltips.BodyFont = ChartFont3
-        ChartFont4.FontName = "Arial"
-        ChartFont4.Size = 9
-        ChartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        Me.GunaChart1.Tooltips.TitleFont = ChartFont4
-        Me.GunaChart1.XAxes.GridLines = Grid1
-        ChartFont5.FontName = "Arial"
-        Tick1.Font = ChartFont5
-        Me.GunaChart1.XAxes.Ticks = Tick1
-        Me.GunaChart1.YAxes.GridLines = Grid2
-        ChartFont6.FontName = "Arial"
-        Tick2.Font = ChartFont6
-        Me.GunaChart1.YAxes.Ticks = Tick2
-        Me.GunaChart1.ZAxes.GridLines = Grid3
-        ChartFont7.FontName = "Arial"
-        PointLabel1.Font = ChartFont7
-        Me.GunaChart1.ZAxes.PointLabels = PointLabel1
-        ChartFont8.FontName = "Arial"
-        Tick3.Font = ChartFont8
-        Me.GunaChart1.ZAxes.Ticks = Tick3
+        ChartFont10.FontName = "Arial"
+        ChartFont10.Size = 12
+        ChartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
+        Me.GunaChart1.Title.Font = ChartFont10
+        ChartFont11.FontName = "Arial"
+        Me.GunaChart1.Tooltips.BodyFont = ChartFont11
+        ChartFont12.FontName = "Arial"
+        ChartFont12.Size = 9
+        ChartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
+        Me.GunaChart1.Tooltips.TitleFont = ChartFont12
+        Me.GunaChart1.XAxes.GridLines = Grid4
+        ChartFont13.FontName = "Arial"
+        Tick4.Font = ChartFont13
+        Me.GunaChart1.XAxes.Ticks = Tick4
+        Me.GunaChart1.YAxes.GridLines = Grid5
+        ChartFont14.FontName = "Arial"
+        Tick5.Font = ChartFont14
+        Me.GunaChart1.YAxes.Ticks = Tick5
+        Me.GunaChart1.ZAxes.GridLines = Grid6
+        ChartFont15.FontName = "Arial"
+        PointLabel2.Font = ChartFont15
+        Me.GunaChart1.ZAxes.PointLabels = PointLabel2
+        ChartFont16.FontName = "Arial"
+        Tick6.Font = ChartFont16
+        Me.GunaChart1.ZAxes.Ticks = Tick6
         '
         'Guna2Panel9
         '
@@ -867,7 +867,7 @@ Partial Class dashboard
     Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Separator5 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Label14 As Label
+    Friend WithEvents lbl_funds As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
     Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel

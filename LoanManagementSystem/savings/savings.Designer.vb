@@ -31,7 +31,7 @@ Partial Class savings
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.lbl_accountname = New System.Windows.Forms.Label()
         Me.lbl_balance = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -48,7 +48,6 @@ Partial Class savings
         Me.txt_amountwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_passwithdraw = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.tab1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +96,7 @@ Partial Class savings
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(864, 660)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Savings"
+        Me.TabPage1.Text = "Savings Account"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'datagrid1
@@ -172,7 +171,6 @@ Partial Class savings
         'Guna2Panel1
         '
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button3)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.lbl_accountname)
         Me.Guna2Panel1.Controls.Add(Me.lbl_balance)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -181,22 +179,22 @@ Partial Class savings
         Me.Guna2Panel1.Size = New System.Drawing.Size(858, 166)
         Me.Guna2Panel1.TabIndex = 3
         '
-        'Guna2Button2
+        'Guna2Button3
         '
-        Me.Guna2Button2.BorderRadius = 3
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.DarkSlateBlue
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
-        Me.Guna2Button2.Location = New System.Drawing.Point(12, 120)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(79, 40)
-        Me.Guna2Button2.TabIndex = 4
-        Me.Guna2Button2.Text = "Print"
+        Me.Guna2Button3.BorderRadius = 3
+        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button3.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
+        Me.Guna2Button3.Location = New System.Drawing.Point(16, 120)
+        Me.Guna2Button3.Name = "Guna2Button3"
+        Me.Guna2Button3.Size = New System.Drawing.Size(119, 40)
+        Me.Guna2Button3.TabIndex = 5
+        Me.Guna2Button3.Text = "Export to excel"
         '
         'lbl_accountname
         '
@@ -449,23 +447,6 @@ Partial Class savings
         Me.txt_passwithdraw.TabIndex = 54
         Me.txt_passwithdraw.UseSystemPasswordChar = True
         '
-        'Guna2Button3
-        '
-        Me.Guna2Button3.BorderRadius = 3
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.FillColor = System.Drawing.Color.DarkSlateBlue
-        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
-        Me.Guna2Button3.Location = New System.Drawing.Point(97, 120)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(119, 40)
-        Me.Guna2Button3.TabIndex = 5
-        Me.Guna2Button3.Text = "Export to excel"
-        '
         'savings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -509,6 +490,5 @@ Partial Class savings
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_withtrans As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
 End Class

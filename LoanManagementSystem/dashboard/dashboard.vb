@@ -14,7 +14,7 @@ Public Class dashboard
         lbl_transaccount.Text = transac_count()
         lbl_collecttotal.Text = collectiontoday()
         lbl_releasedtotal.Text = releasedtoday()
-
+        lbl_funds.Text = checkfunds()
     End Sub
 
 
@@ -115,6 +115,98 @@ FROM (
 
         End Try
     End Function
+
+
+    Private Function checkfunds() As String
+        Try
+            Dim share As Decimal
+            Dim savings As Decimal
+            Dim collection As Decimal
+
+            con.Close()
+            con.Open()
+            ' Define the SQL command to check balance
+            Dim check As New MySqlCommand("SELECT 
+            SUM(CASE WHEN `status` = 'ID' or status='CM' or status='CD' or status='ISC' or status='IPR' THEN `amount` ELSE 0 END) - 
+            SUM(CASE WHEN `status` = 'DM' or status = 'CA' THEN `amount` ELSE 0 END) AS balance
+            FROM `sharecap`", con)
+            ' Execute the command and retrieve the balance
+            Dim balance As Object = check.ExecuteScalar()
+            If balance IsNot DBNull.Value Then
+                share = Convert.ToDecimal(balance)
+            Else
+                share = 0 ' Return 0 if no balance is found
+            End If
+
+
+
+            con.Close()
+            con.Open()
+            ' Define the SQL command to check balance
+            Dim checksavings As New MySqlCommand("SELECT 
+            SUM(CASE WHEN `status` = 'ID'
+                        or status='CHKD'
+                        or status='CD'
+                     THEN `amount` ELSE 0 END) 
+                    - 
+            SUM(CASE WHEN `status` = 'CW'
+                        or status = 'CHKW'
+                     THEN `amount` ELSE 0 END) AS balance
+            FROM `savings`", con)
+
+            ' Execute the command and retrieve the balance
+            Dim balance2 As Object = checksavings.ExecuteScalar()
+
+            ' Check if the result is not null and return the balance as Decimal
+            If balance2 IsNot DBNull.Value Then
+               savings= Convert.ToDecimal(balance2)
+            Else
+              savings = 0 ' Return 0 if no balance is found
+            End If
+
+
+
+            Dim query As String = "SELECT IFNULL(SUM(amount - (service_fee + insurance_fee)), 0) " &
+                                  "FROM loan_app WHERE date_release IS NOT NULL "
+
+            con.Close()
+                con.Open()
+                Dim selectdata As New MySqlCommand(query, con)
+                dr = selectdata.ExecuteReader
+
+                If dr.Read() Then
+                collection = dr.GetDecimal(0)
+
+            Else
+                collection = 0
+            End If
+
+
+
+
+
+
+
+
+
+            Return (share + savings + collection).ToString("N0")
+
+
+
+
+
+        Catch ex As Exception
+            ' Handle any errors that occur during the execution
+            MessageBox.Show("Error: " & ex.Message)
+            Return 0 ' Return 0 in case of an error
+        Finally
+            con.Close() ' Ensure the connection is closed
+        End Try
+
+    End Function
+
+
+
 
     Private Function sharecap() As String
         Try
@@ -344,6 +436,10 @@ ORDER BY YEAR(date_column), MONTH(date_column);
     End Sub
 
     Private Sub Guna2Panel10_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel10.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel7.Paint
 
     End Sub
 End Class

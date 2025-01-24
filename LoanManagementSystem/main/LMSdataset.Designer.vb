@@ -1928,6 +1928,10 @@ Partial Public Class LMSdataset
         
         Private columndate_transac As Global.System.Data.DataColumn
         
+        Private columnnumber As Global.System.Data.DataColumn
+        
+        Private columnid As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2028,6 +2032,22 @@ Partial Public Class LMSdataset
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property numberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnumber
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2064,12 +2084,18 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addsavings_transactRow(ByVal Fullname As String, ByVal account_no As String, ByVal status As String, ByVal withdraw As Decimal, ByVal deposit As Decimal, ByVal balance As Decimal, ByVal teller As String, ByVal date_transac As Date) As savings_transactRow
+        Public Overloads Function Addsavings_transactRow(ByVal Fullname As String, ByVal account_no As String, ByVal status As String, ByVal withdraw As Decimal, ByVal deposit As Decimal, ByVal balance As Decimal, ByVal teller As String, ByVal date_transac As Date, ByVal number As String, ByVal id As String) As savings_transactRow
             Dim rowsavings_transactRow As savings_transactRow = CType(Me.NewRow,savings_transactRow)
-            Dim columnValuesArray() As Object = New Object() {Fullname, account_no, status, withdraw, deposit, balance, teller, date_transac}
+            Dim columnValuesArray() As Object = New Object() {Fullname, account_no, status, withdraw, deposit, balance, teller, date_transac, number, id}
             rowsavings_transactRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowsavings_transactRow)
             Return rowsavings_transactRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function FindByid(ByVal id As String) As savings_transactRow
+            Return CType(Me.Rows.Find(New Object() {id}),savings_transactRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2097,6 +2123,8 @@ Partial Public Class LMSdataset
             Me.columnbalance = MyBase.Columns("balance")
             Me.columnteller = MyBase.Columns("teller")
             Me.columndate_transac = MyBase.Columns("date_transac")
+            Me.columnnumber = MyBase.Columns("number")
+            Me.columnid = MyBase.Columns("id")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2118,6 +2146,13 @@ Partial Public Class LMSdataset
             MyBase.Columns.Add(Me.columnteller)
             Me.columndate_transac = New Global.System.Data.DataColumn("date_transac", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndate_transac)
+            Me.columnnumber = New Global.System.Data.DataColumn("number", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnumber)
+            Me.columnid = New Global.System.Data.DataColumn("id", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
+            Me.columnid.AllowDBNull = false
+            Me.columnid.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3555,6 +3590,32 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property number() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesavings_transact.numberColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'number' in table 'savings_transact' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesavings_transact.numberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property id() As String
+            Get
+                Return CType(Me(Me.tablesavings_transact.idColumn),String)
+            End Get
+            Set
+                Me(Me.tablesavings_transact.idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsFullnameNull() As Boolean
             Return Me.IsNull(Me.tablesavings_transact.FullnameColumn)
         End Function
@@ -3647,6 +3708,18 @@ Partial Public Class LMSdataset
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setdate_transacNull()
             Me(Me.tablesavings_transact.date_transacColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsnumberNull() As Boolean
+            Return Me.IsNull(Me.tablesavings_transact.numberColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetnumberNull()
+            Me(Me.tablesavings_transact.numberColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

@@ -35,7 +35,6 @@ Partial Class sharecap_collection
         Me.lbl_balance = New System.Windows.Forms.Label()
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.tab1 = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -140,6 +139,8 @@ Partial Class sharecap_collection
         '
         'datagrid1
         '
+        Me.datagrid1.AllowUserToAddRows = False
+        Me.datagrid1.AllowUserToDeleteRows = False
         Me.datagrid1.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -170,6 +171,7 @@ Partial Class sharecap_collection
         Me.datagrid1.Location = New System.Drawing.Point(3, 199)
         Me.datagrid1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.datagrid1.Name = "datagrid1"
+        Me.datagrid1.ReadOnly = True
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
@@ -196,7 +198,7 @@ Partial Class sharecap_collection
         Me.datagrid1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.datagrid1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.datagrid1.ThemeStyle.HeaderStyle.Height = 36
-        Me.datagrid1.ThemeStyle.ReadOnly = False
+        Me.datagrid1.ThemeStyle.ReadOnly = True
         Me.datagrid1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.datagrid1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.datagrid1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -207,7 +209,6 @@ Partial Class sharecap_collection
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.lbl_accountname)
         Me.Guna2Panel1.Controls.Add(Me.lbl_balance)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -216,24 +217,6 @@ Partial Class sharecap_collection
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1189, 195)
         Me.Guna2Panel1.TabIndex = 3
-        '
-        'Guna2Button2
-        '
-        Me.Guna2Button2.BorderRadius = 3
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.DarkSlateBlue
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
-        Me.Guna2Button2.Location = New System.Drawing.Point(12, 151)
-        Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(75, 36)
-        Me.Guna2Button2.TabIndex = 4
-        Me.Guna2Button2.Text = "Print"
         '
         'TabPage1
         '
@@ -364,5 +347,4 @@ Partial Class sharecap_collection
     Friend WithEvents tab1 As Guna.UI2.WinForms.Guna2TabControl
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
 End Class

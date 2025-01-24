@@ -24,7 +24,7 @@ Module Module1
     Public user_pass As String
     Public user_initial As String
     Public user_account As String
-
+    Public user_print As Boolean
 
     'credentials of PC used
     Public PCname As String = Environment.MachineName
@@ -35,6 +35,8 @@ Module Module1
     Public datedb As String = Date.Now.ToString("yyyy-MM-dd")
     Public timedb As String = Date.Now.ToString("HH:mm:ss")
     Public shift1 As String
+
+
 
     Function GetMacAddress() As String
         Dim macAddress As String = ""

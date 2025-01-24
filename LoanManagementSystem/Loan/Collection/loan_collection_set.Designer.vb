@@ -116,11 +116,11 @@ Partial Class loan_collection_set
         Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(307, 205)
+        Me.Guna2Button1.Location = New System.Drawing.Point(290, 202)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(82, 40)
+        Me.Guna2Button1.Size = New System.Drawing.Size(117, 40)
         Me.Guna2Button1.TabIndex = 53
-        Me.Guna2Button1.Text = "Approve"
+        Me.Guna2Button1.Text = "Print"
         '
         'btn_see
         '
@@ -131,7 +131,7 @@ Partial Class loan_collection_set
         Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
         Me.btn_see.ImageRotate = 0!
         Me.btn_see.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_see.Location = New System.Drawing.Point(273, 216)
+        Me.btn_see.Location = New System.Drawing.Point(256, 213)
         Me.btn_see.Name = "btn_see"
         Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.btn_see.Size = New System.Drawing.Size(22, 18)
@@ -151,7 +151,7 @@ Partial Class loan_collection_set
         Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
         Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(83, 205)
+        Me.txt_password.Location = New System.Drawing.Point(66, 202)
         Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
