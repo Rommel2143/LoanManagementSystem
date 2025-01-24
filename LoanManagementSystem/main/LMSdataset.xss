@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:loandetails" ZOrder="4" X="708" Y="14" Height="258" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:comakerstatement" ZOrder="3" X="0" Y="0" Height="239" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
     <Shape ID="DesignTable:sharecap_passbook" ZOrder="2" X="209" Y="22" Height="296" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="292" />
-    <Shape ID="DesignTable:savings_transact" ZOrder="1" X="378" Y="15" Height="201" Width="160" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:savings_transact" ZOrder="1" X="532" Y="372" Height="201" Width="160" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

@@ -31,8 +31,6 @@ Partial Class Register_PC
         Me.txtuser = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtpcmac = New System.Windows.Forms.Label()
         Me.txtpcname = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,8 +46,6 @@ Partial Class Register_PC
         Me.Guna2Panel1.Controls.Add(Me.txtuser)
         Me.Guna2Panel1.Controls.Add(Me.txtpcmac)
         Me.Guna2Panel1.Controls.Add(Me.txtpcname)
-        Me.Guna2Panel1.Controls.Add(Me.Label2)
-        Me.Guna2Panel1.Controls.Add(Me.Label1)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
         Me.Guna2Panel1.Location = New System.Drawing.Point(114, 65)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -160,28 +156,6 @@ Partial Class Register_PC
         Me.txtpcname.TabIndex = 3
         Me.txtpcname.Text = "---"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label2.Location = New System.Drawing.Point(324, 65)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(163, 25)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Inventory System"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Location = New System.Drawing.Point(306, 35)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 30)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Philippines TRC Inc."
-        '
         'Register_PC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -201,8 +175,6 @@ Partial Class Register_PC
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents txtpcmac As Label
     Friend WithEvents txtpcname As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents txtpassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtuser As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
