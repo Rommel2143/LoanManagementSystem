@@ -26,10 +26,10 @@ Public Class savings
             Dim imgColumn As New DataGridViewImageColumn()
             imgColumn.Name = "ActionImage"
             imgColumn.HeaderText = "Action"
-            imgColumn.Image = My.Resources.edit_btn ' Replace with your actual resource
+            imgColumn.Image = My.Resources.print ' Replace with your actual resource
 
             datagrid1.Columns.Insert(0, imgColumn) ' Insert at the first column
-            datagrid1.Columns(0).Width = 50
+            datagrid1.Columns(0).Width = 30
             datagrid1.Columns("id").Visible = False
         End If
     End Sub
@@ -183,7 +183,10 @@ Public Class savings
     Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
         If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
             Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
+            Dim printpass As New print_savings
+            printpass.print_savings(selectedPartCode)
 
+            printpass.ShowDialog()
         End If
     End Sub
 

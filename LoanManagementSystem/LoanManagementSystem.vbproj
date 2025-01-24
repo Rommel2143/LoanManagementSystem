@@ -693,6 +693,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="piggy-bank %281%29.ico" />
+    <None Include="Resources\print.png" />
     <None Include="Resources\edit %288%29.png" />
     <None Include="Resources\clock.png" />
     <None Include="Resources\minus.png" />
