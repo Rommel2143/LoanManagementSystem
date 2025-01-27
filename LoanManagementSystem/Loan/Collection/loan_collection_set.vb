@@ -9,27 +9,32 @@ Public Class loan_collection_set
 
     Public Sub loadprofile(reference As String, id As Integer, collectdate As Date, payment As Decimal, account As String)
         Try
+            ' Populate labels with provided information
             lbl_reference.Text = reference
             collection_id = id
             lbl_account.Text = account
             lbl_cdate.Text = collectdate.ToString("MMMM dd, yyyy")
             lbl_payment.Text = payment.ToString("N2")
 
-            ' Check if collection date is in the past
-            If collectdate < Date.Today Then
-                duefines = payment * 0.02 ' Apply 2% fine if the due date is in the past
+            ' Check if collection date is within the past 5 days
+            If collectdate < Date.Today.AddDays(-5) Then
+                duefines = payment * 0.02 ' Apply 2% fine for overdue payments
             Else
-                duefines = 0.00 ' No fine if the due date is today or in the future
+                duefines = 0.00 ' No fine for payments on time or in advance
             End If
 
-
+            ' Display calculated due fines
             lbl_duefines.Text = duefines.ToString("N2")
         Catch ex As Exception
-            display_error(ex.Message)
+            display_error(ex.Message) ' Handle and display exceptions
         Finally
-            con.Close()
+            ' Close the connection if it's open
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
         End Try
     End Sub
+
 
     Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
 
@@ -40,7 +45,7 @@ Public Class loan_collection_set
             con.Close()
             con.Open()
             ' Update the status_inspect for the selected row
-            Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_collection SET status = 1,due_fines='" & duefines & "', teller='" & user_account & "',date_paid='" & datedb & "' WHERE id = '" & collection_id & "'", con)
+            Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_collection SET status = 1,due_fines='" & duefines & "', teller='" & user_account & "',date_paid='" & datedb & "',mode='" & cmb_mode.text.Split(" "c)(0) & "' WHERE id = '" & collection_id & "'", con)
             cmdUpdateStatus.ExecuteNonQuery()
             Dim printpass As New collection_print
             printpass.print_collection(collection_id)
@@ -64,5 +69,10 @@ Public Class loan_collection_set
     End Sub
     Private Sub Guna2ImageButton1_Mousedown(sender As Object, e As MouseEventArgs) Handles btn_see.MouseDown
         txt_password.UseSystemPasswordChar = False
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        duefines = 0
+        lbl_duefines.Text = "0.00"
     End Sub
 End Class

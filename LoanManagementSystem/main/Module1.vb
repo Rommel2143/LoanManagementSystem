@@ -7,8 +7,8 @@ Module Module1
 
     Public Function connection() As MySqlConnection
         '  Return New MySqlConnection("server=localhost;user id=lms;password=Magnaye2143@#;database=lms")
-        ' Return New MySqlConnection("server=localhost;user id=root;password= ;database=lms")
-        Return New MySqlConnection("server=192.168.1.26;user id=lcpmpc123;password=lcpmpc123;database=lms")
+        Return New MySqlConnection("server=localhost;user id=root;password= ;database=lms")
+        ' Return New MySqlConnection("server=192.168.1.26;user id=lcpmpc123;password=lcpmpc123;database=lms")
 
     End Function
     Public con As MySqlConnection = connection()
@@ -288,11 +288,11 @@ Module Module1
             Dim check As New MySqlCommand("SELECT 
             SUM(CASE WHEN `status` = 'ID'
                         or status='CHKD'
-                        or status='CD'
+                        or status='CD' or status='CM'
                      THEN `amount` ELSE 0 END) 
                     - 
             SUM(CASE WHEN `status` = 'CW'
-                        or status = 'CHKW'
+                        or status = 'CHKW'  or status = 'DM'
                      THEN `amount` ELSE 0 END) AS balance
             FROM `savings`
             WHERE `account_no` = @accountno", con)

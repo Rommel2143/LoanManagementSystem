@@ -47,6 +47,8 @@ Public Class savings
                         trans = "CHKD"
                     Case "Initial"
                         trans = "ID"
+                    Case "Credit"
+                        trans = "CM"
                 End Select
 
                 con.Close()
@@ -94,7 +96,8 @@ Public Class savings
                         trans = "CW"
                     Case "Check"
                         trans = "CHKW"
-
+                    Case "Debit"
+                        trans = "DM"
                 End Select
 
                 con.Close()

@@ -39,6 +39,10 @@ Partial Class loan_collection_set
         Me.lbl_cdate = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_duefines = New System.Windows.Forms.Label()
+        Me.cmb_mode = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -116,7 +120,7 @@ Partial Class loan_collection_set
         Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(290, 202)
+        Me.Guna2Button1.Location = New System.Drawing.Point(296, 300)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(117, 40)
         Me.Guna2Button1.TabIndex = 53
@@ -131,7 +135,7 @@ Partial Class loan_collection_set
         Me.btn_see.ImageOffset = New System.Drawing.Point(0, 0)
         Me.btn_see.ImageRotate = 0!
         Me.btn_see.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_see.Location = New System.Drawing.Point(256, 213)
+        Me.btn_see.Location = New System.Drawing.Point(262, 311)
         Me.btn_see.Name = "btn_see"
         Me.btn_see.PressedState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.btn_see.Size = New System.Drawing.Size(22, 18)
@@ -151,7 +155,7 @@ Partial Class loan_collection_set
         Me.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_password.IconLeft = CType(resources.GetObject("txt_password.IconLeft"), System.Drawing.Image)
         Me.txt_password.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txt_password.Location = New System.Drawing.Point(66, 202)
+        Me.txt_password.Location = New System.Drawing.Point(72, 300)
         Me.txt_password.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -214,7 +218,7 @@ Partial Class loan_collection_set
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(68, 144)
+        Me.Label3.Location = New System.Drawing.Point(68, 165)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 20)
         Me.Label3.TabIndex = 69
@@ -226,17 +230,71 @@ Partial Class loan_collection_set
         Me.lbl_duefines.BackColor = System.Drawing.Color.Transparent
         Me.lbl_duefines.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_duefines.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_duefines.Location = New System.Drawing.Point(135, 144)
+        Me.lbl_duefines.Location = New System.Drawing.Point(135, 165)
         Me.lbl_duefines.Name = "lbl_duefines"
         Me.lbl_duefines.Size = New System.Drawing.Size(28, 21)
         Me.lbl_duefines.TabIndex = 70
         Me.lbl_duefines.Text = "---"
         '
+        'cmb_mode
+        '
+        Me.cmb_mode.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_mode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_mode.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_mode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_mode.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmb_mode.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_mode.ItemHeight = 30
+        Me.cmb_mode.Items.AddRange(New Object() {"C : Cash", "CHK : Check"})
+        Me.cmb_mode.Location = New System.Drawing.Point(74, 222)
+        Me.cmb_mode.Name = "cmb_mode"
+        Me.cmb_mode.Size = New System.Drawing.Size(140, 36)
+        Me.cmb_mode.StartIndex = 0
+        Me.cmb_mode.TabIndex = 71
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.DimGray
+        Me.Label6.Location = New System.Drawing.Point(70, 199)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(135, 20)
+        Me.Label6.TabIndex = 72
+        Me.Label6.Text = "Mode of payment :"
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.Animated = True
+        Me.Guna2Button2.AutoRoundedCorners = True
+        Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.BorderRadius = 9
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
+        Me.Guna2Button2.ImageSize = New System.Drawing.Size(24, 24)
+        Me.Guna2Button2.Location = New System.Drawing.Point(42, 165)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.Size = New System.Drawing.Size(20, 20)
+        Me.Guna2Button2.TabIndex = 73
+        Me.ToolTip1.SetToolTip(Me.Guna2Button2, "Reset penalty")
+        Me.Guna2Button2.UseTransparentBackground = True
+        '
         'loan_collection_set
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(472, 301)
+        Me.ClientSize = New System.Drawing.Size(472, 417)
+        Me.Controls.Add(Me.Guna2Button2)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.cmb_mode)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lbl_duefines)
         Me.Controls.Add(Me.Label5)
@@ -275,4 +333,8 @@ Partial Class loan_collection_set
     Friend WithEvents lbl_cdate As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lbl_duefines As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cmb_mode As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
