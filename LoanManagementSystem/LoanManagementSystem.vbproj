@@ -230,6 +230,12 @@
     <Compile Include="Loan\Application\loan_approval_set.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loan\Application\loan_edit.Designer.vb">
+      <DependentUpon>loan_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\Application\loan_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\Collection\collection_dset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -498,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\Application\loan_approval_set.resx">
       <DependentUpon>loan_approval_set.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\Application\loan_edit.resx">
+      <DependentUpon>loan_edit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\Collection\collection_print.resx">
       <DependentUpon>collection_print.vb</DependentUpon>

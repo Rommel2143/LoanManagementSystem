@@ -82,4 +82,8 @@ Public Class loan_approval_set
     Private Sub Guna2ImageButton1_Mousedown(sender As Object, e As MouseEventArgs) Handles btn_see.MouseDown
         txt_password.UseSystemPasswordChar = False
     End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        display_formsub(New loan_edit, "Edit Loan Application")
+    End Sub
 End Class

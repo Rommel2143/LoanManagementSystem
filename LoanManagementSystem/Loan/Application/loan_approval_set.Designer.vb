@@ -40,6 +40,7 @@ Partial Class loan_approval_set
         Me.btn_see = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.lbl_share = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -188,7 +189,7 @@ Partial Class loan_approval_set
         Me.Guna2ControlBox1.BorderRadius = 5
         Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(396, 12)
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(514, 12)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 47
@@ -202,7 +203,7 @@ Partial Class loan_approval_set
         Me.Guna2Button2.FillColor = System.Drawing.Color.Tomato
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(339, 206)
+        Me.Guna2Button2.Location = New System.Drawing.Point(427, 206)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(82, 40)
         Me.Guna2Button2.TabIndex = 48
@@ -248,11 +249,27 @@ Partial Class loan_approval_set
         Me.Label5.TabIndex = 50
         Me.Label5.Text = "Share Capital :"
         '
+        'Guna2Button3
+        '
+        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button3.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button3.Location = New System.Drawing.Point(339, 206)
+        Me.Guna2Button3.Name = "Guna2Button3"
+        Me.Guna2Button3.Size = New System.Drawing.Size(82, 40)
+        Me.Guna2Button3.TabIndex = 52
+        Me.Guna2Button3.Text = "Edit"
+        '
         'loan_approval_set
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(453, 278)
+        Me.ClientSize = New System.Drawing.Size(571, 278)
+        Me.Controls.Add(Me.Guna2Button3)
         Me.Controls.Add(Me.lbl_share)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btn_see)
@@ -293,4 +310,5 @@ Partial Class loan_approval_set
     Friend WithEvents btn_see As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents lbl_share As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
 End Class
