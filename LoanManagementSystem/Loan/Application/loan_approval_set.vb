@@ -84,6 +84,8 @@ Public Class loan_approval_set
     End Sub
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
-        display_formsub(New loan_edit, "Edit Loan Application")
+        Dim loanEdit As New loan_edit
+        loanEdit.load_data(lbl_reference.Text)
+        display_formsub(loanEdit, "Edit Loan Application")
     End Sub
 End Class

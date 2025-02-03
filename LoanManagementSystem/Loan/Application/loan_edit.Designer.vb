@@ -46,6 +46,7 @@ Partial Class loan_edit
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txt_ma = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblreference = New System.Windows.Forms.Label()
         Me.Guna2Panel4.SuspendLayout()
         CType(Me.num_plan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -356,11 +357,24 @@ Partial Class loan_edit
         Me.Label9.TabIndex = 65
         Me.Label9.Text = "Monthly payment"
         '
+        'lblreference
+        '
+        Me.lblreference.AutoSize = True
+        Me.lblreference.BackColor = System.Drawing.Color.Transparent
+        Me.lblreference.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblreference.ForeColor = System.Drawing.Color.DimGray
+        Me.lblreference.Location = New System.Drawing.Point(47, 20)
+        Me.lblreference.Name = "lblreference"
+        Me.lblreference.Size = New System.Drawing.Size(50, 25)
+        Me.lblreference.TabIndex = 74
+        Me.lblreference.Text = "0.00"
+        '
         'loan_edit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 562)
+        Me.Controls.Add(Me.lblreference)
         Me.Controls.Add(Me.Guna2VSeparator1)
         Me.Controls.Add(Me.lbl_percentinterest)
         Me.Controls.Add(Me.Label25)
@@ -415,4 +429,5 @@ Partial Class loan_edit
     Friend WithEvents Label11 As Label
     Friend WithEvents txt_ma As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents lblreference As Label
 End Class
