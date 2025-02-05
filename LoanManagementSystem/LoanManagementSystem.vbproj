@@ -212,6 +212,12 @@
     <Compile Include="dashboard\dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dashboard\weight_ave.Designer.vb">
+      <DependentUpon>weight_ave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard\weight_ave.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loan\Application\loan_application.Designer.vb">
       <DependentUpon>loan_application.vb</DependentUpon>
     </Compile>
@@ -495,6 +501,9 @@
   <ItemGroup>
     <EmbeddedResource Include="dashboard\dashboard.resx">
       <DependentUpon>dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\weight_ave.resx">
+      <DependentUpon>weight_ave.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan\Application\loan_application.resx">
       <DependentUpon>loan_application.vb</DependentUpon>
