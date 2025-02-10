@@ -14,7 +14,7 @@ Public Class loan_application
         Dim search As New search_name
         With search
             .lbl_who.Text = "Borrower :"
-            .ShowDialog()
+            .Show()
             .BringToFront()
 
         End With
@@ -24,7 +24,7 @@ Public Class loan_application
     Private Sub loan_application_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmb_display("SELECT type from loan_types", "type", cmb_purpose)
 
-        btn_search.PerformClick()
+
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
@@ -296,7 +296,7 @@ Public Class loan_application
         Dim search As New search_name
         With search
             .lbl_who.Text = "Co-maker 1 :"
-            .ShowDialog()
+            .Show()
             .BringToFront()
 
         End With
@@ -306,7 +306,7 @@ Public Class loan_application
         Dim search As New search_name
         With search
             .lbl_who.Text = "Co-maker 2 :"
-            .ShowDialog()
+            .Show()
             .BringToFront()
 
         End With

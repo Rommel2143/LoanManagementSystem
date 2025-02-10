@@ -64,7 +64,7 @@ Public Class member_accounts
             Dim options As New member_options
 
             options.load_data(accountNo, member)
-            options.ShowDialog()
+            options.Show()
 
         Catch ex As Exception
 

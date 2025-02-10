@@ -3,6 +3,7 @@ Imports System.Net.NetworkInformation
 Imports System.Text
 Imports System.Reflection
 Imports ClosedXML.Excel
+
 Module Module1
 
     Public Function connection() As MySqlConnection
@@ -60,6 +61,10 @@ Module Module1
 
         Return macAddress
     End Function
+
+
+
+
     Function IsTrustedDevice() As Boolean
 
         Try

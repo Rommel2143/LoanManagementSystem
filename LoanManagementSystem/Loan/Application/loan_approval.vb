@@ -9,13 +9,20 @@ Public Class loan_approval
     Public Sub LoadMemberProfiles()
         query = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
                                     JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 ORDER BY la.date_apply DESC"
-        displayrecord()
+        ' displayrecord()
+        con.Close()
+        con.Open()
+        Dim loaddata As New MySqlCommand(query, con)
+        dr = loaddata.ExecuteReader
+        While dr.Read = True
+            addobject_group(flow_loan, dr.GetString("referenceno"), dr.GetString("Fullname"), Convert.ToInt32(dr.GetDecimal("amount")))
+        End While
     End Sub
     Private Sub SearchProfiles()
 
         query = "SELECT la.id,la.amount, la.referenceno,la.purpose, la.account_no,  DATE_FORMAT(la.date_apply, '%M %d, %Y') AS date_apply,CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS Fullname  FROM loan_app la
                                     JOIN member_profile mp ON mp.account_no = la.account_no WHERE la.status= 0 and (la.referenceno REGEXP '" & txt_search.Text & "' or mp.lastname='" & txt_search.Text & "' or la.account_no REGEXP '" & txt_search.Text & "')"
-        displayrecord()
+        ' displayrecord()
     End Sub
     Private Sub displayrecord()
         Try
@@ -73,7 +80,7 @@ Public Class loan_approval
                                               Dim btn As Guna2Button = CType(senderObj, Guna2Button)
                                               Dim loanreference As String = CType(btn.Tag, String)
                                               loan_approval_set.loadprofile(loanreference)
-                                              loan_approval_set.ShowDialog()
+                                              loan_approval_set.Show()
                                               loan_approval_set.BringToFront()
 
                                           End Sub
