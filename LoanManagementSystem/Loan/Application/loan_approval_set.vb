@@ -40,7 +40,7 @@ Public Class loan_approval_set
             Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_app SET status = 1, date_approved='" & datedb & "', teller_approved='" & user_account & "' WHERE referenceno = '" & lbl_reference.Text & "'", con)
             cmdUpdateStatus.ExecuteNonQuery()
             Me.Close()
-            loan_approval.LoadMemberProfiles()
+            loan_approval.load_profiles()
             loan_release.LoadMemberProfiles()
             txt_password.Clear()
         Else
@@ -66,7 +66,7 @@ Public Class loan_approval_set
                 Dim cmdUpdateStatus As New MySqlCommand("UPDATE loan_app SET status = 3, date_approved='" & datedb & "', teller_approved='" & user_account & "' WHERE referenceno = '" & lbl_reference.Text & "'", con)
                 cmdUpdateStatus.ExecuteNonQuery()
                 Me.Close()
-                loan_approval.LoadMemberProfiles()
+
                 loan_release.LoadMemberProfiles()
                 txt_password.Clear()
             End If
