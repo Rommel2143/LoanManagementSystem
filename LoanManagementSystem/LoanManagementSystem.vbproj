@@ -69,10 +69,10 @@
     <ApplicationIcon>piggy-bank %281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>42CB5D0F71CAC1280077264F92309025F59246F4</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1A7266CB7EB994509C02A1B5377BD03D80B8E582</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>LoanManagementSystem_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>LoanManagementSystem_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -645,6 +645,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="LoanManagementSystem_1_TemporaryKey.pfx" />
+    <None Include="LoanManagementSystem_2_TemporaryKey.pfx" />
     <None Include="LoanManagementSystem_TemporaryKey.pfx" />
     <None Include="Loan\Collection\collection_dset.xsc">
       <DependentUpon>collection_dset.xsd</DependentUpon>
