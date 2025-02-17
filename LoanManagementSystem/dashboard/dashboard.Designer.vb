@@ -22,6 +22,7 @@ Partial Class dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim ChartFont1 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont2 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont3 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
@@ -87,6 +88,9 @@ Partial Class dashboard
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.menu_sharecap = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.WeightedAverageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuarterlyRateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -102,6 +106,7 @@ Partial Class dashboard
         Me.Guna2Panel9.SuspendLayout()
         Me.Guna2Panel10.SuspendLayout()
         Me.Guna2Panel11.SuspendLayout()
+        Me.menu_sharecap.SuspendLayout()
         CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -300,6 +305,7 @@ Partial Class dashboard
         '
         'Guna2Panel3
         '
+        Me.Guna2Panel3.ContextMenuStrip = Me.menu_sharecap
         Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
         Me.Guna2Panel3.Controls.Add(Me.Label12)
         Me.Guna2Panel3.Controls.Add(Me.lbl_sharecount)
@@ -719,6 +725,27 @@ Partial Class dashboard
         Me.Guna2Panel11.Size = New System.Drawing.Size(213, 75)
         Me.Guna2Panel11.TabIndex = 21
         '
+        'menu_sharecap
+        '
+        Me.menu_sharecap.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_sharecap.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WeightedAverageToolStripMenuItem, Me.QuarterlyRateToolStripMenuItem})
+        Me.menu_sharecap.Name = "menu_sharecap"
+        Me.menu_sharecap.Size = New System.Drawing.Size(208, 56)
+        '
+        'WeightedAverageToolStripMenuItem
+        '
+        Me.WeightedAverageToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WeightedAverageToolStripMenuItem.Name = "WeightedAverageToolStripMenuItem"
+        Me.WeightedAverageToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
+        Me.WeightedAverageToolStripMenuItem.Text = "Weighted Average"
+        '
+        'QuarterlyRateToolStripMenuItem
+        '
+        Me.QuarterlyRateToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuarterlyRateToolStripMenuItem.Name = "QuarterlyRateToolStripMenuItem"
+        Me.QuarterlyRateToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
+        Me.QuarterlyRateToolStripMenuItem.Text = "Quarterly rate"
+        '
         'Guna2PictureBox5
         '
         Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
@@ -814,6 +841,7 @@ Partial Class dashboard
         Me.Guna2Panel10.PerformLayout()
         Me.Guna2Panel11.ResumeLayout(False)
         Me.Guna2Panel11.PerformLayout()
+        Me.menu_sharecap.ResumeLayout(False)
         CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -874,4 +902,7 @@ Partial Class dashboard
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel10 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents menu_sharecap As ContextMenuStrip
+    Friend WithEvents WeightedAverageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuarterlyRateToolStripMenuItem As ToolStripMenuItem
 End Class

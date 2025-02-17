@@ -77,7 +77,7 @@ Partial Class member_accounts
         Me.btn_addmember.ForeColor = System.Drawing.Color.White
         Me.btn_addmember.Image = CType(resources.GetObject("btn_addmember.Image"), System.Drawing.Image)
         Me.btn_addmember.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btn_addmember.Location = New System.Drawing.Point(279, 36)
+        Me.btn_addmember.Location = New System.Drawing.Point(310, 36)
         Me.btn_addmember.Name = "btn_addmember"
         Me.btn_addmember.Size = New System.Drawing.Size(40, 36)
         Me.btn_addmember.TabIndex = 41
@@ -94,7 +94,7 @@ Partial Class member_accounts
         Me.txt_search.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_search.IconLeft = CType(resources.GetObject("txt_search.IconLeft"), System.Drawing.Image)
-        Me.txt_search.Location = New System.Drawing.Point(5, 36)
+        Me.txt_search.Location = New System.Drawing.Point(36, 36)
         Me.txt_search.Margin = New System.Windows.Forms.Padding(5)
         Me.txt_search.Name = "txt_search"
         Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)

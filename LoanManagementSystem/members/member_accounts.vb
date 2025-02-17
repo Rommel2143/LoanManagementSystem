@@ -53,7 +53,7 @@ Public Class member_accounts
         End Try
     End Sub
 
-    Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
+    Private Sub datagrid1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles datagrid1.CellMouseClick
         Try
 
 
@@ -66,10 +66,13 @@ Public Class member_accounts
             options.load_data(accountNo, member)
             options.Show()
 
+
         Catch ex As Exception
 
         End Try
     End Sub
+
+
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 

@@ -448,6 +448,28 @@ ORDER BY YEAR(date_column), MONTH(date_column);
     End Sub
 
     Private Sub Guna2Panel3_Click(sender As Object, e As EventArgs) Handles Guna2Panel3.Click
+        If check_access_user("admin") = True Then
+            Guna2Panel3.ContextMenuStrip.Show(Guna2Panel3, 0, Guna2Panel3.Height)
+
+        End If
+    End Sub
+
+    Private Sub WeightedAverageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WeightedAverageToolStripMenuItem.Click
         display_formsub(weight_ave, "Weighted Average")
+    End Sub
+
+    Private Sub QuarterlyRateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuarterlyRateToolStripMenuItem.Click
+        display_formsub(quarter_rate, "Quarterly rate")
+    End Sub
+
+    Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel4_Click(sender As Object, e As EventArgs) Handles Guna2Panel4.Click
+        If check_access_user("admin") = True Then
+            display_formsub(transact_today, "Transaction Summary")
+
+        End If
     End Sub
 End Class

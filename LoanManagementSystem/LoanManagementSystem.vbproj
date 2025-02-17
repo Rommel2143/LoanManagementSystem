@@ -212,6 +212,24 @@
     <Compile Include="dashboard\dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dashboard\mainpage.Designer.vb">
+      <DependentUpon>mainpage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard\mainpage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard\quarter_rate.Designer.vb">
+      <DependentUpon>quarter_rate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard\quarter_rate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard\transact_today.Designer.vb">
+      <DependentUpon>transact_today.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard\transact_today.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dashboard\weight_ave.Designer.vb">
       <DependentUpon>weight_ave.vb</DependentUpon>
     </Compile>
@@ -398,6 +416,7 @@
     <Compile Include="main\subframe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="main\user_access.vb" />
     <Compile Include="members\add_member.Designer.vb">
       <DependentUpon>add_member.vb</DependentUpon>
     </Compile>
@@ -502,6 +521,15 @@
   <ItemGroup>
     <EmbeddedResource Include="dashboard\dashboard.resx">
       <DependentUpon>dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\mainpage.resx">
+      <DependentUpon>mainpage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\quarter_rate.resx">
+      <DependentUpon>quarter_rate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\transact_today.resx">
+      <DependentUpon>transact_today.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard\weight_ave.resx">
       <DependentUpon>weight_ave.vb</DependentUpon>
