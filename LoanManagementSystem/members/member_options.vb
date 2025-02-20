@@ -46,18 +46,24 @@ Public Class member_options
     End Sub
 
     Private Sub Guna2TileButton3_Click(sender As Object, e As EventArgs) Handles Guna2TileButton3.Click
-        Dim sc As New sharecap_collection
-        sc.loaddata(accountno, lbl_fullname.Text)
-        display_formsub(sc, "Share Capital")
+        If check_access_user("sharecap") = True Then
+            Dim sc As New sharecap_collection
+            sc.loaddata(accountno, lbl_fullname.Text)
+            display_formsub(sc, "Share Capital")
 
-        Me.Close()
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub Guna2TileButton2_Click(sender As Object, e As EventArgs) Handles Guna2TileButton2.Click
-        Dim sav As New savings
-        sav.loaddata(accountno, lbl_fullname.Text)
-        display_formsub(sav, "Savings")
-        Me.Close()
+        If check_access_user("savings") = True Then
+            Dim sav As New savings
+            sav.loaddata(accountno, lbl_fullname.Text)
+            display_formsub(sav, "Savings")
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub Guna2TileButton1_Click(sender As Object, e As EventArgs) Handles Guna2TileButton1.Click

@@ -30,19 +30,28 @@
     End Sub
 
     Private Sub LoanApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_apply.Click
+        If check_access_user("loan_apply") = True Then
+            display_formsub(loan_application, "Loan Application")
+        End If
 
-        display_formsub(loan_application, "Loan Application")
     End Sub
 
 
     Private Sub LoanApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_loan_approve.Click
-        display_formsub(loan_approval, "Loan Approval")
-        loan_approval.load_profiles()
+        If check_access_user("loan_approve") = True Then
+            display_formsub(loan_approval, "Loan Approval")
+            loan_approval.load_profiles()
+        End If
+
     End Sub
 
     Private Sub ReleaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnloan_release.Click
-        display_formsub(loan_release, "Release Loan")
-        loan_release.LoadMemberProfiles()
+        If check_access_user("loan_release") = True Then
+            display_formsub(loan_release, "Release Loan")
+            loan_release.LoadMemberProfiles()
+        End If
+
+
     End Sub
 
     Private Sub LoanRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -50,8 +59,11 @@
     End Sub
 
     Private Sub CollectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnloan_collection.Click
-        display_formsub(loan_active, "Active Loan")
-        loan_active.LoadMemberProfiles()
+        If check_access_user("loan_collection") = True Then
+            display_formsub(loan_active, "Active Loan")
+            loan_active.LoadMemberProfiles()
+        End If
+
     End Sub
 
     Private Sub AccountsToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -85,6 +97,13 @@
     End Sub
 
     Private Sub ManageUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_manageuser.Click
-        display_formsub(New user_management, "User Management")
+        If check_access_user("admin") = True Then
+            display_formsub(New user_management, "User Management")
+        End If
+
+    End Sub
+
+    Private Sub CheckForUpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

@@ -27,8 +27,6 @@ Partial Class subframe
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.userstrip = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageMyProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.logout = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_manageuser = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,7 +63,7 @@ Partial Class subframe
         'userstrip
         '
         Me.userstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.logout, Me.btn_manageuser})
+        Me.userstrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageMyProfileToolStripMenuItem, Me.btn_manageuser, Me.logout})
         Me.userstrip.ForeColor = System.Drawing.Color.Black
         Me.userstrip.Image = CType(resources.GetObject("userstrip.Image"), System.Drawing.Image)
         Me.userstrip.Name = "userstrip"
@@ -83,26 +81,6 @@ Partial Class subframe
         Me.ManageMyProfileToolStripMenuItem.Name = "ManageMyProfileToolStripMenuItem"
         Me.ManageMyProfileToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ManageMyProfileToolStripMenuItem.Text = "Manage my profile"
-        '
-        'CheckForUpdatesToolStripMenuItem
-        '
-        Me.CheckForUpdatesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckForUpdatesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.CheckForUpdatesToolStripMenuItem.Image = CType(resources.GetObject("CheckForUpdatesToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CheckForUpdatesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
-        '
-        'DeviceInfoToolStripMenuItem
-        '
-        Me.DeviceInfoToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeviceInfoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.DeviceInfoToolStripMenuItem.Image = CType(resources.GetObject("DeviceInfoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DeviceInfoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.DeviceInfoToolStripMenuItem.Name = "DeviceInfoToolStripMenuItem"
-        Me.DeviceInfoToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.DeviceInfoToolStripMenuItem.Text = "Device Info."
         '
         'logout
         '
@@ -297,8 +275,6 @@ Partial Class subframe
     Friend WithEvents Panel1 As Panel
     Friend WithEvents userstrip As ToolStripMenuItem
     Friend WithEvents logout As ToolStripMenuItem
-    Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DeviceInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lbl_tittle As Label
     Friend WithEvents lbl_calendar As Label

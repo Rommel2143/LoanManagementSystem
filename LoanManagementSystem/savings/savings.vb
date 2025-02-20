@@ -185,12 +185,15 @@ Public Class savings
     End Sub
 
     Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
-        If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
-            Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
-            Dim printpass As New print_savings
-            printpass.print_savings(selectedPartCode)
+        If check_access_user("print_savings") = True Then
 
-            printpass.ShowDialog()
+            If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
+                Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
+                Dim printpass As New print_savings
+                printpass.print_savings(selectedPartCode)
+
+                printpass.ShowDialog()
+            End If
         End If
     End Sub
 

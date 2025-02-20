@@ -22,7 +22,7 @@ Public Class Login
 
             Dim query As String = "SELECT u.account_no, u.username, u.pass,u.initials,
                           CONCAT(mp.lastname, ', ', mp.firstname, ' ', mp.middlename) AS fullname, mp.firstname, 
-                          u.loan_apply, u.loan_approve, u.loan_collection, u.loan_release, u.add_member, u.level 
+                          u.loan_apply, u.loan_approve, u.loan_collection, u.loan_release, u.add_member
                           FROM `user` u 
                           JOIN member_profile mp ON u.account_no = mp.account_no  WHERE (username = @username OR u.account_no = @username) AND pass =@password"
 
@@ -38,25 +38,14 @@ Public Class Login
 
 
             If dr.Read() = True Then
-                Dim apply As Integer = dr.GetInt32("loan_apply")
-                Dim approve As Integer = dr.GetInt32("loan_approve")
-                Dim collection As String = dr.GetInt32("loan_collection")
-                Dim release As Integer = dr.GetInt32("loan_release")
-                Dim addmember As Integer = dr.GetInt32("add_member")
-                Dim manage As Integer = dr.GetInt32("level")
+
                 user_fullname = dr.GetString("fullname")
                 user_firstname = dr.GetString("firstname")
-                user_level = manage
+
                 user_pass = dr.GetString("pass")
                 user_initial = dr.GetString("initials")
                 user_account = dr.GetString("account_no")
 
-                subframe.btn_loan_apply.Visible = (apply = 1)
-                subframe.btn_loan_approve.Visible = (approve = 1)
-                subframe.btnloan_collection.Visible = (Collection = 1)
-                subframe.btnloan_release.Visible = (release = 1)
-                member_accounts.btn_addmember.Visible = (addmember = 1)
-                subframe.btn_manageuser.Visible = (manage = 1)
 
                 subframe.userstrip.Text = "Hello, " & user_firstname
                 display_mainframe(subframe)

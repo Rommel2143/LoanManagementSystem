@@ -142,7 +142,7 @@ ORDER BY lc.id ASC", datagrid1)
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         diminishing_loan.print_diminishing(referenceno)
-        MessageBox.Show(referenceno)
+
         diminishing_loan.Show()
         diminishing_loan.BringToFront()
     End Sub

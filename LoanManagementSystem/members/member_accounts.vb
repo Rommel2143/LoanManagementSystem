@@ -83,7 +83,10 @@ Public Class member_accounts
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btn_addmember.Click
-        display_formsub(New add_member, "Add Member")
+        If check_access_user("add_member") = True Then
+            display_formsub(New add_member, "Add Member")
+        End If
+
     End Sub
 
     Private Sub export_excel_Click(sender As Object, e As EventArgs) Handles export_excel.Click

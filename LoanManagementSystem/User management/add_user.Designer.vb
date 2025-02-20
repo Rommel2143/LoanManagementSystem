@@ -23,10 +23,10 @@ Partial Class add_user
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(add_user))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txt_initials = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_password = New Guna.UI2.WinForms.Guna2TextBox()
@@ -34,23 +34,14 @@ Partial Class add_user
         Me.txt_username = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.chk_reg = New Guna.UI2.WinForms.Guna2CheckBox()
-        Me.chk_release = New Guna.UI2.WinForms.Guna2CheckBox()
-        Me.chk_appr = New Guna.UI2.WinForms.Guna2CheckBox()
-        Me.chk_app = New Guna.UI2.WinForms.Guna2CheckBox()
-        Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.chk_coll = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.lbl_account = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lbl_fullname = New System.Windows.Forms.Label()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.lbl_fullname = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cmb_level = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel1.SuspendLayout()
-        Me.Guna2GroupBox1.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -156,8 +147,6 @@ Partial Class add_user
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 3
-        Me.Guna2Panel1.Controls.Add(Me.cmb_level)
-        Me.Guna2Panel1.Controls.Add(Me.Label4)
         Me.Guna2Panel1.Controls.Add(Me.txt_initials)
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.txt_password)
@@ -171,129 +160,8 @@ Partial Class add_user
         Me.Guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2Panel1.ShadowDecoration.Depth = 10
         Me.Guna2Panel1.ShadowDecoration.Enabled = True
-        Me.Guna2Panel1.Size = New System.Drawing.Size(373, 232)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(373, 203)
         Me.Guna2Panel1.TabIndex = 130
-        '
-        'chk_reg
-        '
-        Me.chk_reg.AutoSize = True
-        Me.chk_reg.BackColor = System.Drawing.Color.Transparent
-        Me.chk_reg.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_reg.CheckedState.BorderRadius = 2
-        Me.chk_reg.CheckedState.BorderThickness = 0
-        Me.chk_reg.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_reg.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.chk_reg.ForeColor = System.Drawing.Color.DimGray
-        Me.chk_reg.Location = New System.Drawing.Point(26, 175)
-        Me.chk_reg.Name = "chk_reg"
-        Me.chk_reg.Size = New System.Drawing.Size(168, 24)
-        Me.chk_reg.TabIndex = 4
-        Me.chk_reg.Text = "Member Registration"
-        Me.chk_reg.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_reg.UncheckedState.BorderRadius = 2
-        Me.chk_reg.UncheckedState.BorderThickness = 0
-        Me.chk_reg.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_reg.UseVisualStyleBackColor = False
-        '
-        'chk_release
-        '
-        Me.chk_release.AutoSize = True
-        Me.chk_release.BackColor = System.Drawing.Color.Transparent
-        Me.chk_release.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_release.CheckedState.BorderRadius = 2
-        Me.chk_release.CheckedState.BorderThickness = 0
-        Me.chk_release.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_release.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.chk_release.ForeColor = System.Drawing.Color.DimGray
-        Me.chk_release.Location = New System.Drawing.Point(26, 115)
-        Me.chk_release.Name = "chk_release"
-        Me.chk_release.Size = New System.Drawing.Size(115, 24)
-        Me.chk_release.TabIndex = 2
-        Me.chk_release.Text = "Loan Release"
-        Me.chk_release.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_release.UncheckedState.BorderRadius = 2
-        Me.chk_release.UncheckedState.BorderThickness = 0
-        Me.chk_release.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_release.UseVisualStyleBackColor = False
-        '
-        'chk_appr
-        '
-        Me.chk_appr.AutoSize = True
-        Me.chk_appr.BackColor = System.Drawing.Color.Transparent
-        Me.chk_appr.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_appr.CheckedState.BorderRadius = 2
-        Me.chk_appr.CheckedState.BorderThickness = 0
-        Me.chk_appr.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_appr.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.chk_appr.ForeColor = System.Drawing.Color.DimGray
-        Me.chk_appr.Location = New System.Drawing.Point(26, 85)
-        Me.chk_appr.Name = "chk_appr"
-        Me.chk_appr.Size = New System.Drawing.Size(125, 24)
-        Me.chk_appr.TabIndex = 1
-        Me.chk_appr.Text = "Loan Approval"
-        Me.chk_appr.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_appr.UncheckedState.BorderRadius = 2
-        Me.chk_appr.UncheckedState.BorderThickness = 0
-        Me.chk_appr.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_appr.UseVisualStyleBackColor = False
-        '
-        'chk_app
-        '
-        Me.chk_app.AutoSize = True
-        Me.chk_app.BackColor = System.Drawing.Color.Transparent
-        Me.chk_app.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_app.CheckedState.BorderRadius = 2
-        Me.chk_app.CheckedState.BorderThickness = 0
-        Me.chk_app.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_app.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.chk_app.ForeColor = System.Drawing.Color.DimGray
-        Me.chk_app.Location = New System.Drawing.Point(26, 55)
-        Me.chk_app.Name = "chk_app"
-        Me.chk_app.Size = New System.Drawing.Size(141, 24)
-        Me.chk_app.TabIndex = 0
-        Me.chk_app.Text = "Loan Application"
-        Me.chk_app.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_app.UncheckedState.BorderRadius = 2
-        Me.chk_app.UncheckedState.BorderThickness = 0
-        Me.chk_app.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_app.UseVisualStyleBackColor = False
-        '
-        'Guna2GroupBox1
-        '
-        Me.Guna2GroupBox1.Controls.Add(Me.chk_reg)
-        Me.Guna2GroupBox1.Controls.Add(Me.chk_coll)
-        Me.Guna2GroupBox1.Controls.Add(Me.chk_release)
-        Me.Guna2GroupBox1.Controls.Add(Me.chk_appr)
-        Me.Guna2GroupBox1.Controls.Add(Me.chk_app)
-        Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.MidnightBlue
-        Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GroupBox1.Location = New System.Drawing.Point(327, 324)
-        Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(373, 220)
-        Me.Guna2GroupBox1.TabIndex = 131
-        Me.Guna2GroupBox1.Text = "User Access"
-        '
-        'chk_coll
-        '
-        Me.chk_coll.AutoSize = True
-        Me.chk_coll.BackColor = System.Drawing.Color.Transparent
-        Me.chk_coll.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_coll.CheckedState.BorderRadius = 2
-        Me.chk_coll.CheckedState.BorderThickness = 0
-        Me.chk_coll.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chk_coll.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.chk_coll.ForeColor = System.Drawing.Color.DimGray
-        Me.chk_coll.Location = New System.Drawing.Point(26, 145)
-        Me.chk_coll.Name = "chk_coll"
-        Me.chk_coll.Size = New System.Drawing.Size(131, 24)
-        Me.chk_coll.TabIndex = 3
-        Me.chk_coll.Text = "Loan Collection"
-        Me.chk_coll.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_coll.UncheckedState.BorderRadius = 2
-        Me.chk_coll.UncheckedState.BorderThickness = 0
-        Me.chk_coll.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.chk_coll.UseVisualStyleBackColor = False
         '
         'Label22
         '
@@ -336,6 +204,17 @@ Partial Class add_user
         Me.Guna2Panel3.Size = New System.Drawing.Size(373, 56)
         Me.Guna2Panel3.TabIndex = 129
         '
+        'lbl_fullname
+        '
+        Me.lbl_fullname.AutoSize = True
+        Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_fullname.Location = New System.Drawing.Point(11, 3)
+        Me.lbl_fullname.Name = "lbl_fullname"
+        Me.lbl_fullname.Size = New System.Drawing.Size(0, 20)
+        Me.lbl_fullname.TabIndex = 82
+        '
         'Guna2Button1
         '
         Me.Guna2Button1.BorderRadius = 3
@@ -347,9 +226,9 @@ Partial Class add_user
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
-        Me.Guna2Button1.Location = New System.Drawing.Point(327, 550)
+        Me.Guna2Button1.Location = New System.Drawing.Point(570, 295)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(373, 61)
+        Me.Guna2Button1.Size = New System.Drawing.Size(130, 39)
         Me.Guna2Button1.TabIndex = 132
         Me.Guna2Button1.Text = "SAVE"
         '
@@ -380,43 +259,43 @@ Partial Class add_user
         Me.datagrid1.AllowUserToAddRows = False
         Me.datagrid1.AllowUserToDeleteRows = False
         Me.datagrid1.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.datagrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datagrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.datagrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datagrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.datagrid1.ColumnHeadersHeight = 33
         Me.datagrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.datagrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.datagrid1.Location = New System.Drawing.Point(23, 70)
         Me.datagrid1.Name = "datagrid1"
         Me.datagrid1.ReadOnly = True
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datagrid1.RowHeadersVisible = False
         Me.datagrid1.RowTemplate.Height = 28
         Me.datagrid1.Size = New System.Drawing.Size(298, 541)
@@ -443,46 +322,6 @@ Partial Class add_user
         Me.datagrid1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.datagrid1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'lbl_fullname
-        '
-        Me.lbl_fullname.AutoSize = True
-        Me.lbl_fullname.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_fullname.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_fullname.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_fullname.Location = New System.Drawing.Point(11, 3)
-        Me.lbl_fullname.Name = "lbl_fullname"
-        Me.lbl_fullname.Size = New System.Drawing.Size(0, 20)
-        Me.lbl_fullname.TabIndex = 82
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.DimGray
-        Me.Label4.Location = New System.Drawing.Point(69, 183)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 17)
-        Me.Label4.TabIndex = 67
-        Me.Label4.Text = "Type :"
-        '
-        'cmb_level
-        '
-        Me.cmb_level.BackColor = System.Drawing.Color.Transparent
-        Me.cmb_level.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmb_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_level.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_level.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_level.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmb_level.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmb_level.ItemHeight = 30
-        Me.cmb_level.Items.AddRange(New Object() {"User", "Admin"})
-        Me.cmb_level.Location = New System.Drawing.Point(124, 173)
-        Me.cmb_level.Name = "cmb_level"
-        Me.cmb_level.Size = New System.Drawing.Size(98, 36)
-        Me.cmb_level.StartIndex = 0
-        Me.cmb_level.TabIndex = 68
-        '
         'add_user
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -492,7 +331,6 @@ Partial Class add_user
         Me.Controls.Add(Me.datagrid1)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.Guna2GroupBox1)
         Me.Controls.Add(Me.Guna2Panel3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "add_user"
@@ -500,8 +338,6 @@ Partial Class add_user
         Me.Text = "add_user"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        Me.Guna2GroupBox1.ResumeLayout(False)
-        Me.Guna2GroupBox1.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -516,18 +352,10 @@ Partial Class add_user
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents chk_reg As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents chk_release As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents chk_appr As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents chk_app As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents chk_coll As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents Label22 As Label
     Friend WithEvents lbl_account As Label
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents txt_search As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents datagrid1 As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents lbl_fullname As Label
-    Friend WithEvents cmb_level As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Label4 As Label
 End Class

@@ -25,8 +25,8 @@ Public Class add_user
             End If
 
             ' Proceed with the insert if all required fields are filled
-            Dim query As String = "INSERT INTO user (account_no,level,username, pass, initials, loan_apply, loan_approve, loan_release, loan_collection, add_member) 
-                       VALUES (@account_no,@level,@username, @password, @initials, @loan_apply, @loan_approve, @loan_release, @loan_collection, @add_member)"
+            Dim query As String = "INSERT INTO user (account_no,username, pass, initials, loan_apply, loan_approve, loan_release, loan_collection, add_member,admin,`print_savings`, `print_sharecap`, `savings`, `sharecap` ) 
+                       VALUES (@account_no,@username, @password, @initials, @loan_apply, @loan_approve, @loan_release, @loan_collection, @add_member,0,0,0,0,0)"
 
             ' Ensure to use parameterized queries to avoid SQL injection
             con.Close()
@@ -34,15 +34,15 @@ Public Class add_user
 
             Dim insertUser As New MySqlCommand(query, con)
             insertUser.Parameters.AddWithValue("@account_no", lbl_account.Text)
-            insertUser.Parameters.AddWithValue("@level", cmb_level.SelectedIndex)
+
             insertUser.Parameters.AddWithValue("@username", txt_username.Text)
             insertUser.Parameters.AddWithValue("@password", txt_password.Text)
             insertUser.Parameters.AddWithValue("@initials", txt_initials.Text)
-            insertUser.Parameters.AddWithValue("@loan_apply", If(chk_app.Checked, 1, 0))
-            insertUser.Parameters.AddWithValue("@loan_approve", If(chk_appr.Checked, 1, 0))
-            insertUser.Parameters.AddWithValue("@loan_release", If(chk_release.Checked, 1, 0))
-            insertUser.Parameters.AddWithValue("@loan_collection", If(chk_coll.Checked, 1, 0))
-            insertUser.Parameters.AddWithValue("@add_member", If(chk_reg.Checked, 1, 0))
+            insertUser.Parameters.AddWithValue("@loan_apply", 0)
+            insertUser.Parameters.AddWithValue("@loan_approve", 0)
+            insertUser.Parameters.AddWithValue("@loan_release", 0)
+            insertUser.Parameters.AddWithValue("@loan_collection", 0)
+            insertUser.Parameters.AddWithValue("@add_member", 0)
 
             ' Execute the insert query for user table
             insertUser.ExecuteNonQuery()
@@ -70,7 +70,7 @@ Public Class add_user
         End If
     End Sub
 
-    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_level.SelectedIndexChanged
+    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class
