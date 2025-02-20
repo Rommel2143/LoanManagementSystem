@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAA6UlEQVRIS8WWYQqCQBBGPUHaMcKia9UBrCt0heqfFl2vTvBiYIzdDw1zlR4MLMzs+3STNMscYAnc
+        gBfjsb0NULTeD8BdpxNo1G8BKVeuPNVvASFnYKEzfdgscAkFOqMBg+UtQB4KtB8FaG8oXx1hc/Y78PPM
+        daYPl19Dgc5oQDLq/1vAzutn1N8VsPe/DytbKw/g5GXrCPWPCSiDvaU2Y3t3gDHrESWh/r8ErIGD10ab
+        U/wGVdCrtOkvlqOXrSNi+7iA5Md068dj8pU2pziiJNRvAbO/Mu2LYipq9VtA4U9Dyp3Y3jr8bHkDV6Q/
+        yMU2YH4AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="export_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAE6

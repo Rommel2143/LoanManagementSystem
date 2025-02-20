@@ -3,24 +3,13 @@
 Public Class Login
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            txt_password.UseSystemPasswordChar = True
 
-            If IsTrustedDevice() Then
-                txt_user.Enabled = True
-                txt_user.Focus()
-            Else
-                Dim result As DialogResult = MessageBox.Show("Machine not Verified!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
-                If result = DialogResult.OK Then
-                    display_mainframe(Register_PC)
-                Else
-                    Application.Exit()
-                End If
-            End If
-        Catch ex As Exception
+        txt_password.UseSystemPasswordChar = True
 
-            MessageBox.Show("An error occurred while verifying the machine.")
-        End Try
+
+            txt_user.Enabled = True
+            txt_user.Focus()
+
     End Sub
 
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click

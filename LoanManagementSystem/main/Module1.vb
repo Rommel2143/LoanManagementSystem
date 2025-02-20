@@ -29,9 +29,9 @@ Module Module1
     Public user_print As Boolean
 
     'credentials of PC used
-    Public PCname As String = Environment.MachineName
-    Public PCmac As String = GetMacAddress()
-    Public systemversion As String = Assembly.GetExecutingAssembly().GetName().Version.ToString()
+    'Public PCname As String = Environment.MachineName
+    'Public PCmac As String = GetMacAddress()
+    'Public systemversion As String = Assembly.GetExecutingAssembly().GetName().Version.ToString()
 
     Public date1 As String = Date.Now.ToString("MMMM dd, yyyy")
     Public datedb As String = Date.Now.ToString("yyyy-MM-dd")
@@ -65,30 +65,30 @@ Module Module1
 
 
 
-    Function IsTrustedDevice() As Boolean
+    'Function IsTrustedDevice() As Boolean
 
-        Try
-            Dim query As String = "SELECT * FROM trusted_devices WHERE PCname = @pcName AND PCmac = @pcMac"
+    '    Try
+    '        Dim query As String = "SELECT * FROM trusted_devices WHERE PCname = @pcName AND PCmac = @pcMac"
 
-            Using cmd As New MySqlCommand(query, con)
-                cmd.Parameters.AddWithValue("@pcName", PCname)
-                cmd.Parameters.AddWithValue("@pcMac", PCmac)
-                con.Close()
-                con.Open()
-                dr = cmd.ExecuteReader
-                If dr.Read = True Then
-                    Return True
-                Else
-                    Return False
-                End If
+    '        Using cmd As New MySqlCommand(query, con)
+    '            cmd.Parameters.AddWithValue("@pcName", PCname)
+    '            cmd.Parameters.AddWithValue("@pcMac", PCmac)
+    '            con.Close()
+    '            con.Open()
+    '            dr = cmd.ExecuteReader
+    '            If dr.Read = True Then
+    '                Return True
+    '            Else
+    '                Return False
+    '            End If
 
-            End Using
+    '        End Using
 
-        Catch ex As Exception
-            Return False
-        End Try
+    '    Catch ex As Exception
+    '        Return False
+    '    End Try
 
-    End Function
+    'End Function
 
     Public Sub display_mainframe(form As Form)
         With form

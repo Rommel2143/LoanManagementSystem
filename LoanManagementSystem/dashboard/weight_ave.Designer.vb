@@ -22,17 +22,19 @@ Partial Class weight_ave
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(weight_ave))
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2NumericUpDown1 = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.export_excel = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'datagrid1
@@ -40,30 +42,30 @@ Partial Class weight_ave
         Me.datagrid1.AllowUserToAddRows = False
         Me.datagrid1.AllowUserToDeleteRows = False
         Me.datagrid1.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.datagrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datagrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.datagrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datagrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.datagrid1.ColumnHeadersHeight = 30
         Me.datagrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datagrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.datagrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datagrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.datagrid1.Location = New System.Drawing.Point(0, 97)
@@ -71,14 +73,14 @@ Partial Class weight_ave
         Me.datagrid1.Name = "datagrid1"
         Me.datagrid1.ReadOnly = True
         Me.datagrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datagrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datagrid1.RowHeadersVisible = False
         Me.datagrid1.RowTemplate.Height = 42
         Me.datagrid1.Size = New System.Drawing.Size(952, 525)
@@ -108,6 +110,7 @@ Partial Class weight_ave
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel1.Controls.Add(Me.Guna2NumericUpDown1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
         Me.Guna2Panel1.Controls.Add(Me.export_excel)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -117,8 +120,25 @@ Partial Class weight_ave
         Me.Guna2Panel1.Size = New System.Drawing.Size(952, 97)
         Me.Guna2Panel1.TabIndex = 4
         '
+        'Guna2NumericUpDown1
+        '
+        Me.Guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2NumericUpDown1.BorderRadius = 3
+        Me.Guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2NumericUpDown1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2NumericUpDown1.Location = New System.Drawing.Point(40, 49)
+        Me.Guna2NumericUpDown1.Maximum = New Decimal(New Integer() {2050, 0, 0, 0})
+        Me.Guna2NumericUpDown1.Minimum = New Decimal(New Integer() {2023, 0, 0, 0})
+        Me.Guna2NumericUpDown1.Name = "Guna2NumericUpDown1"
+        Me.Guna2NumericUpDown1.Size = New System.Drawing.Size(100, 39)
+        Me.Guna2NumericUpDown1.TabIndex = 90
+        Me.Guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.MidnightBlue
+        Me.Guna2NumericUpDown1.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.Guna2NumericUpDown1.Value = New Decimal(New Integer() {2024, 0, 0, 0})
+        '
         'Guna2Button1
         '
+        Me.Guna2Button1.BorderRadius = 3
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -126,11 +146,12 @@ Partial Class weight_ave
         Me.Guna2Button1.FillColor = System.Drawing.Color.MidnightBlue
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(12, 50)
+        Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
+        Me.Guna2Button1.Location = New System.Drawing.Point(156, 49)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(99, 39)
+        Me.Guna2Button1.Size = New System.Drawing.Size(135, 39)
         Me.Guna2Button1.TabIndex = 87
-        Me.Guna2Button1.Text = "Weighted Average"
+        Me.Guna2Button1.Text = "Compute Average"
         '
         'export_excel
         '
@@ -164,6 +185,7 @@ Partial Class weight_ave
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
+        CType(Me.Guna2NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -172,4 +194,5 @@ Partial Class weight_ave
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents export_excel As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2NumericUpDown1 As Guna.UI2.WinForms.Guna2NumericUpDown
 End Class
