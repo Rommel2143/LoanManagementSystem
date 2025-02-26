@@ -332,8 +332,8 @@ Module Module1
 
             ' Define the SQL command to check balance
             Dim check As New MySqlCommand("SELECT 
-            SUM(CASE WHEN `status` = 'ID' or status='CM' or status='CD' or status='ISC' or status='IPR' THEN `amount` ELSE 0 END) - 
-            SUM(CASE WHEN `status` = 'DM' or status = 'CA' THEN `amount` ELSE 0 END) AS balance
+            SUM(CASE WHEN `status` = 'ID' or status='CM' or status='CD' or status='ISC' or status='IPR' or status='C' THEN `amount` ELSE 0 END) - 
+            SUM(CASE WHEN `status` = 'DM' or status = 'CA' or status='D' THEN `amount` ELSE 0 END) AS balance
             FROM `sharecap`
             WHERE `account_no` = @accountno", con)
 

@@ -24,7 +24,7 @@ Public Class quarter_rate
         CONCAT(" & rateValue & ", ' %') as Rate,
         SUM(sc.amount) AS quarterly_total,
         ((SUM(sc.amount) / 90) * " & rateDecimal & ") / 360 AS computed_value
-    FROM sharecap sc
+    FROM savings sc
     LEFT JOIN member_profile mp ON mp.account_no = sc.account_no
     WHERE YEAR(sc.date_transac) = " & Guna2NumericUpDown1.Value & "
     AND QUARTER(sc.date_transac) = " & cmb_quarter.Text & "
