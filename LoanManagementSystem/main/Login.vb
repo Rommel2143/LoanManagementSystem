@@ -75,37 +75,6 @@ Public Class Login
         txt_password.UseSystemPasswordChar = Not isVisible
     End Sub
 
-    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
-
-    End Sub
-
-    Private Sub txt_user_TextChanged(sender As Object, e As EventArgs) Handles txt_user.TextChanged
-
-    End Sub
-
-    Private Sub txt_user_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_user.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            If txt_user.Text = "" Then
-            Else
 
 
-                Dim query As String = "SELECT * FROM `user` WHERE username =@username"
-
-
-
-                con.Close()
-                con.Open()
-                Dim logincred As New MySqlCommand(query, con)
-                logincred.Parameters.AddWithValue("@username", txt_user.Text)
-
-                dr = logincred.ExecuteReader()
-                If dr.Read = True Then
-
-
-                Else
-
-                End If
-            End If
-        End If
-    End Sub
 End Class
