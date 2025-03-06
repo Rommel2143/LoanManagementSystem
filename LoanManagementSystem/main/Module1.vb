@@ -9,7 +9,7 @@ Module Module1
     Public Function connection() As MySqlConnection
         '  Return New MySqlConnection("server=localhost;user id=lms;password=Magnaye2143@#;database=lms")
         Return New MySqlConnection("server=localhost;user id=root;password= ;database=lms")
-        ' Return New MySqlConnection("server=192.168.1.26;user id=lcpmpc123;password=lcpmpc123;database=lms")
+        '    Return New MySqlConnection("server=192.168.1.26;user id=lcpmpc123;password=lcpmpc123;database=lms")
 
     End Function
     Public con As MySqlConnection = connection()
@@ -293,11 +293,28 @@ Module Module1
             Dim check As New MySqlCommand("SELECT 
             SUM(CASE WHEN `status` = 'ID'
                         or status='CHKD'
-                        or status='CD' or status='CM'
-                     THEN `amount` ELSE 0 END) 
+                        or status='CD' 
+                        or status='CM'
+                      or status='CSHDEP'
+                      or status='BEGBAL'
+                      or status='TIMDEP'
+                      or status='CMEMO'
+                      or status='CHKDEP'
+                      or status='CSHADJ'
+                      or status='CSHAD1'
+                      or status='INT'
+THEN `amount` ELSE 0 END) 
                     - 
             SUM(CASE WHEN `status` = 'CW'
-                        or status = 'CHKW'  or status = 'DM'
+                        or status = 'CHKW' 
+                        or status = 'DM'
+  or status='DAMAY'
+  or status='DMEMO'
+  or status='DEDB'
+  or status='CSHWIT'
+  or status='CHKBON'
+  or status='TAXWIT'
+  or status='CHKWIT'
                      THEN `amount` ELSE 0 END) AS balance
             FROM `savings`
             WHERE `account_no` = @accountno", con)
@@ -332,8 +349,30 @@ Module Module1
 
             ' Define the SQL command to check balance
             Dim check As New MySqlCommand("SELECT 
-            SUM(CASE WHEN `status` = 'ID' or status='CM' or status='CD' or status='ISC' or status='IPR' or status='C' THEN `amount` ELSE 0 END) - 
-            SUM(CASE WHEN `status` = 'DM' or status = 'CA' or status='D' THEN `amount` ELSE 0 END) AS balance
+            SUM(CASE WHEN `status` = 'ID' 
+or status='CM'
+or status='CD'
+or status='ISC' 
+or status='IPR' 
+or status='C'
+or status='CASHDEP'
+or status='BEGBAL'
+or status='CMEMO'
+or status='CHKDEP'
+or status='CSHAD1'
+or status='INT'
+
+THEN `amount` ELSE 0 END) - 
+
+            SUM(CASE WHEN `status` = 'DM' 
+or status = 'CA' 
+or status='D'
+or status='DMEMO'
+or status='CHKWID'
+or status='CSHWIT'
+or status='CHKWIT'
+
+THEN `amount` ELSE 0 END) AS balance
             FROM `sharecap`
             WHERE `account_no` = @accountno", con)
 

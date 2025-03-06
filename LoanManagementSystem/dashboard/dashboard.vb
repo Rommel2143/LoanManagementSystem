@@ -15,6 +15,7 @@ Public Class dashboard
         lbl_collecttotal.Text = collectiontoday()
         lbl_releasedtotal.Text = releasedtoday()
         lbl_funds.Text = checkfunds()
+        lbl_savings.Text = chksavings()
     End Sub
 
 
@@ -40,6 +41,53 @@ Public Class dashboard
         End Try
     End Function
 
+    Private Function chksavings() As String
+        Try
+
+
+            Dim query As String = "Select 
+            SUM(CASE WHEN `status` = 'ID'
+                        Or status='CHKD'
+                        Or status='CD' 
+                        Or status='CM'
+                      Or status='CSHDEP'
+                      Or status='BEGBAL'
+                      Or status='TIMDEP'
+                      Or status='CMEMO'
+                      Or status='CHKDEP'
+                      Or status='CSHADJ'
+                      Or status='CSHAD1'
+                      Or status='INT'
+THEN `amount` ELSE 0 END) 
+                    - 
+            SUM(CASE WHEN `status` = 'CW'
+                        Or status = 'CHKW' 
+                        Or status = 'DM'
+  Or status='DAMAY'
+  Or status='DMEMO'
+  Or status='DEDB'
+  Or status='CSHWIT'
+  Or status='CHKBON'
+  Or status='TAXWIT'
+  Or status='CHKWIT'
+                     THEN `amount` ELSE 0 END) AS balance
+            FROM `savings`"
+            con.Close()
+            con.Open()
+            Dim selectdata As New MySqlCommand(query, con)
+            dr = selectdata.ExecuteReader
+            If dr.Read = True Then
+
+
+                Return dr.GetInt32(0).ToString("N0")
+            Else
+                Return "Unable to load data."
+            End If
+        Catch ex As Exception
+            Return "Unable to load data."
+
+        End Try
+    End Function
 
     Private Function activecount() As String
         Try
@@ -127,8 +175,30 @@ FROM (
             con.Open()
             ' Define the SQL command to check balance
             Dim check As New MySqlCommand("SELECT 
-            SUM(CASE WHEN `status` = 'ID' or status='CM' or status='CD' or status='ISC' or status='IPR' or status='C' THEN `amount` ELSE 0 END) - 
-            SUM(CASE WHEN `status` = 'DM' or status = 'CA' or status='D' THEN `amount` ELSE 0 END) AS balance
+            SUM(CASE WHEN `status` = 'ID' 
+or status='CM'
+or status='CD'
+or status='ISC' 
+or status='IPR' 
+or status='C'
+or status='CASHDEP'
+or status='BEGBAL'
+or status='CMEMO'
+or status='CHKDEP'
+or status='CSHAD1'
+or status='INT'
+
+THEN `amount` ELSE 0 END) - 
+
+            SUM(CASE WHEN `status` = 'DM' 
+or status = 'CA' 
+or status='D'
+or status='DMEMO'
+or status='CHKWID'
+or status='CSHWIT'
+or status='CHKWIT'
+
+THEN `amount` ELSE 0 END) AS balance
             FROM `sharecap`", con)
             ' Execute the command and retrieve the balance
             Dim balance As Object = check.ExecuteScalar()
@@ -143,14 +213,31 @@ FROM (
             con.Close()
             con.Open()
             ' Define the SQL command to check balance
-            Dim checksavings As New MySqlCommand("SELECT 
+            Dim checksavings As New MySqlCommand("Select 
             SUM(CASE WHEN `status` = 'ID'
-                        or status='CHKD'
-                        or status='CD'
-                     THEN `amount` ELSE 0 END) 
+                        Or status='CHKD'
+                        Or status='CD' 
+                        Or status='CM'
+                      Or status='CSHDEP'
+                      Or status='BEGBAL'
+                      Or status='TIMDEP'
+                      Or status='CMEMO'
+                      Or status='CHKDEP'
+                      Or status='CSHADJ'
+                      Or status='CSHAD1'
+                      Or status='INT'
+THEN `amount` ELSE 0 END) 
                     - 
             SUM(CASE WHEN `status` = 'CW'
-                        or status = 'CHKW'
+                        Or status = 'CHKW' 
+                        Or status = 'DM'
+  Or status='DAMAY'
+  Or status='DMEMO'
+  Or status='DEDB'
+  Or status='CSHWIT'
+  Or status='CHKBON'
+  Or status='TAXWIT'
+  Or status='CHKWIT'
                      THEN `amount` ELSE 0 END) AS balance
             FROM `savings`", con)
 
@@ -213,8 +300,30 @@ FROM (
 
 
             Dim query As String = " SELECT 
-            SUM(CASE WHEN `status` = 'ID' or status='CM' or status='CD' or status='ISC' or status='IPR' or status='C' THEN `amount` ELSE 0 END) - 
-            SUM(CASE WHEN `status` = 'DM' or status = 'CA' or status='D' THEN `amount` ELSE 0 END) AS balance
+            SUM(CASE WHEN `status` = 'ID' 
+or status='CM'
+or status='CD'
+or status='ISC' 
+or status='IPR' 
+or status='C'
+or status='CASHDEP'
+or status='BEGBAL'
+or status='CMEMO'
+or status='CHKDEP'
+or status='CSHAD1'
+or status='INT'
+
+THEN `amount` ELSE 0 END) - 
+
+            SUM(CASE WHEN `status` = 'DM' 
+or status = 'CA' 
+or status='D'
+or status='DMEMO'
+or status='CHKWID'
+or status='CSHWIT'
+or status='CHKWIT'
+
+THEN `amount` ELSE 0 END) AS balance
             FROM `sharecap`"
 
             con.Close()

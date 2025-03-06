@@ -98,6 +98,8 @@ Public Class savings
                         trans = "CHKW"
                     Case "Debit"
                         trans = "DM"
+                    Case "Interest"
+                        trans = "INT"
                 End Select
 
                 con.Close()
@@ -199,5 +201,9 @@ Public Class savings
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         exportexcel(datagrid1)
+    End Sub
+
+    Private Sub cmb_withtrans_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_withtrans.SelectedIndexChanged
+
     End Sub
 End Class
