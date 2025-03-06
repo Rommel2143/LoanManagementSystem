@@ -106,33 +106,32 @@ Public Class sharecap_collection
         insertshare()
     End Sub
 
-    Private Sub txt_amount_TextChanged(sender As Object, e As EventArgs) Handles txt_amountdeposit.TextChanged
+    'Private Sub txt_amount_TextChanged(sender As Object, e As EventArgs) Handles txt_amountdeposit.TextChanged
 
-        Dim textBox As Guna.UI2.WinForms.Guna2TextBox = DirectCast(sender, Guna.UI2.WinForms.Guna2TextBox)
+    '    Dim textBox As Guna.UI2.WinForms.Guna2TextBox = DirectCast(sender, Guna.UI2.WinForms.Guna2TextBox)
 
 
-        Dim numericText As String = New String(textBox.Text.Where(Function(c) Char.IsDigit(c) Or c = "."c).ToArray())
+    '    Dim numericText As String = New String(textBox.Text.Where(Function(c) Char.IsDigit(c) Or c = "."c).ToArray())
 
-        ' Remove existing event handler to prevent infinite loop
-        RemoveHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
+    '    ' Remove existing event handler to prevent infinite loop
+    '    RemoveHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
 
-        ' Format the numeric text as currency
-        If Decimal.TryParse(numericText, NumberStyles.Any, CultureInfo.InvariantCulture, Nothing) Then
-            Dim formattedText As String = String.Format(CultureInfo.CurrentCulture, "{0:N0}", Convert.ToDecimal(numericText))
-            textBox.Text = formattedText
-            ' Move the cursor to the end of the text
-            textBox.SelectionStart = textBox.Text.Length
-        End If
+    '    ' Format the numeric text as currency
+    '    If Decimal.TryParse(numericText, NumberStyles.Any, CultureInfo.InvariantCulture, Nothing) Then
+    '        Dim formattedText As String = String.Format(CultureInfo.CurrentCulture, "{0:N0}", Convert.ToDecimal(numericText))
+    '        textBox.Text = formattedText
+    '        ' Move the cursor to the end of the text
+    '        textBox.SelectionStart = textBox.Text.Length
+    '    End If
 
-        ' Re-add the event handler
-        AddHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
-    End Sub
+    '    ' Re-add the event handler
+    '    AddHandler textBox.TextChanged, AddressOf txt_amount_TextChanged
+    'End Sub
 
     Private Sub txt_amountdeposit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_amountdeposit.KeyPress
-        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
-            e.Handled = True
+        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "."c Then
+            e.Handled = True ' Ignore the input
         End If
-
     End Sub
 
     Private Sub TabPage3_Click(sender As Object, e As EventArgs) Handles TabPage3.Click
