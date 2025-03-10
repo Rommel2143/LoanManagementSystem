@@ -2,22 +2,25 @@
 Imports Guna.Charts.WinForms
 Public Class dashboard
     Private Sub dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loaddata()
+    End Sub
+
+    Private Sub loaddata()
         lbl_day.Text = Date.Now.ToString("dd")
         lbl_month.Text = Date.Now.ToString("MMMM")
         lbl_year.Text = Date.Now.ToString("yyyy")
         lbl_membercount.Text = membercount()
-        lbl_active.Text = activecount()
+        ' lbl_active.Text = activecount()
         lbl_activeloan.Text = activeloan()
         lbl_pendingloan.Text = pendingloan()
         lbl_sharecap.Text = sharecap()
-        lbl_sharecount.Text = sharecount()
+        ' lbl_sharecount.Text = sharecount()
         lbl_transaccount.Text = transac_count()
         lbl_collecttotal.Text = collectiontoday()
         lbl_releasedtotal.Text = releasedtoday()
         lbl_funds.Text = checkfunds()
         lbl_savings.Text = chksavings()
     End Sub
-
 
     Private Function membercount() As String
         Try
@@ -580,5 +583,9 @@ ORDER BY YEAR(date_column), MONTH(date_column);
             display_formsub(transact_today, "Transaction Summary")
 
         End If
+    End Sub
+
+    Private Sub btn_totalfunds_Click(sender As Object, e As EventArgs) Handles btn_totalfunds.Click
+        loaddata()
     End Sub
 End Class

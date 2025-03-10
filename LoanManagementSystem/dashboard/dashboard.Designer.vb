@@ -47,9 +47,6 @@ Partial Class dashboard
         Me.lbl_membercount = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.lbl_active = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -63,9 +60,6 @@ Partial Class dashboard
         Me.QuarterlyRateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.lbl_sharecount = New System.Windows.Forms.Label()
-        Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.lbl_sharecap = New System.Windows.Forms.Label()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbl_sharetranscount = New System.Windows.Forms.Label()
@@ -84,9 +78,12 @@ Partial Class dashboard
         Me.lbl_day = New System.Windows.Forms.Label()
         Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Separator5 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.btn_totalfunds = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lbl_savings = New System.Windows.Forms.Label()
+        Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbl_funds = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -95,10 +92,6 @@ Partial Class dashboard
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2Separator6 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.lbl_savings = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -110,12 +103,12 @@ Partial Class dashboard
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
         Me.Guna2Panel7.SuspendLayout()
-        Me.Guna2Panel8.SuspendLayout()
+        Me.Guna2Panel12.SuspendLayout()
         CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel8.SuspendLayout()
         Me.Guna2Panel9.SuspendLayout()
         Me.Guna2Panel10.SuspendLayout()
         Me.Guna2Panel11.SuspendLayout()
-        Me.Guna2Panel12.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -180,7 +173,7 @@ Partial Class dashboard
         Me.lbl_membercount.BackColor = System.Drawing.Color.Transparent
         Me.lbl_membercount.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_membercount.ForeColor = System.Drawing.Color.White
-        Me.lbl_membercount.Location = New System.Drawing.Point(12, 28)
+        Me.lbl_membercount.Location = New System.Drawing.Point(21, 44)
         Me.lbl_membercount.Name = "lbl_membercount"
         Me.lbl_membercount.Size = New System.Drawing.Size(68, 30)
         Me.lbl_membercount.TabIndex = 3
@@ -188,17 +181,17 @@ Partial Class dashboard
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel1.BorderRadius = 3
         Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Separator1)
-        Me.Guna2Panel1.Controls.Add(Me.lbl_active)
-        Me.Guna2Panel1.Controls.Add(Me.Label13)
         Me.Guna2Panel1.Controls.Add(Me.lbl_membercount)
         Me.Guna2Panel1.Controls.Add(Me.Label7)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.Teal
-        Me.Guna2Panel1.Location = New System.Drawing.Point(27, 178)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(27, 368)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.DarkGray
+        Me.Guna2Panel1.ShadowDecoration.Depth = 50
         Me.Guna2Panel1.ShadowDecoration.Enabled = True
+        Me.Guna2Panel1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
         Me.Guna2Panel1.Size = New System.Drawing.Size(260, 107)
         Me.Guna2Panel1.TabIndex = 7
         '
@@ -207,50 +200,18 @@ Partial Class dashboard
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(200, 47)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(160, 11)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(64, 64)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(104, 100)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox1.TabIndex = 0
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
-        'Guna2Separator1
-        '
-        Me.Guna2Separator1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Separator1.Location = New System.Drawing.Point(-26, 71)
-        Me.Guna2Separator1.Name = "Guna2Separator1"
-        Me.Guna2Separator1.Size = New System.Drawing.Size(218, 10)
-        Me.Guna2Separator1.TabIndex = 12
-        '
-        'lbl_active
-        '
-        Me.lbl_active.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.lbl_active.AutoSize = True
-        Me.lbl_active.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_active.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_active.ForeColor = System.Drawing.Color.White
-        Me.lbl_active.Location = New System.Drawing.Point(45, 83)
-        Me.lbl_active.Name = "lbl_active"
-        Me.lbl_active.Size = New System.Drawing.Size(31, 15)
-        Me.lbl_active.TabIndex = 7
-        Me.lbl_active.Text = "0000"
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(3, 83)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(46, 15)
-        Me.Label13.TabIndex = 4
-        Me.Label13.Text = "Active :"
-        '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderRadius = 3
         Me.Guna2Panel2.Controls.Add(Me.Guna2Separator2)
         Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox2)
         Me.Guna2Panel2.Controls.Add(Me.lbl_pendingloan)
@@ -258,10 +219,11 @@ Partial Class dashboard
         Me.Guna2Panel2.Controls.Add(Me.lbl_activeloan)
         Me.Guna2Panel2.Controls.Add(Me.Label10)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.Teal
-        Me.Guna2Panel2.Location = New System.Drawing.Point(27, 531)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(27, 721)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.DarkGray
+        Me.Guna2Panel2.ShadowDecoration.Depth = 50
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
+        Me.Guna2Panel2.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
         Me.Guna2Panel2.Size = New System.Drawing.Size(260, 107)
         Me.Guna2Panel2.TabIndex = 9
         '
@@ -279,9 +241,9 @@ Partial Class dashboard
         Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
         Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(200, 46)
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(160, 16)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(64, 64)
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(104, 94)
         Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox2.TabIndex = 12
         Me.Guna2PictureBox2.TabStop = False
@@ -317,7 +279,7 @@ Partial Class dashboard
         Me.lbl_activeloan.BackColor = System.Drawing.Color.Transparent
         Me.lbl_activeloan.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_activeloan.ForeColor = System.Drawing.Color.White
-        Me.lbl_activeloan.Location = New System.Drawing.Point(12, 33)
+        Me.lbl_activeloan.Location = New System.Drawing.Point(21, 40)
         Me.lbl_activeloan.Name = "lbl_activeloan"
         Me.lbl_activeloan.Size = New System.Drawing.Size(24, 30)
         Me.lbl_activeloan.TabIndex = 3
@@ -337,18 +299,18 @@ Partial Class dashboard
         '
         'Guna2Panel3
         '
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel3.BorderRadius = 3
         Me.Guna2Panel3.ContextMenuStrip = Me.menu_sharecap
         Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
         Me.Guna2Panel3.Controls.Add(Me.Label12)
-        Me.Guna2Panel3.Controls.Add(Me.lbl_sharecount)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2Separator3)
-        Me.Guna2Panel3.Controls.Add(Me.Label22)
         Me.Guna2Panel3.Controls.Add(Me.lbl_sharecap)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.Teal
-        Me.Guna2Panel3.Location = New System.Drawing.Point(27, 299)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(27, 489)
         Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.Color = System.Drawing.Color.DarkGray
+        Me.Guna2Panel3.ShadowDecoration.Depth = 50
         Me.Guna2Panel3.ShadowDecoration.Enabled = True
+        Me.Guna2Panel3.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
         Me.Guna2Panel3.Size = New System.Drawing.Size(260, 107)
         Me.Guna2Panel3.TabIndex = 11
         '
@@ -379,9 +341,9 @@ Partial Class dashboard
         Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), System.Drawing.Image)
         Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(200, 46)
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(160, 13)
         Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Me.Guna2PictureBox3.Size = New System.Drawing.Size(64, 64)
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(104, 97)
         Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox3.TabIndex = 0
         Me.Guna2PictureBox3.TabStop = False
@@ -399,47 +361,13 @@ Partial Class dashboard
         Me.Label12.TabIndex = 11
         Me.Label12.Text = "Share Capital"
         '
-        'lbl_sharecount
-        '
-        Me.lbl_sharecount.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.lbl_sharecount.AutoSize = True
-        Me.lbl_sharecount.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_sharecount.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_sharecount.ForeColor = System.Drawing.Color.White
-        Me.lbl_sharecount.Location = New System.Drawing.Point(83, 82)
-        Me.lbl_sharecount.Name = "lbl_sharecount"
-        Me.lbl_sharecount.Size = New System.Drawing.Size(37, 15)
-        Me.lbl_sharecount.TabIndex = 10
-        Me.lbl_sharecount.Text = "00000"
-        '
-        'Guna2Separator3
-        '
-        Me.Guna2Separator3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Separator3.Location = New System.Drawing.Point(-26, 68)
-        Me.Guna2Separator3.Name = "Guna2Separator3"
-        Me.Guna2Separator3.Size = New System.Drawing.Size(218, 10)
-        Me.Guna2Separator3.TabIndex = 9
-        '
-        'Label22
-        '
-        Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Label22.AutoSize = True
-        Me.Label22.BackColor = System.Drawing.Color.Transparent
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.White
-        Me.Label22.Location = New System.Drawing.Point(3, 82)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(83, 15)
-        Me.Label22.TabIndex = 8
-        Me.Label22.Text = "No. of Shares :"
-        '
         'lbl_sharecap
         '
         Me.lbl_sharecap.AutoSize = True
         Me.lbl_sharecap.BackColor = System.Drawing.Color.Transparent
         Me.lbl_sharecap.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_sharecap.ForeColor = System.Drawing.Color.White
-        Me.lbl_sharecap.Location = New System.Drawing.Point(12, 30)
+        Me.lbl_sharecap.Location = New System.Drawing.Point(21, 43)
         Me.lbl_sharecap.Name = "lbl_sharecap"
         Me.lbl_sharecap.Size = New System.Drawing.Size(68, 30)
         Me.lbl_sharecap.TabIndex = 3
@@ -447,6 +375,8 @@ Partial Class dashboard
         '
         'Guna2Panel4
         '
+        Me.Guna2Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel4.BorderRadius = 3
         Me.Guna2Panel4.Controls.Add(Me.lbl_sharetranscount)
         Me.Guna2Panel4.Controls.Add(Me.Label9)
         Me.Guna2Panel4.Controls.Add(Me.lbl_savingstranscount)
@@ -457,7 +387,7 @@ Partial Class dashboard
         Me.Guna2Panel4.Controls.Add(Me.lbl_transaccount)
         Me.Guna2Panel4.Controls.Add(Me.Label26)
         Me.Guna2Panel4.FillColor = System.Drawing.Color.SteelBlue
-        Me.Guna2Panel4.Location = New System.Drawing.Point(338, 57)
+        Me.Guna2Panel4.Location = New System.Drawing.Point(351, 9)
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.DarkGray
         Me.Guna2Panel4.ShadowDecoration.Enabled = True
@@ -575,7 +505,7 @@ Partial Class dashboard
         Me.Guna2Panel5.Controls.Add(Me.Guna2Panel6)
         Me.Guna2Panel5.Controls.Add(Me.lbl_day)
         Me.Guna2Panel5.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel5.Location = New System.Drawing.Point(958, 16)
+        Me.Guna2Panel5.Location = New System.Drawing.Point(27, 95)
         Me.Guna2Panel5.Name = "Guna2Panel5"
         Me.Guna2Panel5.ShadowDecoration.Color = System.Drawing.Color.Silver
         Me.Guna2Panel5.ShadowDecoration.Enabled = True
@@ -633,47 +563,75 @@ Partial Class dashboard
         'Guna2VSeparator1
         '
         Me.Guna2VSeparator1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Guna2VSeparator1.Location = New System.Drawing.Point(321, 0)
+        Me.Guna2VSeparator1.Location = New System.Drawing.Point(304, 0)
         Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
-        Me.Guna2VSeparator1.Size = New System.Drawing.Size(11, 673)
+        Me.Guna2VSeparator1.Size = New System.Drawing.Size(11, 878)
         Me.Guna2VSeparator1.TabIndex = 16
         '
         'Guna2Panel7
         '
+        Me.Guna2Panel7.AutoScroll = True
+        Me.Guna2Panel7.AutoScrollMargin = New System.Drawing.Size(0, 50)
+        Me.Guna2Panel7.Controls.Add(Me.btn_totalfunds)
         Me.Guna2Panel7.Controls.Add(Me.Guna2Panel12)
         Me.Guna2Panel7.Controls.Add(Me.Guna2Panel8)
         Me.Guna2Panel7.Controls.Add(Me.Label27)
         Me.Guna2Panel7.Controls.Add(Me.Guna2VSeparator1)
+        Me.Guna2Panel7.Controls.Add(Me.Guna2Panel5)
         Me.Guna2Panel7.Controls.Add(Me.Guna2Panel1)
         Me.Guna2Panel7.Controls.Add(Me.Guna2Panel2)
         Me.Guna2Panel7.Controls.Add(Me.Guna2Panel3)
         Me.Guna2Panel7.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2Panel7.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel7.Name = "Guna2Panel7"
-        Me.Guna2Panel7.Size = New System.Drawing.Size(332, 673)
+        Me.Guna2Panel7.Size = New System.Drawing.Size(332, 765)
         Me.Guna2Panel7.TabIndex = 17
         '
-        'Guna2Panel8
+        'btn_totalfunds
         '
-        Me.Guna2Panel8.Controls.Add(Me.Guna2Separator5)
-        Me.Guna2Panel8.Controls.Add(Me.Guna2PictureBox5)
-        Me.Guna2Panel8.Controls.Add(Me.lbl_funds)
-        Me.Guna2Panel8.Controls.Add(Me.Label15)
-        Me.Guna2Panel8.FillColor = System.Drawing.Color.Teal
-        Me.Guna2Panel8.Location = New System.Drawing.Point(27, 57)
-        Me.Guna2Panel8.Name = "Guna2Panel8"
-        Me.Guna2Panel8.ShadowDecoration.Color = System.Drawing.Color.DarkGray
-        Me.Guna2Panel8.ShadowDecoration.Enabled = True
-        Me.Guna2Panel8.Size = New System.Drawing.Size(260, 107)
-        Me.Guna2Panel8.TabIndex = 13
+        Me.btn_totalfunds.BackColor = System.Drawing.Color.Transparent
+        Me.btn_totalfunds.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btn_totalfunds.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btn_totalfunds.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btn_totalfunds.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btn_totalfunds.FillColor = System.Drawing.Color.Transparent
+        Me.btn_totalfunds.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btn_totalfunds.ForeColor = System.Drawing.Color.White
+        Me.btn_totalfunds.Image = CType(resources.GetObject("btn_totalfunds.Image"), System.Drawing.Image)
+        Me.btn_totalfunds.ImageSize = New System.Drawing.Size(32, 32)
+        Me.btn_totalfunds.Location = New System.Drawing.Point(249, 16)
+        Me.btn_totalfunds.Name = "btn_totalfunds"
+        Me.btn_totalfunds.Size = New System.Drawing.Size(38, 33)
+        Me.btn_totalfunds.TabIndex = 11
         '
-        'Guna2Separator5
+        'Guna2Panel12
         '
-        Me.Guna2Separator5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Separator5.Location = New System.Drawing.Point(-26, 73)
-        Me.Guna2Separator5.Name = "Guna2Separator5"
-        Me.Guna2Separator5.Size = New System.Drawing.Size(218, 10)
-        Me.Guna2Separator5.TabIndex = 12
+        Me.Guna2Panel12.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel12.BorderRadius = 3
+        Me.Guna2Panel12.ContextMenuStrip = Me.menu_sharecap
+        Me.Guna2Panel12.Controls.Add(Me.Label2)
+        Me.Guna2Panel12.Controls.Add(Me.Guna2PictureBox5)
+        Me.Guna2Panel12.Controls.Add(Me.lbl_savings)
+        Me.Guna2Panel12.FillColor = System.Drawing.Color.Teal
+        Me.Guna2Panel12.Location = New System.Drawing.Point(27, 605)
+        Me.Guna2Panel12.Name = "Guna2Panel12"
+        Me.Guna2Panel12.ShadowDecoration.Depth = 50
+        Me.Guna2Panel12.ShadowDecoration.Enabled = True
+        Me.Guna2Panel12.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Guna2Panel12.Size = New System.Drawing.Size(260, 107)
+        Me.Guna2Panel12.TabIndex = 12
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(6, 13)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(52, 17)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Savings"
         '
         'Guna2PictureBox5
         '
@@ -681,23 +639,50 @@ Partial Class dashboard
         Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), System.Drawing.Image)
         Me.Guna2PictureBox5.ImageRotate = 0!
-        Me.Guna2PictureBox5.Location = New System.Drawing.Point(200, 46)
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(160, 13)
         Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
-        Me.Guna2PictureBox5.Size = New System.Drawing.Size(64, 64)
+        Me.Guna2PictureBox5.Size = New System.Drawing.Size(104, 97)
         Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox5.TabIndex = 12
         Me.Guna2PictureBox5.TabStop = False
         Me.Guna2PictureBox5.UseTransparentBackground = True
         '
+        'lbl_savings
+        '
+        Me.lbl_savings.AutoSize = True
+        Me.lbl_savings.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_savings.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_savings.ForeColor = System.Drawing.Color.White
+        Me.lbl_savings.Location = New System.Drawing.Point(21, 42)
+        Me.lbl_savings.Name = "lbl_savings"
+        Me.lbl_savings.Size = New System.Drawing.Size(68, 30)
+        Me.lbl_savings.TabIndex = 3
+        Me.lbl_savings.Text = "00000"
+        '
+        'Guna2Panel8
+        '
+        Me.Guna2Panel8.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel8.BorderRadius = 3
+        Me.Guna2Panel8.Controls.Add(Me.lbl_funds)
+        Me.Guna2Panel8.Controls.Add(Me.Label15)
+        Me.Guna2Panel8.FillColor = System.Drawing.Color.SteelBlue
+        Me.Guna2Panel8.Location = New System.Drawing.Point(27, 247)
+        Me.Guna2Panel8.Name = "Guna2Panel8"
+        Me.Guna2Panel8.ShadowDecoration.Depth = 50
+        Me.Guna2Panel8.ShadowDecoration.Enabled = True
+        Me.Guna2Panel8.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Guna2Panel8.Size = New System.Drawing.Size(260, 107)
+        Me.Guna2Panel8.TabIndex = 13
+        '
         'lbl_funds
         '
         Me.lbl_funds.AutoSize = True
         Me.lbl_funds.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_funds.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_funds.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_funds.ForeColor = System.Drawing.Color.White
-        Me.lbl_funds.Location = New System.Drawing.Point(12, 33)
+        Me.lbl_funds.Location = New System.Drawing.Point(20, 42)
         Me.lbl_funds.Name = "lbl_funds"
-        Me.lbl_funds.Size = New System.Drawing.Size(24, 30)
+        Me.lbl_funds.Size = New System.Drawing.Size(28, 32)
         Me.lbl_funds.TabIndex = 3
         Me.lbl_funds.Text = "0"
         '
@@ -727,13 +712,14 @@ Partial Class dashboard
         'GunaChart1
         '
         Me.GunaChart1.AutoScroll = True
+        Me.GunaChart1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.GunaChart1.Legend.Align = Guna.Charts.WinForms.ChartTextAlignment.Start
         Me.GunaChart1.Legend.BoxWidth = 10
         ChartFont9.FontName = "Arial"
         Me.GunaChart1.Legend.LabelFont = ChartFont9
-        Me.GunaChart1.Location = New System.Drawing.Point(20, 45)
+        Me.GunaChart1.Location = New System.Drawing.Point(0, 48)
         Me.GunaChart1.Name = "GunaChart1"
-        Me.GunaChart1.Size = New System.Drawing.Size(512, 217)
+        Me.GunaChart1.Size = New System.Drawing.Size(742, 283)
         Me.GunaChart1.TabIndex = 18
         ChartFont10.FontName = "Arial"
         ChartFont10.Size = 12
@@ -763,13 +749,17 @@ Partial Class dashboard
         '
         'Guna2Panel9
         '
+        Me.Guna2Panel9.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel9.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel9.BorderRadius = 3
         Me.Guna2Panel9.Controls.Add(Me.Label1)
         Me.Guna2Panel9.Controls.Add(Me.GunaChart1)
-        Me.Guna2Panel9.Location = New System.Drawing.Point(338, 227)
+        Me.Guna2Panel9.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel9.Location = New System.Drawing.Point(351, 384)
         Me.Guna2Panel9.Name = "Guna2Panel9"
         Me.Guna2Panel9.ShadowDecoration.Color = System.Drawing.Color.DimGray
         Me.Guna2Panel9.ShadowDecoration.Enabled = True
-        Me.Guna2Panel9.Size = New System.Drawing.Size(552, 276)
+        Me.Guna2Panel9.Size = New System.Drawing.Size(742, 331)
         Me.Guna2Panel9.TabIndex = 19
         '
         'Label1
@@ -786,72 +776,32 @@ Partial Class dashboard
         '
         'Guna2Panel10
         '
+        Me.Guna2Panel10.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel10.BorderRadius = 3
         Me.Guna2Panel10.Controls.Add(Me.Label3)
         Me.Guna2Panel10.Controls.Add(Me.lbl_collecttotal)
         Me.Guna2Panel10.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel10.Location = New System.Drawing.Point(677, 57)
+        Me.Guna2Panel10.Location = New System.Drawing.Point(351, 190)
         Me.Guna2Panel10.Name = "Guna2Panel10"
         Me.Guna2Panel10.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.Guna2Panel10.ShadowDecoration.Enabled = True
-        Me.Guna2Panel10.Size = New System.Drawing.Size(213, 75)
+        Me.Guna2Panel10.Size = New System.Drawing.Size(288, 75)
         Me.Guna2Panel10.TabIndex = 20
         '
         'Guna2Panel11
         '
+        Me.Guna2Panel11.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel11.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel11.BorderRadius = 3
         Me.Guna2Panel11.Controls.Add(Me.Label5)
         Me.Guna2Panel11.Controls.Add(Me.lbl_releasedtotal)
-        Me.Guna2Panel11.Location = New System.Drawing.Point(677, 141)
+        Me.Guna2Panel11.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel11.Location = New System.Drawing.Point(351, 287)
         Me.Guna2Panel11.Name = "Guna2Panel11"
         Me.Guna2Panel11.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.Guna2Panel11.ShadowDecoration.Enabled = True
-        Me.Guna2Panel11.Size = New System.Drawing.Size(213, 75)
+        Me.Guna2Panel11.Size = New System.Drawing.Size(288, 75)
         Me.Guna2Panel11.TabIndex = 21
-        '
-        'Guna2Panel12
-        '
-        Me.Guna2Panel12.ContextMenuStrip = Me.menu_sharecap
-        Me.Guna2Panel12.Controls.Add(Me.Label2)
-        Me.Guna2Panel12.Controls.Add(Me.Guna2Separator6)
-        Me.Guna2Panel12.Controls.Add(Me.lbl_savings)
-        Me.Guna2Panel12.FillColor = System.Drawing.Color.Teal
-        Me.Guna2Panel12.Location = New System.Drawing.Point(27, 415)
-        Me.Guna2Panel12.Name = "Guna2Panel12"
-        Me.Guna2Panel12.ShadowDecoration.Color = System.Drawing.Color.DarkGray
-        Me.Guna2Panel12.ShadowDecoration.Enabled = True
-        Me.Guna2Panel12.Size = New System.Drawing.Size(260, 107)
-        Me.Guna2Panel12.TabIndex = 12
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(6, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 17)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Savings"
-        '
-        'Guna2Separator6
-        '
-        Me.Guna2Separator6.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Separator6.Location = New System.Drawing.Point(-26, 68)
-        Me.Guna2Separator6.Name = "Guna2Separator6"
-        Me.Guna2Separator6.Size = New System.Drawing.Size(218, 10)
-        Me.Guna2Separator6.TabIndex = 9
-        '
-        'lbl_savings
-        '
-        Me.lbl_savings.AutoSize = True
-        Me.lbl_savings.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_savings.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_savings.ForeColor = System.Drawing.Color.White
-        Me.lbl_savings.Location = New System.Drawing.Point(12, 30)
-        Me.lbl_savings.Name = "lbl_savings"
-        Me.lbl_savings.Size = New System.Drawing.Size(68, 30)
-        Me.lbl_savings.TabIndex = 3
-        Me.lbl_savings.Text = "00000"
         '
         'dashboard
         '
@@ -860,12 +810,11 @@ Partial Class dashboard
         Me.AutoScroll = True
         Me.AutoScrollMargin = New System.Drawing.Size(0, 50)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1109, 673)
+        Me.ClientSize = New System.Drawing.Size(1179, 605)
         Me.Controls.Add(Me.Guna2Panel11)
         Me.Controls.Add(Me.Guna2Panel10)
         Me.Controls.Add(Me.Guna2Panel9)
         Me.Controls.Add(Me.Guna2Panel7)
-        Me.Controls.Add(Me.Guna2Panel5)
         Me.Controls.Add(Me.Guna2Panel4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "dashboard"
@@ -889,17 +838,17 @@ Partial Class dashboard
         Me.Guna2Panel6.PerformLayout()
         Me.Guna2Panel7.ResumeLayout(False)
         Me.Guna2Panel7.PerformLayout()
+        Me.Guna2Panel12.ResumeLayout(False)
+        Me.Guna2Panel12.PerformLayout()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel8.ResumeLayout(False)
         Me.Guna2Panel8.PerformLayout()
-        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel9.ResumeLayout(False)
         Me.Guna2Panel9.PerformLayout()
         Me.Guna2Panel10.ResumeLayout(False)
         Me.Guna2Panel10.PerformLayout()
         Me.Guna2Panel11.ResumeLayout(False)
         Me.Guna2Panel11.PerformLayout()
-        Me.Guna2Panel12.ResumeLayout(False)
-        Me.Guna2Panel12.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -911,8 +860,6 @@ Partial Class dashboard
     Friend WithEvents Label7 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents lbl_active As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lbl_pendingloan As Label
     Friend WithEvents Label18 As Label
@@ -921,9 +868,6 @@ Partial Class dashboard
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lbl_sharecap As Label
-    Friend WithEvents lbl_sharecount As Label
-    Friend WithEvents Guna2Separator3 As Guna.UI2.WinForms.Guna2Separator
-    Friend WithEvents Label22 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lbl_savingstranscount As Label
@@ -943,11 +887,9 @@ Partial Class dashboard
     Friend WithEvents Label27 As Label
     Friend WithEvents lbl_sharetranscount As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2Separator2 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Separator5 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents lbl_funds As Label
     Friend WithEvents Label15 As Label
@@ -961,6 +903,6 @@ Partial Class dashboard
     Friend WithEvents QuarterlyRateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2Separator6 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents lbl_savings As Label
+    Friend WithEvents btn_totalfunds As Guna.UI2.WinForms.Guna2Button
 End Class

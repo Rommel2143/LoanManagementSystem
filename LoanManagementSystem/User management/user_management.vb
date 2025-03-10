@@ -71,12 +71,12 @@ Public Class user_management
 
 
     Private Sub loadusers(text As String)
-        reload("SELECT `id`, `account_no`, `username`, `initials`, `pass`, `admin`, `loan_apply`, `loan_approve`, `loan_release`, `loan_collection`, `add_member`, `print_savings`, `print_sharecap`, `savings`, `sharecap` FROM `user` WHERE " & text & "", datagrid1)
+        reload("SELECT `id`, `account_no`, `username`, `initials`, `pass`, `admin`, `loan_apply`, `loan_approve`, `loan_release`, `loan_collection`, `add_member`, `print_savings`, `print_sharecap`, `savings`, `sharecap`,`dashboard` FROM `user` WHERE " & text & "", datagrid1)
         If datagrid1.Columns.Contains("id") Then
             datagrid1.Columns("id").Visible = False
         End If
 
-        For Each colName As String In {"loan_apply", "loan_approve", "loan_release", "loan_collection", "add_member", "admin", "print_savings", "print_sharecap", "savings", "sharecap"}
+        For Each colName As String In {"loan_apply", "loan_approve", "loan_release", "loan_collection", "add_member", "admin", "print_savings", "print_sharecap", "savings", "sharecap", "dashboard"}
             If datagrid1.Columns.Contains(colName) Then
                 Dim chkColumn As New DataGridViewCheckBoxColumn()
                 With chkColumn
@@ -130,12 +130,14 @@ Public Class user_management
                     Dim print_sharecap As Integer = If(Convert.ToBoolean(row.Cells("print_sharecap").Value), 1, 0)
                     Dim savings As Integer = If(Convert.ToBoolean(row.Cells("savings").Value), 1, 0)
                     Dim sharecap As Integer = If(Convert.ToBoolean(row.Cells("sharecap").Value), 1, 0)
+                    Dim dashboard As Integer = If(Convert.ToBoolean(row.Cells("dashboard").Value), 1, 0)
 
                     Dim query As String = "UPDATE user SET `username`=@username, `initials`=@initials, `pass`=@pass, loan_apply=@loan_apply, loan_approve=@loan_approve, loan_release=@loan_release, loan_collection=@loan_collection, add_member=@add_member, admin=@admin,
                                             `print_savings`=" & print_savings & ",
                                             `print_sharecap`=" & print_sharecap & ",
                                             `savings`=" & savings & ",
-                                            `sharecap` =" & sharecap & "
+                                            `sharecap` =" & sharecap & ",
+                                            `dashboard` =" & dashboard & "
                                             WHERE id=@id"
 
                     Using cmd As New MySqlCommand(query, con)

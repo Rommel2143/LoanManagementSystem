@@ -10,8 +10,46 @@ Public Class savings
         lbl_balance.Text = String.Format("₱{0:N2}", checksavings(account))
         lbl_accountname.Text = fname
 
-        reload("SELECT id,`referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `savings` WHERE account_no='" & account & "' ", datagrid1)
-        datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
+        'reload("SELECT savings.id,`referenceno`, `amount` AS 'Amount', DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,`status` AS 'Type', initials AS 'Teller' FROM `savings` 
+        '        LEFT JOIN user ON savings.teller=user.account_no
+        '        WHERE savings.account_no='" & account & "' 
+        '        ORDER BY date_transac DESC ", datagrid1)
+
+        reload("SELECT savings.id,
+    `referenceno` AS `Reference no`, 
+    `date_transac`, 
+    CASE 
+        WHEN `status` IN ('ID', 'CHKD', 'CD', 'CM', 'CSHDEP', 'BEGBAL', 'TIMDEP', 'CMEMO', 'CHKDEP', 'CSHADJ', 'CSHAD1', 'INT') 
+        THEN `amount` ELSE 0 END AS `Deposit`,
+    CASE 
+        WHEN `status` IN ('CW', 'CHKW', 'DM', 'DAMAY', 'DMEMO', 'DEDB', 'CSHWIT', 'CHKBON', 'TAXWIT', 'CHKWIT') 
+        THEN `amount` ELSE 0 END AS `Withdrawal`,
+ SUM(
+        CASE 
+            WHEN `status` IN ('ID', 'CHKD', 'CD', 'CM', 'CSHDEP', 'BEGBAL', 'TIMDEP', 'CMEMO', 'CHKDEP', 'CSHADJ', 'CSHAD1', 'INT') 
+            THEN `amount` 
+            WHEN `status` IN ('CW', 'CHKW', 'DM', 'DAMAY', 'DMEMO', 'DEDB', 'CSHWIT', 'CHKBON', 'TAXWIT', 'CHKWIT') 
+            THEN -`amount`
+            ELSE 0 
+        END
+    ) OVER (PARTITION BY savings.account_no ORDER BY savings.id) AS `Balance`,
+
+status AS 'Transaction',
+initials as 'Teller'
+FROM `savings`
+ LEFT JOIN user ON savings.teller=user.account_no
+WHERE savings.account_no='" & account & "'
+ORDER BY id DESC;
+", datagrid1)
+
+
+
+
+
+
+
+        'datagrid1.Columns("deposit").DefaultCellStyle.Format = "₱#,##0.00"
+        'datagrid1.Columns("withdraw").DefaultCellStyle.Format = "₱#,##0.00"
 
         ' Check if "ActionImage" column already exists
         Dim columnExists As Boolean = False
@@ -180,23 +218,24 @@ Public Class savings
 
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) 
-        Dim printpass As New print_savings
-        printpass.print_savings(account_no)
 
-        printpass.ShowDialog()
-    End Sub
 
     Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
         If check_access_user("print_savings") = True Then
 
             If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
-                Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
-                Dim printpass As New print_savings
-                printpass.print_savings(selectedPartCode)
+                Dim status As String = datagrid1.Rows(e.RowIndex).Cells("Transaction").Value.ToString()
+                Dim withdraw As String = datagrid1.Rows(e.RowIndex).Cells("withdrawal").Value.ToString()
+                Dim deposit As String = datagrid1.Rows(e.RowIndex).Cells("deposit").Value.ToString()
+                Dim balance As String = datagrid1.Rows(e.RowIndex).Cells("balance").Value.ToString()
+                Dim teller As String = datagrid1.Rows(e.RowIndex).Cells("Teller").Value.ToString()
+                Dim date_transac As String = datagrid1.Rows(e.RowIndex).Cells("date_transac").Value.ToString()
 
+                Dim printpass As New print_savings
+                printpass.loaddata(status, withdraw, deposit, balance, teller, date_transac)
                 printpass.ShowDialog()
             End If
+
         End If
     End Sub
 

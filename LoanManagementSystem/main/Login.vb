@@ -75,6 +75,7 @@ Public Class Login
         txt_password.UseSystemPasswordChar = Not isVisible
     End Sub
 
+    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
 
-
+    End Sub
 End Class

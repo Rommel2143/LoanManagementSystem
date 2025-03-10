@@ -12,7 +12,7 @@
   <xs:element name="LMSdataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LMSdataset" msprop:Generator_UserDSName="LMSdataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Loanapp" msprop:Generator_TableClassName="LoanappDataTable" msprop:Generator_TableVarName="tableLoanapp" msprop:Generator_RowChangedName="LoanappRowChanged" msprop:Generator_TablePropName="Loanapp" msprop:Generator_RowDeletingName="LoanappRowDeleting" msprop:Generator_RowChangingName="LoanappRowChanging" msprop:Generator_RowEvHandlerName="LoanappRowChangeEventHandler" msprop:Generator_RowDeletedName="LoanappRowDeleted" msprop:Generator_RowClassName="LoanappRow" msprop:Generator_UserTableName="Loanapp" msprop:Generator_RowEvArgName="LoanappRowChangeEvent">
+        <xs:element name="Loanapp" msprop:Generator_TableClassName="LoanappDataTable" msprop:Generator_TableVarName="tableLoanapp" msprop:Generator_TablePropName="Loanapp" msprop:Generator_RowDeletingName="LoanappRowDeleting" msprop:Generator_RowChangingName="LoanappRowChanging" msprop:Generator_RowEvHandlerName="LoanappRowChangeEventHandler" msprop:Generator_RowDeletedName="LoanappRowDeleted" msprop:Generator_UserTableName="Loanapp" msprop:Generator_RowChangedName="LoanappRowChanged" msprop:Generator_RowEvArgName="LoanappRowChangeEvent" msprop:Generator_RowClassName="LoanappRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname" type="xs:string" minOccurs="0" />
@@ -32,7 +32,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="loandetails" msprop:Generator_TableClassName="loandetailsDataTable" msprop:Generator_TableVarName="tableloandetails" msprop:Generator_TablePropName="loandetails" msprop:Generator_RowDeletingName="loandetailsRowDeleting" msprop:Generator_RowChangingName="loandetailsRowChanging" msprop:Generator_RowEvHandlerName="loandetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="loandetailsRowDeleted" msprop:Generator_UserTableName="loandetails" msprop:Generator_RowChangedName="loandetailsRowChanged" msprop:Generator_RowEvArgName="loandetailsRowChangeEvent" msprop:Generator_RowClassName="loandetailsRow">
+        <xs:element name="loandetails" msprop:Generator_TableClassName="loandetailsDataTable" msprop:Generator_TableVarName="tableloandetails" msprop:Generator_RowChangedName="loandetailsRowChanged" msprop:Generator_TablePropName="loandetails" msprop:Generator_RowDeletingName="loandetailsRowDeleting" msprop:Generator_RowChangingName="loandetailsRowChanging" msprop:Generator_RowEvHandlerName="loandetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="loandetailsRowDeleted" msprop:Generator_RowClassName="loandetailsRow" msprop:Generator_UserTableName="loandetails" msprop:Generator_RowEvArgName="loandetailsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="referenceno" msprop:Generator_ColumnVarNameInTable="columnreferenceno" msprop:Generator_ColumnPropNameInRow="referenceno" msprop:Generator_ColumnPropNameInTable="referencenoColumn" msprop:Generator_UserColumnName="referenceno" type="xs:string" minOccurs="0" />
@@ -52,7 +52,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="comakerstatement" msprop:Generator_TableClassName="comakerstatementDataTable" msprop:Generator_TableVarName="tablecomakerstatement" msprop:Generator_RowChangedName="comakerstatementRowChanged" msprop:Generator_TablePropName="comakerstatement" msprop:Generator_RowDeletingName="comakerstatementRowDeleting" msprop:Generator_RowChangingName="comakerstatementRowChanging" msprop:Generator_RowEvHandlerName="comakerstatementRowChangeEventHandler" msprop:Generator_RowDeletedName="comakerstatementRowDeleted" msprop:Generator_RowClassName="comakerstatementRow" msprop:Generator_UserTableName="comakerstatement" msprop:Generator_RowEvArgName="comakerstatementRowChangeEvent">
+        <xs:element name="comakerstatement" msprop:Generator_TableClassName="comakerstatementDataTable" msprop:Generator_TableVarName="tablecomakerstatement" msprop:Generator_TablePropName="comakerstatement" msprop:Generator_RowDeletingName="comakerstatementRowDeleting" msprop:Generator_RowChangingName="comakerstatementRowChanging" msprop:Generator_RowEvHandlerName="comakerstatementRowChangeEventHandler" msprop:Generator_RowDeletedName="comakerstatementRowDeleted" msprop:Generator_UserTableName="comakerstatement" msprop:Generator_RowChangedName="comakerstatementRowChanged" msprop:Generator_RowEvArgName="comakerstatementRowChangeEvent" msprop:Generator_RowClassName="comakerstatementRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname" type="xs:string" minOccurs="0" />
@@ -64,7 +64,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="sharecap_passbook" msprop:Generator_TableClassName="sharecap_passbookDataTable" msprop:Generator_TableVarName="tablesharecap_passbook" msprop:Generator_RowChangedName="sharecap_passbookRowChanged" msprop:Generator_TablePropName="sharecap_passbook" msprop:Generator_RowDeletingName="sharecap_passbookRowDeleting" msprop:Generator_RowChangingName="sharecap_passbookRowChanging" msprop:Generator_RowEvHandlerName="sharecap_passbookRowChangeEventHandler" msprop:Generator_RowDeletedName="sharecap_passbookRowDeleted" msprop:Generator_RowClassName="sharecap_passbookRow" msprop:Generator_UserTableName="sharecap_passbook" msprop:Generator_RowEvArgName="sharecap_passbookRowChangeEvent">
+        <xs:element name="sharecap_passbook" msprop:Generator_TableClassName="sharecap_passbookDataTable" msprop:Generator_TableVarName="tablesharecap_passbook" msprop:Generator_TablePropName="sharecap_passbook" msprop:Generator_RowDeletingName="sharecap_passbookRowDeleting" msprop:Generator_RowChangingName="sharecap_passbookRowChanging" msprop:Generator_RowEvHandlerName="sharecap_passbookRowChangeEventHandler" msprop:Generator_RowDeletedName="sharecap_passbookRowDeleted" msprop:Generator_UserTableName="sharecap_passbook" msprop:Generator_RowChangedName="sharecap_passbookRowChanged" msprop:Generator_RowEvArgName="sharecap_passbookRowChangeEvent" msprop:Generator_RowClassName="sharecap_passbookRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname" type="xs:string" minOccurs="0" />
@@ -77,27 +77,20 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="savings_transact" msprop:Generator_TableClassName="savings_transactDataTable" msprop:Generator_TableVarName="tablesavings_transact" msprop:Generator_RowChangedName="savings_transactRowChanged" msprop:Generator_TablePropName="savings_transact" msprop:Generator_RowDeletingName="savings_transactRowDeleting" msprop:Generator_RowChangingName="savings_transactRowChanging" msprop:Generator_RowEvHandlerName="savings_transactRowChangeEventHandler" msprop:Generator_RowDeletedName="savings_transactRowDeleted" msprop:Generator_RowClassName="savings_transactRow" msprop:Generator_UserTableName="savings_transact" msprop:Generator_RowEvArgName="savings_transactRowChangeEvent">
+        <xs:element name="savings_transact" msprop:Generator_TableClassName="savings_transactDataTable" msprop:Generator_TableVarName="tablesavings_transact" msprop:Generator_TablePropName="savings_transact" msprop:Generator_RowDeletingName="savings_transactRowDeleting" msprop:Generator_RowChangingName="savings_transactRowChanging" msprop:Generator_RowEvHandlerName="savings_transactRowChangeEventHandler" msprop:Generator_RowDeletedName="savings_transactRowDeleted" msprop:Generator_UserTableName="savings_transact" msprop:Generator_RowChangedName="savings_transactRowChanged" msprop:Generator_RowEvArgName="savings_transactRowChangeEvent" msprop:Generator_RowClassName="savings_transactRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname" type="xs:string" minOccurs="0" />
-              <xs:element name="account_no" msprop:Generator_ColumnVarNameInTable="columnaccount_no" msprop:Generator_ColumnPropNameInRow="account_no" msprop:Generator_ColumnPropNameInTable="account_noColumn" msprop:Generator_UserColumnName="account_no" type="xs:string" minOccurs="0" />
               <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
               <xs:element name="withdraw" msprop:Generator_ColumnVarNameInTable="columnwithdraw" msprop:Generator_ColumnPropNameInRow="withdraw" msprop:Generator_ColumnPropNameInTable="withdrawColumn" msprop:Generator_UserColumnName="withdraw" type="xs:decimal" minOccurs="0" />
               <xs:element name="deposit" msprop:Generator_ColumnVarNameInTable="columndeposit" msprop:Generator_ColumnPropNameInRow="deposit" msprop:Generator_ColumnPropNameInTable="depositColumn" msprop:Generator_UserColumnName="deposit" type="xs:decimal" minOccurs="0" />
               <xs:element name="balance" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:decimal" minOccurs="0" />
               <xs:element name="teller" msprop:Generator_ColumnVarNameInTable="columnteller" msprop:Generator_ColumnPropNameInRow="teller" msprop:Generator_ColumnPropNameInTable="tellerColumn" msprop:Generator_UserColumnName="teller" type="xs:string" minOccurs="0" />
-              <xs:element name="date_transac" msprop:Generator_ColumnVarNameInTable="columndate_transac" msprop:Generator_ColumnPropNameInRow="date_transac" msprop:Generator_ColumnPropNameInTable="date_transacColumn" msprop:Generator_UserColumnName="date_transac" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="date_transac" msprop:Generator_ColumnVarNameInTable="columndate_transac" msprop:Generator_ColumnPropNameInRow="date_transac" msprop:Generator_ColumnPropNameInTable="date_transacColumn" msprop:Generator_UserColumnName="date_transac" type="xs:string" minOccurs="0" />
               <xs:element name="number" msprop:Generator_ColumnVarNameInTable="columnnumber" msprop:Generator_ColumnPropNameInRow="number" msprop:Generator_ColumnPropNameInTable="numberColumn" msprop:Generator_UserColumnName="number" type="xs:string" minOccurs="0" />
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:savings_transact" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

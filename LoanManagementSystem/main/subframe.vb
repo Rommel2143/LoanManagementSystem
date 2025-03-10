@@ -2,7 +2,7 @@
 
     Private Sub subframe_load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbl_calendar.Text = date1
-        display_formsub(New dashboard, "Dashboard")
+        'display_formsub(New dashboard, "Dashboard")
         Timer1.Start()
     End Sub
     Private Sub MasterlistToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -72,11 +72,14 @@
 
     Private Sub MembersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MembersToolStripMenuItem.Click
         display_formsub(member_accounts, "Accounts")
-        member_accounts.LoadData()
+
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
-        display_formsub(New dashboard, "Dashboard")
+        If check_access_user("dashboard") = True Then
+            display_formsub(dashboard, "Dashboard")
+        End If
+
     End Sub
 
     Private Sub SuggestImprovementToolStripMenuItem_Click(sender As Object, e As EventArgs)

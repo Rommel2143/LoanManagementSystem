@@ -27,8 +27,8 @@ Partial Class subframe
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.userstrip = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageMyProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.logout = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_manageuser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.logout = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MembersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -82,16 +82,6 @@ Partial Class subframe
         Me.ManageMyProfileToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ManageMyProfileToolStripMenuItem.Text = "Manage my profile"
         '
-        'logout
-        '
-        Me.logout.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.logout.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.logout.Image = CType(resources.GetObject("logout.Image"), System.Drawing.Image)
-        Me.logout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.logout.Name = "logout"
-        Me.logout.Size = New System.Drawing.Size(188, 22)
-        Me.logout.Text = "Logout"
-        '
         'btn_manageuser
         '
         Me.btn_manageuser.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -101,6 +91,16 @@ Partial Class subframe
         Me.btn_manageuser.Name = "btn_manageuser"
         Me.btn_manageuser.Size = New System.Drawing.Size(188, 22)
         Me.btn_manageuser.Text = "User Management"
+        '
+        'logout
+        '
+        Me.logout.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logout.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.logout.Image = CType(resources.GetObject("logout.Image"), System.Drawing.Image)
+        Me.logout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.logout.Name = "logout"
+        Me.logout.Size = New System.Drawing.Size(188, 22)
+        Me.logout.Text = "Logout"
         '
         'DashboardToolStripMenuItem
         '

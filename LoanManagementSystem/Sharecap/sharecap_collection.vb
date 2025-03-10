@@ -11,8 +11,12 @@ Public Class sharecap_collection
         account_share = acc
         lbl_balance.Text = String.Format("₱{0:N2}", checksharecap(acc))
         lbl_accountname.Text = fname
-        reload("SELECT id,`referenceno`, `amount`, DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,time,`status`, `teller` FROM `sharecap` WHERE account_no='" & acc & "' ", datagrid1)
+        reload("SELECT sharecap.id,`referenceno`, `amount` AS 'Amount', DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,`status` AS 'Type', initials AS 'Teller' FROM `sharecap`
+        LEFT JOIN user ON sharecap.teller=user.account_no
+        WHERE sharecap.account_no='" & acc & "' 
+         ORDER BY date_transac DESC", datagrid1)
         datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
+
 
 
         ' Check if "ActionImage" column already exists
