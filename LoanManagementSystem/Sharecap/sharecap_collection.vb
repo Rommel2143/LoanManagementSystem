@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Globalization
+Imports System.Text.RegularExpressions
 Public Class sharecap_collection
     Dim account_share As String
     Dim selected_trans As String
@@ -11,11 +12,43 @@ Public Class sharecap_collection
         account_share = acc
         lbl_balance.Text = String.Format("₱{0:N2}", checksharecap(acc))
         lbl_accountname.Text = fname
-        reload("SELECT sharecap.id,`referenceno`, `amount` AS 'Amount', DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,`status` AS 'Type', initials AS 'Teller' FROM `sharecap`
-        LEFT JOIN user ON sharecap.teller=user.account_no
-        WHERE sharecap.account_no='" & acc & "' 
-         ORDER BY date_transac DESC", datagrid1)
-        datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
+        'reload("SELECT sharecap.id,`referenceno`, `amount` AS 'Amount', DATE_FORMAT(date_transac, '%M %d, %Y') AS Date,`status` AS 'Type', initials AS 'Teller' FROM `sharecap`
+        'LEFT JOIN user ON sharecap.teller=user.account_no
+        'WHERE sharecap.account_no='" & acc & "' 
+        ' ORDER BY date_transac DESC", datagrid1)
+
+
+
+        reload("SELECT sharecap.id,
+    `referenceno` AS `Reference no`, 
+    `date_transac`, 
+    CASE 
+        WHEN `status` IN ('ID' ,'CM','CD','ISC' ,'IPR' ,'C','CASHDEP','BEGBAL','CMEMO','CHKDEP','CSHAD1','INT') 
+        THEN `amount` ELSE 0 END AS `Deposit`,
+    CASE 
+        WHEN `status` IN ('DM','CA','D','DMEMO','CHKWID','CSHWIT','CHKWIT') 
+        THEN `amount` ELSE 0 END AS `Withdrawal`,
+ SUM(
+        CASE 
+            WHEN `status` IN ('ID' ,'CM','CD','ISC' ,'IPR' ,'C','CASHDEP','BEGBAL','CMEMO','CHKDEP','CSHAD1','INT') 
+            THEN `amount` 
+            WHEN `status` IN ('DM','CA','D','DMEMO','CHKWID','CSHWIT','CHKWIT') 
+            THEN -`amount`
+            ELSE 0 
+        END
+    ) OVER (PARTITION BY sharecap.account_no ORDER BY sharecap.id) AS `Balance`,
+
+status AS 'Transaction',
+initials as 'Teller'
+FROM `sharecap`
+ LEFT JOIN user ON sharecap.teller=user.account_no
+WHERE sharecap.account_no='" & acc & "'
+ORDER BY id DESC;
+", datagrid1)
+
+
+
+        '  datagrid1.Columns("amount").DefaultCellStyle.Format = "₱#,##0.00"
 
 
 
@@ -146,12 +179,12 @@ Public Class sharecap_collection
 
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs)
-        Dim printpass As New print_passbook
-        printpass.print_pass(account_share)
+    'Private Sub Guna2Button2_Click(sender As Object, e As EventArgs)
+    '    Dim printpass As New print_passbook
+    '    printpass.print_pass(account_share)
 
-        printpass.ShowDialog()
-    End Sub
+    '    printpass.ShowDialog()
+    'End Sub
 
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
 
@@ -159,13 +192,22 @@ Public Class sharecap_collection
 
     Private Sub datagrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellClick
         If check_access_user("print_sharecap") = True Then
-            If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
-                Dim selectedPartCode As String = datagrid1.Rows(e.RowIndex).Cells("id").Value.ToString()
-                Dim printpass As New print_passbook
-                printpass.print_pass(selectedPartCode)
 
+
+            If e.ColumnIndex = datagrid1.Columns("ActionImage").Index AndAlso e.RowIndex >= 0 Then
+                    Dim status As String = datagrid1.Rows(e.RowIndex).Cells("Transaction").Value.ToString()
+                    Dim withdraw As String = datagrid1.Rows(e.RowIndex).Cells("withdrawal").Value.ToString()
+                    Dim deposit As String = datagrid1.Rows(e.RowIndex).Cells("deposit").Value.ToString()
+                    Dim balance As String = datagrid1.Rows(e.RowIndex).Cells("balance").Value.ToString()
+                    Dim teller As String = datagrid1.Rows(e.RowIndex).Cells("Teller").Value.ToString()
+                Dim date_transac As String = datagrid1.Rows(e.RowIndex).Cells("date_transac").Value.ToString()
+
+                Dim printpass As New print_passbook
+                printpass.loaddata(status, withdraw, deposit, balance, teller, date_transac, account_share, Regex.Replace(lbl_accountname.Text, "\(\d+\)", "").Trim())
                 printpass.ShowDialog()
-            End If
+                End If
+
+
         End If
 
     End Sub

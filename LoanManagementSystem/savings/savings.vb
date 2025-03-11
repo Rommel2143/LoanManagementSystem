@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Globalization
+Imports System.Text.RegularExpressions
 Public Class savings
     Dim account_no As String
     Private Sub savings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -232,7 +233,7 @@ ORDER BY id DESC;
                 Dim date_transac As String = datagrid1.Rows(e.RowIndex).Cells("date_transac").Value.ToString()
 
                 Dim printpass As New print_savings
-                printpass.loaddata(status, withdraw, deposit, balance, teller, date_transac)
+                printpass.loaddata(status, withdraw, deposit, balance, teller, date_transac, account_no, Regex.Replace(lbl_accountname.Text, "\(\d+\)", "").Trim())
                 printpass.ShowDialog()
             End If
 
