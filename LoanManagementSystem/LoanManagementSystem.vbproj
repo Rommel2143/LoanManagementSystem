@@ -224,6 +224,18 @@
     <Compile Include="dashboard\quarter_rate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dashboard\sharecap_daily.Designer.vb">
+      <DependentUpon>sharecap_daily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard\sharecap_daily.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard\share_daily.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>share_daily.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dashboard\transact_today.Designer.vb">
       <DependentUpon>transact_today.vb</DependentUpon>
     </Compile>
@@ -527,6 +539,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard\quarter_rate.resx">
       <DependentUpon>quarter_rate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\sharecap_daily.resx">
+      <DependentUpon>sharecap_daily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\share_daily.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>share_daily.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard\transact_today.resx">
       <DependentUpon>transact_today.vb</DependentUpon>

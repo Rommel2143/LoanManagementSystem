@@ -588,4 +588,8 @@ ORDER BY YEAR(date_column), MONTH(date_column);
     Private Sub btn_totalfunds_Click(sender As Object, e As EventArgs) Handles btn_totalfunds.Click
         loaddata()
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        display_formsub(sharecap_daily, "Daily Sharecap Records")
+    End Sub
 End Class
