@@ -13,22 +13,19 @@ Public Class sharecap_daily
             con.Open()
 
             Dim showreport As New MySqlCommand("SELECT 
-    sc.status,
+    status,
+    account_no,
     CASE 
-        WHEN sc.status IN ('DM','CA','D','DMEMO','CHKWID','CSHWIT','CHKWIT') 
-        THEN sc.amount ELSE 0 
-    END AS Withdraw,
+        WHEN status IN ('DM','CA','D','DMEMO','CHKWID','CSHWIT','CHKWIT') THEN amount 
+        ELSE 0 
+    END AS withdraw_amount,
     CASE 
-        WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR', 'C', 'CASHDEP', 'BEGBAL', 'CMEMO', 'CHKDEP', 'CSHAD1', 'INT') 
-        THEN sc.amount ELSE 0 
-    END AS Deposit,
-    sc.date_transac, 
-    CONCAT(mp.lastname, ', ', mp.firstname, ' ', COALESCE(mp.middlename, ''), ' (', sc.account_no, ')') AS Fullname,
-    user.initials AS Teller
-FROM sharecap sc
-JOIN member_profile mp ON mp.account_no = sc.account_no
-LEFT JOIN user ON sc.teller = user.account_no
-WHERE sc.date_transac = '" & dtpicker_from.Value.ToString("yyy-MM-dd") & "'", con)
+        WHEN status IN ('ID', 'CM', 'CD', 'ISC', 'IPR', 'C', 'CASHDEP', 'BEGBAL', 'CMEMO', 'CHKDEP', 'CSHAD1', 'INT') THEN amount 
+        ELSE 0 
+    END AS deposit_amount,
+    date_transac
+FROM sharecap  
+WHERE date_transac = '2025-02-25';", con)
 
 
 
