@@ -204,7 +204,7 @@ Public Class loan_application
         End If
 
     End Sub
-    Private Sub num_plan_ValueChanged(sender As Object, e As EventArgs) Handles num_plan.ValueChanged, num_plan.TextChanged, btn_month.CheckedChanged, btn_year.CheckedChanged, txt_amount.TextChanged, cmb_purpose.SelectedIndexChanged
+    Private Sub num_plan_ValueChanged(sender As Object, e As EventArgs) Handles num_plan.ValueChanged, num_plan.TextChanged, btn_month.CheckedChanged, btn_year.CheckedChanged, txt_amount.TextChanged, cmb_purpose.SelectedIndexChanged, txt_otheramount1.TextChanged, txt_otheramount2.TextChanged
         Try
 
             If txt_amount.Text = "" Then
@@ -238,7 +238,7 @@ Public Class loan_application
                 lbl_processfee.Text = "-" & Convert.ToDecimal(lbl_servicefee.Text).ToString("N0")
                 lbl_purpose.Text = cmb_purpose.Text
 
-                lbl_disbursement.Text = (loan_amount - (Convert.ToDecimal(lbl_servicefee.Text) + Convert.ToDecimal(txt_insurance.Text))).ToString("N0")
+                lbl_disbursement.Text = (loan_amount - (Convert.ToDecimal(lbl_servicefee.Text) + Convert.ToDecimal(txt_insurance.Text) + Convert.ToDecimal(lbl_otherfee1.Text) + Convert.ToDecimal(lbl_otherfee2.Text))).ToString("N0")
                 lbl_term.Text = month_count & " months"
                 lbl_ma.Text = txt_ma.Text
             End If
@@ -267,7 +267,7 @@ Public Class loan_application
 
     End Sub
 
-    Private Sub cmb_collateral_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_collateral.SelectedIndexChanged
+    Private Sub cmb_collateral_SelectedIndexChanged(sender As Object, e As EventArgs)
         lbl_collateral.Text = cmb_collateral.Text
     End Sub
 
@@ -358,6 +358,23 @@ Public Class loan_application
     End Sub
 
     Private Sub lbl_loanamount_TextChanged(sender As Object, e As EventArgs) Handles lbl_loanamount.TextChanged
+
+    End Sub
+
+    Private Sub cmb_collateral_TextChanged(sender As Object, e As EventArgs) Handles cmb_collateral.TextChanged
+        lbl_collateral.Text = cmb_collateral.Text
+    End Sub
+
+    Private Sub txt_otheramount1_TextChanged(sender As Object, e As EventArgs) Handles txt_otheramount1.TextChanged
+        lbl_otherfee1.Text = txt_otheramount1.Text
+
+    End Sub
+
+    Private Sub txt_otheramount2_TextChanged(sender As Object, e As EventArgs) Handles txt_otheramount2.TextChanged
+        lbl_otherfee2.Text = txt_otheramount2.Text
+    End Sub
+
+    Private Sub lbl_disbursement_Click(sender As Object, e As EventArgs) Handles lbl_disbursement.Click
 
     End Sub
 End Class

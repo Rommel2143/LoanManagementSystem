@@ -78,7 +78,7 @@ Public Class search_name
             fullname = datagrid1.Rows(e.RowIndex).Cells(1).Value.ToString()
             sharecap = datagrid1.Rows(e.RowIndex).Cells(3).Value.ToString()
             lbl_fullname.Text = datagrid1.Rows(e.RowIndex).Cells(1).Value.ToString()
-            age = datagrid1.Rows(e.RowIndex).Cells(2).Value.ToString()
+            age = datagrid1.Rows(e.RowIndex).Cells(2).Value.ToString
         End If
     End Sub
 
