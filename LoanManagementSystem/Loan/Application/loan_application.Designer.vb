@@ -38,6 +38,12 @@ Partial Class loan_application
         Me.Label35 = New System.Windows.Forms.Label()
         Me.tabcontrol = New Guna.UI2.WinForms.Guna2TabControl()
         Me.panel_compute = New System.Windows.Forms.TabPage()
+        Me.txt_otherfee2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.txt_otheramount2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txt_otherfee1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.txt_otheramount1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txt_insurance = New Guna.UI2.WinForms.Guna2TextBox()
@@ -59,6 +65,7 @@ Partial Class loan_application
         Me.cmb_purpose = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.panel_details = New System.Windows.Forms.TabPage()
+        Me.cmb_collateral = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.txt_collavalue = New Guna.UI2.WinForms.Guna2TextBox()
@@ -73,6 +80,10 @@ Partial Class loan_application
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.panel_apply = New System.Windows.Forms.TabPage()
+        Me.lbl_otherfee2 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.lbl_otherfee1 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.Guna2VSeparator2 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.lbl_insurancefee = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -103,17 +114,6 @@ Partial Class loan_application
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lbl_purpose = New System.Windows.Forms.Label()
-        Me.cmb_collateral = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.txt_otheramount1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txt_otherfee1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.txt_otheramount2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txt_otherfee2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.lbl_otherfee1 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.lbl_otherfee2 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.tabcontrol.SuspendLayout()
@@ -357,6 +357,106 @@ Partial Class loan_application
         Me.panel_compute.TabIndex = 0
         Me.panel_compute.Text = "1. Compute"
         Me.panel_compute.UseVisualStyleBackColor = True
+        '
+        'txt_otherfee2
+        '
+        Me.txt_otherfee2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_otherfee2.DefaultText = ""
+        Me.txt_otherfee2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_otherfee2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_otherfee2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otherfee2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otherfee2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otherfee2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_otherfee2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otherfee2.Location = New System.Drawing.Point(77, 562)
+        Me.txt_otherfee2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_otherfee2.Name = "txt_otherfee2"
+        Me.txt_otherfee2.PlaceholderText = "Input remarks.."
+        Me.txt_otherfee2.SelectedText = ""
+        Me.txt_otherfee2.Size = New System.Drawing.Size(154, 36)
+        Me.txt_otherfee2.TabIndex = 63
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.Color.DimGray
+        Me.Label34.Location = New System.Drawing.Point(73, 537)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(83, 20)
+        Me.Label34.TabIndex = 62
+        Me.Label34.Text = "Other fee 2"
+        '
+        'txt_otheramount2
+        '
+        Me.txt_otheramount2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_otheramount2.DefaultText = "0"
+        Me.txt_otheramount2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_otheramount2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_otheramount2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otheramount2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otheramount2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otheramount2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_otheramount2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otheramount2.Location = New System.Drawing.Point(244, 562)
+        Me.txt_otheramount2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_otheramount2.Name = "txt_otheramount2"
+        Me.txt_otheramount2.PlaceholderText = ""
+        Me.txt_otheramount2.SelectedText = ""
+        Me.txt_otheramount2.Size = New System.Drawing.Size(154, 36)
+        Me.txt_otheramount2.TabIndex = 61
+        '
+        'txt_otherfee1
+        '
+        Me.txt_otherfee1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_otherfee1.DefaultText = ""
+        Me.txt_otherfee1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_otherfee1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_otherfee1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otherfee1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otherfee1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otherfee1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_otherfee1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otherfee1.Location = New System.Drawing.Point(77, 472)
+        Me.txt_otherfee1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_otherfee1.Name = "txt_otherfee1"
+        Me.txt_otherfee1.PlaceholderText = "Input remarks.."
+        Me.txt_otherfee1.SelectedText = ""
+        Me.txt_otherfee1.Size = New System.Drawing.Size(154, 36)
+        Me.txt_otherfee1.TabIndex = 60
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.Transparent
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.DimGray
+        Me.Label26.Location = New System.Drawing.Point(73, 447)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(83, 20)
+        Me.Label26.TabIndex = 59
+        Me.Label26.Text = "Other fee 1"
+        '
+        'txt_otheramount1
+        '
+        Me.txt_otheramount1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_otheramount1.DefaultText = "0"
+        Me.txt_otheramount1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_otheramount1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_otheramount1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otheramount1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_otheramount1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otheramount1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_otheramount1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_otheramount1.Location = New System.Drawing.Point(244, 472)
+        Me.txt_otheramount1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_otheramount1.Name = "txt_otheramount1"
+        Me.txt_otheramount1.PlaceholderText = ""
+        Me.txt_otheramount1.SelectedText = ""
+        Me.txt_otheramount1.Size = New System.Drawing.Size(154, 36)
+        Me.txt_otheramount1.TabIndex = 58
         '
         'Guna2VSeparator1
         '
@@ -655,6 +755,25 @@ Partial Class loan_application
         Me.panel_details.Text = "2. Select Details"
         Me.panel_details.UseVisualStyleBackColor = True
         '
+        'cmb_collateral
+        '
+        Me.cmb_collateral.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.cmb_collateral.DefaultText = ""
+        Me.cmb_collateral.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.cmb_collateral.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.cmb_collateral.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.cmb_collateral.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.cmb_collateral.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_collateral.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_collateral.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_collateral.Location = New System.Drawing.Point(98, 70)
+        Me.cmb_collateral.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.cmb_collateral.Name = "cmb_collateral"
+        Me.cmb_collateral.PlaceholderText = "Collateral Type..."
+        Me.cmb_collateral.SelectedText = ""
+        Me.cmb_collateral.Size = New System.Drawing.Size(266, 36)
+        Me.cmb_collateral.TabIndex = 61
+        '
         'Guna2Separator3
         '
         Me.Guna2Separator3.Location = New System.Drawing.Point(72, 238)
@@ -868,6 +987,54 @@ Partial Class loan_application
         Me.panel_apply.TabIndex = 2
         Me.panel_apply.Text = "3. Summary"
         Me.panel_apply.UseVisualStyleBackColor = True
+        '
+        'lbl_otherfee2
+        '
+        Me.lbl_otherfee2.AutoSize = True
+        Me.lbl_otherfee2.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_otherfee2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_otherfee2.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_otherfee2.Location = New System.Drawing.Point(324, 152)
+        Me.lbl_otherfee2.Name = "lbl_otherfee2"
+        Me.lbl_otherfee2.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_otherfee2.TabIndex = 71
+        Me.lbl_otherfee2.Text = "---"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.Transparent
+        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.DimGray
+        Me.Label39.Location = New System.Drawing.Point(41, 153)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(83, 20)
+        Me.Label39.TabIndex = 70
+        Me.Label39.Text = "Other fee 2"
+        '
+        'lbl_otherfee1
+        '
+        Me.lbl_otherfee1.AutoSize = True
+        Me.lbl_otherfee1.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_otherfee1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_otherfee1.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_otherfee1.Location = New System.Drawing.Point(324, 132)
+        Me.lbl_otherfee1.Name = "lbl_otherfee1"
+        Me.lbl_otherfee1.Size = New System.Drawing.Size(28, 21)
+        Me.lbl_otherfee1.TabIndex = 69
+        Me.lbl_otherfee1.Text = "---"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.DimGray
+        Me.Label37.Location = New System.Drawing.Point(41, 133)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(83, 20)
+        Me.Label37.TabIndex = 68
+        Me.Label37.Text = "Other fee 1"
         '
         'Guna2VSeparator2
         '
@@ -1216,173 +1383,6 @@ Partial Class loan_application
         Me.lbl_purpose.Size = New System.Drawing.Size(28, 21)
         Me.lbl_purpose.TabIndex = 23
         Me.lbl_purpose.Text = "---"
-        '
-        'cmb_collateral
-        '
-        Me.cmb_collateral.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.cmb_collateral.DefaultText = ""
-        Me.cmb_collateral.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.cmb_collateral.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.cmb_collateral.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.cmb_collateral.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.cmb_collateral.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_collateral.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_collateral.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_collateral.Location = New System.Drawing.Point(98, 70)
-        Me.cmb_collateral.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.cmb_collateral.Name = "cmb_collateral"
-        Me.cmb_collateral.PlaceholderText = "Collateral Type..."
-        Me.cmb_collateral.SelectedText = ""
-        Me.cmb_collateral.Size = New System.Drawing.Size(266, 36)
-        Me.cmb_collateral.TabIndex = 61
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.BackColor = System.Drawing.Color.Transparent
-        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.DimGray
-        Me.Label26.Location = New System.Drawing.Point(73, 447)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(83, 20)
-        Me.Label26.TabIndex = 59
-        Me.Label26.Text = "Other fee 1"
-        '
-        'txt_otheramount1
-        '
-        Me.txt_otheramount1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_otheramount1.DefaultText = "0"
-        Me.txt_otheramount1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_otheramount1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_otheramount1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otheramount1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otheramount1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otheramount1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_otheramount1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otheramount1.Location = New System.Drawing.Point(244, 472)
-        Me.txt_otheramount1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.txt_otheramount1.Name = "txt_otheramount1"
-        Me.txt_otheramount1.PlaceholderText = ""
-        Me.txt_otheramount1.SelectedText = ""
-        Me.txt_otheramount1.Size = New System.Drawing.Size(154, 36)
-        Me.txt_otheramount1.TabIndex = 58
-        '
-        'txt_otherfee1
-        '
-        Me.txt_otherfee1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_otherfee1.DefaultText = ""
-        Me.txt_otherfee1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_otherfee1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_otherfee1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otherfee1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otherfee1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otherfee1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_otherfee1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otherfee1.Location = New System.Drawing.Point(77, 472)
-        Me.txt_otherfee1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.txt_otherfee1.Name = "txt_otherfee1"
-        Me.txt_otherfee1.PlaceholderText = "Input remarks.."
-        Me.txt_otherfee1.SelectedText = ""
-        Me.txt_otherfee1.Size = New System.Drawing.Size(154, 36)
-        Me.txt_otherfee1.TabIndex = 60
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.BackColor = System.Drawing.Color.Transparent
-        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.ForeColor = System.Drawing.Color.DimGray
-        Me.Label34.Location = New System.Drawing.Point(73, 537)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(83, 20)
-        Me.Label34.TabIndex = 62
-        Me.Label34.Text = "Other fee 2"
-        '
-        'txt_otheramount2
-        '
-        Me.txt_otheramount2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_otheramount2.DefaultText = "0"
-        Me.txt_otheramount2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_otheramount2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_otheramount2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otheramount2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otheramount2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otheramount2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_otheramount2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otheramount2.Location = New System.Drawing.Point(244, 562)
-        Me.txt_otheramount2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.txt_otheramount2.Name = "txt_otheramount2"
-        Me.txt_otheramount2.PlaceholderText = ""
-        Me.txt_otheramount2.SelectedText = ""
-        Me.txt_otheramount2.Size = New System.Drawing.Size(154, 36)
-        Me.txt_otheramount2.TabIndex = 61
-        '
-        'txt_otherfee2
-        '
-        Me.txt_otherfee2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_otherfee2.DefaultText = ""
-        Me.txt_otherfee2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_otherfee2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_otherfee2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otherfee2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_otherfee2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otherfee2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_otherfee2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_otherfee2.Location = New System.Drawing.Point(77, 562)
-        Me.txt_otherfee2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.txt_otherfee2.Name = "txt_otherfee2"
-        Me.txt_otherfee2.PlaceholderText = "Input remarks.."
-        Me.txt_otherfee2.SelectedText = ""
-        Me.txt_otherfee2.Size = New System.Drawing.Size(154, 36)
-        Me.txt_otherfee2.TabIndex = 63
-        '
-        'lbl_otherfee1
-        '
-        Me.lbl_otherfee1.AutoSize = True
-        Me.lbl_otherfee1.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_otherfee1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_otherfee1.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_otherfee1.Location = New System.Drawing.Point(324, 132)
-        Me.lbl_otherfee1.Name = "lbl_otherfee1"
-        Me.lbl_otherfee1.Size = New System.Drawing.Size(28, 21)
-        Me.lbl_otherfee1.TabIndex = 69
-        Me.lbl_otherfee1.Text = "---"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.Transparent
-        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.Color.DimGray
-        Me.Label37.Location = New System.Drawing.Point(41, 133)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(83, 20)
-        Me.Label37.TabIndex = 68
-        Me.Label37.Text = "Other fee 1"
-        '
-        'lbl_otherfee2
-        '
-        Me.lbl_otherfee2.AutoSize = True
-        Me.lbl_otherfee2.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_otherfee2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_otherfee2.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_otherfee2.Location = New System.Drawing.Point(324, 152)
-        Me.lbl_otherfee2.Name = "lbl_otherfee2"
-        Me.lbl_otherfee2.Size = New System.Drawing.Size(28, 21)
-        Me.lbl_otherfee2.TabIndex = 71
-        Me.lbl_otherfee2.Text = "---"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.BackColor = System.Drawing.Color.Transparent
-        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.ForeColor = System.Drawing.Color.DimGray
-        Me.Label39.Location = New System.Drawing.Point(41, 153)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(83, 20)
-        Me.Label39.TabIndex = 70
-        Me.Label39.Text = "Other fee 2"
         '
         'loan_application
         '

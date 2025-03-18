@@ -1,11 +1,12 @@
-﻿Imports MySql.Data.MySqlClient
-Public Class sharecap_daily
+﻿
+Imports MySql.Data.MySqlClient
+Public Class savings_summary
     Private Sub sharecap_daily_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpicker_from.Value = Date.Now
     End Sub
 
     Private Sub loaddaily()
-        Dim myrpt As New share_daily
+        Dim myrpt As New savings_daily
         dt.Clear()
 
         Try
@@ -15,17 +16,17 @@ Public Class sharecap_daily
             Dim showreport As New MySqlCommand("SELECT 
         sc.status,
         Case 
-            WHEN sc.status IN ('DM','CA','D','DMEMO','CHKWID','CSHWIT','CHKWIT') THEN amount 
+            WHEN sc.status IN ('CW','CHKW','DM','DAMAY','DMEMO','DEDB','CSHWIT','CHKBON','TAXWIT','CHKWIT') THEN amount 
             Else 0 
         End As withdraw,
         Case 
-            WHEN sc.status IN ('ID', 'CM', 'CD', 'ISC', 'IPR', 'C', 'CASHDEP', 'BEGBAL', 'CMEMO', 'CHKDEP', 'CSHAD1', 'INT') THEN amount 
+            WHEN sc.status IN ( 'ID','CHKD','CD','CM','CSHDEP','BEGBAL','TIMDEP','CMEMO','CHKDEP','CSHADJ','CSHAD1','INT') THEN amount 
             Else 0 
         End As deposit,
         sc.date_transac,
    account_no as Fullname,
     sc.teller
-    FROM sharecap sc
+    FROM savings sc
 
     WHERE date_transac ='" & dtpicker_from.Value.ToString("yyyy-MM-dd") & "'", con)
 
@@ -36,7 +37,7 @@ Public Class sharecap_daily
 
             Dim da As New MySqlDataAdapter(showreport)
             da.Fill(dt)
-            myrpt.Database.Tables("sharecap_daily").SetDataSource(dt)
+            myrpt.Database.Tables("saving_daily").SetDataSource(dt)
             CrystalReportViewer1.ReportSource = Nothing
             CrystalReportViewer1.ReportSource = myrpt
         Catch ex As Exception

@@ -238,7 +238,7 @@ Public Class loan_application
                 lbl_processfee.Text = "-" & Convert.ToDecimal(lbl_servicefee.Text).ToString("N0")
                 lbl_purpose.Text = cmb_purpose.Text
 
-                lbl_disbursement.Text = (loan_amount - (Convert.ToDecimal(lbl_servicefee.Text) + Convert.ToDecimal(txt_insurance.Text) + Convert.ToDecimal(lbl_otherfee1.Text) + Convert.ToDecimal(lbl_otherfee2.Text))).ToString("N0")
+                lbl_disbursement.Text = (loan_amount - (Convert.ToDecimal(lbl_servicefee.Text) + Convert.ToDecimal(txt_insurance.Text) + Convert.ToDecimal(txt_otheramount1.Text) + Convert.ToDecimal(txt_otheramount2.Text))).ToString("N0")
                 lbl_term.Text = month_count & " months"
                 lbl_ma.Text = txt_ma.Text
             End If
@@ -375,6 +375,10 @@ Public Class loan_application
     End Sub
 
     Private Sub lbl_disbursement_Click(sender As Object, e As EventArgs) Handles lbl_disbursement.Click
+
+    End Sub
+
+    Private Sub panel_apply_Click(sender As Object, e As EventArgs) Handles panel_apply.Click
 
     End Sub
 End Class

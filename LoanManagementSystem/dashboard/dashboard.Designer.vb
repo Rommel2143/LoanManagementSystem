@@ -23,6 +23,7 @@ Partial Class dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard))
         Dim ChartFont1 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont2 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont3 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
@@ -38,7 +39,6 @@ Partial Class dashboard
         Dim ChartFont7 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_collecttotal = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -46,8 +46,10 @@ Partial Class dashboard
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lbl_membercount = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_pendingloan = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lbl_activeloan = New System.Windows.Forms.Label()
@@ -55,7 +57,8 @@ Partial Class dashboard
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.menu_sharecap = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.WeightedAverageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuarterlyRateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.lbl_sharecap = New System.Windows.Forms.Label()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
@@ -75,8 +78,13 @@ Partial Class dashboard
         Me.lbl_day = New System.Windows.Forms.Label()
         Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btn_totalfunds = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.QUARTERLYRATESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lbl_savings = New System.Windows.Forms.Label()
         Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbl_funds = New System.Windows.Forms.Label()
@@ -87,29 +95,24 @@ Partial Class dashboard
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btn_totalfunds = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.menu_sharecap.SuspendLayout()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
         Me.Guna2Panel7.SuspendLayout()
         Me.Guna2Panel12.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel8.SuspendLayout()
         Me.Guna2Panel9.SuspendLayout()
         Me.Guna2Panel10.SuspendLayout()
         Me.Guna2Panel11.SuspendLayout()
-        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -196,6 +199,19 @@ Partial Class dashboard
         Me.Guna2Panel1.Size = New System.Drawing.Size(260, 107)
         Me.Guna2Panel1.TabIndex = 7
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(160, 11)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(104, 100)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
@@ -222,6 +238,20 @@ Partial Class dashboard
         Me.Guna2Separator2.Name = "Guna2Separator2"
         Me.Guna2Separator2.Size = New System.Drawing.Size(218, 10)
         Me.Guna2Separator2.TabIndex = 12
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(160, 16)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(104, 94)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 12
+        Me.Guna2PictureBox2.TabStop = False
+        Me.Guna2PictureBox2.UseTransparentBackground = True
         '
         'lbl_pendingloan
         '
@@ -291,9 +321,9 @@ Partial Class dashboard
         'menu_sharecap
         '
         Me.menu_sharecap.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menu_sharecap.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WeightedAverageToolStripMenuItem, Me.QuarterlyRateToolStripMenuItem, Me.ToolStripMenuItem1})
+        Me.menu_sharecap.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WeightedAverageToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.menu_sharecap.Name = "menu_sharecap"
-        Me.menu_sharecap.Size = New System.Drawing.Size(208, 104)
+        Me.menu_sharecap.Size = New System.Drawing.Size(208, 56)
         '
         'WeightedAverageToolStripMenuItem
         '
@@ -302,12 +332,25 @@ Partial Class dashboard
         Me.WeightedAverageToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
         Me.WeightedAverageToolStripMenuItem.Text = "Weighted Average"
         '
-        'QuarterlyRateToolStripMenuItem
+        'ToolStripMenuItem1
         '
-        Me.QuarterlyRateToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QuarterlyRateToolStripMenuItem.Name = "QuarterlyRateToolStripMenuItem"
-        Me.QuarterlyRateToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
-        Me.QuarterlyRateToolStripMenuItem.Text = "Quarterly rate"
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(207, 26)
+        Me.ToolStripMenuItem1.Text = "Daily Records"
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(160, 13)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(104, 97)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox3.TabIndex = 0
+        Me.Guna2PictureBox3.TabStop = False
+        Me.Guna2PictureBox3.UseTransparentBackground = True
         '
         'Label12
         '
@@ -547,11 +590,28 @@ Partial Class dashboard
         Me.Guna2Panel7.Size = New System.Drawing.Size(332, 765)
         Me.Guna2Panel7.TabIndex = 17
         '
+        'btn_totalfunds
+        '
+        Me.btn_totalfunds.BackColor = System.Drawing.Color.Transparent
+        Me.btn_totalfunds.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btn_totalfunds.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btn_totalfunds.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btn_totalfunds.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btn_totalfunds.FillColor = System.Drawing.Color.Transparent
+        Me.btn_totalfunds.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btn_totalfunds.ForeColor = System.Drawing.Color.White
+        Me.btn_totalfunds.Image = CType(resources.GetObject("btn_totalfunds.Image"), System.Drawing.Image)
+        Me.btn_totalfunds.ImageSize = New System.Drawing.Size(32, 32)
+        Me.btn_totalfunds.Location = New System.Drawing.Point(249, 129)
+        Me.btn_totalfunds.Name = "btn_totalfunds"
+        Me.btn_totalfunds.Size = New System.Drawing.Size(38, 33)
+        Me.btn_totalfunds.TabIndex = 11
+        '
         'Guna2Panel12
         '
         Me.Guna2Panel12.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel12.BorderRadius = 3
-        Me.Guna2Panel12.ContextMenuStrip = Me.menu_sharecap
+        Me.Guna2Panel12.ContextMenuStrip = Me.ContextMenuStrip1
         Me.Guna2Panel12.Controls.Add(Me.Label2)
         Me.Guna2Panel12.Controls.Add(Me.Guna2PictureBox5)
         Me.Guna2Panel12.Controls.Add(Me.lbl_savings)
@@ -564,6 +624,25 @@ Partial Class dashboard
         Me.Guna2Panel12.Size = New System.Drawing.Size(260, 107)
         Me.Guna2Panel12.TabIndex = 12
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QUARTERLYRATESToolStripMenuItem, Me.ToolStripMenuItem4})
+        Me.ContextMenuStrip1.Name = "menu_sharecap"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(213, 78)
+        '
+        'QUARTERLYRATESToolStripMenuItem
+        '
+        Me.QUARTERLYRATESToolStripMenuItem.Name = "QUARTERLYRATESToolStripMenuItem"
+        Me.QUARTERLYRATESToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
+        Me.QUARTERLYRATESToolStripMenuItem.Text = "QUARTERLY RATES"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(212, 26)
+        Me.ToolStripMenuItem4.Text = "Daily Records"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -575,6 +654,20 @@ Partial Class dashboard
         Me.Label2.Size = New System.Drawing.Size(52, 17)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Savings"
+        '
+        'Guna2PictureBox5
+        '
+        Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox5.ImageRotate = 0!
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(160, 13)
+        Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
+        Me.Guna2PictureBox5.Size = New System.Drawing.Size(104, 97)
+        Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox5.TabIndex = 12
+        Me.Guna2PictureBox5.TabStop = False
+        Me.Guna2PictureBox5.UseTransparentBackground = True
         '
         'lbl_savings
         '
@@ -732,84 +825,6 @@ Partial Class dashboard
         Me.Guna2Panel11.Size = New System.Drawing.Size(288, 75)
         Me.Guna2Panel11.TabIndex = 21
         '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(207, 26)
-        Me.ToolStripMenuItem1.Text = "Daily Records"
-        '
-        'btn_totalfunds
-        '
-        Me.btn_totalfunds.BackColor = System.Drawing.Color.Transparent
-        Me.btn_totalfunds.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn_totalfunds.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn_totalfunds.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn_totalfunds.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn_totalfunds.FillColor = System.Drawing.Color.Transparent
-        Me.btn_totalfunds.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn_totalfunds.ForeColor = System.Drawing.Color.White
-        Me.btn_totalfunds.Image = CType(resources.GetObject("btn_totalfunds.Image"), System.Drawing.Image)
-        Me.btn_totalfunds.ImageSize = New System.Drawing.Size(32, 32)
-        Me.btn_totalfunds.Location = New System.Drawing.Point(249, 129)
-        Me.btn_totalfunds.Name = "btn_totalfunds"
-        Me.btn_totalfunds.Size = New System.Drawing.Size(38, 33)
-        Me.btn_totalfunds.TabIndex = 11
-        '
-        'Guna2PictureBox5
-        '
-        Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox5.ImageRotate = 0!
-        Me.Guna2PictureBox5.Location = New System.Drawing.Point(160, 13)
-        Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
-        Me.Guna2PictureBox5.Size = New System.Drawing.Size(104, 97)
-        Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox5.TabIndex = 12
-        Me.Guna2PictureBox5.TabStop = False
-        Me.Guna2PictureBox5.UseTransparentBackground = True
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(160, 11)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(104, 100)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
-        Me.Guna2PictureBox1.UseTransparentBackground = True
-        '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(160, 16)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(104, 94)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox2.TabIndex = 12
-        Me.Guna2PictureBox2.TabStop = False
-        Me.Guna2PictureBox2.UseTransparentBackground = True
-        '
-        'Guna2PictureBox3
-        '
-        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(160, 13)
-        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Me.Guna2PictureBox3.Size = New System.Drawing.Size(104, 97)
-        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox3.TabIndex = 0
-        Me.Guna2PictureBox3.TabStop = False
-        Me.Guna2PictureBox3.UseTransparentBackground = True
-        '
         'dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -829,11 +844,14 @@ Partial Class dashboard
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
         Me.menu_sharecap.ResumeLayout(False)
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel4.PerformLayout()
         Me.Guna2Panel5.ResumeLayout(False)
@@ -844,6 +862,8 @@ Partial Class dashboard
         Me.Guna2Panel7.PerformLayout()
         Me.Guna2Panel12.ResumeLayout(False)
         Me.Guna2Panel12.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel8.ResumeLayout(False)
         Me.Guna2Panel8.PerformLayout()
         Me.Guna2Panel9.ResumeLayout(False)
@@ -852,10 +872,6 @@ Partial Class dashboard
         Me.Guna2Panel10.PerformLayout()
         Me.Guna2Panel11.ResumeLayout(False)
         Me.Guna2Panel11.PerformLayout()
-        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -907,10 +923,12 @@ Partial Class dashboard
     Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents menu_sharecap As ContextMenuStrip
     Friend WithEvents WeightedAverageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents QuarterlyRateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents lbl_savings As Label
     Friend WithEvents btn_totalfunds As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents QUARTERLYRATESToolStripMenuItem As ToolStripMenuItem
 End Class

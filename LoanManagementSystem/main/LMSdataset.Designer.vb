@@ -39,6 +39,8 @@ Partial Public Class LMSdataset
     
     Private tablesharecap_daily As sharecap_dailyDataTable
     
+    Private tablesaving_daily As saving_dailyDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -88,6 +90,9 @@ Partial Public Class LMSdataset
             End If
             If (Not (ds.Tables("sharecap_daily")) Is Nothing) Then
                 MyBase.Tables.Add(New sharecap_dailyDataTable(ds.Tables("sharecap_daily")))
+            End If
+            If (Not (ds.Tables("saving_daily")) Is Nothing) Then
+                MyBase.Tables.Add(New saving_dailyDataTable(ds.Tables("saving_daily")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -173,6 +178,16 @@ Partial Public Class LMSdataset
     Public ReadOnly Property sharecap_daily() As sharecap_dailyDataTable
         Get
             Return Me.tablesharecap_daily
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property saving_daily() As saving_dailyDataTable
+        Get
+            Return Me.tablesaving_daily
         End Get
     End Property
     
@@ -264,6 +279,9 @@ Partial Public Class LMSdataset
             If (Not (ds.Tables("sharecap_daily")) Is Nothing) Then
                 MyBase.Tables.Add(New sharecap_dailyDataTable(ds.Tables("sharecap_daily")))
             End If
+            If (Not (ds.Tables("saving_daily")) Is Nothing) Then
+                MyBase.Tables.Add(New saving_dailyDataTable(ds.Tables("saving_daily")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -338,6 +356,12 @@ Partial Public Class LMSdataset
                 Me.tablesharecap_daily.InitVars
             End If
         End If
+        Me.tablesaving_daily = CType(MyBase.Tables("saving_daily"),saving_dailyDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablesaving_daily) Is Nothing) Then
+                Me.tablesaving_daily.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -362,6 +386,8 @@ Partial Public Class LMSdataset
         MyBase.Tables.Add(Me.tablemember_info)
         Me.tablesharecap_daily = New sharecap_dailyDataTable()
         MyBase.Tables.Add(Me.tablesharecap_daily)
+        Me.tablesaving_daily = New saving_dailyDataTable()
+        MyBase.Tables.Add(Me.tablesaving_daily)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -403,6 +429,12 @@ Partial Public Class LMSdataset
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Function ShouldSerializesharecap_daily() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Private Function ShouldSerializesaving_daily() As Boolean
         Return false
     End Function
     
@@ -484,6 +516,9 @@ Partial Public Class LMSdataset
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Delegate Sub sharecap_dailyRowChangeEventHandler(ByVal sender As Object, ByVal e As sharecap_dailyRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Delegate Sub saving_dailyRowChangeEventHandler(ByVal sender As Object, ByVal e As saving_dailyRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -2709,7 +2744,7 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addsharecap_dailyRow(ByVal status As String, ByVal withdraw As String, ByVal deposit As String, ByVal date_transac As String, ByVal Fullname As String, ByVal teller As String) As sharecap_dailyRow
+        Public Overloads Function Addsharecap_dailyRow(ByVal status As String, ByVal withdraw As Integer, ByVal deposit As Integer, ByVal date_transac As Date, ByVal Fullname As String, ByVal teller As String) As sharecap_dailyRow
             Dim rowsharecap_dailyRow As sharecap_dailyRow = CType(Me.NewRow,sharecap_dailyRow)
             Dim columnValuesArray() As Object = New Object() {status, withdraw, deposit, date_transac, Fullname, teller}
             rowsharecap_dailyRow.ItemArray = columnValuesArray
@@ -2747,11 +2782,11 @@ Partial Public Class LMSdataset
         Private Sub InitClass()
             Me.columnstatus = New Global.System.Data.DataColumn("status", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstatus)
-            Me.columnwithdraw = New Global.System.Data.DataColumn("withdraw", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnwithdraw = New Global.System.Data.DataColumn("withdraw", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnwithdraw)
-            Me.columndeposit = New Global.System.Data.DataColumn("deposit", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columndeposit = New Global.System.Data.DataColumn("deposit", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndeposit)
-            Me.columndate_transac = New Global.System.Data.DataColumn("date_transac", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columndate_transac = New Global.System.Data.DataColumn("date_transac", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndate_transac)
             Me.columnFullname = New Global.System.Data.DataColumn("Fullname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFullname)
@@ -2843,6 +2878,323 @@ Partial Public Class LMSdataset
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "sharecap_dailyDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class saving_dailyDataTable
+        Inherits Global.System.Data.TypedTableBase(Of saving_dailyRow)
+        
+        Private columnstatus As Global.System.Data.DataColumn
+        
+        Private columnwithdraw As Global.System.Data.DataColumn
+        
+        Private columndeposit As Global.System.Data.DataColumn
+        
+        Private columndate_transac As Global.System.Data.DataColumn
+        
+        Private columnFullname As Global.System.Data.DataColumn
+        
+        Private columnteller As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "saving_daily"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property statusColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnstatus
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property withdrawColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnwithdraw
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property depositColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndeposit
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property date_transacColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndate_transac
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property FullnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFullname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property tellerColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnteller
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As saving_dailyRow
+            Get
+                Return CType(Me.Rows(index),saving_dailyRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event saving_dailyRowChanging As saving_dailyRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event saving_dailyRowChanged As saving_dailyRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event saving_dailyRowDeleting As saving_dailyRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event saving_dailyRowDeleted As saving_dailyRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Sub Addsaving_dailyRow(ByVal row As saving_dailyRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function Addsaving_dailyRow(ByVal status As String, ByVal withdraw As Integer, ByVal deposit As Integer, ByVal date_transac As Date, ByVal Fullname As String, ByVal teller As String) As saving_dailyRow
+            Dim rowsaving_dailyRow As saving_dailyRow = CType(Me.NewRow,saving_dailyRow)
+            Dim columnValuesArray() As Object = New Object() {status, withdraw, deposit, date_transac, Fullname, teller}
+            rowsaving_dailyRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowsaving_dailyRow)
+            Return rowsaving_dailyRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As saving_dailyDataTable = CType(MyBase.Clone,saving_dailyDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New saving_dailyDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnstatus = MyBase.Columns("status")
+            Me.columnwithdraw = MyBase.Columns("withdraw")
+            Me.columndeposit = MyBase.Columns("deposit")
+            Me.columndate_transac = MyBase.Columns("date_transac")
+            Me.columnFullname = MyBase.Columns("Fullname")
+            Me.columnteller = MyBase.Columns("teller")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnstatus = New Global.System.Data.DataColumn("status", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstatus)
+            Me.columnwithdraw = New Global.System.Data.DataColumn("withdraw", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnwithdraw)
+            Me.columndeposit = New Global.System.Data.DataColumn("deposit", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndeposit)
+            Me.columndate_transac = New Global.System.Data.DataColumn("date_transac", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndate_transac)
+            Me.columnFullname = New Global.System.Data.DataColumn("Fullname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFullname)
+            Me.columnteller = New Global.System.Data.DataColumn("teller", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnteller)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Newsaving_dailyRow() As saving_dailyRow
+            Return CType(Me.NewRow,saving_dailyRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New saving_dailyRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(saving_dailyRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.saving_dailyRowChangedEvent) Is Nothing) Then
+                RaiseEvent saving_dailyRowChanged(Me, New saving_dailyRowChangeEvent(CType(e.Row,saving_dailyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.saving_dailyRowChangingEvent) Is Nothing) Then
+                RaiseEvent saving_dailyRowChanging(Me, New saving_dailyRowChangeEvent(CType(e.Row,saving_dailyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.saving_dailyRowDeletedEvent) Is Nothing) Then
+                RaiseEvent saving_dailyRowDeleted(Me, New saving_dailyRowChangeEvent(CType(e.Row,saving_dailyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.saving_dailyRowDeletingEvent) Is Nothing) Then
+                RaiseEvent saving_dailyRowDeleting(Me, New saving_dailyRowChangeEvent(CType(e.Row,saving_dailyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Removesaving_dailyRow(ByVal row As saving_dailyRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LMSdataset = New LMSdataset()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "saving_dailyDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -4364,10 +4716,10 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property withdraw() As String
+        Public Property withdraw() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablesharecap_daily.withdrawColumn),String)
+                    Return CType(Me(Me.tablesharecap_daily.withdrawColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'withdraw' in table 'sharecap_daily' is DBNull.", e)
                 End Try
@@ -4379,10 +4731,10 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property deposit() As String
+        Public Property deposit() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablesharecap_daily.depositColumn),String)
+                    Return CType(Me(Me.tablesharecap_daily.depositColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'deposit' in table 'sharecap_daily' is DBNull.", e)
                 End Try
@@ -4394,10 +4746,10 @@ Partial Public Class LMSdataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property date_transac() As String
+        Public Property date_transac() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tablesharecap_daily.date_transacColumn),String)
+                    Return CType(Me(Me.tablesharecap_daily.date_transacColumn),Date)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'date_transac' in table 'sharecap_daily' is DBNull.", e)
                 End Try
@@ -4507,6 +4859,184 @@ Partial Public Class LMSdataset
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SettellerNull()
             Me(Me.tablesharecap_daily.tellerColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class saving_dailyRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablesaving_daily As saving_dailyDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablesaving_daily = CType(Me.Table,saving_dailyDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property status() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesaving_daily.statusColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'status' in table 'saving_daily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesaving_daily.statusColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property withdraw() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablesaving_daily.withdrawColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'withdraw' in table 'saving_daily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesaving_daily.withdrawColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property deposit() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablesaving_daily.depositColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'deposit' in table 'saving_daily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesaving_daily.depositColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property date_transac() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tablesaving_daily.date_transacColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'date_transac' in table 'saving_daily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesaving_daily.date_transacColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Fullname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesaving_daily.FullnameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fullname' in table 'saving_daily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesaving_daily.FullnameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property teller() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesaving_daily.tellerColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'teller' in table 'saving_daily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesaving_daily.tellerColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsstatusNull() As Boolean
+            Return Me.IsNull(Me.tablesaving_daily.statusColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetstatusNull()
+            Me(Me.tablesaving_daily.statusColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IswithdrawNull() As Boolean
+            Return Me.IsNull(Me.tablesaving_daily.withdrawColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetwithdrawNull()
+            Me(Me.tablesaving_daily.withdrawColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsdepositNull() As Boolean
+            Return Me.IsNull(Me.tablesaving_daily.depositColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetdepositNull()
+            Me(Me.tablesaving_daily.depositColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Isdate_transacNull() As Boolean
+            Return Me.IsNull(Me.tablesaving_daily.date_transacColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Setdate_transacNull()
+            Me(Me.tablesaving_daily.date_transacColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsFullnameNull() As Boolean
+            Return Me.IsNull(Me.tablesaving_daily.FullnameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetFullnameNull()
+            Me(Me.tablesaving_daily.FullnameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IstellerNull() As Boolean
+            Return Me.IsNull(Me.tablesaving_daily.tellerColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SettellerNull()
+            Me(Me.tablesaving_daily.tellerColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4748,6 +5278,42 @@ Partial Public Class LMSdataset
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property Row() As sharecap_dailyRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Class saving_dailyRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As saving_dailyRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New(ByVal row As saving_dailyRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Row() As saving_dailyRow
             Get
                 Return Me.eventRow
             End Get

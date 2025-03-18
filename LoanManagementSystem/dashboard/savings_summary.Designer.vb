@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class sharecap_daily
+Partial Class savings_summary
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,22 +22,12 @@ Partial Class sharecap_daily
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.dtpicker_from = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Guna2Panel1
-        '
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
-        Me.Guna2Panel1.Controls.Add(Me.dtpicker_from)
-        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(912, 81)
-        Me.Guna2Panel1.TabIndex = 0
         '
         'dtpicker_from
         '
@@ -62,8 +52,18 @@ Partial Class sharecap_daily
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 81)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(912, 518)
-        Me.CrystalReportViewer1.TabIndex = 1
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1136, 561)
+        Me.CrystalReportViewer1.TabIndex = 3
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2Panel1.Controls.Add(Me.dtpicker_from)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1136, 81)
+        Me.Guna2Panel1.TabIndex = 2
         '
         'Guna2Button2
         '
@@ -78,27 +78,27 @@ Partial Class sharecap_daily
         Me.Guna2Button2.Location = New System.Drawing.Point(244, 39)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(124, 36)
-        Me.Guna2Button2.TabIndex = 91
+        Me.Guna2Button2.TabIndex = 90
         Me.Guna2Button2.Text = "Load Data"
         '
-        'sharecap_daily
+        'savings_summary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(912, 599)
+        Me.ClientSize = New System.Drawing.Size(1136, 642)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "sharecap_daily"
-        Me.Text = "sharecap_daily"
+        Me.Name = "savings_summary"
+        Me.Text = "savings_summary"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents dtpicker_from As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
 End Class

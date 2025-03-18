@@ -559,7 +559,7 @@ ORDER BY YEAR(date_column), MONTH(date_column);
 
     End Sub
 
-    Private Sub Guna2Panel3_Click(sender As Object, e As EventArgs) Handles Guna2Panel3.Click
+    Private Sub Guna2Panel3_Click(sender As Object, e As EventArgs) Handles Guna2Panel3.Click, lbl_sharecap.Click, Guna2PictureBox3.Click
         If check_access_user("admin") = True Then
             Guna2Panel3.ContextMenuStrip.Show(Guna2Panel3, 0, Guna2Panel3.Height)
 
@@ -570,8 +570,8 @@ ORDER BY YEAR(date_column), MONTH(date_column);
         display_formsub(weight_ave, "Weighted Average")
     End Sub
 
-    Private Sub QuarterlyRateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuarterlyRateToolStripMenuItem.Click
-        display_formsub(quarter_rate, "Quarterly rate")
+    Private Sub QuarterlyRateToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
@@ -591,5 +591,24 @@ ORDER BY YEAR(date_column), MONTH(date_column);
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         display_formsub(sharecap_daily, "Daily Sharecap Records")
+    End Sub
+
+    Private Sub QUARTERLYRATESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QUARTERLYRATESToolStripMenuItem.Click
+        display_formsub(quarter_rate, "Quarterly rate")
+    End Sub
+
+    Private Sub Guna2Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel12.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel12_Click(sender As Object, e As EventArgs) Handles Guna2Panel12.Click, lbl_savings.Click, Guna2PictureBox5.Click
+        If check_access_user("admin") = True Then
+            Guna2Panel12.ContextMenuStrip.Show(Guna2Panel12, 0, Guna2Panel12.Height)
+
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
+        display_formsub(savings_summary, "Savings Daily Summary")
     End Sub
 End Class
